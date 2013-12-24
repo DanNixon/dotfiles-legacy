@@ -13,7 +13,7 @@ set expandtab
 " Set options to restore from last session
 set viewoptions=cursor,folds,slash,unix
 
-" Set syntax folding with manual override
+" Set indent folding with manual override
 set foldmethod=indent
 nnoremap <F2> :set foldmethod=manual <CR>
 
