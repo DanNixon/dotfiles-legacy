@@ -11,6 +11,7 @@ alias l='ls -CF'
 alias g="git"
 alias e="exit"
 alias q="exit"
+alias die="sudo shutdown -P now"
 
 # Update APT packages
 alias aptup="sudo apt-get update && sudo apt-get upgrade"
