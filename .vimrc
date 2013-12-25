@@ -27,7 +27,7 @@ set noswapfile nobackup
 set nowrap nolbr
 
 " Show folds and line numbers on left, add highlights
-set foldcolumn=1
+set foldcolumn=2
 set cursorline
 set number
 autocmd BufWinEnter * highlight LineNr term=bold ctermfg=Blue ctermbg=DarkGrey
