@@ -8,9 +8,11 @@
 [alias]
   s = status
   p = push
-  l = log
-  d = diff
-  c = commit
+  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  la = log --pretty=oneline --graph --abbrev-commit
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+  co = commit
   up = pull
   update = pull
-  a = add
+  tags = tag -l
+  br = branch -a

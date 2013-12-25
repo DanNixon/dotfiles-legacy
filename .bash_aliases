@@ -10,6 +10,7 @@ alias l='ls -CF'
 # General comands
 alias g="git"
 alias e="exit"
+alias q="exit"
 
 # Update APT packages
 alias aptup="sudo apt-get update && sudo apt-get upgrade"
