@@ -1,0 +1,16 @@
+[user]
+	email = dan@dan-nixon.com
+	name = Dan Nixon
+[color]
+	ui = true
+[core]
+  editor = vim
+[alias]
+  s = status
+  p = push
+  l = log
+  d = diff
+  c = commit
+  up = pull
+  update = pull
+  a = add

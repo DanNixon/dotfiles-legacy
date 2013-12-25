@@ -1,3 +1,6 @@
+set nocompatible
+set encoding=utf-8
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -27,6 +30,6 @@ set nowrap nolbr
 set foldcolumn=1
 set cursorline
 set number
-autocmd BufReadPre * highlight LineNr term=bold ctermfg=Blue ctermbg=DarkGrey
-autocmd BufReadPre * highlight FoldColumn term=bold ctermfg=Blue ctermbg=DarkGrey
-autocmd BufReadPre * highlight CursorLine cterm=NONE ctermbg=DarkGrey
+autocmd BufWinEnter * highlight LineNr term=bold ctermfg=Blue ctermbg=DarkGrey
+autocmd BufWinEnter * highlight FoldColumn term=bold ctermfg=Blue ctermbg=DarkGrey
+autocmd BufWinEnter * highlight CursorLine cterm=NONE ctermbg=DarkGrey
