@@ -1,2 +1,7 @@
+# Vim stuff
 .vim/bundle
 .vim/view
+
+# Temp. files
+*.*~
+*~
