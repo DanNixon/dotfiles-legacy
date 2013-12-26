@@ -11,5 +11,5 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # Install new packages
-data=`cat apt_packages | tr '\n' ' '`
-sudo apt-get install $data
+packages=`cat apt_packages | tr '\n' ' '`
+sudo apt-get install $packages
