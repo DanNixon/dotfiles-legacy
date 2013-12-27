@@ -11,8 +11,10 @@
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
   la = log --pretty=oneline --graph --abbrev-commit
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-  co = commit
+  com = commit
+  co = checkout
   up = pull
   update = pull
+  br = branch
   tags = tag -l
-  br = branch -a
+  brs = branch -a

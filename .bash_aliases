@@ -13,8 +13,10 @@ alias e="exit"
 alias q="exit"
 alias die="sudo shutdown -P now"
 
-# Update APT packages
+# APT commands
 alias aptup="sudo apt-get update && sudo apt-get upgrade"
+alias aptin="sudo apt-get install"
 
 # Project status script
 alias projstat='~/project_status'
+alias pstat='~/project_status'
