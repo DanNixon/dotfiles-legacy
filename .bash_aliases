@@ -18,5 +18,8 @@ alias aptup="sudo apt-get update && sudo apt-get upgrade"
 alias aptin="sudo apt-get install"
 
 # Project status script
-alias projstat='~/project_status'
-alias pstat='~/project_status'
+alias projstat='~/dotfiles/project_status'
+alias pstat='~/dotfiles/project_status'
+
+# GitHub backup script
+alias ghexport="~/dotfiles/github_export"
