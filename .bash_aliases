@@ -2,6 +2,16 @@
 alias music='python ~/apps/PlayMusicCL.py'
 alias roku='python ~/apps/RokuRTerm.py'
 
+# Other apps
+alias odbex='cd ~/apps/ObjectDB-Explorer && ./explorer.sh & exit'
+alias mc='java -jar ~/apps/Minecraft.jar'
+
+# Touhou
+# Currently the only three bullet shooter variants which worl on my laptop
+alias th6='cd ~/apps/Touhou/Touhou60 && wine th06e.exe & exit'
+alias th7='cd ~/apps/Touhou/Touhou70 && wine th07e.exe & exit'
+alias th8='cd ~/apps/Touhou/Touhou80 && wine th08e.exe & exit'
+
 # ls commands
 alias ll='ls -alF'
 alias la='ls -A'
