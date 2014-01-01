@@ -5,6 +5,8 @@ alias roku='python ~/apps/RokuRTerm.py'
 # Other apps
 alias odbex='cd ~/apps/ObjectDB-Explorer && ./explorer.sh & exit'
 alias mc='java -jar ~/apps/Minecraft.jar'
+alias lcwallet="~/apps/LiteCoin64/litecoin-qt & exit"
+alias litecoin="~/apps/LiteCoin64/litecoind"
 
 # Touhou
 # Currently the only three bullet shooter variants which work on my laptop
