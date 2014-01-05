@@ -3,8 +3,8 @@ alias music='python ~/apps/PlayMusicCL.py'
 alias roku='python ~/apps/RokuRTerm.py'
 
 # Other apps
-alias odbex='cd ~/apps/ObjectDB-Explorer && ./explorer.sh & exit'
-alias mc='java -jar ~/apps/Minecraft.jar'
+alias odbex='cd ~/apps/ObjectDB-Explorer && ./explorer.sh'
+alias mc='java -jar ~/apps/Minecraft.jar & exit'
 
 # LiteCoin clients
 alias lcwallet="~/apps/LiteCoin64/litecoin-qt -minimizetotray=1 & exit"
