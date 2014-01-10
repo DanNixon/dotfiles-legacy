@@ -2,7 +2,7 @@
 
 cd
 
-git_projects=(dotfiles IeNoTenshi UrabeVocalSynth ArduinoESCLib BubbleCopter)
+git_projects=(dotfiles IeNoTenshi ArduinoESCLib BubbleCopter CAD)
 svn_projects=(csc2022_team15)
 
 function status {
