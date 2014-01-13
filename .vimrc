@@ -33,3 +33,6 @@ set number
 autocmd BufWinEnter * highlight LineNr term=bold ctermfg=Blue ctermbg=DarkGrey
 autocmd BufWinEnter * highlight FoldColumn term=bold ctermfg=Blue ctermbg=DarkGrey
 autocmd BufWinEnter * highlight CursorLine cterm=NONE ctermbg=DarkGrey
+
+" Set C syntax highlighting for Arduino source files
+autocmd BufWinEnter *.ino set filetype=c
