@@ -2,6 +2,10 @@
 .vim/bundle
 .vim/view
 
+# Fish stuff
+fishd.*
+fish_history
+
 # Temp. files
 *.*~
 *~

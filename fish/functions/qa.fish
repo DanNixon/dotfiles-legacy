@@ -1,0 +1,3 @@
+function qa
+	exit
+end
