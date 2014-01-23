@@ -1,6 +1,9 @@
 set nocompatible
 set encoding=utf-8
 
+set t_Co=256
+colorscheme distinguished
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -30,9 +33,6 @@ set nowrap nolbr
 set foldcolumn=2
 set cursorline
 set number
-autocmd BufWinEnter * highlight LineNr term=bold ctermfg=Blue ctermbg=DarkGrey
-autocmd BufWinEnter * highlight FoldColumn term=bold ctermfg=Blue ctermbg=DarkGrey
-autocmd BufWinEnter * highlight CursorLine cterm=NONE ctermbg=DarkGrey
 
 " Set C syntax highlighting for Arduino source files
 autocmd BufWinEnter *.ino set filetype=c
