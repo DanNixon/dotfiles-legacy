@@ -1,12 +1,24 @@
 function fish_prompt --description 'Write out the prompt'
-  function _git_branch_name
-    echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
-  end
-  
-  function _is_git_dirty
-    echo (git status -s --ignore-submodules=dirty ^/dev/null)
-  end
-  
+  set -g __fish_git_prompt_show_informative_status 1
+  set -g __fish_git_prompt_hide_untrackedfiles 1
+
+  set -g __fish_git_prompt_color_branch magenta
+  set -g __fish_git_prompt_showupstream "informative"
+  set -g __fish_git_prompt_char_upstream_ahead "↑"
+  set -g __fish_git_prompt_char_upstream_behind "↓"
+  set -g __fish_git_prompt_char_upstream_prefix ""
+
+  set -g __fish_git_prompt_char_stagedstate "●"
+  set -g __fish_git_prompt_char_dirtystate "✚"
+  set -g __fish_git_prompt_char_untrackedfiles "…"
+  set -g __fish_git_prompt_char_conflictedstate "✖"
+  set -g __fish_git_prompt_char_cleanstate "✔"
+
+  set -g __fish_git_prompt_color_dirtystate blue
+  set -g __fish_git_prompt_color_stagedstate yellow
+  set -g __fish_git_prompt_color_invalidstate red
+  set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
+
 	set -l last_status $status
 
   # User
@@ -28,18 +40,7 @@ function fish_prompt --description 'Write out the prompt'
   echo -n (prompt_pwd)
   set_color normal
 
-  if [ (_git_branch_name) ]
-    set -l git_branch (_git_branch_name)
-
-    if [ (_is_git_dirty) ]
-      set -l yellow (set_color -o yellow)
-      set dirty " $yellow✗"
-    end
-
-    set -l col_cwd (set_color $fish_color_cwd)
-    set -l col_norm (set_color normal)
-    echo -n " ($col_cwd$git_branch$dirty$col_norm)"
-  end
+  echo -n (__fish_git_prompt)
 
   if not test $last_status -eq 0
     set_color $fish_color_error

@@ -8,8 +8,8 @@
 [alias]
   s = status
   p = push
-  l = log --pretty=oneline -n 20 --graph --abbrev-commit
-  la = log --pretty=oneline --graph --abbrev-commit
+  l = log --pretty=oneline --graph --abbrev-commit
+  la = log --pretty=full --graph
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   com = commit
   co = checkout
