@@ -21,3 +21,6 @@ alias die="sudo shutdown -P now"
 # APT commands
 alias aptup="sudo apt-get update && sudo apt-get upgrade"
 alias aptin="sudo apt-get install"
+
+# Project status script
+alias pstat='~/dotfiles/project_status'
