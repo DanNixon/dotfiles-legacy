@@ -16,6 +16,12 @@ filetype plugin indent on
 " Start NERDTree if no file was specified
 autocmd vimenter * if !argc() | NERDTree | endif
 
+" Easy window switching
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
 " Set tab width to 2 spaces
 set tabstop=2
 set shiftwidth=2
