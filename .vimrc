@@ -22,6 +22,12 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
+" Esay window switching for tablet via SSH
+nmap <silent> <F5> :wincmd h<CR>
+nmap <silent> <F6> :wincmd j<CR>
+nmap <silent> <F7> :wincmd k<CR>
+nmap <silent> <F8> :wincmd l<CR>
+
 " Set tab width to 2 spaces
 set tabstop=2
 set shiftwidth=2
