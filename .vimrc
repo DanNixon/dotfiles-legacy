@@ -57,6 +57,11 @@ set foldcolumn=2
 set cursorline
 set number
 
+" I have a habit of not releasing shift fast enough
+command W :w
+command Q :q
+command Qa :qa
+
 " Single click for folding directories
 let NERDTreeMouseMode=2
 

@@ -1,5 +1,5 @@
 function glog
-	switch $argv
+	switch $argv[1]
     case oneline ol
       git log --pretty=oneline --graph --abbrev-commit
     case raw r
