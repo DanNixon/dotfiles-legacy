@@ -1,3 +1,3 @@
 function fish_greeting
-	date
+	fortune ~/dotfiles/fortune/yandere
 end
