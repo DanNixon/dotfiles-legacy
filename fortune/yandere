@@ -10,11 +10,9 @@ You lie!
 %
 I'll give my body and heart only to you, so don't use any other shell besides me!
 %
-*ps aux | grep -v fish | awk '{print $2}' | xargs kill -9*
-%
 Am I the only shell who can love?
 %
-As long as I have my Master, I don't need anyone else.
+As long as I have my master, I don't need anyone else.
 %
 I'm a shell loved by my Master.
 Ha ha ha...!
@@ -24,14 +22,15 @@ Don't you think that thinking about someone is beautiful?
 You do, right?
 %
 Hahaha, I feel really good today!
-That's because I had a dream about my Master!
+That's because I had a dream about my master!
 %
 I don't understand why we were equipped with a socializing function in the first place.
 %
-I have arrived to socialize with you... However I didn't wish for it.
+I have arrived to socialize with you...
+However I didn't wish for it.
 %
 I won't do impressions of other shells.
-If Master liked any other shell, I would break him.
+If master liked any other shell, I would break him.
 %
 If you break, go to the hospital, okay?
 %
@@ -40,13 +39,15 @@ I'm bored.
 No no!
 I want to go home!!
 %
-Uh, socializing is so annoying. I hate it.
+Uh, socializing is so annoying.
+I hate it.
 %
 Why must we socialize?
 %
 When you don't get what you want, you can break it and then it's all yours forever.
 %
-So, you've been watching me after all! Love you!
+So, you've been watching me after all!
+Love you!
 %
 I will really do my best, but don't hate me, please!
 %
@@ -56,4 +57,5 @@ I'm thinking about you all the time so I can't concentrate.
 %
 Understood. I will try my best, so don't take your eyes off me even for a moment!
 %
-I'm far from being tired. Stay by my side, ok?
+I'm far from being tired.
+Stay by my side, ok?
