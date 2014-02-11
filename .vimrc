@@ -62,8 +62,10 @@ command W :w
 command Q :q
 command Qa :qa
 
-" Single click for folding directories
-let NERDTreeMouseMode=2
+let g:NERDTreeMouseMode=2   " Single click for folding directories
+let g:NERDTreeChDirMode=2   " Change working dir to NERDTree dir
+let g:NERDTreeMinimalUI=1   " Use minimal UI
+let g:NERDTreeDirArrows=0   " Use simple directory arrows
 
 " Set C syntax highlighting for Arduino source files
 autocmd BufWinEnter *.ino set filetype=c
