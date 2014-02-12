@@ -1,6 +1,7 @@
 # Vim stuff
 .vim/bundle
 .vim/view
+.vim/.netrwhist
 
 # Fish stuff
 fishd.*
@@ -9,3 +10,7 @@ fish_history
 # Temp. files
 *.*~
 *~
+
+#PuTTY sessions
+putty_serial_sessions/*
+!putty_serial_sessions/serial_*
