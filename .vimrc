@@ -65,7 +65,11 @@ command Qa :qa
 let g:NERDTreeMouseMode=2   " Single click for folding directories
 let g:NERDTreeChDirMode=2   " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI=1   " Use minimal UI
-let g:NERDTreeDirArrows=0   " Use simple directory arrows
+if has("win32unix")         " When using Cygwin
+  let g:NERDTreeDirArrows=0 " Use simple directory arrows
+else
+  let g:NERDTreeDirArrows=1 " Otherwise use nice arrows
+endif
 
 " Set C syntax highlighting for Arduino source files
 autocmd BufWinEnter *.ino set filetype=c
