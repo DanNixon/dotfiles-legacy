@@ -10,7 +10,9 @@ function apt
       sudo apt-get remove $argv[2..(count $argv)]
     case arm arem
       sudo apt-get autoremove
+    case s search
+      apt-cache search $argv[2..(count $argv)]
     case '*'
-      echo "Possible commands: up, in, rm, arm"
+      echo "Possible commands: up, in, rm, arm, s"
     end
 end
