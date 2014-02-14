@@ -1,15 +1,45 @@
 #!/bin/bash
 
-# Add new APT repositories
-cat apt_repos | while read repo
-do
-  sudo apt-add-repository "$repo"
-done
+function usage {
+  echo "Bulk APT repository adder and package installer"
+  echo "-R [respository_list] : Adds a set of repositories to APT"
+  echo "-P [package_list]     : Installs a set of packages from APT"
+  echo "-u                    : Upgrade installed packages after repository addition or before package installation"
+}
 
-# Update package list and upgrade installed packages
-sudo apt-get update
-sudo apt-get upgrade
+# Add new APT repositories
+function add_repos {
+  cat apt_repos | while read repo
+  do
+    sudo apt-add-repository "$repo"
+  done
+}
 
 # Install new packages
-packages=`cat apt_packages | tr '\n' ' '`
-sudo apt-get install $packages
+function install_packages {
+  packages=`cat $1 | tr '\n' ' '`
+  sudo apt-get install $packages
+}
+
+if [ $# -lt 1 ]
+then
+  usage
+else
+  # If adding repos
+  if [ $1 = "-R" ]
+  then
+    add_repos $2
+    sudo apt-get update
+  fi
+  # If request package update
+  if [ $# -eq 3 ] && [ $3 = "-u" ]
+  then
+    sudo apt-get upgrade
+  fi
+  # If installing packages
+  if [ $1 = "-P" ]
+  then
+    sudo apt-get update
+    install_packages $2
+  fi
+fi
