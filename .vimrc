@@ -1,5 +1,15 @@
 set nocompatible
+filetype off
 set encoding=utf-8
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-commentary'
+Bundle 'vim-scripts/comments.vim'
+Bundle 'vim-scripts/restore_view.vim'
 
 " Use mouse pointer
 set mouse=a
@@ -9,7 +19,6 @@ set t_Co=256
 
 colorscheme distinguished
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
