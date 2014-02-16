@@ -3,3 +3,4 @@ deb http://apt.isis.rl.ac.uk precise main
 ppa:w-vollprecht/ppa
 ppa:webupd8team/java
 http://ppa.launchpad.net/dns/sound/ubuntu
+ppa:gstreamer-developers/ppa
