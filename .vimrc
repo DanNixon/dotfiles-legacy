@@ -42,12 +42,14 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Don't break Python indentation
+au FileType python set noexpandtab
+
 " Set options to restore from last session
 set viewoptions=cursor,folds,slash,unix
 
 " Set indent folding with manual override
 set foldmethod=indent
-nnoremap <F2> :set foldmethod=manual <CR>
 
 " Don't use swap and backup files
 set noswapfile
@@ -82,3 +84,6 @@ endif
 
 " Set C syntax highlighting for Arduino source files
 autocmd BufWinEnter *.ino set filetype=c
+
+" Add :Render command for SCAD files
+autocmd BufWinEnter *.scad command Render execute "!openscad % &"
