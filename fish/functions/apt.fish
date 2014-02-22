@@ -4,7 +4,6 @@ function apt
       sudo apt-get update
       sudo apt-get upgrade
     case in
-      sudo apt-get update
       sudo apt-get install $argv[2..(count $argv)]
     case rm rem
       sudo apt-get remove $argv[2..(count $argv)]
