@@ -1,0 +1,24 @@
+set last_window_maximized True
+set last_window_width 985
+set last_window_height 505
+
+set port None
+set baudrate 115200
+
+set uimode Standard
+set tempgauges True
+set lockbox True
+set monitor False
+
+button 0 "GetPosition" M114
+button 1 "MoveCentre" G1 X100 Y100 F6000
+button 2 "MovePrintHeight" G1 Z0.1 F75
+button 3 "MoveZ10" G1 Z10 F75
+button 4 "MoveOffset" G1 X40 Y160 F6000
+
+## Makerspace Prusa i2
+set build_dimensions 165.00x165.00x100.00+0.00+0.00+0.00+0.00+0.00+0.00
+set extruders 1
+set xy_feedrate 7200
+set z_feedrate 200
+set e_feedrate 30
