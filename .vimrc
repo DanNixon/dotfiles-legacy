@@ -2,6 +2,8 @@ set nocompatible
 filetype off
 set encoding=utf-8
 
+set shell=bash
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -10,9 +12,18 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-commentary'
 Bundle 'vim-scripts/comments.vim'
 Bundle 'vim-scripts/restore_view.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
 
 " Use mouse pointer
 set mouse=a
+
+" Use single <Leader> for easymotion
+map <Leader> <Plug>(easymotion-prefix)
+
+" easymotion matches uppercase using lowercase
+let g:EasyMotion_smartcase = 1
 
 " 256 colour ability is not reported properly
 set t_Co=256
@@ -67,6 +78,9 @@ set nolbr
 set foldcolumn=2
 set cursorline
 set number
+
+" Find using CtrlP
+command Find :CtrlP
 
 " I have a habit of not releasing shift fast enough
 command W :w
