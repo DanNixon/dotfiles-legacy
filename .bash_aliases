@@ -23,4 +23,4 @@ alias aptup="sudo apt-get update && sudo apt-get upgrade"
 alias aptin="sudo apt-get install"
 
 # Project status script
-alias pstat='~/dotfiles/project_status'
+alias pstat='~/dotfiles/scripts/project_status'

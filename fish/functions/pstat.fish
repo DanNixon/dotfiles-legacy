@@ -1,3 +1,3 @@
 function pstat
-	~/dotfiles/project_status $argv
+	~/dotfiles/scripts/project_status $argv
 end

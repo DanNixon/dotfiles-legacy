@@ -22,6 +22,10 @@ set mouse=a
 " Use single <Leader> for easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
+" PyLint config
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = "--disable=W0312,C0111,C0301"
+
 " easymotion matches uppercase using lowercase
 let g:EasyMotion_smartcase = 1
 
