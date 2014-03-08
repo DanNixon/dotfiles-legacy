@@ -14,8 +14,11 @@ alias l='ls -CF'
 alias q="exit"
 alias qa="exit"
 
-# General comands
+# Git commands
 alias g="git"
+alias gs="git status"
+
+# General comands
 alias die="sudo shutdown -P now"
 
 # APT commands
