@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Usage make_pronsolerc [printer_config]
+
 cd ~/dotfiles/pronsolerc
 
 rm ~/.pronsolerc
