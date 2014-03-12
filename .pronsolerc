@@ -10,11 +10,13 @@ set tempgauges True
 set lockbox True
 set monitor False
 
+set last_file_path /home/dan/Desktop
+set recentfiles ["/home/dan/Desktop/TabletRetentionClips.stl"]
+
 button 0 "GetPosition" M114
 button 1 "MoveCentre" G1 X100 Y100 F6000
 button 2 "MovePrintHeight" G1 Z0.1 F75
 button 3 "MoveZ10" G1 Z10 F75
-button 4 "MoveOffset" G1 X40 Y160 F6000
 
 ## Makerspace Prusa i2
 set build_dimensions 165.00x165.00x100.00+0.00+0.00+0.00+0.00+0.00+0.00

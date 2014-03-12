@@ -104,4 +104,4 @@ endif
 autocmd BufWinEnter *.ino set filetype=c
 
 " Add :Render command for SCAD files
-autocmd BufWinEnter *.scad command Render execute "!openscad % &"
+autocmd BufWinEnter *.scad command! Render execute "!openscad % &"
