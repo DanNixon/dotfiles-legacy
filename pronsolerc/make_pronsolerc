@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/dotfiles/pronsolerc
+
 rm ~/.pronsolerc
 
 echo "# Generated pronsolerc" > ~/.pronsolerc
