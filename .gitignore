@@ -14,3 +14,7 @@ fish_history
 # PuTTY sessions
 putty_serial_sessions/*
 !putty_serial_sessions/serial_*
+
+# Exclude all unused Skeinforge profiles
+.skeinforge/profiles/*
+!.skeinforge/profiles/extrusion/Makerspace_i2_ABS

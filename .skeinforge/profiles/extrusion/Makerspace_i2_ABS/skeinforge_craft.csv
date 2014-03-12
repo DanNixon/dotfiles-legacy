@@ -28,13 +28,13 @@ lash	False
 lift	False
 limit	False
 mill	False
-multiply	False
+multiply	True
 oozebane	False
 outset	False
 preface	False
 raft	False
 scale	False
-skin	True
+skin	False
 skirt	False
 smooth	False
 speed	False
