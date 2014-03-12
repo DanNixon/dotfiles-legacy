@@ -1,0 +1,16 @@
+set last_window_maximized True
+set last_window_width 985
+set last_window_height 505
+
+set port /dev/ttyACM0
+set baudrate 115200
+
+set uimode Standard
+set tempgauges True
+set lockbox True
+set monitor True
+
+button 1 "EStop" M112
+button 2 "GetPosition" M114
+button 3 "MovePrintHeight" G1 Z0.1 F75
+button 4 "MoveZ10" G1 Z10 F75

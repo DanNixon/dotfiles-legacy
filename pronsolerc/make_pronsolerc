@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm ~/.pronsolerc
+
+echo "# Generated pronsolerc" > ~/.pronsolerc
+
+echo "# Common config" >> ~/.pronsolerc
+cat common >> ~/.pronsolerc
+
+echo "# $1 config" >> ~/.pronsolerc
+cat $1 >> ~/.pronsolerc
