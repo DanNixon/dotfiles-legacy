@@ -16,3 +16,4 @@ libopencv-dev
 kicad
 cmake
 subversion
+python-pip
