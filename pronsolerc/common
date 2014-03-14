@@ -12,6 +12,6 @@ set monitor True
 
 button 0 "EStop" /c "#FF0000" M112
 button 1 "GetPosition" /c "#77EEFF" M114
-button 4 "SetZ0" /c "#FFAA66" G92 Z0
-button 5 "MovePrintHeight" /c "#22FF22" G1 Z0.1 F75
-button 6 "MoveZ10" /c "#22FF22" G1 Z10 F75
+button 4 "SetZ0" /c "#88CC22" G92 Z0
+button 5 "MovePrintHeight" /c "#FF9966" G1 Z0.1 F75
+button 6 "MoveZ10" /c "#FF9966" G1 Z10 F100

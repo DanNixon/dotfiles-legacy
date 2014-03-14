@@ -1,5 +1,5 @@
-button 8 "SetCentre" /c "#FFAA66" G92 X82.5 Y82.5
-button 9 "MoveCentre" /c "#22FF22" G1 X82.5 Y82.5 F6000
+button 8 "SetCentre" /c "#88CC22" G92 X82.5 Y82.5
+button 9 "MoveCentre" /c "#FF9966" G1 X82.5 Y82.5 F6000
 
 set build_dimensions 165.00x165.00x100.00+0.00+0.00+0.00+0.00+0.00+0.00
 set extruders 1
