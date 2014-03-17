@@ -10,11 +10,15 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-commentary'
-Bundle 'vim-scripts/comments.vim'
-Bundle 'vim-scripts/restore_view.vim'
+Bundle 'comments.vim'
+Bundle 'restore_view.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
+Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Bundle 'l9'
+Bundle 'FuzzyFinder'
+Bundle 'taglist.vim'
+Bundle 'Licenses'
 
 " Use mouse pointer
 set mouse=a
@@ -40,17 +44,22 @@ filetype plugin indent on
 " Start NERDTree if no file was specified
 autocmd vimenter * if !argc() | NERDTree | endif
 
-" Easy window switching
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
+" Find shortcuts
+nmap <silent> <Leader>f :FufLine<CR>
+nmap <silent> <Leader>o :FufFile<CR>
 
-" Esay window switching for tablet via SSH
-nmap <silent> <F5> :wincmd h<CR>
-nmap <silent> <F6> :wincmd j<CR>
-nmap <silent> <F7> :wincmd k<CR>
-nmap <silent> <F8> :wincmd l<CR>
+" Toggle taglist
+nmap <silent> <Leader>t :TlistToggle<CR>
+
+" Easy window switching
+nmap <silent> <Leader><Up> :wincmd k<CR>
+nmap <silent> <Leader><Down> :wincmd j<CR>
+nmap <silent> <Leader><Left> :wincmd h<CR>
+nmap <silent> <Leader><Right> :wincmd l<CR>
+" I have a habit of not releasing shift fast enough
+command W :w
+command Q :q
+command Qa :qa
 
 " Set tab width to 2 spaces
 set tabstop=2
@@ -83,13 +92,8 @@ set foldcolumn=2
 set cursorline
 set number
 
-" Find using CtrlP
-command Find :CtrlP
-
-" I have a habit of not releasing shift fast enough
-command W :w
-command Q :q
-command Qa :qa
+" Don't overcrowd taglist
+let g:Tlist_Show_One_File=1
 
 let g:NERDTreeMouseMode=2   " Single click for folding directories
 let g:NERDTreeChDirMode=2   " Change working dir to NERDTree dir
@@ -99,6 +103,9 @@ if has("win32unix")         " When using Cygwin
 else
   let g:NERDTreeDirArrows=1 " Otherwise use nice arrows
 endif
+
+" I like PDFs
+let g:Tex_DefaultTargetFormat='pdf'
 
 " Set C syntax highlighting for Arduino source files
 autocmd BufWinEnter *.ino set filetype=c
