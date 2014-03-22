@@ -44,18 +44,29 @@ filetype plugin indent on
 " Start NERDTree if no file was specified
 autocmd vimenter * if !argc() | NERDTree | endif
 
+" Toggle NERDTree on Leader-n
+map <Leader>n :NERDTreeToggle<CR>
+
 " Find shortcuts
-nmap <silent> <Leader>f :FufLine<CR>
+map <silent> <Leader>f :FufLine<CR>
 nmap <silent> <Leader>o :FufFile<CR>
 
 " Toggle taglist
-nmap <silent> <Leader>t :TlistToggle<CR>
+map <silent> <Leader>tt :TlistToggle<CR>
+
+" Open new tab on Leader-t
+map <Leader>t :tabnew<CR>
+
+" Easy tab switching
+nmap <silent> <Leader>t<Left> :tabp<CR>
+nmap <silent> <Leader>t<Right> :tabn<CR>
 
 " Easy window switching
-nmap <silent> <Leader><Up> :wincmd k<CR>
-nmap <silent> <Leader><Down> :wincmd j<CR>
-nmap <silent> <Leader><Left> :wincmd h<CR>
-nmap <silent> <Leader><Right> :wincmd l<CR>
+nmap <silent> <Leader>w<Up> :wincmd k<CR>
+nmap <silent> <Leader>w<Down> :wincmd j<CR>
+nmap <silent> <Leader>w<Left> :wincmd h<CR>
+nmap <silent> <Leader>w<Right> :wincmd l<CR>
+
 " I have a habit of not releasing shift fast enough
 command W :w
 command Q :q

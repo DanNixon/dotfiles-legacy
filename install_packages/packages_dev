@@ -17,3 +17,5 @@ kicad
 cmake
 subversion
 python-pip
+arp-scan
+gparted
