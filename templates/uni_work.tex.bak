@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt]{article}
+
+%Set for specific document
+\def\DOCTITLE{TITLE}
+\def\DOCAUTHOR{Dan Nixon (SNUMBER)}
+\def\DOCDATE{01/01/2014}
+
+%Set document attributes
+\title{\DOCTITLE}
+\author{\DOCAUTHOR}
+\date{\DOCDATE}
+
+\usepackage{fullpage}
+\usepackage{scrextend}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+%Setup headers and footers
+\pagestyle{fancy}
+\lhead{\DOCTITLE}
+\chead{}
+\rhead{\DOCDATE}
+\rfoot{\thepage}
+\cfoot{}
+\lfoot{\DOCAUTHOR}
+
+%Set header and footer sizes
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{15.2pt}
+\setlength{\headsep}{15.2pt}
+
+%Default paragraph spacing
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
+
+\begin{document}
+
+Put wrok here.
+
+\end{document}

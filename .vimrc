@@ -77,9 +77,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" Don't break Python indentation
-au FileType python set noexpandtab
-
 " Set options to restore from last session
 set viewoptions=cursor,folds,slash,unix
 
@@ -115,11 +112,7 @@ else
   let g:NERDTreeDirArrows=1 " Otherwise use nice arrows
 endif
 
-" I like PDFs
+" LaTeX config
 let g:Tex_DefaultTargetFormat='pdf'
-
-" Set C syntax highlighting for Arduino source files
-autocmd BufWinEnter *.ino set filetype=c
-
-" Add :Render command for SCAD files
-autocmd BufWinEnter *.scad command! Render execute "!openscad % &"
+set shellslash
+set grepprg=grep\ -nH\ $*
