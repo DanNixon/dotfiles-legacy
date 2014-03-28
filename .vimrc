@@ -116,3 +116,7 @@ endif
 let g:Tex_DefaultTargetFormat='pdf'
 set shellslash
 set grepprg=grep\ -nH\ $*
+
+" Manual spelling command
+command Spell setlocal spell spelllang=en_us
+command SpellOff setlocal spell spelllang=
