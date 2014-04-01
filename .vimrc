@@ -49,7 +49,7 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Find shortcuts
 map <silent> <Leader>f :FufLine<CR>
-nmap <silent> <Leader>o :FufFile<CR>
+map <silent> <Leader>o :FufFile<CR>
 
 " Toggle taglist
 map <silent> <Leader>tt :TlistToggle<CR>
