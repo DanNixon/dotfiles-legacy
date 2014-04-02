@@ -1,0 +1,18 @@
+[global_config]
+  title_receive_bg_color = "#004f87"
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
+  title_transmit_bg_color = "#7b0001"
+[keybindings]
+  split_horiz = <Primary><Shift>h
+  search = <Primary>f
+  split_vert = <Primary><Shift>s
+[profiles]
+  [[default]]
+  [[small]]
+    use_system_font = False
+    font = Monospace 8
+  [[infinte-scrollback]]
+    scroll_on_output = False
+    scrollback_infinite = True
+[layouts]
+[plugins]

@@ -1,8 +1,8 @@
 # Vim stuff
-.vim/bundle
-.vim/view
-.vim/swap
-.vim/.netrwhist
+vim/bundle
+vim/view
+vim/swap
+vim/.netrwhist
 
 # Fish stuff
 fishd.*
@@ -16,5 +16,5 @@ putty_serial_sessions/*
 !putty_serial_sessions/serial_*
 
 # Exclude all unused Skeinforge profiles
-.skeinforge/profiles/*
-!.skeinforge/profiles/extrusion/Makerspace_i2_ABS
+skeinforge/profiles/*
+!skeinforge/profiles/extrusion/Makerspace_i2_ABS
