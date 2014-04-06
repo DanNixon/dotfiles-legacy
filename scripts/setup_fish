@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd
+mkdir .config
+
+rm -r .config/fish
+cd .config
+ln -s ../dotfiles/fish/ fish
+
+chsh -s /usr/bin/fish
