@@ -13,12 +13,14 @@ chatnets = { FreeNode = { type = "IRC"; nick = "dannixon"; }; };
 
 channels = (
   { name = "#makerspace"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#gmusicapi"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#ubuntu"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "##linux"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#touhou"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#arduino"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#vim"; chatnet = "FreeNode"; autojoin = "yes"; }
+  { name = "#vim"; chatnet = "FreeNode"; },
+  { name = "#git"; chatnet = "FreeNode"; },
+  { name = "#python"; chatnet = "FreeNode"; },
+  { name = "#touhou"; chatnet = "FreeNode"; },
+  { name = "#gmusicapi"; chatnet = "FreeNode"; }
 );
 
 aliases = {
@@ -56,6 +58,7 @@ aliases = {
   SB = "scrollback";
   UMODE = "mode $N";
   WC = "window close";
+  CLOSE = "window close";
   WN = "window new hide";
   SV = "say Irssi $J ($V) - http://irssi.org/";
   GOTO = "sb goto";
@@ -188,9 +191,11 @@ settings = {
     real_name = "Dan Nixon";
     user_name = "dannixon";
     nick = "dannixon";
+    quit_message = "Leaving IRC for now...";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "murf"; autolog = "yes"; };
+  "irc/core" = { part_message = "Leaving this channel for now..."; };
 };
 
 logs = { };

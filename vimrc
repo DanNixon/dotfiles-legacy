@@ -10,7 +10,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-commentary'
-Bundle 'comments.vim'
 Bundle 'restore_view.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
@@ -43,6 +42,18 @@ filetype plugin indent on
 
 " Start NERDTree if no file was specified
 autocmd vimenter * if !argc() | NERDTree | endif
+
+" Toggle folding
+map <Leader>z zA
+
+" Commenting
+map <C-X> gcc
+vmap <C-X> gc
+
+" Copy/paste
+map <C-C> "+yy
+vmap <C-C> "+y
+map <C-V> "+p
 
 " Toggle NERDTree on Leader-n
 map <Leader>n :NERDTreeToggle<CR>
