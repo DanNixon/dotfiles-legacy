@@ -19,3 +19,6 @@ subversion
 python-pip
 arp-scan
 gparted
+clang
+libclang1
+libclang-dev

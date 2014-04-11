@@ -18,6 +18,8 @@ Bundle 'l9'
 Bundle 'FuzzyFinder'
 Bundle 'taglist.vim'
 Bundle 'Licenses'
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'ervandew/supertab'
 
 " Use mouse pointer
 set mouse=a
@@ -87,6 +89,16 @@ command Qa :qa
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Complete options (disable preview scratch window, limit popup items)
+set completeopt=menu,menuone,longest
+set pumheight=15
+
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType = "context"
+ 
+" Clang should not autocomplete
+let g:clang_complete_auto=0
 
 " Set options to restore from last session
 set viewoptions=cursor,folds,slash,unix
