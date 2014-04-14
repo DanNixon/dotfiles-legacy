@@ -8,7 +8,7 @@ alias ..='cd ..'
 # ls commands
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -l'
 
 # I'm not sure how many ways I really need to exit the terminal
 alias q="exit"
