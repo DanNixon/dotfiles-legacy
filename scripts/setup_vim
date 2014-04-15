@@ -2,6 +2,8 @@
 
 cd
 
+dotfiles/install_packages/install_packages -P dotfiles/install_packages/packages_vim
+
 rm .vimrc
 rm -r .vim
 
