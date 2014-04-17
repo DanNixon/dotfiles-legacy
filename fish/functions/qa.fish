@@ -1,3 +1,0 @@
-function qa
-	exit
-end

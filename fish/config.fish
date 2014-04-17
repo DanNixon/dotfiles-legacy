@@ -1,3 +1,5 @@
+. ~/dotfiles/shell/common_aliases
+
 # Set global varibles for fishd, allows colour scheme to be persisted with Git
 set -g fish_color_autosuggestion 555\x1e\x2d\x2dunderline
 set -g fish_color_command 005fd7\x1epurple
