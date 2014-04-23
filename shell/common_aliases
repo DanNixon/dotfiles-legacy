@@ -1,7 +1,7 @@
 # ls commands
-alias ll='ls -alF'
+alias l='ls -lFh'
+alias ll='ls -alFh'
 alias la='ls -A'
-alias l='ls -l'
 
 # General comands
 alias die="sudo shutdown -P now"

@@ -28,14 +28,13 @@ channels = (
 
 aliases = {
   I = "msg NickServ identify";
-  Q = "quit";
-  EXIT = "quit";
+  Q = "window close";
   J = "join";
   WJOIN = "join -window";
   WQUERY = "query -window";
+  P = "part";
   LEAVE = "part";
-  WC = "window close";
-  CLOSE = "window close";
+  C = "window close";
 };
 
 statusbar = {
