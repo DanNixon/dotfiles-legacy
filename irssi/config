@@ -24,6 +24,7 @@ channels = (
   { name = "#fish"; chatnet = "FreeNode"; }
   { name = "#opencv"; chatnet = "FreeNode"; },
   { name = "#ffmpeg"; chatnet = "FreeNode"; },
+  { name = "#reprap"; chatnet = "FreeNode"; },
 );
 
 aliases = {
