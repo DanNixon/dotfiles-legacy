@@ -143,3 +143,22 @@ set grepprg=grep\ -nH\ $*
 " Manual spelling command
 command Spell setlocal spell spelllang=en_us
 command SpellOff setlocal spell spelllang=
+
+" 80 char width warn
+highlight CharLim ctermbg=130 guibg=#592929
+highlight link CharLimMatch NONE
+match CharLimMatch /\%81v.\+/
+
+let s:showOverLength = 0
+
+fun ToggleShowOverLength()
+  if s:showOverLength
+    hi link CharLimMatch NONE
+    let s:showOverLength = 0
+  else
+    hi link CharLimMatch CharLim
+    let s:showOverLength = 1
+  endif
+endfun
+
+map <Leader>8 :call ToggleShowOverLength()<CR>

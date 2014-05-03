@@ -133,8 +133,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="465.69179625023071"
-         height="293.58828987662253"
+         width="4772.4773873620024"
+         height="4704.2990951826641"
          rx="0"
          ry="0" />
       <eventcontext
@@ -331,7 +331,7 @@
        gradientdrag="1"
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
-       style="fill:black;fill-opacity:1;stroke:none;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Sans;font-style:normal;font-weight:normal;font-size:144px;line-height:125%;letter-spacing:0px;word-spacing:0px"
        selcue="1" />
     <eventcontext
        id="nodes"
@@ -609,7 +609,7 @@
        default="org.ekips.output.dxf_outlines"
        append_extension="1"
        enable_preview="1"
-       path="/home/dan/Desktop"
+       path="/home/dan/CAD/Things/BarEasternBinder"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -670,8 +670,8 @@
        panel_wrap="0"
        x="0"
        y="0"
-       w="577"
-       h="352" />
+       w="1330"
+       h="512" />
     <group
        id="script" />
     <group
@@ -961,18 +961,18 @@
   </group>
   <group
      id="extensions"
-     org.ekips.filter.flatten.flatness="0.30000001192092896"
+     org.ekips.filter.flatten.flatness="2.0999999046325684"
      org.ekips.filter.flatten.__live_effect__="0"
      org.ekips.output.dxf_outlines.units="25.4/90"
      org.ekips.output.dxf_outlines.encoding="latin_1" />
   <group
      id="desktop"
-     style="fill:#008000;stroke:none">
+     style="fill:#ffff00;stroke:#000000;font-size:144px;-inkscape-font-specification:URW Chancery L Bold Italic;font-family:URW Chancery L;font-weight:bold;font-style:italic;font-stretch:normal;font-variant:normal">
     <group
-       width="640"
-       height="480"
-       x="0"
-       y="0"
+       width="513"
+       height="406"
+       x="397"
+       y="186"
        fullscreen="0"
        id="geometry"
        maximized="1" />
