@@ -1,7 +1,7 @@
 # ls commands
-alias l='ls -lFh'
-alias ll='ls -alFh'
-alias la='ls -A'
+alias l="ls -lFh"
+alias ll="ls -alFh"
+alias la="ls -A"
 
 # General comands
 alias die="sudo shutdown -P now"
@@ -17,8 +17,9 @@ alias gs="git status"
 alias gp="git push"
 
 # Directory commands
-alias ..='cd ..'
+alias ..="cd .."
 
-# Custom app launchers
-alias music='python ~/apps/PlayMusicCL.py'
-alias roku='python ~/apps/RokuRTerm.py'
+# Misc app stuff
+alias music="python ~/apps/PlayMusicCL.py"
+alias roku="python ~/apps/RokuRTerm.py"
+alias ytdl="youtube-dl -t"

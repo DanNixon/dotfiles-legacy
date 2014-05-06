@@ -30,6 +30,7 @@ channels = (
 aliases = {
   I = "msg NickServ identify";
   Q = "window close";
+  QA = "quit";
   J = "join";
   WJOIN = "join -window";
   WQUERY = "query -window";
