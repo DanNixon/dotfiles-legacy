@@ -28,6 +28,7 @@ set mouse=a
 map <Leader> <Plug>(easymotion-prefix)
 
 " PyLint config
+let g:syntastic_java_checkers = []
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_python_pylint_args = "--disable=W0312,C0111,C0301"
 
