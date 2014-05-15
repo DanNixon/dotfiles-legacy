@@ -1,7 +1,7 @@
-<TaskerData sr="" dvi="1" tv="4.2u3m">
+<TaskerData sr="" dvi="1" tv="4.3u4m">
 	<Profile sr="prof12" ve="2">
 		<cdate>1389704774725</cdate>
-		<edate>1389746400901</edate>
+		<edate>1397405671836</edate>
 		<flags>2</flags>
 		<id>12</id>
 		<mid0>13</mid0>
@@ -14,7 +14,7 @@
 			<prv>2</prv>
 			<rad>50.0</rad>
 		</Loc>
-		<State sr="con1">
+		<State sr="con1" ve="2">
 			<code>170</code>
 			<Str sr="arg0" ve="3">Makerspace</Str>
 			<Str sr="arg1" ve="3"/>
@@ -32,7 +32,7 @@
 		<mid0>10</mid0>
 		<mid1>6</mid1>
 		<nme>In Lecture</nme>
-		<State sr="con0">
+		<State sr="con0" ve="2">
 			<code>5</code>
 			<Str sr="arg0" ve="3"/>
 			<Str sr="arg1" ve="3"/>
@@ -40,11 +40,15 @@
 			<Int sr="arg3" val="1"/>
 			<Str sr="arg4" ve="3">Google:Uni Timetable</Str>
 		</State>
-		<State sr="con1">
+		<State sr="con1" ve="2">
 			<code>165</code>
-			<Str sr="arg0" ve="3">%LOCATION</Str>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">uni</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="2">
+					<lhs>%LOCATION</lhs>
+					<op>0</op>
+					<rhs>uni</rhs>
+				</Condition>
+			</ConditionList>
 		</State>
 	</Profile>
 	<Profile sr="prof17" ve="2">
@@ -55,18 +59,22 @@
 		<mid0>18</mid0>
 		<mid1>19</mid1>
 		<nme>Low Battery</nme>
-		<State sr="con0">
+		<State sr="con0" ve="2">
 			<code>165</code>
-			<Str sr="arg0" ve="3">%LOCATION</Str>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">home</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="2">
+					<lhs>%LOCATION</lhs>
+					<op>0</op>
+					<rhs>home</rhs>
+				</Condition>
+			</ConditionList>
 		</State>
-		<State sr="con1">
+		<State sr="con1" ve="2">
 			<code>140</code>
 			<Int sr="arg0" val="0"/>
 			<Int sr="arg1" val="40"/>
 		</State>
-		<State sr="con2">
+		<State sr="con2" ve="2">
 			<code>10</code>
 			<pin>true</pin>
 			<Int sr="arg0" val="0"/>
@@ -80,7 +88,7 @@
 		<mid0>3</mid0>
 		<mid1>11</mid1>
 		<nme>At Home Newcastle</nme>
-		<State sr="con0">
+		<State sr="con0" ve="2">
 			<code>160</code>
 			<Str sr="arg0" ve="3">DanNixon</Str>
 			<Str sr="arg1" ve="3"/>
@@ -94,11 +102,15 @@
 		<id>4</id>
 		<mid0>5</mid0>
 		<nme>Night</nme>
-		<State sr="con0">
+		<State sr="con0" ve="2">
 			<code>165</code>
-			<Str sr="arg0" ve="3">%LOCATION</Str>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">home</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="2">
+					<lhs>%LOCATION</lhs>
+					<op>0</op>
+					<rhs>home</rhs>
+				</Condition>
+			</ConditionList>
 		</State>
 		<Time sr="con1">
 			<fh>21</fh>
@@ -125,13 +137,13 @@
 	</Profile>
 	<Profile sr="prof9" ve="2">
 		<cdate>1390607121913</cdate>
-		<edate>1390607121913</edate>
+		<edate>1397405628690</edate>
 		<flags>2</flags>
 		<id>9</id>
 		<mid0>3</mid0>
 		<mid1>11</mid1>
 		<nme>At Home Cumbria</nme>
-		<State sr="con0">
+		<State sr="con0" ve="2">
 			<code>160</code>
 			<Str sr="arg0" ve="3">Nixon</Str>
 			<Str sr="arg1" ve="3"/>
@@ -153,11 +165,11 @@
 		<edate>1389745624890</edate>
 		<id>10</id>
 		<nme>Quiet Mode</nme>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>310</code>
 			<Int sr="arg0" val="1"/>
 		</Action>
-		<Action sr="act1" ve="3">
+		<Action sr="act1" ve="5">
 			<code>307</code>
 			<Int sr="arg0" val="0"/>
 			<Int sr="arg1" val="0"/>
@@ -169,12 +181,12 @@
 		<edate>1389705069715</edate>
 		<id>11</id>
 		<nme>Set Location Unknown</nme>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>549</code>
 			<Str sr="arg0" ve="3">%LOCATION</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
-		<Action sr="act1" ve="3">
+		<Action sr="act1" ve="5">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Normal Mode</Str>
 			<Int sr="arg1" val="0"/>
@@ -186,17 +198,17 @@
 	</Task>
 	<Task sr="task13">
 		<cdate>1389704793271</cdate>
-		<edate>1389746400901</edate>
+		<edate>1397405671836</edate>
 		<id>13</id>
 		<nme>Set Location Makerspace</nme>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%LOCATION</Str>
 			<Str sr="arg1" ve="3">makerspace</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act1" ve="3">
+		<Action sr="act1" ve="5">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Quiet Mode</Str>
 			<Int sr="arg1" val="0"/>
@@ -212,7 +224,7 @@
 		<id>18</id>
 		<nme>Battery Charge Alert</nme>
 		<pri>10</pri>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Charge Me!</Str>
 			<Str sr="arg1" ve="3">I've got less than half charge, why aren't you putting me on charge?</Str>
@@ -230,7 +242,7 @@
 		<id>19</id>
 		<nme>Clear Battery Charge Alert</nme>
 		<pri>10</pri>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>779</code>
 			<Str sr="arg0" ve="3">Charge Me!</Str>
 			<Int sr="arg1" val="0"/>
@@ -241,7 +253,7 @@
 		<edate>1389790583665</edate>
 		<id>22</id>
 		<nme>Mute Media</nme>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>307</code>
 			<Int sr="arg0" val="0"/>
 			<Int sr="arg1" val="0"/>
@@ -250,10 +262,10 @@
 	</Task>
 	<Task sr="task3">
 		<cdate>1389656977893</cdate>
-		<edate>1390607135786</edate>
+		<edate>1397405628690</edate>
 		<id>3</id>
 		<nme>Set At Home</nme>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%LOCATION</Str>
 			<Str sr="arg1" ve="3">home</Str>
@@ -267,17 +279,17 @@
 		<id>5</id>
 		<nme>Night Mode</nme>
 		<pri>10</pri>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>310</code>
 			<Int sr="arg0" val="2"/>
 		</Action>
-		<Action sr="act1" ve="3">
+		<Action sr="act1" ve="5">
 			<code>307</code>
 			<Int sr="arg0" val="0"/>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
 		</Action>
-		<Action sr="act2" ve="3">
+		<Action sr="act2" ve="5">
 			<code>822</code>
 			<Int sr="arg0" val="0"/>
 		</Action>
@@ -288,11 +300,11 @@
 		<id>6</id>
 		<nme>Normal Mode</nme>
 		<pri>10</pri>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>822</code>
 			<Int sr="arg0" val="1"/>
 		</Action>
-		<Action sr="act1" ve="3">
+		<Action sr="act1" ve="5">
 			<code>310</code>
 			<Int sr="arg0" val="0"/>
 		</Action>
@@ -302,21 +314,12 @@
 		<edate>1389746375957</edate>
 		<id>8</id>
 		<nme>Set At Uni</nme>
-		<Action sr="act0" ve="3">
+		<Action sr="act0" ve="5">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%LOCATION</Str>
 			<Str sr="arg1" ve="3">uni</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act1" ve="3">
-			<code>130</code>
-			<Str sr="arg0" ve="3">Quiet Mode</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="5"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-		</Action>
-	</Task>
-</TaskerData>
+		<Action sr="act1" ve="5">
+			<code>130
