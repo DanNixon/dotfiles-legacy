@@ -25,6 +25,7 @@ channels = (
   { name = "#opencv"; chatnet = "FreeNode"; },
   { name = "#ffmpeg"; chatnet = "FreeNode"; },
   { name = "#reprap"; chatnet = "FreeNode"; },
+  { name = "#cyanogenmod"; chatnet = "FreeNode"; },
 );
 
 aliases = {
