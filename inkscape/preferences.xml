@@ -606,7 +606,7 @@
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.ekips.output.dxf_outlines"
        append_extension="1"
        enable_preview="1"
        path="/home/dan/Desktop"
