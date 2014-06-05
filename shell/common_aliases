@@ -25,3 +25,4 @@ alias roku="python ~/apps/RokuRTerm.py"
 alias ytdl="youtube-dl -t"
 
 alias dbs="dropbox status"
+alias dev="l /dev/ | grep"
