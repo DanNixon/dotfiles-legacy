@@ -18,3 +18,5 @@
   br = branch
   tags = tag -l
   brs = branch -a
+  rad = add -u
+  unbugger = reset --hard HEAD
