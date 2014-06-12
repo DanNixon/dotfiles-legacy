@@ -331,7 +331,7 @@
        gradientdrag="1"
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
-       style="fill:black;fill-opacity:1;stroke:none;font-family:Sans;font-style:normal;font-weight:normal;font-size:144px;line-height:125%;letter-spacing:0px;word-spacing:0px"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:UnPilgi;font-style:normal;font-weight:normal;font-size:144px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:UnPilgi;font-stretch:normal;font-variant:normal"
        selcue="1" />
     <eventcontext
        id="nodes"
@@ -616,7 +616,7 @@
        default="org.ekips.output.dxf_outlines"
        append_extension="1"
        enable_preview="1"
-       path="/home/dan/Documents/CAD/BryanChristineWeddingThing" />
+       path="/home/dan/Desktop" />
     <group
        id="open"
        enable_preview="1"
@@ -670,8 +670,8 @@
        panel_wrap="0"
        x="0"
        y="0"
-       w="1348"
-       h="602" />
+       w="1360"
+       h="662" />
     <group
        id="script" />
     <group
@@ -967,7 +967,7 @@
      org.ekips.output.dxf_outlines.encoding="latin_1" />
   <group
      id="desktop"
-     style="fill:none;stroke:#000000;font-size:144px;-inkscape-font-specification:URW Chancery L Bold Italic;font-family:URW Chancery L;font-weight:bold;font-style:italic;font-stretch:normal;font-variant:normal">
+     style="fill:none;stroke:#000000;font-size:32px;-inkscape-font-specification:URW Chancery L Bold Italic;font-family:URW Chancery L;font-weight:bold;font-style:italic;font-stretch:normal;font-variant:normal">
     <group
        width="513"
        height="406"

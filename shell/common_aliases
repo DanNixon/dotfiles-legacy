@@ -20,6 +20,10 @@ alias gp="git push"
 alias ..="cd .."
 
 # Misc app stuff
-alias music="python ~/apps/PlayMusicCL.py"
+alias music="playmusiccl"
 alias roku="python ~/apps/RokuRTerm.py"
 alias ytdl="youtube-dl -t"
+
+alias dbs="dropbox status"
+alias dev="l /dev/ | grep"
+alias stripexif="exiftool -all= "
