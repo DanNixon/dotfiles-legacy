@@ -6,6 +6,7 @@ alias la="ls -A"
 # General comands
 alias die="sudo shutdown -P now"
 alias df="df -h"
+alias df="du -h"
 
 # I'm not sure how many ways I really need to exit the terminal
 alias q="exit"
