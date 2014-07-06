@@ -9,7 +9,7 @@ defscrollback 5000
 
 hardstatus on
 hardstatus alwayslastline
-hardstatus string "%{= kG} Screen #%n %t in %S%?%=%Y/%m/%d %c:%s  "
+hardstatus string "%{= kG} %S (#%n)%?%=%Y/%m/%d %c:%s  "
 
 deflog on
 logfile $HOME/screenlogs/screenlog.%t

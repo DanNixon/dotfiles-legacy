@@ -40,6 +40,10 @@ aliases = {
   WL = "window list";
   WC = "window close";
   W = "window";
+  NL = "nicklist screen";
+  NONL = "nicklist off";
+  NLD = "nicklist scroll 10";
+  NLU = "nicklist scroll -10";
 };
 
 statusbar = {
@@ -152,18 +156,10 @@ statusbar = {
       };
     };
 
-
     awl_0 = {
       items = {
         barstart = { priority = "100"; };
         awl_0 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
         barend = { priority = "100"; alignment = "right"; };
       };
     };
@@ -180,7 +176,14 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "murf"; autolog = "yes"; };
   "irc/core" = { part_message = "Leaving this channel for now..."; };
-  "perl/core/scripts" = { awl_shared_sbar = "OFF"; awl_viewer = "no"; };
+  "perl/core/scripts" = {
+    awl_shared_sbar = "OFF";
+    awl_viewer = "no";
+    awl_mouse = "yes";
+  };
 };
 
 logs = { };
+keyboard = ( 
+  { key = "meta-[M"; id = "command"; data = "mouse_xterm"; }
+);

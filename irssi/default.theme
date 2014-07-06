@@ -1,6 +1,3 @@
-# Murf's irssi theme
-# 20051106
-
 # When testing changes, the easiest way to reload the theme is with /RELOAD.
 # This reloads the configuration file too, so if you did any changes remember
 # to /SAVE it first. Remember also that /SAVE overwrites the theme file with
@@ -66,11 +63,10 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%B-%W!%B-%n ";
+  line_start = "%B-%n!%B-%n ";
 
   # timestamp styling, nothing by default
-  # Dark-grey, so less annoying
-  timestamp = "%K$*%n";
+  timestamp = "$*";
 
   # any kind of text that needs hilighting, default is to bold
   hilight = "%_$*%_";
@@ -142,7 +138,7 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1-}";
-  ownnick = "%w$*%n";
+  ownnick = "%_$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1-}";
@@ -167,7 +163,7 @@ abstracts = {
 
   # own private message in query
   ownprivmsgnick = "{msgnick  $*}";
-  ownprivnick = "%W$*%n";
+  ownprivnick = "%_$*%n";
 
   # private message in query
   privmsgnick = "{msgnick  %R$*%n}";
@@ -177,19 +173,19 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = "%W * $*%n";
+  action_core = "%_ * $*%n";
 
   # generic one that's used by most actions
   action = "{action_core $*} ";
 
   # own action, both private/public
-  ownaction = "{action %W$*%n}";
+  ownaction = "{action $*}";
 
   # own action with target, both private/public
   ownaction_target = "{action_core $0}%K:%c$1%n ";
 
   # private action sent by others
-  pvtaction = "%W (*) $*%n ";
+  pvtaction = "%_ (*) $*%n ";
   pvtaction_query = "{action $*}";
 
   # public action sent by others
@@ -205,7 +201,7 @@ abstracts = {
 
   # notices
   ownnotice = "[%r$0%K(%R$1-%K)]%n ";
-  notice = "%K-%M$*%K-%n/";
+  notice = "%K-%M$*%K-%n ";
   pubnotice_channel = "%K:%m$*";
   pvtnotice_host = "%K(%m$*%K)";
   servernotice = "%g!$*%n ";
@@ -215,9 +211,9 @@ abstracts = {
   ctcp = "%g$*%n";
 
   # wallops
-  wallop = "%W$*%n: ";
+  wallop = "%_$*%n: ";
   wallop_nick = "%n$*";
-  wallop_action = "%W * $*%n ";
+  wallop_action = "%_ * $*%n ";
 
   # netsplits
   netsplit = "%R$*%n";
@@ -239,14 +235,14 @@ abstracts = {
   # DCC chat, own msg/action
   dccownmsg = "[%r$0%K($1-%K)%n] ";
   dccownnick = "%R$*%n";
-  dccownquerynick = "%W$*%n";
+  dccownquerynick = "%_$*%n";
   dccownaction = "{action $*}";
   dccownaction_target = "{action_core $0}%K:%c$1%n ";
 
   # DCC chat, others
   dccmsg = "[%G$1-%K(%g$0%K)%n] ";
   dccquerynick = "%G$*%n";
-  dccaction = "%W (*dcc*) $*%n %|";
+  dccaction = "%_ (*dcc*) $*%n %|";
 
   ##
   ## statusbar
@@ -254,16 +250,16 @@ abstracts = {
 
   # default background for all statusbars. You can also give
   # the default foreground color for statusbar items.
-  sb_background = "%m%0";
+  sb_background = "%4%w";
 
   # default backround for "default" statusbar group
-  sb_default_bg = "%0";
+  #sb_default_bg = "%4";
   # background for prompt / input line
-  sb_prompt_bg = "%Y";
+  sb_prompt_bg = "%n";
   # background for info statusbar
   sb_info_bg = "%8";
-  # background for topicbar (same default) (AND foreground, mind the BG color and the fg color)
-  sb_topic_bg = "%m%0";
+  # background for topicbar (same default)
+  #sb_topic_bg = "%4";
 
   # text at the beginning of statusbars. sb-item already puts
   # space there,so we don't use anything by default.
@@ -275,39 +271,24 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "$*# ";
+  prompt = "[$*] ";
 
-  #sb = "%c[%n$*%c]%n";
-  #Statusbar, no space at beginning, seperatorspaces at end of each item
-  sb = "%9%B$* %9%n";
+  sb = " %c[%n$*%c]%n";
   sbmode = "(%c+%n$*)";
-  sbaway = "(%GAWAY%n)";
+  sbaway = " (%GzZzZ%n)";
   sbservertag = ":$0 (change with ^X)";
+  sbnickmode = "$0";
 
   # activity in statusbar
 
   # ',' separator
-  sb_act_sep = "'";
+  sb_act_sep = "%c$*";
   # normal text
-  sb_act_text = "%K$*";
+  sb_act_text = "%c$*";
   # public message
-  sb_act_msg = "%w$*";
+  sb_act_msg = "%W$*";
   # hilight
-  sb_act_hilight = "%Y$*";
+  sb_act_hilight = "%M$*";
   # hilight with specified color, $0 = color, $1 = text
   sb_act_hilight_color = "$0$1-%n";
-};
-formats = {
-  "fe-common/core" = {
-    pubmsg = "{pubmsgnick $2 {pubnick \00310$0}}$1";
-    your_nick_changed = "You're now known as {nick $1}";
-  };
-  "Irssi::Script::adv_windowlist" = {
-    awl_display_nokey = "$Q.$H$C%n$S";
-    awl_display_key = "$Q.$H$C%n$S";
-    awl_display_nokey_visible = "$Q.%2$H$C%n$S";
-    awl_display_key_visible = "$Q.%2$H$C%n$S";
-    awl_display_key_active = "$Q.%7%k$H$C%n$S";
-    awl_display_header = "|";
-  };
 };
