@@ -289,10 +289,13 @@ abstracts = {
   # ',' separator
   sb_act_sep = "'";
   # normal text
-  sb_act_text = "%K$*";
+  # sb_act_text = "%K$*";
+  sb_act_text = "%C$*";
   # public message
-  sb_act_msg = "%w$*";
+  # sb_act_msg = "%w$*";
+  sb_act_msg = "%G$*";
   # hilight
+  # sb_act_hilight = "%Y$*";
   sb_act_hilight = "%Y$*";
   # hilight with specified color, $0 = color, $1 = text
   sb_act_hilight_color = "$0$1-%n";
