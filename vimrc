@@ -145,6 +145,9 @@ set grepprg=grep\ -nH\ $*
 command Spell setlocal spell spelllang=en_us
 command SpellOff setlocal spell spelllang=
 
+map <Leader>ss :Spell<CR>
+map <Leader>s :SpellOff<CR>
+
 " 80 char width warn
 highlight CharLim ctermbg=130 guibg=#592929
 highlight link CharLimMatch NONE
