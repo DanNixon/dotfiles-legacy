@@ -46,46 +46,6 @@ filetype plugin indent on
 " Start NERDTree if no file was specified
 autocmd vimenter * if !argc() | NERDTree | endif
 
-" Toggle folding
-map <Leader>z zA
-
-" Commenting
-map <C-X> gcc
-vmap <C-X> gc
-
-" Copy/paste
-map <C-C> "+yy
-vmap <C-C> "+y
-map <C-V> "+p
-
-" Toggle NERDTree on Leader-n
-map <Leader>n :NERDTreeToggle<CR>
-
-" Find shortcuts
-map <silent> <Leader>f :FufLine<CR>
-map <silent> <Leader>o :FufFile<CR>
-
-" Toggle taglist
-map <silent> <Leader>tt :TlistToggle<CR>
-
-" Open new tab on Leader-t
-map <Leader>t :tabnew<CR>
-
-" Easy tab switching
-nmap <silent> <Leader>t<Left> :tabp<CR>
-nmap <silent> <Leader>t<Right> :tabn<CR>
-
-" Easy window switching
-nmap <silent> <Leader>w<Up> :wincmd k<CR>
-nmap <silent> <Leader>w<Down> :wincmd j<CR>
-nmap <silent> <Leader>w<Left> :wincmd h<CR>
-nmap <silent> <Leader>w<Right> :wincmd l<CR>
-
-" I have a habit of not releasing shift fast enough
-command W :w
-command Q :q
-command Qa :qa
-
 " Set tab width to 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -145,10 +105,10 @@ set grepprg=grep\ -nH\ $*
 command Spell setlocal spell spelllang=en_us
 command SpellOff setlocal spell spelllang=
 
-map <Leader>ss :Spell<CR>
-map <Leader>s :SpellOff<CR>
+"
+" 80 CHAR WIDTH WARN
+"
 
-" 80 char width warn
 highlight CharLim ctermbg=130 guibg=#592929
 highlight link CharLimMatch NONE
 match CharLimMatch /\%81v.\+/
@@ -165,4 +125,76 @@ fun ToggleShowOverLength()
   endif
 endfun
 
+"
+" DMENU FIND FUNCTIONS
+" Modified from: http://leafo.net/posts/using_dmenu_to_open_quickly.html
+"
+
+" Strip the newline from the end of a string
+function! Chomp(str)
+    return substitute(a:str, '\n$', '', '')
+  endfunction
+
+" Find a file and pass it to cmd
+function! DmenuOpen(findCmd, cmd)
+  let fname = Chomp(system(a:findCmd . " | dmenu -i -l 20 -p " . a:cmd))
+  if empty(fname)
+    return
+  endif
+    execute a:cmd . " " . fname
+endfunction
+
+"
+" KEY MAPPINGS
+"
+
+" 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
+
+" Manual spelling toggle
+map <Leader>ss :Spell<CR>
+map <Leader>s :SpellOff<CR>
+
+" Find shortcuts
+" FuzzyFind
+map <silent> <Leader>f :FufLine<CR>
+map <silent> <Leader>o :FufCoverageFile<CR>
+" dmenu
+map <silent> <Leader>ff :call DmenuOpen("git ls-files", "e")<CR>
+map <silent> <Leader>ft :call DmenuOpen("git ls-files", "tabe")<CR>
+
+" Toggle folding
+map <Leader>z zA
+
+" Commenting
+map <C-X> gcc
+vmap <C-X> gc
+
+" Copy/paste
+map <C-C> "+yy
+vmap <C-C> "+y
+map <C-V> "+p
+
+" Toggle NERDTree on Leader-n
+map <Leader>n :NERDTreeToggle<CR>
+
+" Toggle taglist
+map <silent> <Leader>tt :TlistToggle<CR>
+
+" Open new tab on Leader-t
+map <Leader>t :tabnew<CR>
+
+" Easy tab switching
+nmap <silent> <Leader>t<Left> :tabp<CR>
+nmap <silent> <Leader>t<Right> :tabn<CR>
+
+" Easy window switching
+nmap <silent> <Leader>w<Up> :wincmd k<CR>
+nmap <silent> <Leader>w<Down> :wincmd j<CR>
+nmap <silent> <Leader>w<Left> :wincmd h<CR>
+nmap <silent> <Leader>w<Right> :wincmd l<CR>
+
+" I have a habit of not releasing shift fast enough
+command W :w
+command Q :q
+command Qa :qa
