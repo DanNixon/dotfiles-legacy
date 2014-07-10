@@ -37,8 +37,8 @@
 "	   | Highlight group                |  CTFG |  CTBG |    CTAttributes | || |   GUIFG |    GUIBG |   GUIAttributes |
 "	   |--------------------------------|-------|-------|-----------------| || |---------|----------|-----------------|
 call s:ColorDictParser({
-	\   'Normal'                      : [    231,     16,               '',      'ffffff',  '000000',               '']
-	\ , 'Visual'                      : [    240,    253,               '',      '585858',  'dadada',               '']
+	\   'Normal'                      : [    252,    232,               '',      'd0d0d0',  '080808',               '']
+	\ , 'Visual'                      : [    240,    252,               '',      '585858',  'd0d0d0',               '']
 	\
 	\ , 'Cursor'                      : [     '',     '',               '',      'ffffff',  'dd4010',               '']
 	\ , 'lCursor'                     : [     '',     '',               '',      'ffffff',  '89b6e2',               '']
@@ -52,7 +52,7 @@ call s:ColorDictParser({
 	\ , 'SignColumn'                  : [    231,    233,           'bold',      'ffffff',  '121212',           'bold']
 	\ , 'ColorColumn'                 : [      '',   233,               '',            '',  '262626',               '']
 	\
-	\ , 'StatusLine'                  : [    231,    236,           'bold',      'ffffff',  '303030',           'bold']
+	\ , 'StatusLine'                  : [    253,    236,           'bold',      'dadada',  '303030',           'bold']
 	\ , 'StatusLineNC'                : [    244,    232,               '',      '808080',  '080808',               '']
 	\
 	\ , 'LineNr'                      : [    243,    235,               '',      '767676',  '262626',               '']
