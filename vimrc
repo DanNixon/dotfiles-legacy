@@ -165,6 +165,7 @@ map <silent> <Leader>ft :call DmenuOpen("git ls-files", "tabe")<CR>
 
 " Toggle folding
 map <Leader>z zA
+map <Leader>u zR
 
 " Commenting
 map <C-X> gcc
