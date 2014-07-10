@@ -4,6 +4,7 @@ set encoding=utf-8
 
 set shell=bash
 
+let g:vundle_default_git_proto='ssh'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
