@@ -17,6 +17,7 @@
   update = pull
   br = branch
   tags = tag -l
-  brs = branch -a
+  brs = branch --list
   rad = add -u
   unbugger = reset --hard HEAD
+  stl = stash list
