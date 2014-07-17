@@ -196,6 +196,13 @@ nmap <silent> <Leader>w<Down> :wincmd j<CR>
 nmap <silent> <Leader>w<Left> :wincmd h<CR>
 nmap <silent> <Leader>w<Right> :wincmd l<CR>
 
+" Easy indent/unindent
+vnoremap < <gv
+vnoremap > >gv
+
+map <silent> <Leader>, <<
+map <silent> <Leader>. >>
+
 " I have a habit of not releasing shift fast enough
 command W :w
 command Q :q
