@@ -4,7 +4,8 @@ set encoding=utf-8
 
 set shell=bash
 
-let g:vundle_default_git_proto='ssh'
+" Reenable thsi when my PR eventually gets merged
+" let g:vundle_default_git_proto='ssh'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -21,6 +22,7 @@ Bundle 'taglist.vim'
 Bundle 'Licenses'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'ervandew/supertab'
+Bundle 'jnwhiteh/vim-golang'
 
 " Use mouse pointer
 set mouse=a

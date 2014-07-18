@@ -24,7 +24,6 @@ channels = (
   { name = "#arduino"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#vim"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#git"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#python"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#reprap"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#fish"; chatnet = "FreeNode"; autojoin = "yes"; },
   { name = "#cyanogenmod"; chatnet = "FreeNode"; autojoin = "yes"; },
