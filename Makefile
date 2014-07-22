@@ -1,8 +1,8 @@
 SHELL=/bin/bash
 
-all: vim bash_aliases git irssi terminator putty screen lynx skeinforge inkscape
+all: vim bash_aliases git irssi terminator putty screen lynx skeinforge inkscape i3
 
-clean: clean_vim_links clean_fish clean_bash_aliases clean_git clean_irssi clean_terminator clean_putty clean_screen clean_lynx clean_skeinforge clean_inkscape
+clean: clean_vim_links clean_fish clean_bash_aliases clean_git clean_irssi clean_terminator clean_putty clean_screen clean_lynx clean_skeinforge clean_inkscape clean_i3
 
 #vim
 vim: vim_links
@@ -88,3 +88,12 @@ inkscape:
 
 clean_inkscape:
 	rm -r ~/.config/inkscape
+
+#i3
+i3:
+	ln -s ~/dotfiles/i3/i3/ ~/.i3
+	ln -s ~/dotfiles/i3/i3status.conf ~/.i3status.conf
+
+clean_i3:
+	rm -r ~/.i3
+	rm ~/.i3status.conf

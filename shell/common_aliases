@@ -2,15 +2,13 @@
 alias l="ls -lFh"
 alias ll="ls -alFh"
 alias la="ls -A"
+alias ldev="l /dev/ | grep"
 
 # General comands
 alias die="sudo shutdown -P now"
 alias df="df -h"
 alias du="du -h"
-
-# I'm not sure how many ways I really need to exit the terminal
 alias q="exit"
-alias qa="exit"
 
 # Git commands
 alias g="git"
@@ -21,14 +19,14 @@ alias gp="git push"
 alias ..="cd .."
 
 # Misc app stuff
-alias music="playmusiccl"
 alias roku="python ~/apps/RokuRTerm.py"
 alias ytdl="youtube-dl -t"
-
 alias dbs="dropbox status"
-alias dev="l /dev/ | grep"
 alias stripexif="exiftool -all= "
 alias calc="bc -lq"
+
+# Apps used with screen
+alias music="screen -dR PlayMusicCL playmusiccl"
 alias irc="screen -dR irssi irssi"
 alias s="screen -dR"
 alias screens="screen -ls"
