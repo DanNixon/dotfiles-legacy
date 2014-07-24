@@ -1,88 +1,87 @@
-# i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+## i3 config file (v4)
+##
+## Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# application launchers
-bindsym $mod+c exec google-chrome
-
-# set background image
+## Set background image
 exec --no-startup-id feh --bg-scale ~/background_image
 
-# colours
+## Use horizontal two finger scrolling
+exec --no-startup-id synclient HorizTwoFingerScroll=1
+
+## Colours
 client.focused          #6699AA #6699AA #333333 #FF99AA
 client.focused_inactive #555555 #555555 #888888 #FF5555
 client.unfocused        #333333 #222222 #888888 #FF3333
 client.urgent           #900000 #900000 #CCCCCC #900000
 
-# use Super_L as mod key
+## Use Super_L as mod key
 set $mod Mod4
 
-# font for window titles. ISO 10646 = Unicode
+## Font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+## Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-
-# kill focused window
+## Kill focused window
 bindsym $mod+Shift+Q kill
 
-# start dmenu (a program launcher)
+## Start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-# change focus
+## Change focus
 bindsym $mod+h focus left
 bindsym $mod+i focus down
 bindsym $mod+j focus up
 bindsym $mod+k focus right
 
-# alternatively, you can use the cursor keys:
+## Arrow key change focus bindings
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
+## Move focused window
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+I move down
 bindsym $mod+Shift+J move up
 bindsym $mod+Shift+K move right
 
-# alternatively, you can use the cursor keys:
+## Arrow keysmove window bindings
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+## Split in horizontal orientation
 bindsym $mod+b split h
 
-# split in vertical orientation
+## Split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
+## Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
-# change container layout (stacked, tabbed, default)
+## Change container layout (stacked, tabbed, default)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
-# toggle tiling / floating
+## Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+## Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+## Focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindcode $mod+d focus child
+## Focus the child container
+bindcode $mod+d focus child
 
 # switch to workspace
+bindsym $mod+comma workspace prev
+bindsym $mod+period workspace next
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -93,8 +92,9 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+bindsym $mod+minus scratchpad show
 
-# move focused container to workspace
+## Move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1
 bindsym $mod+Shift+quotedbl move workspace 2
 bindsym $mod+Shift+sterling move workspace 3
@@ -105,21 +105,22 @@ bindsym $mod+Shift+ampersand move workspace 7
 bindsym $mod+Shift+asterisk move workspace 8
 bindsym $mod+Shift+parenleft move workspace 9
 bindsym $mod+Shift+parenright move workspace 10
+bindsym $mod+Shift+minus move scratchpad
 
-# reload the configuration file
+## Reload the configuration file
 bindsym $mod+Shift+C reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+## Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
-# exit i3 (logs you out of your X session)
+## Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
 
-# resize window (you can also use the mouse for that)
+## Resize window (you can also use the mouse for that)
 mode "resize" {
-  # These bindings trigger as soon as you enter the resize mode
+  ## These bindings trigger as soon as you enter the resize mode
 
-  # They resize the border in the direction you pressed, e.g.
-  # when pressing left, the window is resized so that it has
-  # more space on its left
+  ## They resize the border in the direction you pressed, e.g.
+  ## when pressing left, the window is resized so that it has
+  ## more space on its left
 
   bindsym h resize shrink left 10 px or 10 ppt
   bindsym Shift+H resize grow   left 10 px or 10 ppt
@@ -133,7 +134,7 @@ mode "resize" {
   bindsym l resize shrink right 10 px or 10 ppt
   bindsym Shift+L resize grow   right 10 px or 10 ppt
 
-  # same bindings, but for the arrow keys
+  ## Arrow key bindings
   bindsym Left resize shrink left 10 px or 10 ppt
   bindsym Shift+Left resize grow   left 10 px or 10 ppt
 
@@ -146,7 +147,7 @@ mode "resize" {
   bindsym Right resize shrink right 10 px or 10 ppt
   bindsym Shift+Right resize grow   right 10 px or 10 ppt
 
-  # back to normal: Enter or Escape
+  ## Enter or Escape to go back to normal
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
@@ -166,6 +167,12 @@ bar {
   status_command i3status
 }
 
+## Audio controls
+## TODO: Need better controls for this
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2dB+ unmute & killall -SIGUSR1 i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2dB- unmute & killall -SIGUSR1 i3status
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Speaker toggle & amixer -q set Headphone toggle & killall -SIGUSR1 i3status
+
+## Application launchers
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+c exec google-chrome
