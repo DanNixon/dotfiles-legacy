@@ -3,7 +3,10 @@
 ## Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 ## Set background image
-exec --no-startup-id feh --bg-scale ~/background_image
+exec --no-startup-id feh --bg-fill ~/background_image
+
+## Start dropbox
+exec --no-startup-id dropbox start
 
 ## Use horizontal two finger scrolling
 exec --no-startup-id synclient HorizTwoFingerScroll=1

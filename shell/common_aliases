@@ -6,9 +6,13 @@ alias ldev="l /dev/ | grep"
 
 # General comands
 alias die="sudo shutdown -P now"
+alias rb="sudo shutdown -r now"
+
 alias df="df -h"
 alias du="du -h"
+
 alias q="exit"
+alias qa="exit"
 
 # Git commands
 alias g="git"
