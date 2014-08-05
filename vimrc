@@ -23,9 +23,13 @@ Bundle 'Licenses'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'ervandew/supertab'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'wikitopian/hardmode'
 
-" Use mouse pointer
-set mouse=a
+" Use mouse
+" set mouse=a
+
+" Hardmode config
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Use single <Leader> for easymotion
 map <Leader> <Plug>(easymotion-prefix)
@@ -86,6 +90,7 @@ set nolbr
 set foldcolumn=2
 set cursorline
 set number
+set relativenumber
 
 " Don't overcrowd taglist
 let g:Tlist_Show_One_File=1
