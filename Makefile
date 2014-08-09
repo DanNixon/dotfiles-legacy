@@ -91,9 +91,15 @@ clean_inkscape:
 
 #i3
 i3:
-	ln -s ~/dotfiles/i3/i3/ ~/.i3
+	mkdir -p ~/.i3
+	cd i3/i3; \
+		./generate_config
 	ln -s ~/dotfiles/i3/i3status.conf ~/.i3status.conf
+	i3-msg reload
 
 clean_i3:
 	rm -r ~/.i3
 	rm ~/.i3status.conf
+
+refresh_i3: clean_i3 i3
+	i3-msg restart
