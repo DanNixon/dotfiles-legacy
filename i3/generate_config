@@ -1,0 +1,19 @@
+#!/bin/sh
+
+I3_CONFIG=~/.i3/config
+I3_SBAR_CONFIG=~/.i3status.conf
+HOSTNAME=$(cat /etc/hostname)
+
+# Main config
+echo "## COMMON CONFIG\n" > $I3_CONFIG
+cat i3/common_config >> $I3_CONFIG
+
+echo "\n\n## SYSTEM SPECIFIC CONFIG\n" >> $I3_CONFIG
+cat i3/system_configs/$HOSTNAME >> $I3_CONFIG
+
+# Status bar config
+echo "## COMMON CONFIG\n" > $I3_SBAR_CONFIG
+cat i3status/common_config >> $I3_SBAR_CONFIG
+
+echo "\n\n## SYSTEM SPECIFIC BAR ORDERING\n" >> $I3_SBAR_CONFIG
+cat i3status/system_orders/$HOSTNAME >> $I3_SBAR_CONFIG
