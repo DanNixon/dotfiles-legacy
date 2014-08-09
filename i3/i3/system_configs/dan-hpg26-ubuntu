@@ -1,3 +1,6 @@
+## Start dropbox
+exec --no-startup-id dropbox start
+
 ## Use horizontal two finger scrolling
 exec --no-startup-id synclient HorizTwoFingerScroll=1
 
