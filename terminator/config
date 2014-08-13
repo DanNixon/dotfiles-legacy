@@ -8,11 +8,21 @@
   split_vert = <Primary><Shift>s
 [profiles]
   [[default]]
+    background_image = None
   [[small]]
     use_system_font = False
     font = Monospace 8
+    background_image = None
   [[infinte-scrollback]]
+    background_image = None
     scroll_on_output = False
     scrollback_infinite = True
 [layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
 [plugins]

@@ -31,9 +31,6 @@ Bundle 'wikitopian/hardmode'
 " Hardmode config
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
-" Use single <Leader> for easymotion
-map <Leader> <Plug>(easymotion-prefix)
-
 " PyLint config
 let g:syntastic_java_checkers = []
 let g:syntastic_python_checkers = ['pylint']
@@ -51,7 +48,7 @@ syntax on
 filetype plugin indent on
 
 " Start NERDTree if no file was specified
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
 
 " Set tab width to 2 spaces
 set tabstop=2
