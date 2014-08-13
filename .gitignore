@@ -19,3 +19,6 @@ putty_serial_sessions/*
 # Exclude all unused Skeinforge profiles
 skeinforge/profiles/*
 !skeinforge/profiles/extrusion/Makerspace_i2_ABS
+
+# Compiled Python
+*.pyc
