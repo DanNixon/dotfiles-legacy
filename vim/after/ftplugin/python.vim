@@ -5,3 +5,7 @@ set shiftwidth=4
 
 " Add Run command
 command! Run execute "!python %"
+
+" Reformat
+command! SpaceFormat :%s/	/    /g
+

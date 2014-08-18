@@ -1,0 +1,7 @@
+## Set UK keymap
+exec --no-startup-id xrandr --output DisplayPort-0 --rotate left --right-of DVI-0
+# exec --no-startup-id setxkbmap -option grp:alt_shift_toggle "gb, us"
+
+## Workspace moving (work desktop PC)
+bindsym $mod+Shift+P move workspace to output DisplayPort-0
+bindsym $mod+Shift+O move workspace to output DVI-0

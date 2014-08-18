@@ -31,10 +31,18 @@ Bundle 'wikitopian/hardmode'
 " Hardmode config
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
-" PyLint config
+" Syntastic config
+let g:syntastic_mode_map = { 'mode': 'passive',     
+                          \ 'active_filetypes': [],     
+                          \ 'passive_filetypes': [] } 
+let g:syntastic_auto_loc_list=1     
+let g:syntastic_aggregate_errors = 1
+
 let g:syntastic_java_checkers = []
-let g:syntastic_python_checkers = ['pylint']
+
+let g:syntastic_python_checkers = ['pep8', 'pylint']
 let g:syntastic_python_pylint_args = "--disable=W0312,C0111,C0301"
+let g:syntastic_python_pep8_args = "--ignore=E501"
 
 " easymotion matches uppercase using lowercase
 let g:EasyMotion_smartcase = 1
@@ -153,8 +161,14 @@ endfunction
 " KEY MAPPINGS
 "
 
+" Remove trailing whitespace
+command! RemTrailWhilespace :%s/\s\+$//
+
 " 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
+
+" Syntax checking
+nnoremap <silent> <F6> :SyntasticCheck<CR>
 
 " Manual spelling toggle
 map <Leader>ss :Spell<CR>
