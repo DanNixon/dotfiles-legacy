@@ -161,7 +161,7 @@ bar {
 }
 
 ## Lock shortcut
-bindsym $mod+Shift+L exec i3lock -d -c 0EEADF
+bindsym $mod+Shift+L exec i3lock -d -c 182040
 
 ## Application launchers
 bindsym $mod+Return exec i3-sensible-terminal
