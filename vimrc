@@ -24,6 +24,7 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'ervandew/supertab'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'wikitopian/hardmode'
+Bundle 'openscad.vim'
 
 " Use mouse
 " set mouse=a
