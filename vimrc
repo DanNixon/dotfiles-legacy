@@ -18,7 +18,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 Bundle 'l9'
 Bundle 'FuzzyFinder'
-Bundle 'taglist.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'Licenses'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'ervandew/supertab'
@@ -27,10 +27,17 @@ Bundle 'wikitopian/hardmode'
 Bundle 'openscad.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
+Bundle 'majutsushi/tagbar'
+
+" Use Space as Leader
+let mapleader = " "
 
 " Airline config
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'bubblegum'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 set laststatus=2
 set timeoutlen=250
@@ -38,8 +45,9 @@ set timeoutlen=250
 " Use mouse
 " set mouse=a
 
-" Hardmode config
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+" Tagbar config
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
 
 " Syntastic config
 let g:syntastic_mode_map = { 'mode': 'passive',
@@ -179,18 +187,18 @@ map <Leader>8 :call ToggleShowOverLength()<CR>
 
 " Syntax checking
 nnoremap <silent> <F6> :SyntasticCheck<CR>
+map <Leader>sc :SyntasticCheck<CR>
+map <Leader>sr :SyntasticReset<CR>
 
 " Manual spelling toggle
 map <Leader>ss :Spell<CR>
 map <Leader>s :SpellOff<CR>
 
 " Find shortcuts
-" FuzzyFind
-map <silent> <Leader>f :FufLine<CR>
-map <silent> <Leader>o :FufCoverageFile<CR>
-" dmenu
-map <silent> <Leader>ff :call DmenuOpen("git ls-files", "e")<CR>
-map <silent> <Leader>ft :call DmenuOpen("git ls-files", "tabe")<CR>
+map <silent> <Leader>l :FufLine<CR>
+map <silent> <Leader>f :CtrlP<CR>
+" map <silent> <Leader>ff :call DmenuOpen("git ls-files", "e")<CR>
+" map <silent> <Leader>ft :call DmenuOpen("git ls-files", "tabe")<CR>
 
 " Toggle folding
 map <Leader>z zA
@@ -208,21 +216,24 @@ map <C-V> "+p
 " Toggle NERDTree on Leader-n
 map <Leader>n :NERDTreeToggle<CR>
 
-" Toggle taglist
-map <silent> <Leader>tt :TlistToggle<CR>
+" Toggle tagbar
+map <Leader>t :TagbarToggle<CR>
 
-" Open new tab on Leader-t
-map <Leader>t :tabnew<CR>
+" Open new tab
+map <Leader>tn :tabnew<CR>
 
 " Easy tab switching
-nmap <silent> <Leader>t<Left> :tabp<CR>
-nmap <silent> <Leader>t<Right> :tabn<CR>
+nmap <silent> <Leader>th :tabp<CR>
+nmap <silent> <Leader>tl :tabn<CR>
+
+" Easy buffer switching
+nmap <Leader>b :buffers<CR>:buffer<Space>
 
 " Easy window switching
-nmap <silent> <Leader>w<Up> :wincmd k<CR>
-nmap <silent> <Leader>w<Down> :wincmd j<CR>
-nmap <silent> <Leader>w<Left> :wincmd h<CR>
-nmap <silent> <Leader>w<Right> :wincmd l<CR>
+nmap <silent> <Leader>wk :wincmd k<CR>
+nmap <silent> <Leader>wj :wincmd j<CR>
+nmap <silent> <Leader>wh :wincmd h<CR>
+nmap <silent> <Leader>wl :wincmd l<CR>
 
 " Easy indent/unindent
 vnoremap < <gv
@@ -235,3 +246,6 @@ map <silent> <Leader>. >>
 command W :w
 command Q :q
 command Qa :qa
+
+" Hardmode shortcut
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
