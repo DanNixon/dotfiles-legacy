@@ -3,7 +3,6 @@
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
   title_transmit_bg_color = "#7b0001"
   tab_position = hidden
-  borderless = True
 [keybindings]
   new_tab = <Primary><Shift>t
   search = <Primary>f
@@ -15,7 +14,14 @@
     use_system_font = False
     font = Droid Sans Mono for Powerline 10
     background_image = None
+    show_titlebar = False
   [[small]]
+    scrollbar_position = hidden
+    use_system_font = False
+    font = Droid Sans Mono for Powerline 10
+    background_image = None
+    show_titlebar = False
+  [[show-titles]]
     scrollbar_position = hidden
     use_system_font = False
     font = Droid Sans Mono for Powerline 10
@@ -25,6 +31,7 @@
     background_image = None
     use_system_font = False
     scroll_on_output = False
+    show_titlebar = False
     font = Droid Sans Mono for Powerline 10
     scrollback_infinite = True
 [layouts]
