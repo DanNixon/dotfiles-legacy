@@ -9,26 +9,78 @@ servers = (
   }
 );
 
-chatnets = { FreeNode = { type = "IRC"; nick = "dannixon"; }; };
+chatnets = {
+  FreeNode = {
+    type = "IRC";
+    nick = "dannixon";
+  };
+};
 
 channels = (
-  { name = "#mantid-talk"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#makerspace"; chatnet = "FreeNode"; autojoin = "yes"; },
   {
-    name = "#oxford-hack-space";
+    name = "#mantid-talk";
     chatnet = "FreeNode";
     autojoin = "yes";
   },
-  { name = "#ubuntu"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "##linux"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#arduino"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#vim"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#git"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#reprap"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#fish"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#cyanogenmod"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#opencv"; chatnet = "FreeNode"; autojoin = "yes"; },
-  { name = "#gmusicapi"; chatnet = "FreeNode"; autojoin = "yes"; }
+  {
+    name = "#makerspace";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#oxford-hack-space";
+    chatnet = "FreeNode";
+  },
+  {
+    name = "#ubuntu";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "##linux";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#arduino";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#vim";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#git";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#reprap";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#fish";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#cyanogenmod";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#opencv";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  },
+  {
+    name = "#gmusicapi";
+    chatnet = "FreeNode";
+    autojoin = "yes";
+  }
 );
 
 aliases = {
@@ -184,6 +236,7 @@ settings = {
 };
 
 logs = { };
+
 keyboard = ( 
   { key = "meta-[M"; id = "command"; data = "mouse_xterm"; }
 );
