@@ -2,22 +2,30 @@
   title_receive_bg_color = "#004f87"
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
   title_transmit_bg_color = "#7b0001"
+  tab_position = hidden
+  borderless = True
 [keybindings]
-  split_horiz = <Primary><Shift>h
+  new_tab = <Primary><Shift>t
   search = <Primary>f
   split_vert = <Primary><Shift>s
+  split_horiz = <Primary><Shift>h
 [profiles]
   [[default]]
+    scrollbar_position = hidden
     use_system_font = False
     font = Droid Sans Mono for Powerline 10
     background_image = None
   [[small]]
+    scrollbar_position = hidden
     use_system_font = False
-    font = Monospace 8
+    font = Droid Sans Mono for Powerline 10
     background_image = None
   [[infinte-scrollback]]
+    scrollbar_position = hidden
     background_image = None
+    use_system_font = False
     scroll_on_output = False
+    font = Droid Sans Mono for Powerline 10
     scrollback_infinite = True
 [layouts]
   [[default]]
