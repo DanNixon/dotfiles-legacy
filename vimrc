@@ -25,6 +25,15 @@ Bundle 'ervandew/supertab'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'wikitopian/hardmode'
 Bundle 'openscad.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'bling/vim-airline'
+
+" Airline config
+let g:airline_theme = 'wombat'
+let g:airline_powerline_fonts = 1
+
+set laststatus=2
+set timeoutlen=250
 
 " Use mouse
 " set mouse=a
@@ -33,10 +42,10 @@ Bundle 'openscad.vim'
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Syntastic config
-let g:syntastic_mode_map = { 'mode': 'passive',     
-                          \ 'active_filetypes': [],     
-                          \ 'passive_filetypes': [] } 
-let g:syntastic_auto_loc_list=1     
+let g:syntastic_mode_map = { 'mode': 'passive',
+                          \ 'active_filetypes': [],
+                          \ 'passive_filetypes': [] }
+let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_java_checkers = []
@@ -70,7 +79,7 @@ set pumheight=15
 
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
- 
+
 " Clang should not autocomplete
 let g:clang_complete_auto=0
 

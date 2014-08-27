@@ -8,6 +8,8 @@
   split_vert = <Primary><Shift>s
 [profiles]
   [[default]]
+    use_system_font = False
+    font = Droid Sans Mono for Powerline 10
     background_image = None
   [[small]]
     use_system_font = False
