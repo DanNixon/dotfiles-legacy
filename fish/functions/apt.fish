@@ -1,16 +1,16 @@
 function apt
   switch $argv[1]
     case up
-      sudo apt-get update
-      sudo apt-get upgrade
+      sudo aptitude update
+      sudo aptitude upgrade
     case in
-      sudo apt-get install $argv[2..(count $argv)]
+      sudo aptitude install $argv[2..(count $argv)]
     case rm rem
-      sudo apt-get remove $argv[2..(count $argv)]
+      sudo aptitude remove $argv[2..(count $argv)]
     case arm arem
-      sudo apt-get autoremove
+      sudo aptitude autoremove
     case s search
-      apt-cache search $argv[2..(count $argv)]
+      aptitude search $argv[2..(count $argv)]
     case '*'
       echo "Possible commands: up, in, rm, arm, s"
     end
