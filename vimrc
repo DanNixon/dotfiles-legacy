@@ -186,7 +186,7 @@ command! RemTrailWhilespace :%s/\s\+$//
 map <Leader>8 :call ToggleShowOverLength()<CR>
 
 " Syntax checking
-nnoremap <silent> <F6> :SyntasticCheck<CR>
+nnoremap  <F6> :SyntasticCheck<CR>
 map <Leader>sc :SyntasticCheck<CR>
 map <Leader>sr :SyntasticReset<CR>
 
@@ -195,10 +195,10 @@ map <Leader>ss :Spell<CR>
 map <Leader>s :SpellOff<CR>
 
 " Find shortcuts
-map <silent> <Leader>l :FufLine<CR>
-map <silent> <Leader>f :CtrlP<CR>
-" map <silent> <Leader>ff :call DmenuOpen("git ls-files", "e")<CR>
-" map <silent> <Leader>ft :call DmenuOpen("git ls-files", "tabe")<CR>
+map <Leader>l :FufLine<CR>
+map <Leader>f :CtrlP<CR>
+" map <Leader>ff :call DmenuOpen("git ls-files", "e")<CR>
+" map <Leader>ft :call DmenuOpen("git ls-files", "tabe")<CR>
 
 " Toggle folding
 map <Leader>z zA
@@ -223,24 +223,25 @@ map <Leader>t :TagbarToggle<CR>
 map <Leader>tn :tabnew<CR>
 
 " Easy tab switching
-nmap <silent> <Leader>th :tabp<CR>
-nmap <silent> <Leader>tl :tabn<CR>
+nmap <Leader>th :tabp<CR>
+nmap <Leader>tl :tabn<CR>
 
-" Easy buffer switching
+" Easy buffer management
 nmap <Leader>b :buffers<CR>:buffer<Space>
+nmap <Leader>bd :buffers<CR>:bd<Space>
 
 " Easy window switching
-nmap <silent> <Leader>wk :wincmd k<CR>
-nmap <silent> <Leader>wj :wincmd j<CR>
-nmap <silent> <Leader>wh :wincmd h<CR>
-nmap <silent> <Leader>wl :wincmd l<CR>
+nmap <Leader>wk :wincmd k<CR>
+nmap <Leader>wj :wincmd j<CR>
+nmap <Leader>wh :wincmd h<CR>
+nmap <Leader>wl :wincmd l<CR>
 
 " Easy indent/unindent
 vnoremap < <gv
 vnoremap > >gv
 
-map <silent> <Leader>, <<
-map <silent> <Leader>. >>
+map <Leader>, <<
+map <Leader>. >>
 
 " I have a habit of not releasing shift fast enough
 command W :w
@@ -249,3 +250,5 @@ command Qa :qa
 
 " Hardmode shortcut
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
+nnoremap \ :echo "Nope"<CR>
