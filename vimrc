@@ -32,9 +32,16 @@ Bundle 'majutsushi/tagbar'
 " Use Space as Leader
 let mapleader = " "
 
+" Some things that are specific to Cygwin
+if has("win32unix")
+  let g:NERDTreeDirArrows=0           " Use simple directory arrows
+else
+  let g:NERDTreeDirArrows=1           " Otherwise use nice arrows
+  let g:airline_powerline_fonts = 1   " Use nice fints for Airline
+endif
+
 " Airline config
 let g:airline_theme = 'bubblegum'
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -89,7 +96,7 @@ set pumheight=15
 let g:SuperTabDefaultCompletionType = "context"
 
 " Clang should not autocomplete
-let g:clang_complete_auto=0
+let g:clang_complete_auto = 0
 
 " Set options to restore from last session
 set viewoptions=cursor,folds,slash,unix
@@ -115,17 +122,10 @@ set cursorline
 set number
 set relativenumber
 
-" Don't overcrowd taglist
-let g:Tlist_Show_One_File=1
-
+" NERDTree config
 let g:NERDTreeMouseMode=2   " Single click for folding directories
 let g:NERDTreeChDirMode=2   " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI=1   " Use minimal UI
-if has("win32unix")         " When using Cygwin
-  let g:NERDTreeDirArrows=0 " Use simple directory arrows
-else
-  let g:NERDTreeDirArrows=1 " Otherwise use nice arrows
-endif
 
 " LaTeX config
 let g:Tex_DefaultTargetFormat='pdf'
