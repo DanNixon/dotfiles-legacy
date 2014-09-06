@@ -1,3 +1,3 @@
 ## Workspace moving (custom desktop PC)
-bindsym $mod+Shift+P move workspace to output DVI-D-1
-bindsym $mod+Shift+O move workspace to output DVI-I-1
+bindsym $mod+Shift+greater move workspace to output DVI-D-1
+bindsym $mod+Shift+less move workspace to output DVI-I-1

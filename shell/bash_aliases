@@ -1,6 +1,6 @@
 source ~/dotfiles/shell/common_aliases
 
 # APT commands
-alias aptup="sudo apt-get update && sudo apt-get upgrade"
-alias aptin="sudo apt-get install"
-alias apts="sudo apt-cache search"
+alias aptup="sudo aptitude update && sudo apttitude upgrade"
+alias aptin="sudo aptitude install"
+alias apts="sudo aptitude search"
