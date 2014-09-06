@@ -5,10 +5,10 @@ exec --no-startup-id feh --bg-fill ~/background_image
 exec --no-startup-id rescuetime
 
 ## Colours
-client.focused          #6699AA #6699AA #333333 #FF99AA
-client.focused_inactive #555555 #555555 #888888 #FF5555
-client.unfocused        #333333 #222222 #888888 #FF3333
-client.urgent           #900000 #900000 #CCCCCC #900000
+client.focused          #335566 #335566 #888888 #AA5555
+client.focused_inactive #444444 #444444 #888888 #AA3333
+client.unfocused        #333333 #222222 #888888 #AA3333
+client.urgent           #900000 #900000 #CCCCCC #AA3333
 
 ## Use Super_L as mod key
 set $mod Mod4
@@ -152,12 +152,12 @@ bindsym $mod+r mode "resize"
 
 bar {
   colors {
-    background #151515
-    statusline #AAAAAA
-    separator #888888
-    focused_workspace  #6699AA #336677 #AAAAAA
-    active_workspace   #333333 #5f676a #AAAAAA
-    inactive_workspace #333333 #222222 #888888
+    background #101010
+    statusline #888888
+    separator #555555
+    focused_workspace  #6699AA #335566 #AAAAAA
+    active_workspace   #AAAAAA #555555 #AAAAAA
+    inactive_workspace #555555 #222222 #888888
     urgent_workspace   #FF5555 #900000 #AAAAAA
   }
   status_command i3status
