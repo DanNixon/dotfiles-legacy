@@ -1,6 +1,9 @@
 ## Set background image
 exec --no-startup-id feh --bg-fill ~/background_image
 
+## Start RescueTime
+exec --no-startup-id rescuetime
+
 ## Colours
 client.focused          #6699AA #6699AA #333333 #FF99AA
 client.focused_inactive #555555 #555555 #888888 #FF5555
