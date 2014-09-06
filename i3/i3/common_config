@@ -5,7 +5,7 @@ exec --no-startup-id feh --bg-fill ~/background_image
 exec --no-startup-id rescuetime
 
 ## Colours
-client.focused          #335566 #335566 #888888 #AA5555
+client.focused          #30404A #30404A #888888 #AA5555
 client.focused_inactive #444444 #444444 #888888 #AA3333
 client.unfocused        #333333 #222222 #888888 #AA3333
 client.urgent           #900000 #900000 #CCCCCC #AA3333
@@ -155,7 +155,7 @@ bar {
     background #101010
     statusline #888888
     separator #555555
-    focused_workspace  #6699AA #335566 #AAAAAA
+    focused_workspace  #668899 #30404A #AAAAAA
     active_workspace   #AAAAAA #555555 #AAAAAA
     inactive_workspace #555555 #222222 #888888
     urgent_workspace   #FF5555 #900000 #AAAAAA
