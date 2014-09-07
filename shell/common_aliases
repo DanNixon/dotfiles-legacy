@@ -23,12 +23,14 @@ alias gp="git push"
 alias ..="cd .."
 
 # Misc app stuff
-alias roku="python ~/apps/RokuRTerm.py"
 alias ytdl="youtube-dl -t"
 alias dbs="dropbox status"
 alias stripexif="exiftool -all= "
 alias calc="bc -lq"
 alias search="find -L . -name"
+
+alias udm="udisks --mount"
+alias udum="udisks --unmount"
 
 # Apps used with screen
 alias music="screen -dR PlayMusicCL playmusiccl"
