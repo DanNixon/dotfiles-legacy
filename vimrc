@@ -227,7 +227,7 @@ nmap <Leader>th :tabp<CR>
 nmap <Leader>tl :tabn<CR>
 
 " Easy buffer management
-nmap <Leader>b :buffers<CR>:buffer<Space>
+nmap <Leader>b :CtrlPBuffer<CR>
 nmap <Leader>bd :buffers<CR>:bd<Space>
 
 " Easy window switching
