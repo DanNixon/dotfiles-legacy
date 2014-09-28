@@ -32,10 +32,28 @@ Bundle 'majutsushi/tagbar'
 " Use Space as Leader
 let mapleader = " "
 
-" Some things that are specific to Cygwin
+
+"""""""""""""""""""""""""""
+" SYSTEM DEPENDANT CONFIG "
+"""""""""""""""""""""""""""
+
+let hostname = substitute(system('hostname'), '\n', '', '')
+
+" Use Powerline fonts if not on Windows
 if !has("win32unix")
-  let g:airline_powerline_fonts = 1   " Use nice fonts for Airline
+  let g:airline_powerline_fonts = 1
 endif
+
+" An SSH only machine, cannot guarentee I will have Powerline fonts
+if hostname == "ritchie"
+  let g:airline_powerline_fonts = 0
+  let g:NERDTreeDirArrows = 0
+endif
+
+
+""""""""""""""""""
+" GENERAL CONFIG "
+""""""""""""""""""
 
 " Airline config
 let g:airline_theme = 'bubblegum'
@@ -124,6 +142,7 @@ set grepprg=grep\ -nH\ $*
 command Spell setlocal spell spelllang=en_us
 command SpellOff setlocal spell spelllang=
 
+
 """"""""""""""""""""""
 " 80 CHAR WIDTH WARN "
 """"""""""""""""""""""
@@ -165,6 +184,7 @@ endfunction
 
 " Remove trailing whitespace
 command! RemTrailWhilespace :%s/\s\+$//
+
 
 """"""""""""""""
 " KEY MAPPINGS "
