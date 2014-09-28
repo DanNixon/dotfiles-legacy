@@ -33,24 +33,6 @@ Bundle 'majutsushi/tagbar'
 let mapleader = " "
 
 
-"""""""""""""""""""""""""""
-" SYSTEM DEPENDANT CONFIG "
-"""""""""""""""""""""""""""
-
-let hostname = substitute(system('hostname'), '\n', '', '')
-
-" Use Powerline fonts if not on Windows
-if !has("win32unix")
-  let g:airline_powerline_fonts = 1
-endif
-
-" An SSH only machine, cannot guarentee I will have Powerline fonts
-if hostname == "ritchie"
-  let g:airline_powerline_fonts = 0
-  let g:NERDTreeDirArrows = 0
-endif
-
-
 """"""""""""""""""
 " GENERAL CONFIG "
 """"""""""""""""""
@@ -142,6 +124,20 @@ set grepprg=grep\ -nH\ $*
 command Spell setlocal spell spelllang=en_us
 command SpellOff setlocal spell spelllang=
 
+"""""""""""""""""""""""""""""""
+" MISC COMMANDS AND FUNCTIONS "
+"""""""""""""""""""""""""""""""
+
+" Remove trailing whitespace
+command! RemTrailWhilespace :%s/\s\+$//
+
+function SSHMode()
+  let g:airline_powerline_fonts = 0
+  let g:NERDTreeDirArrows = 0
+endfunction
+
+command! SSH :call SSHMode()
+
 
 """"""""""""""""""""""
 " 80 CHAR WIDTH WARN "
@@ -153,7 +149,7 @@ match CharLimMatch /\%81v.\+/
 
 let s:showOverLength = 0
 
-fun ToggleShowOverLength()
+function ToggleShowOverLength()
   if s:showOverLength
     hi link CharLimMatch NONE
     let s:showOverLength = 0
@@ -162,28 +158,6 @@ fun ToggleShowOverLength()
     let s:showOverLength = 1
   endif
 endfun
-
-"
-" DMENU FIND FUNCTIONS
-" Modified from: http://leafo.net/posts/using_dmenu_to_open_quickly.html
-"
-
-" Strip the newline from the end of a string
-function! Chomp(str)
-    return substitute(a:str, '\n$', '', '')
-  endfunction
-
-" Find a file and pass it to cmd
-function! DmenuOpen(findCmd, cmd)
-  let fname = Chomp(system(a:findCmd . " | dmenu -i -l 20 -p " . a:cmd))
-  if empty(fname)
-    return
-  endif
-    execute a:cmd . " " . fname
-endfunction
-
-" Remove trailing whitespace
-command! RemTrailWhilespace :%s/\s\+$//
 
 
 """"""""""""""""
@@ -250,3 +224,21 @@ command Qa :qa
 
 " Hardmode shortcut
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
+
+"""""""""""""""""""""""""""
+" SYSTEM DEPENDANT CONFIG "
+"""""""""""""""""""""""""""
+
+let hostname = substitute(system('hostname'), '\n', '', '')
+
+" Use Powerline fonts if not on Windows
+if !has("win32unix")
+  let g:airline_powerline_fonts = 1
+endif
+
+" An SSH only machine, cannot guarentee I will have Powerline fonts
+if hostname == "ritchie"
+  call SSHMode()
+endif
+

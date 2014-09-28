@@ -6,7 +6,6 @@ clean: clean_vim_links clean_fish clean_bash_aliases clean_git clean_irssi clean
 
 #vim
 vim: vim_links
-	~/dotfiles/install_packages/install_packages -P ~/dotfiles/install_packages/packages_vim
 	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 	vim +BundleInstall! +BundleClean +qall
 
