@@ -4,7 +4,7 @@ set encoding=utf-8
 
 set shell=bash
 
-" Reenable thsi when my PR eventually gets merged
+" Re-enable this when my PR eventually gets merged
 " let g:vundle_default_git_proto='ssh'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -33,24 +33,15 @@ Bundle 'majutsushi/tagbar'
 let mapleader = " "
 
 " Some things that are specific to Cygwin
-if has("win32unix")
-  let g:NERDTreeDirArrows=0           " Use simple directory arrows
-else
-  let g:NERDTreeDirArrows=1           " Otherwise use nice arrows
-  let g:airline_powerline_fonts = 1   " Use nice fints for Airline
+if !has("win32unix")
+  let g:airline_powerline_fonts = 1   " Use nice fonts for Airline
 endif
 
 " Airline config
 let g:airline_theme = 'bubblegum'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = '|'
 
 set laststatus=2
 set timeoutlen=250
-
-" Use mouse
-" set mouse=a
 
 " Tagbar config
 let g:tagbar_autofocus = 1
@@ -79,9 +70,6 @@ colorscheme distinguished
 
 syntax on
 filetype plugin indent on
-
-" Start NERDTree if no file was specified
-" autocmd vimenter * if !argc() | NERDTree | endif
 
 " Set tab width to 2 spaces
 set tabstop=2
@@ -136,9 +124,9 @@ set grepprg=grep\ -nH\ $*
 command Spell setlocal spell spelllang=en_us
 command SpellOff setlocal spell spelllang=
 
-"
-" 80 CHAR WIDTH WARN
-"
+""""""""""""""""""""""
+" 80 CHAR WIDTH WARN "
+""""""""""""""""""""""
 
 highlight CharLim ctermbg=130 guibg=#592929
 highlight link CharLimMatch NONE
@@ -175,18 +163,18 @@ function! DmenuOpen(findCmd, cmd)
     execute a:cmd . " " . fname
 endfunction
 
-"
-" KEY MAPPINGS
-"
-
 " Remove trailing whitespace
 command! RemTrailWhilespace :%s/\s\+$//
+
+""""""""""""""""
+" KEY MAPPINGS "
+""""""""""""""""
 
 " 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
 
 " Syntax checking
-nnoremap  <F6> :SyntasticCheck<CR>
+map <F6> :SyntasticCheck<CR>
 map <Leader>sc :SyntasticCheck<CR>
 map <Leader>sr :SyntasticReset<CR>
 
@@ -197,8 +185,7 @@ map <Leader>s :SpellOff<CR>
 " Find shortcuts
 map <Leader>l :FufLine<CR>
 map <Leader>f :CtrlP<CR>
-" map <Leader>ff :call DmenuOpen("git ls-files", "e")<CR>
-" map <Leader>ft :call DmenuOpen("git ls-files", "tabe")<CR>
+map <Leader>b :CtrlPBuffer<CR>
 
 " Toggle folding
 map <Leader>z zA
@@ -219,16 +206,10 @@ map <Leader>n :NERDTreeToggle<CR>
 " Toggle tagbar
 map <Leader>t :TagbarToggle<CR>
 
-" Open new tab
-map <Leader>tn :tabnew<CR>
-
-" Easy tab switching
-nmap <Leader>th :tabp<CR>
-nmap <Leader>tl :tabn<CR>
-
-" Easy buffer management
-nmap <Leader>b :CtrlPBuffer<CR>
-nmap <Leader>bd :buffers<CR>:bd<Space>
+" Tab shortcuts
+nmap <Leader>t<Left> :tabp<CR>
+nmap <Leader>t<Right> :tabn<CR>
+nmap <Leader>tt :tab new<CR>
 
 " Easy window switching
 nmap <Leader>wk :wincmd k<CR>
@@ -237,11 +218,10 @@ nmap <Leader>wh :wincmd h<CR>
 nmap <Leader>wl :wincmd l<CR>
 
 " Easy indent/unindent
-vnoremap < <gv
-vnoremap > >gv
-
 map <Leader>, <<
 map <Leader>. >>
+vmap < <gv
+vmap > >gv
 
 " I have a habit of not releasing shift fast enough
 command W :w
@@ -250,5 +230,3 @@ command Qa :qa
 
 " Hardmode shortcut
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
-
-nnoremap \ :echo "Nope"<CR>
