@@ -21,3 +21,5 @@
   rad = add -u
   unbugger = reset --hard HEAD
   stl = stash list
+[merge]
+  conflictstyle=diff3

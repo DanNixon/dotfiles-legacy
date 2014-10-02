@@ -2,7 +2,7 @@
 alias l="ls -lFh"
 alias ll="ls -alFh"
 alias la="ls -A"
-alias ldev="l /dev/ | grep"
+alias ldev="ls -A /dev/ | grep"
 
 # General comands
 alias die="sudo shutdown -P now"
