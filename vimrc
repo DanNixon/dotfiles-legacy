@@ -4,8 +4,7 @@ set encoding=utf-8
 
 set shell=bash
 
-" Re-enable this when my PR eventually gets merged
-" let g:vundle_default_git_proto='ssh'
+let g:vundle_default_git_proto='git'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
