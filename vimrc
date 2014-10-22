@@ -27,6 +27,8 @@ Bundle 'openscad.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'majutsushi/tagbar'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 " Use Space as Leader
 let mapleader = " "
@@ -162,6 +164,8 @@ endfun
 """"""""""""""""
 " KEY MAPPINGS "
 """"""""""""""""
+
+map <Leader>c zyiw:exe "%s/".@z."/"
 
 " 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
