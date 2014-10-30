@@ -125,6 +125,7 @@ set grepprg=grep\ -nH\ $*
 command Spell setlocal spell spelllang=en_us
 command SpellOff setlocal spell spelllang=
 
+
 """""""""""""""""""""""""""""""
 " MISC COMMANDS AND FUNCTIONS "
 """""""""""""""""""""""""""""""
@@ -165,7 +166,8 @@ endfun
 " KEY MAPPINGS "
 """"""""""""""""
 
-map <Leader>c zyiw:exe "%s/".@z."/"
+" Command to open my to-do Gist for work
+command MantidTodo :Gist 6160cf8e8c55749b7fb7
 
 " 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
@@ -191,11 +193,6 @@ map <Leader>a zR
 " Commenting
 map <C-X> gcc
 vmap <C-X> gc
-
-" Copy/paste
-map <C-C> "+yy
-vmap <C-C> "+y
-map <C-V> "+p
 
 " Toggle NERDTree on Leader-n
 map <Leader>n :NERDTreeToggle<CR>
@@ -245,3 +242,7 @@ if hostname == "ritchie"
   call SSHMode()
 endif
 
+" Another SSH only machine, same assumption
+if hostname == "yukari"
+  call SSHMode()
+endif
