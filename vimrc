@@ -171,6 +171,9 @@ endfun
 " Command to open my to-do Gist for work
 command MantidTodo :Gist 6160cf8e8c55749b7fb7
 
+" Handy shortcut for replacing words
+map <Leader>r :%s/\<<C-r><C-w>\>/
+
 " 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
 
