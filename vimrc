@@ -61,6 +61,8 @@ let g:syntastic_python_checkers = ['pep8', 'pylint']
 let g:syntastic_python_pylint_args = "--disable=W0312,C0111,C0301"
 let g:syntastic_python_pep8_args = "--ignore=E501"
 
+let g:syntastic_cppcheckers = ['gcc', 'clang']
+
 " easymotion matches uppercase using lowercase
 let g:EasyMotion_smartcase = 1
 
