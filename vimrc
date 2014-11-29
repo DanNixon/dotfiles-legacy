@@ -29,6 +29,8 @@ Bundle 'bling/vim-airline'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'vasconcelloslf/vim-interestingwords'
+Bundle 'tpope/vim-abolish'
 
 " Use Space as Leader
 let mapleader = " "
@@ -227,8 +229,9 @@ command W :w
 command Q :q
 command Qa :qa
 
-" Hardmode shortcut
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+" Highlight shortcuts
+nnoremap <silent> <leader>h :call InterestingWords()<cr>
+nnoremap <silent> <leader>H :call UncolorAllWords()<cr>
 
 
 """""""""""""""""""""""""""
