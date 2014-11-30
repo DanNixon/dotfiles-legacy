@@ -11,28 +11,32 @@
 [profiles]
   [[default]]
     scrollbar_position = hidden
-    use_system_font = False
-    font = Droid Sans Mono for Powerline 10
     background_image = None
+    use_system_font = False
     show_titlebar = False
+    font = Droid Sans Mono for Powerline 10
+    background_color = "#101010"
   [[small]]
     scrollbar_position = hidden
-    use_system_font = False
-    font = Droid Sans Mono for Powerline 10
     background_image = None
+    use_system_font = False
     show_titlebar = False
+    font = Droid Sans Mono for Powerline 10
+    background_color = "#101010"
   [[show-titles]]
     scrollbar_position = hidden
     use_system_font = False
     font = Droid Sans Mono for Powerline 10
+    background_color = "#101010"
     background_image = None
   [[infinte-scrollback]]
     scrollbar_position = hidden
-    background_image = None
     use_system_font = False
+    background_image = None
     scroll_on_output = False
     show_titlebar = False
     font = Droid Sans Mono for Powerline 10
+    background_color = "#101010"
     scrollback_infinite = True
 [layouts]
   [[default]]
