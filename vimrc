@@ -42,6 +42,9 @@ let mapleader = " "
 " GENERAL CONFIG "
 """"""""""""""""""
 
+" Use mouse (really just do this for the sake of having a sensible scroll wheel)
+set mouse=a
+
 " Airline config
 let g:airline_theme = 'bubblegum'
 
@@ -184,6 +187,11 @@ map <Leader>r :%s/\<<C-r><C-w>\>/
 
 " 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
+
+" Git tools
+map <Leader>gd :Gvdiff<CR>
+map <Leader>gb :Gblame<CR>
+map <Leader>gs :Gstatus<CR>
 
 " Syntax checking
 map <F6> :SyntasticCheck<CR>
