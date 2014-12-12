@@ -118,11 +118,21 @@ set autoread
 set nowrap
 set nolbr
 
+" Squelch bells
+set noerrorbells
+set novisualbell
+
+" Vim search config
+set incsearch
+set hlsearch
+
 " Show folds and line numbers on left, add highlights
 set foldcolumn=2
 set cursorline
 set number
-set relativenumber
+if exists('+relativenumber')
+  set relativenumber
+endif
 
 " NERDTree config
 let g:NERDTreeMouseMode=2   " Single click for folding directories
