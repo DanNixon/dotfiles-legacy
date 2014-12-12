@@ -31,6 +31,8 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'vasconcelloslf/vim-interestingwords'
 Bundle 'tpope/vim-abolish'
+Bundle 'kana/vim-operator-user'
+Bundle 'rhysd/vim-clang-format'
 
 " Use Space as Leader
 let mapleader = " "
@@ -39,6 +41,9 @@ let mapleader = " "
 """"""""""""""""""
 " GENERAL CONFIG "
 """"""""""""""""""
+
+" Use mouse (really just do this for the sake of having a sensible scroll wheel)
+set mouse=a
 
 " Airline config
 let g:airline_theme = 'bubblegum'
@@ -64,6 +69,10 @@ let g:syntastic_python_pylint_args = "--disable=W0312,C0111,C0301"
 let g:syntastic_python_pep8_args = "--ignore=E501"
 
 let g:syntastic_cppcheckers = ['gcc', 'clang']
+
+" Clang Format config
+let g:clang_format#command = 'clang-format-3.5'
+let g:clang_format#detect_style_file = 1
 
 " easymotion matches uppercase using lowercase
 let g:EasyMotion_smartcase = 1
@@ -178,6 +187,11 @@ map <Leader>r :%s/\<<C-r><C-w>\>/
 
 " 80 char limit warning
 map <Leader>8 :call ToggleShowOverLength()<CR>
+
+" Git tools
+map <Leader>gd :Gvdiff<CR>
+map <Leader>gb :Gblame<CR>
+map <Leader>gs :Gstatus<CR>
 
 " Syntax checking
 map <F6> :SyntasticCheck<CR>

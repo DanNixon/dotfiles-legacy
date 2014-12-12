@@ -22,3 +22,6 @@ skeinforge/profiles/*
 
 # Compiled Python
 *.pyc
+
+# Log files
+*.log
