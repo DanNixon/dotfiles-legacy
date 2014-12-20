@@ -33,6 +33,8 @@ Bundle 'vasconcelloslf/vim-interestingwords'
 Bundle 'tpope/vim-abolish'
 Bundle 'kana/vim-operator-user'
 Bundle 'rhysd/vim-clang-format'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-eunuch'
 
 " Use Space as Leader
 let mapleader = " "
