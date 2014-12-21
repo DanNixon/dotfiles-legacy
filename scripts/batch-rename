@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Check that we actually want to do this potentially dangerous operation without review
+read -p "Are you sure you want to use this script (considered batch-rename-safe)? " -n 1 -r
+echo
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  # Loop through matching filenames
+  for filename in *$1*;
+  do
+    # Rename the file replacing the old pattern with the new
+    mv "$filename" "${filename//$1/$2}";
+  done
+fi

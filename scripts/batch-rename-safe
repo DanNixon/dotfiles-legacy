@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Give some usage info if needed
+if [ $# -lt 2 ]
+then
+  echo Renames files in the current directory, replacing a matched section of text with a new section.
+  echo Usage: batch-rename-safe [original pattern] [new pattern]
+fi
+
+#The generated rename script
+script_file=rename.sh
+
+# Add a shebang to the script
+echo \#!/bin/bash > $script_file
+
+# Loop through the files matching the original pattern
+for filename in *$1*;
+do
+  # echo a command that would rename it replacing with the new pattern
+  echo mv \"$filename\" \"${filename//$1/$2}\";
+done >> $script_file
+
+# Make the script executable
+chmod a+x $script_file
+
+# cat it for review
+cat $script_file | less
