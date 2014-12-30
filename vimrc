@@ -269,6 +269,8 @@ let hostname = substitute(system('hostname'), '\n', '', '')
 " Use Powerline fonts if not on Windows
 if !has("win32unix")
   let g:airline_powerline_fonts = 1
+else
+  call SSHMode()
 endif
 
 " An SSH only machine, cannot guarentee I will have Powerline fonts
