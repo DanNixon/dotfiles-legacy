@@ -277,8 +277,3 @@ endif
 if hostname == "ritchie"
   call SSHMode()
 endif
-
-" Another SSH only machine, same assumption
-if hostname == "yukari"
-  call SSHMode()
-endif
