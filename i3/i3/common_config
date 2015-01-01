@@ -171,3 +171,9 @@ bindsym $mod+c exec google-chrome
 
 ## Screenshot shortcuts
 bindsym $mod+p exec scrot -z
+
+## Graphical file browser for moments of insanity
+bindsym $mod+slash exec pcmanfm
+
+## Open Clock Chrome app in floating mode
+for_window [class="Google-chrome" instance="crx_hoihofapbdnldlhecnhefifbcddgdkhm"] floating enable

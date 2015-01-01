@@ -252,6 +252,7 @@ vmap > >gv
 
 " Fast saving and exiting
 nmap <Leader>w :w<CR>
+nmap <Leader>x :x<CR>
 nmap <Leader>q :q<CR>
 
 " I have a habit of not releasing shift fast enough
