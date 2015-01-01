@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Scipt to either call ls or dropbox filestatus depending on if
+# it is assumed that the working directory is a Dropbox folder
+# (i.e. Dropbox is in the path to it)
+
+wd=$(pwd)
+wd_dirs=$(echo $wd | tr "/" "\n")
+
+for dir in $wd_dirs
+do
+  if [ $dir == "Dropbox" ]
+  then
+    dropbox filestatus -l
+    exit 0
+  fi
+done
+
+ls "$@"
