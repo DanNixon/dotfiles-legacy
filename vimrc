@@ -261,7 +261,7 @@ command Q :q
 command Qa :qa
 
 " Highlight shortcuts
-nnoremap <silent> <leader>h :call InterestingWords()<cr>
+nnoremap <silent> <leader>h :call InterestingWords('n')<cr>
 nnoremap <silent> <leader>H :call UncolorAllWords()<cr>
 
 
