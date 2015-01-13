@@ -175,5 +175,7 @@ bindsym $mod+p exec scrot -z
 ## Graphical file browser for moments of insanity
 bindsym $mod+slash exec pcmanfm
 
-## Open Clock Chrome app in floating mode
-for_window [class="Google-chrome" instance="crx_hoihofapbdnldlhecnhefifbcddgdkhm"] floating enable
+## Open some windows in floating mode
+for_window [class="Google-chrome" instance="crx_hoihofapbdnldlhecnhefifbcddgdkhm"] floating enable  # clock
+for_window [class="MantidPlot" title="Catalog search"] floating enable
+for_window [class="MantidPlot" title="CatalogSelector"] floating enable
