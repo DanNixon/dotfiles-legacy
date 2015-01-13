@@ -4,5 +4,6 @@ setlocal spell spelllang=en_us
 " Set command for aspell spell checker
 command! ASpell execute "!aspell -t -c %"
 
-" Wrap text
+set textwidth=80
 set wrap
+set fo=cqt

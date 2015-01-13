@@ -1,3 +1,3 @@
-set textwidth=80
+set textwidth=100
 set wrap
 set fo=cqt
