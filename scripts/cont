@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "$(ls -l | grep "^-" | wc -l) files"
+echo "$(ls -l | grep "^d" | wc -l) directories"
+echo "$(ls -l | grep "^l" | wc -l) links"
