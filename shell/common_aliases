@@ -17,17 +17,16 @@ alias qa="exit"
 # Git commands
 alias g="git"
 alias gs="git status"
-alias gp="git push"
 
 # Directory commands
 alias ..="cd .."
 
 # Misc app stuff
-alias ytdl="youtube-dl -t"
+alias ytdl="youtube-dl"
+alias ytmdl="youtube-dl -x -k --audio-format mp3"
 alias dbs="dropbox status"
 alias stripexif="exiftool -all= "
 alias calc="bc -lq"
-alias search="find -L . -name"
 
 alias udm="udisks --mount"
 alias udum="udisks --unmount"
