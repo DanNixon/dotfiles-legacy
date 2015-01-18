@@ -167,24 +167,11 @@ command! SSH :call SSHMode()
 
 
 """"""""""""""""""""""
-" 80 CHAR WIDTH WARN "
+" WHITESPACE WARNING "
 """"""""""""""""""""""
 
-highlight CharLim ctermbg=130 guibg=#592929
-highlight link CharLimMatch NONE
-match CharLimMatch /\%81v.\+/
-
-let s:showOverLength = 0
-
-function ToggleShowOverLength()
-  if s:showOverLength
-    hi link CharLimMatch NONE
-    let s:showOverLength = 0
-  else
-    hi link CharLimMatch CharLim
-    let s:showOverLength = 1
-  endif
-endfun
+highlight Trailinghitespace ctermbg=130 guibg=#592929
+match Trailinghitespace /\s\+\%#\@<!$/
 
 
 """"""""""""""""
@@ -207,12 +194,16 @@ map <Leader>gs :Gstatus<CR>
 
 " Syntax checking
 map <F6> :SyntasticCheck<CR>
-map <Leader>sc :SyntasticCheck<CR>
-map <Leader>sr :SyntasticReset<CR>
+map <Leader>c :SyntasticCheck<CR>
+map <Leader>C :SyntasticReset<CR>
 
 " Manual spelling toggle
-map <Leader>ss :Spell<CR>
-map <Leader>s :SpellOff<CR>
+map <Leader>s :Spell<CR>
+map <Leader>S :SpellOff<CR>
+
+" Highlight shortcuts
+nnoremap <silent> <leader>h :call InterestingWords('n')<cr>
+nnoremap <silent> <leader>H :call UncolorAllWords()<cr>
 
 " Find shortcuts
 map <Leader>l :FufLine<CR>
@@ -227,7 +218,7 @@ map <Leader>a zR
 map <C-X> gcc
 vmap <C-X> gc
 
-" Toggle NERDTree on Leader-n
+" Toggle NERDTree
 map <Leader>n :NERDTreeToggle<CR>
 
 " Toggle tagbar
@@ -259,10 +250,6 @@ nmap <Leader>q :q<CR>
 command W :w
 command Q :q
 command Qa :qa
-
-" Highlight shortcuts
-nnoremap <silent> <leader>h :call InterestingWords('n')<cr>
-nnoremap <silent> <leader>H :call UncolorAllWords()<cr>
 
 
 """""""""""""""""""""""""""
