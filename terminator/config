@@ -9,20 +9,6 @@
   split_vert = <Primary><Shift>s
   split_horiz = <Primary><Shift>h
 [profiles]
-  [[default]]
-    scrollbar_position = hidden
-    background_image = None
-    use_system_font = False
-    show_titlebar = False
-    font = Droid Sans Mono for Powerline 10
-    background_color = "#101010"
-  [[small]]
-    scrollbar_position = hidden
-    background_image = None
-    use_system_font = False
-    show_titlebar = False
-    font = Droid Sans Mono for Powerline 10
-    background_color = "#101010"
   [[show-titles]]
     scrollbar_position = hidden
     use_system_font = False
@@ -38,6 +24,27 @@
     font = Droid Sans Mono for Powerline 10
     background_color = "#101010"
     scrollback_infinite = True
+  [[default]]
+    scrollbar_position = hidden
+    background_image = None
+    use_system_font = False
+    show_titlebar = False
+    font = Droid Sans Mono for Powerline 10
+    background_color = "#101010"
+  [[small]]
+    scrollbar_position = hidden
+    background_image = None
+    use_system_font = False
+    show_titlebar = False
+    font = Droid Sans Mono for Powerline 8
+    background_color = "#101010"
+  [[big]]
+    scrollbar_position = hidden
+    background_image = None
+    use_system_font = False
+    show_titlebar = False
+    font = Droid Sans Mono for Powerline 12
+    background_color = "#101010"
 [layouts]
   [[default]]
     [[[child1]]]
