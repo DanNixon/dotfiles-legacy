@@ -266,6 +266,6 @@ else
 endif
 
 " An SSH only machine, cannot guarentee I will have Powerline fonts
-if hostname == "ritchie"
+if hostname == "borg.ncl.ac.uk"
   call SSHMode()
 endif
