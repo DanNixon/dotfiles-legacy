@@ -96,6 +96,8 @@ set expandtab
 set completeopt=menu,menuone,longest
 set pumheight=15
 
+let g:interestingWordsRandomiseColors = 1
+
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
 
