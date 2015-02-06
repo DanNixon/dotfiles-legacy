@@ -33,6 +33,6 @@ alias udum="udisks --unmount"
 
 # Apps used with screen
 alias music="screen -dR PlayMusicCL playmusiccl"
-alias irc="screen -dR irssi irssi"
+alias irc="screen -dR irc weechat-curses"
 alias s="screen -dR"
 alias screens="screen -ls"
