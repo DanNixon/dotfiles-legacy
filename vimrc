@@ -96,6 +96,8 @@ set expandtab
 set completeopt=menu,menuone,longest
 set pumheight=15
 
+let g:interestingWordsRandomiseColors = 1
+
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
 
@@ -266,6 +268,6 @@ else
 endif
 
 " An SSH only machine, cannot guarentee I will have Powerline fonts
-if hostname == "ritchie"
+if hostname == "borg.ncl.ac.uk"
   call SSHMode()
 endif
