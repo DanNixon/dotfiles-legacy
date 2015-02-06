@@ -1,8 +1,8 @@
 SHELL=/bin/bash
 
-all: vim bash_aliases git irssi terminator putty screen lynx skeinforge inkscape i3 gdb
+all: vim bash_aliases git weechat terminator putty screen lynx skeinforge inkscape i3 gdb
 
-clean: clean_vim_links clean_fish clean_bash_aliases clean_git clean_irssi clean_terminator clean_putty clean_screen clean_lynx clean_skeinforge clean_inkscape clean_i3 clean_gdb
+clean: clean_vim_links clean_fish clean_bash_aliases clean_git clean_weechat clean_terminator clean_putty clean_screen clean_lynx clean_skeinforge clean_inkscape clean_i3 clean_gdb
 
 #vim
 vim: vim_links
@@ -39,12 +39,12 @@ git:
 clean_git:
 	rm ~/.gitconfig
 
-#irssi
-irssi:
-	ln -s ~/dotfiles/irssi/ ~/.irssi
+#weechat
+weechat:
+	ln -s ~/dotfiles/weechat/ ~/.weechat
 
 clean_irssi:
-	rm ~/.irssi
+	rm ~/.weechat
 
 #terminator
 terminator:
