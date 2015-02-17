@@ -10,19 +10,20 @@
 [alias]
   s = status
   p = push
+  m = merge
   l = log --pretty=oneline --graph --abbrev-commit
   la = log --pretty=full --graph
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   com = commit
   co = checkout
-  up = pull
-  update = pull
   br = branch
   tags = tag -l
   brs = branch --list
+  stl = stash list
+  up = fetch -p
   rad = add -u
   unbugger = reset --hard HEAD
-  stl = stash list
+  test-pr = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
 [merge]
   conflictstyle = diff3
 [push]
