@@ -66,9 +66,8 @@ let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_java_checkers = []
 
-let g:syntastic_python_checkers = ['pep8', 'pylint']
-let g:syntastic_python_pylint_args = "--disable=W0312,C0111,C0301"
-let g:syntastic_python_pep8_args = "--ignore=E501"
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = "--rcfile=~/.pylintrc"
 
 let g:syntastic_cppcheckers = ['gcc', 'clang']
 
