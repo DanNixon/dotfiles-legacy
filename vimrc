@@ -53,6 +53,8 @@ let g:airline_theme = 'bubblegum'
 set laststatus=2
 set timeoutlen=250
 
+set wildignore+=*~,*.pyc,*.so,*.o
+
 " Tagbar config
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
