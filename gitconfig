@@ -21,6 +21,7 @@
   brs = branch --list
   stl = stash list
   up = fetch -p
+  upp = !"git fetch -p; git pull"
   rad = add -u
   unbugger = reset --hard HEAD
   test-pr = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
