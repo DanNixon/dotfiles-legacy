@@ -24,6 +24,7 @@ Bundle 'ervandew/supertab'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'wikitopian/hardmode'
 Bundle 'openscad.vim'
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'majutsushi/tagbar'
@@ -87,6 +88,8 @@ colorscheme distinguished
 
 syntax on
 filetype plugin indent on
+
+set colorcolumn=80
 
 " Set tab width to 2 spaces
 set tabstop=2
@@ -173,8 +176,8 @@ command! SSH :call SSHMode()
 " WHITESPACE WARNING "
 """"""""""""""""""""""
 
-highlight Trailinghitespace ctermbg=130 guibg=#592929
-match Trailinghitespace /\s\+\%#\@<!$/
+highlight TrailingWhitespace ctermbg=130 guibg=#592929
+match TrailingWhitespace /\s\+\%#\@<!$/
 
 
 """"""""""""""""
@@ -186,9 +189,6 @@ command MantidTodo :Gist 6160cf8e8c55749b7fb7
 
 " Handy shortcut for replacing words
 map <Leader>r :%s/\<<C-r><C-w>\>/
-
-" 80 char limit warning
-map <Leader>8 :call ToggleShowOverLength()<CR>
 
 " Git tools
 map <Leader>gd :Gvdiff<CR>
