@@ -8,34 +8,34 @@ let g:vundle_default_git_proto='git'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-commentary'
-Bundle 'restore_view.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/syntastic'
-Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
-Bundle 'l9'
-Bundle 'FuzzyFinder'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Licenses'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'ervandew/supertab'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'wikitopian/hardmode'
-Bundle 'openscad.vim'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bling/vim-airline'
-Bundle 'majutsushi/tagbar'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'vasconcelloslf/vim-interestingwords'
-Bundle 'tpope/vim-abolish'
-Bundle 'kana/vim-operator-user'
-Bundle 'rhysd/vim-clang-format'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-eunuch'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-commentary'
+Plugin 'restore_view.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/syntastic'
+Plugin 'l9'
+Plugin 'FuzzyFinder'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Licenses'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'ervandew/supertab'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'wikitopian/hardmode'
+Plugin 'openscad.vim'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'majutsushi/tagbar'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'vasconcelloslf/vim-interestingwords'
+Plugin 'tpope/vim-abolish'
+Plugin 'kana/vim-operator-user'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-eunuch'
+Plugin 'lervag/vim-latex'
 
 " Use Space as Leader
 let mapleader = " "
@@ -146,11 +146,6 @@ endif
 let g:NERDTreeMouseMode=2   " Single click for folding directories
 let g:NERDTreeChDirMode=2   " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI=1   " Use minimal UI
-
-" LaTeX config
-let g:Tex_DefaultTargetFormat='pdf'
-set shellslash
-set grepprg=grep\ -nH\ $*
 
 " Manual spelling command
 command Spell setlocal spell spelllang=en_us
