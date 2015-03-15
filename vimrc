@@ -4,6 +4,11 @@ set encoding=utf-8
 
 set shell=bash
 
+
+"""""""""""""""""
+" VUNDLE CONFIG "
+"""""""""""""""""
+
 let g:vundle_default_git_proto='git'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -36,14 +41,16 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vim-latex'
-
-" Use Space as Leader
-let mapleader = " "
+Plugin 'vim-compile'
+Plugin 'todo-txt.vim'
 
 
 """"""""""""""""""
 " GENERAL CONFIG "
 """"""""""""""""""
+
+" Use Space as Leader
+let mapleader = " "
 
 " Use mouse (really just do this for the sake of having a sensible scroll wheel)
 set mouse=a
