@@ -42,7 +42,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vim-latex'
 Plugin 'vim-compile'
-Plugin 'todo-txt.vim'
+Plugin 'dbeniamine/todo.txt-vim'
 
 
 """"""""""""""""""

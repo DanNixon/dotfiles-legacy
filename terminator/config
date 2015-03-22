@@ -31,19 +31,28 @@
     show_titlebar = False
     font = Droid Sans Mono for Powerline 10
     background_color = "#101010"
-  [[small]]
+  [[light]]
     scrollbar_position = hidden
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     background_image = None
     use_system_font = False
+    foreground_color = "#000000"
     show_titlebar = False
-    font = Droid Sans Mono for Powerline 8
-    background_color = "#101010"
+    font = Droid Sans Mono for Powerline 10
+    background_color = "#ffffff"
   [[big]]
     scrollbar_position = hidden
     background_image = None
     use_system_font = False
     show_titlebar = False
     font = Droid Sans Mono for Powerline 12
+    background_color = "#101010"
+  [[small]]
+    scrollbar_position = hidden
+    background_image = None
+    use_system_font = False
+    show_titlebar = False
+    font = Droid Sans Mono for Powerline 8
     background_color = "#101010"
 [layouts]
   [[default]]
