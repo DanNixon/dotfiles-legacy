@@ -42,7 +42,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vim-latex'
 Plugin 'vim-compile'
-Plugin 'dbeniamine/todo.txt-vim'
+" Plugin 'dbeniamine/todo.txt-vim'
+Plugin 'freitass/todo.txt-vim'
+Plugin 'tclem/vim-arduino'
 
 
 """"""""""""""""""

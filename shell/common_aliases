@@ -27,6 +27,7 @@ alias ytmdl="youtube-dl -x -k --audio-format mp3"
 alias dbs="dropbox status"
 alias stripexif="exiftool -all= "
 alias calc="bc -lq"
+alias todo="todo.sh -d ~/dotfiles/todo.cfg"
 
 alias udm="udisks --mount"
 alias udum="udisks --unmount"
