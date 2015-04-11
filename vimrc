@@ -211,7 +211,7 @@ nnoremap <silent> <leader>H :call UncolorAllWords()<cr>
 
 " Find shortcuts
 map <Leader>l :FufLine<CR>
-map <Leader>f :CtrlP<CR>
+map <Leader>f :CtrlP<CR> <c-r>
 map <Leader>b :CtrlPBuffer<CR>
 
 " Toggle folding
