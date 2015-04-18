@@ -4,3 +4,6 @@ source ~/dotfiles/shell/common_aliases
 alias aptup="sudo aptitude update && sudo apttitude upgrade"
 alias aptin="sudo aptitude install"
 alias apts="sudo aptitude search"
+
+# The Fuck
+alias fuck='$(thefuck $(fc -ln -1))'
