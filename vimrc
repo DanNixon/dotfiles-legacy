@@ -155,6 +155,7 @@ endif
 let g:NERDTreeMouseMode=2   " Single click for folding directories
 let g:NERDTreeChDirMode=2   " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI=1   " Use minimal UI
+let g:NERDTreeIgnore=['.pyc']
 
 
 """""""""""""""""""""""""""""""
