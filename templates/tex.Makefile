@@ -9,3 +9,6 @@ clean:
 	- rm *.pdf
 	- rm *.log
 	- rm *.aux
+	- rm *.dvi
+	- rm *.bbl
+	- rm *.blg
