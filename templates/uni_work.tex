@@ -1,11 +1,11 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper]{article}
 
-%Set for specific document
+% Set for specific document
 \def\DOCTITLE{TITLE}
 \def\DOCAUTHOR{Dan Nixon (SNUMBER)}
-\def\DOCDATE{01/01/2014}
+\def\DOCDATE{01/01/2015}
 
-%Set document attributes
+% Set document attributes
 \title{\DOCTITLE}
 \author{\DOCAUTHOR}
 \date{\DOCDATE}
@@ -15,27 +15,41 @@
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 
-%Setup headers and footers
+% Handle graphics correctly
+\ifx\pdftexversion\undefined
+\usepackage[dvips]{graphicx}
+\else
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+
+% Setup headers and footers
 \pagestyle{fancy}
-\lhead{\DOCTITLE}
-\chead{}
-\rhead{\DOCDATE}
-\rfoot{\thepage}
-\cfoot{}
+\lhead{}
+\chead{\DOCTITLE}
+\rhead{}
+\rfoot{\DOCDATE}
+\cfoot{\thepage}
 \lfoot{\DOCAUTHOR}
 
-%Set header and footer sizes
+% Set header and footer sizes
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \setlength{\headheight}{15.2pt}
 \setlength{\headsep}{15.2pt}
 
-%Default paragraph spacing
-\setlength{\parskip}{10pt plus 1pt minus 1pt}
-\setlength{\parindent}{0pt}
+% Paragraph spacing
+% \setlength{\parskip}{10pt plus 1pt minus 1pt}
+% \setlength{\parindent}{0pt}
 
 \begin{document}
 
+% \begin{abstract}
+% \end{abstract}
+
 Put work here.
+
+% \begin{thebibliography}{9}
+% \end{thebibliography}
 
 \end{document}
