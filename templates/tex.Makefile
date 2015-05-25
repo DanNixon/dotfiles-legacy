@@ -12,3 +12,8 @@ clean:
 	- rm *.dvi
 	- rm *.bbl
 	- rm *.blg
+	- rm *.bm
+	- rm *.out
+	- rm *.nav
+	- rm *.snm
+	- rm *.toc
