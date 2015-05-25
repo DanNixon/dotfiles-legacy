@@ -22,6 +22,17 @@
   \end{frame}
 }
 
+% Environment for a sub sub slide
+\newenvironment{subsubslide}[1]
+{
+  \begin{frame}
+    \frametitle{#1}
+    \subsubsection{#1}
+}
+{
+  \end{frame}
+}
+
 % \usetheme{Hannover}
 % \usetheme{Montpellier}
 
