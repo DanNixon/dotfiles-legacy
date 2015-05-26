@@ -17,3 +17,9 @@ clean:
 	- rm *.nav
 	- rm *.snm
 	- rm *.toc
+	- rm *.gls
+	- rm *.glg
+	- rm *.glo
+	- rm *.ilg
+	- rm *.ind
+	- rm *.ist
