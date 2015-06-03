@@ -21,11 +21,11 @@ battery 0 {
 }
 
 cpu_usage {
-  format = "%usage "
+  format = "%usage"
 }
 
 time {
-	format = "%d/%m/%Y %H:%M:%S"
+	format = "%d/%m/%Y %H:%M:%S|"
 }
 
 load {
