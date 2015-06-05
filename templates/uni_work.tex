@@ -17,7 +17,8 @@
 
 % Handle graphics correctly
 \ifx\pdftexversion\undefined
-\usepackage[dvips]{graphicx}
+\usepackage{graphicx}
+% \usepackage[dvips]{graphicx}
 \else
 \usepackage[pdftex]{graphicx}
 \DeclareGraphicsRule{*}{mps}{*}{}
