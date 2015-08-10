@@ -6,6 +6,8 @@ clean: clean_vim_links clean_fish clean_bash_aliases clean_git clean_weechat cle
 
 #vim
 vim: vim_links
+	git clone git://github.com/powerline/fonts.git fonts
+	./fonts/install.sh
 	git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 	vim +BundleInstall! +BundleClean +qall
 
