@@ -45,6 +45,7 @@ Plugin 'vim-compile'
 " Plugin 'dbeniamine/todo.txt-vim'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'tclem/vim-arduino'
+Plugin 'reedes/vim-lexical'
 
 
 """"""""""""""""""
@@ -86,6 +87,12 @@ let g:syntastic_cppcheckers = ['gcc', 'clang']
 " Clang Format config
 let g:clang_format#command = 'clang-format-3.5'
 let g:clang_format#detect_style_file = 1
+
+" Spelling config
+let g:lexical#spell_key = '<leader>ss'
+let g:lexical#thesaurus_key = '<leader>st'
+command Spell call lexical#init({'spell': 1})
+command SpellOff call lexical#init({'spell': 0})
 
 " easymotion matches uppercase using lowercase
 let g:EasyMotion_smartcase = 1
@@ -161,10 +168,6 @@ let g:NERDTreeIgnore=['.pyc']
 """""""""""""""""""""""""""""""
 " MISC COMMANDS AND FUNCTIONS "
 """""""""""""""""""""""""""""""
-
-" Manual spelling command
-command Spell setlocal spell spelllang=en_us
-command SpellOff setlocal spell spelllang=
 
 " Remove trailing whitespace
 command! RemTrailWhilespace :%s/\s\+$//
