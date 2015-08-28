@@ -91,6 +91,7 @@ let g:clang_format#detect_style_file = 1
 " Spelling config
 let g:lexical#spell_key = '<leader>ss'
 let g:lexical#thesaurus_key = '<leader>st'
+let g:lexical#spelllang = ['en_gb']
 command Spell call lexical#init({'spell': 1})
 command SpellOff call lexical#init({'spell': 0})
 
