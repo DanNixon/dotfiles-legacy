@@ -9,11 +9,19 @@ echo "## COMMON CONFIG\n" > $I3_CONFIG
 cat i3/common_config >> $I3_CONFIG
 
 echo "\n\n## SYSTEM SPECIFIC CONFIG\n" >> $I3_CONFIG
-cat i3/system_configs/$HOSTNAME >> $I3_CONFIG
+if [ -e i3/system_configs/$HOSTNAME ]
+then
+  cat i3/system_configs/$HOSTNAME >> $I3_CONFIG
+fi
 
 # Status bar config
 echo "## COMMON CONFIG\n" > $I3_SBAR_CONFIG
 cat i3status/common_config >> $I3_SBAR_CONFIG
 
 echo "\n\n## SYSTEM SPECIFIC BAR ORDERING\n" >> $I3_SBAR_CONFIG
-cat i3status/system_orders/$HOSTNAME >> $I3_SBAR_CONFIG
+if [ -e i3status/system_orders//$HOSTNAME ]
+then
+  cat i3status/system_orders/$HOSTNAME >> $I3_SBAR_CONFIG
+else
+  cat i3status/system_orders/default >> $I3_SBAR_CONFIG
+fi
