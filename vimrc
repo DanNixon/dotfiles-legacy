@@ -42,7 +42,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vim-latex'
 Plugin 'vim-compile'
-" Plugin 'dbeniamine/todo.txt-vim'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'tclem/vim-arduino'
 Plugin 'reedes/vim-lexical'
@@ -85,7 +84,7 @@ let g:syntastic_python_pylint_args = "--rcfile=~/.pylintrc"
 let g:syntastic_cppcheckers = ['gcc', 'clang']
 
 " Clang Format config
-let g:clang_format#command = 'clang-format-3.5'
+let g:clang_format#command = 'clang-format'
 let g:clang_format#detect_style_file = 1
 
 " Spelling config
