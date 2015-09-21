@@ -1,5 +1,3 @@
-exec --no-startup-id xrandr --output DVI-I-1 --rotate left --left-of DVI-D-1 --auto
-
 ## My Model M doesn't have a Super_L key :(
 set $mod Mod1
 
