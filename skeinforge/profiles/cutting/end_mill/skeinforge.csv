@@ -1,9 +1,0 @@
-Format is tab separated skeinforge settings.
-_Name                          	Value
-WindowPosition	230+59
-Open File for Skeinforge	C:/Documents and Settings/cdj/bed clamp open.stl
-analyze	False
-craft	False
-help	False
-meta	False
-profile	True
