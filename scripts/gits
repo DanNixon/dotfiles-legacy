@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for dir in `ls -d */`
+do
+  cd $dir
+  if [ -d ".git" ]
+  then
+    echo -e "\033[1m=== $dir ===\033[0m"
+    git status
+    echo
+  fi
+  cd ..
+done
