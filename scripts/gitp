@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Updates each Git repo with a clean working copy
+
+for dir in `ls -d */`
+do
+  cd "$dir"
+  if [ -d ".git" ]
+  then
+    echo -e "\033[1m=== $dir ===\033[0m"
+    if [[ $(git status --porcelain) ]]
+    then
+      echo -e '\E[31mWorking copy not clean.'
+      tput sgr0
+    else
+      git pull
+    fi
+    echo
+  fi
+  cd ..
+done
