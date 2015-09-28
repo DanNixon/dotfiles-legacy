@@ -2,7 +2,7 @@
 
 for dir in `ls -d */`
 do
-  cd $dir
+  cd "$dir"
   if [ -d ".git" ]
   then
     echo -e "\033[1m=== $dir ===\033[0m"
