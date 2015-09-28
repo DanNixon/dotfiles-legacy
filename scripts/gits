@@ -1,12 +1,14 @@
 #!/bin/bash
 
+# Prints status for each Git repo in the current directory.
+
 for dir in `ls -d */`
 do
   cd "$dir"
   if [ -d ".git" ]
   then
     echo -e "\033[1m=== $dir ===\033[0m"
-    git status
+    git status --short --branch
     echo
   fi
   cd ..
