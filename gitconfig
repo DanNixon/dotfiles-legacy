@@ -13,7 +13,6 @@
   m = merge
   l = log --pretty=oneline --graph --abbrev-commit
   la = log --pretty=full --graph
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   com = commit
   co = checkout
   br = branch
@@ -25,6 +24,7 @@
   rad = add -u
   unbugger = reset --hard HEAD
   test-pr = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
+  cla = clean -ixd
 [merge]
   conflictstyle = diff3
 [push]
