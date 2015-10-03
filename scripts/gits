@@ -1,15 +1,21 @@
 #!/bin/bash
 
-# Prints status for each Git repo in the current directory.
+# Prints status for each Git repo in the current directory
+# or for the current directory if it is a repo.
 
-for dir in `ls -d */`
-do
-  cd "$dir"
-  if [ -d ".git" ]
-  then
-    echo -e "\033[1m=== $dir ===\033[0m"
-    git status --short --branch
-    echo
-  fi
-  cd ..
-done
+if [ -d ".git" ]
+then
+  git status --short --branch
+else
+  for dir in `ls -d */`
+  do
+    cd "$dir"
+    if [ -d ".git" ]
+    then
+      echo -e "\033[1m=== $dir ===\033[0m"
+      git status --short --branch
+      echo
+    fi
+    cd ..
+  done
+fi

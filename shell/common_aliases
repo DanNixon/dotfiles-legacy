@@ -16,7 +16,7 @@ alias qa="exit"
 
 # Git commands
 alias g="git"
-alias gs="git status"
+alias gs="git s"
 
 # Directory commands
 alias ..="cd .."
