@@ -179,3 +179,4 @@ bindsym $mod+slash exec pcmanfm
 for_window [class="Google-chrome" instance="crx_hoihofapbdnldlhecnhefifbcddgdkhm"] floating enable  # clock
 for_window [class="MantidPlot" title="Catalog search"] floating enable
 for_window [class="MantidPlot" title="CatalogSelector"] floating enable
+for_window [class="Teensy" instance="teensy" title="Teensy"] floating enable
