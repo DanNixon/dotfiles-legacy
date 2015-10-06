@@ -25,6 +25,7 @@
   unbugger = reset --hard HEAD
   test-pr = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
   cla = clean -ixd
+  bundleall = !"f() { git bundle create $1 --all; }; f"
 [merge]
   conflictstyle = diff3
 [push]
