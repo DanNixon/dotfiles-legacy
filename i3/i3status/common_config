@@ -16,6 +16,11 @@ ethernet eth0 {
   format_down = "E: down"
 }
 
+ethernet eth1 {
+  format_up = "E1: %ip"
+  format_down = "E1: down"
+}
+
 battery 0 {
   format = "%status %percentage"
 }
