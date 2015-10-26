@@ -45,6 +45,7 @@ Plugin 'vim-compile'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'tclem/vim-arduino'
 Plugin 'reedes/vim-lexical'
+Plugin 'hexman.vim'
 
 
 """"""""""""""""""
@@ -178,7 +179,6 @@ function SSHMode()
 endfunction
 
 command! SSH :call SSHMode()
-
 
 """"""""""""""""""""""
 " WHITESPACE WARNING "
