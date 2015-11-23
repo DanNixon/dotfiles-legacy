@@ -168,9 +168,10 @@ bindsym $mod+Shift+L exec i3lock -d -c 182040
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+backslash exec i3-sensible-terminal
 bindsym $mod+c exec google-chrome
+bindsym $mod+p exec evince
 
 ## Screenshot shortcuts
-bindsym $mod+p exec scrot -z
+bindsym $mod+Shift+p exec scrot -z
 
 ## Graphical file browser for moments of insanity
 bindsym $mod+slash exec pcmanfm
