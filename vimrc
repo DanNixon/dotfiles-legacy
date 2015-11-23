@@ -277,3 +277,6 @@ endif
 if hostname == "borg.ncl.ac.uk"
   call SSHMode()
 endif
+if hostname == "yukari"
+  call SSHMode()
+endif
