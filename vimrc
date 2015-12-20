@@ -180,6 +180,10 @@ endfunction
 
 command! SSH :call SSHMode()
 
+command! NoTextWrap :set formatoptions-=t
+command! TextWrap :set formatoptions+=t
+
+
 """"""""""""""""""""""
 " WHITESPACE WARNING "
 """"""""""""""""""""""
