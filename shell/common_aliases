@@ -11,6 +11,7 @@ alias rb="sudo shutdown -r now"
 
 alias df="df -h"
 alias du="du -h"
+alias free="free -h"
 
 alias q="exit"
 alias qa="exit"
