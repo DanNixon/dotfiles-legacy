@@ -182,3 +182,25 @@ for_window [class="MantidPlot" title="Catalog search"] floating enable
 for_window [class="MantidPlot" title="CatalogSelector"] floating enable
 for_window [class="Teensy" instance="teensy" title="Teensy"] floating enable
 for_window [class="Pidgin" instance="Pidgin" window_role="buddy_list"] floating enable
+
+## Audio controls
+bindsym $mod+m exec --no-startup-id amixer -q -c 1 set Master 2dB+ unmute & killall -SIGUSR1 i3status
+bindsym $mod+n exec --no-startup-id amixer -q -c 1 set Master 2dB- unmute & killall -SIGUSR1 i3status
+bindsym $mod+Shift+M exec --no-startup-id amixer -q -c 1 set Master toggle & killall -SIGUSR1 i3status
+
+## Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -c 1 set Master 2dB+ unmute & killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -c 1 set Master 2dB- unmute & killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec --no-startup-id amixer -q -c 1 set Speaker toggle & amixer -q set Headphone toggle & killall -SIGUSR1 i3status
+
+## Backlight
+bindsym XF86MonBrightnessUp exec xbacklight +5
+bindsym XF86MonBrightnessDown exec xbacklight -5
+
+### BEGIN SYSTEM SPECIFIC SECTION
+
+## Start dropbox
+exec --no-startup-id dropbox start
+
+## Use horizontal two finger scrolling
+exec --no-startup-id synclient HorizTwoFingerScroll=1
