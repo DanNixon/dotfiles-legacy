@@ -276,11 +276,3 @@ if !has("win32unix")
 else
   call SSHMode()
 endif
-
-" An SSH only machine, cannot guarentee I will have Powerline fonts
-if hostname == "borg.ncl.ac.uk"
-  call SSHMode()
-endif
-if hostname == "yukari"
-  call SSHMode()
-endif
