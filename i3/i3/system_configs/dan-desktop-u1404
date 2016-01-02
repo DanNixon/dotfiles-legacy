@@ -1,6 +1,0 @@
-## My Model M doesn't have a Super_L key :(
-set $mod Mod1
-
-## Workspace moving (custom desktop PC)
-bindsym $mod+Shift+greater move workspace to output DVI-D-1
-bindsym $mod+Shift+less move workspace to output DVI-I-1
