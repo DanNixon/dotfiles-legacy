@@ -1,5 +1,6 @@
 # Vim stuff
 vim/bundle
+!vim/bundle/vundle
 vim/view
 vim/swap
 vim/.netrwhist

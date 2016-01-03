@@ -45,15 +45,12 @@
         path: i3status.conf
 
 - shell:
-    - git clone git://github.com/powerline/fonts.git fonts
-    - ./fonts/install.sh
-    - rm -rf fonts
-    - git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    - vim +BundleInstall! +BundleClean +qall
+    - [git submodule update --init --recursive, Installing submodules]
 
     -
         command: chsh -s /usr/bin/fish
         stdin: true
         stdout: true
+        stderr: true
 
     - i3-msg restart
