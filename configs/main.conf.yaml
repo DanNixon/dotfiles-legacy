@@ -1,0 +1,38 @@
+- clean: ['~']
+
+- link:
+    ~/.config/terminator:
+        create: true
+        path: dotfiles/terminator/
+
+    ~/.vim:
+        path: dotfiles/vim/
+
+    ~/.vimrc:
+        path: dotfiles/vimrc
+
+    ~/.gitconfig:
+        path: dotfiles/gitconfig
+
+    ~/.putty/sessions:
+        create: true
+        path: dotfiles/putty_serial_sessions/
+
+    ~/.screenrc:
+        path: dotfiles/screenrc
+
+    ~/.bash_aliases:
+        path: dotfiles/shell/bash_aliases
+
+    ~/.weechat:
+        path: dotfiles/weechat/
+
+    ~/.gdbinit:
+        path: dotfiles/gdb/gdbinit
+
+    ~/.gdb:
+        path: dotfiles/gdb/gdb/
+
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

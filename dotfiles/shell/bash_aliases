@@ -1,4 +1,4 @@
-source ~/dotfiles/shell/common_aliases
+source ~/dotfiles/dotfiles/shell/common_aliases
 
 # APT commands
 alias aptup="sudo aptitude update && sudo apttitude upgrade"

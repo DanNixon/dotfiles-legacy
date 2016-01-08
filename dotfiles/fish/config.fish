@@ -1,4 +1,4 @@
-. ~/dotfiles/shell/common_aliases
+. ~/dotfiles/dotfiles/shell/common_aliases
 
 set -U fish_user_paths $fish_user_paths ~/dotfiles/scripts
 

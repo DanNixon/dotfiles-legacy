@@ -1,25 +1,5 @@
-# Vim stuff
-vim/bundle
-!vim/bundle/vundle
-vim/view
-vim/swap
-vim/.netrwhist
-
-# Fish stuff
-fishd.*
-fish_history*
-fish/generated_completions/
-
 # Temp. files
 *~
-
-# PuTTY sessions
-putty_serial_sessions/*
-!putty_serial_sessions/serial_*
-
-# Exclude all unused Skeinforge profiles
-skeinforge/profiles/*
-!skeinforge/profiles/extrusion/Makerspace_i2_ABS
 
 # Compiled Python
 *.pyc

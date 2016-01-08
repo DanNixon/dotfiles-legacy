@@ -1,0 +1,11 @@
+- link:
+    ~/.config/fish:
+        create: true
+        path: dotfiles/fish/
+
+- shell:
+    -
+        command: chsh -s /usr/bin/fish
+        stdin: true
+        stdout: true
+        stderr: true

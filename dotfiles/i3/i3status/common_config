@@ -47,12 +47,3 @@ volume 0 {
   mixer = "Master"
   mixer_idx = 0
 }
-
-order += "wireless wlan0"
-order += "ethernet eth0"
-order += "cpu_usage"
-order += "load"
-order += "cpu_temperature 0"
-order += "battery 0"
-order += "volume 0"
-order += "time"
