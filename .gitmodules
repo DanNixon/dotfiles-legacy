@@ -4,6 +4,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts
-[submodule "vim/bundle/vundle"]
+[submodule "vundle"]
 	path = dotfiles/vim/bundle/vundle
 	url = https://github.com/gmarik/vundle
