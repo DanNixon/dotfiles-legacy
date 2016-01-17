@@ -46,6 +46,7 @@ Plugin 'freitass/todo.txt-vim'
 Plugin 'tclem/vim-arduino'
 Plugin 'reedes/vim-lexical'
 Plugin 'hexman.vim'
+Plugin 'mrtazz/DoxygenToolkit.vim'
 
 
 """"""""""""""""""
