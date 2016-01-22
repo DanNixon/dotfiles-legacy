@@ -33,6 +33,5 @@
     ~/.gdb:
         path: dotfiles/gdb/gdb/
 
-
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

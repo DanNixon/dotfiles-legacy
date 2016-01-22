@@ -9,3 +9,4 @@
         stdin: true
         stdout: true
         stderr: true
+    - "./fonts/install.sh"
