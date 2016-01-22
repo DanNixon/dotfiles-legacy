@@ -2,10 +2,11 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 HOSTNAME=$(cat /etc/hostname)
-I3_CONFIG=$HOME/.i3/config
+I3_CONFIG_DIR=$HOME/.i3
+I3_CONFIG=$I3_CONFIG_DIR/config
 I3_SBAR_CONFIG=$HOME/.i3status.conf
 
-echo $DIR
+mkdir -p $I3_CONFIG_DIR
 
 # Main config
 echo "## COMMON CONFIG\n" > $I3_CONFIG
