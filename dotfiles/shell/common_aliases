@@ -33,8 +33,8 @@ alias todo="todo.sh -d ~/dotfiles/dotfiles//todo.cfg"
 alias tdl="todo list"
 alias vimtodo="vim ~/Dropbox/todo/todo.txt"
 
-alias udm="udisks --mount"
-alias udum="udisks --unmount"
+alias udm="sudo udisks --mount"
+alias udum="sudo udisks --unmount"
 
 # Apps used with screen
 alias music="screen -dR PlayMusicCL playmusiccl"
