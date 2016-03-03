@@ -24,6 +24,9 @@
     ~/.bash_profile:
         path: dotfiles/shell/bash_profile
 
+    ~/.bashrc:
+        path: dotfiles/shell/bash_profile
+
     ~/.weechat:
         path: dotfiles/weechat/
 
