@@ -32,6 +32,7 @@ alias calc="bc -lq"
 alias todo="todo.sh -d ~/dotfiles/dotfiles//todo.cfg"
 alias tdl="todo list"
 alias vimtodo="vim ~/Dropbox/todo/todo.txt"
+alias texc="texcount *.tex"
 
 alias udm="udisks --mount"
 alias udum="udisks --unmount"
