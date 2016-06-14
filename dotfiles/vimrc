@@ -48,6 +48,8 @@ Plugin 'tclem/vim-arduino'
 Plugin 'reedes/vim-lexical'
 Plugin 'hexman.vim'
 Plugin 'mrtazz/DoxygenToolkit.vim'
+Plugin 'elzr/vim-json'
+Plugin 'tpope/vim-jdaddy'
 
 
 """"""""""""""""""
