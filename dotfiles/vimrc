@@ -50,6 +50,7 @@ Plugin 'hexman.vim'
 Plugin 'mrtazz/DoxygenToolkit.vim'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-jdaddy'
+Plugin 'editorconfig/editorconfig-vim'
 
 
 """"""""""""""""""
