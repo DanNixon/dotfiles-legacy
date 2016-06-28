@@ -1,7 +1,7 @@
 - link:
-    ~/.config/fish:
+    ~/.config/omf:
         create: true
-        path: dotfiles/fish/
+        path: dotfiles/omf/
 
 - shell:
     -
@@ -10,10 +10,13 @@
         stdout: true
         stderr: true
     -
-        sudo pip install thefuck
-        command: chsh -s /usr/bin/fish
+        command: sudo pip install thefuck
         stdin: true
         stdout: true
         stderr: true
     - "./fonts/install.sh"
-    - "curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish"
+    -
+        command: curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+        stdin: true
+        stdout: true
+        stderr: true
