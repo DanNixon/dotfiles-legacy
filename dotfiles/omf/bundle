@@ -4,6 +4,7 @@ package config
 package shark
 package thefuck
 package vundle
-theme cbjohnson
-theme godfather
 theme lambda
+theme nai
+theme shellder
+theme zish
