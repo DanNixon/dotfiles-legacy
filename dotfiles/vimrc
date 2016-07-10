@@ -48,9 +48,10 @@ Plugin 'tclem/vim-arduino'
 Plugin 'reedes/vim-lexical'
 Plugin 'hexman.vim'
 Plugin 'mrtazz/DoxygenToolkit.vim'
-Plugin 'elzr/vim-json'
+" Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Chiel92/vim-autoformat'
 
 
 """"""""""""""""""
@@ -219,13 +220,16 @@ map <Leader>s :Spell<CR>
 map <Leader>S :SpellOff<CR>
 
 " Highlight shortcuts
-nnoremap <silent> <leader>h :call InterestingWords('n')<cr>
-nnoremap <silent> <leader>H :call UncolorAllWords()<cr>
+nnoremap <silent> <Leader>h :call InterestingWords('n')<cr>
+nnoremap <silent> <Leader>H :call UncolorAllWords()<cr>
 
 " Find shortcuts
 map <Leader>l :FufLine<CR>
 map <Leader>f :CtrlP<CR>
 map <Leader>b :CtrlPBuffer<CR>
+
+" Code format shortcut
+map <Leader>F :Autoformat<CR>
 
 " Toggle folding
 map <Leader>z zA
