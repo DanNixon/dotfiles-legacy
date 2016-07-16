@@ -2,7 +2,9 @@ set nocompatible
 filetype off
 set encoding=utf-8
 
-set shell=bash
+if !has("win32")
+	set shell=bash
+endif
 
 
 """""""""""""""""
@@ -52,7 +54,8 @@ Plugin 'mrtazz/DoxygenToolkit.vim'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Chiel92/vim-autoformat'
-
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'jnurmine/Zenburn'
 
 """"""""""""""""""
 " GENERAL CONFIG "
@@ -104,10 +107,35 @@ command SpellOff call lexical#init({'spell': 0})
 " easymotion matches uppercase using lowercase
 let g:EasyMotion_smartcase = 1
 
-" 256 colour ability is not reported properly
-set t_Co=256
+" Handle ebackspace correctly under ConEmu
+if has("win32")
+	func ConEmuBackspace()
+		if col('.') == 1
+			if line('.')  != 1
+				return  "\<ESC>kA\<Del>"
+			else
+				return ""
+			endif
+		else
+			return "\<Left>\<Del>"
+		endif
+	endfunc
+	
+	inoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
+	nnoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
+endif
 
-colorscheme distinguished
+" Terminal colour
+if has("win32")
+	set term=xterm
+	set t_Co=256
+	let &t_AB="\e[48;5;%dm"
+	let &t_AF="\e[38;5;%dm"
+	colorscheme zenburn
+else
+	set t_Co=256
+	colorscheme distinguished
+endif
 
 syntax on
 filetype plugin indent on
