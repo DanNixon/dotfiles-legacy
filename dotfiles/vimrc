@@ -3,7 +3,7 @@ filetype off
 set encoding=utf-8
 
 if !has("win32")
-	set shell=bash
+  set shell=bash
 endif
 
 
@@ -109,32 +109,32 @@ let g:EasyMotion_smartcase = 1
 
 " Handle ebackspace correctly under ConEmu
 if has("win32")
-	func ConEmuBackspace()
-		if col('.') == 1
-			if line('.')  != 1
-				return  "\<ESC>kA\<Del>"
-			else
-				return ""
-			endif
-		else
-			return "\<Left>\<Del>"
-		endif
-	endfunc
-	
-	inoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
-	nnoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
+  func ConEmuBackspace()
+    if col('.') == 1
+      if line('.')  != 1
+        return  "\<ESC>kA\<Del>"
+      else
+        return ""
+      endif
+    else
+      return "\<Left>\<Del>"
+    endif
+  endfunc
+
+  inoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
+  nnoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
 endif
 
 " Terminal colour
 if has("win32")
-	set term=xterm
-	set t_Co=256
-	let &t_AB="\e[48;5;%dm"
-	let &t_AF="\e[38;5;%dm"
-	colorscheme zenburn
+  set term=xterm
+  set t_Co=256
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
+  colorscheme zenburn
 else
-	set t_Co=256
-	colorscheme distinguished
+  set t_Co=256
+  colorscheme distinguished
 endif
 
 syntax on
