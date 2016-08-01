@@ -1,11 +1,11 @@
 set nocompatible
-filetype off
 set encoding=utf-8
 
 if !has("win32")
   set shell=bash
 endif
 
+filetype off
 
 """""""""""""""""
 " VUNDLE CONFIG "
@@ -57,9 +57,14 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'jnurmine/Zenburn'
 
+call vundle#end()
+
 """"""""""""""""""
 " GENERAL CONFIG "
 """"""""""""""""""
+
+filetype plugin indent on
+syntax on
 
 " Use Space as Leader
 let mapleader = " "
@@ -136,9 +141,6 @@ else
   set t_Co=256
   colorscheme distinguished
 endif
-
-syntax on
-filetype plugin indent on
 
 set colorcolumn=80
 
