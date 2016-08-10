@@ -1,15 +1,15 @@
 [github]
   user = DanNixon
 [user]
-	email = dan@dan-nixon.com
-	name = Dan Nixon
+  email = dan@dan-nixon.com
+  name = Dan Nixon
 [color]
-	ui = true
+  ui = true
 [core]
   editor = vim
 [alias]
   s = status --short --branch
-  p = push
+  p = pull
   m = merge
   l = log --pretty=oneline --graph --abbrev-commit
   la = log --pretty=full --graph
