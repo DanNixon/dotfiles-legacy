@@ -164,6 +164,10 @@ bar {
 ## Lock shortcut
 bindsym $mod+Shift+L exec i3lock -d -c 182040
 
+## Move workspace shortcuts
+bindsym $mod+Shift+less move workspace to output left
+bindsym $mod+Shift+greater move workspace to output right
+
 ## Application launchers
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+backslash exec i3-sensible-terminal
