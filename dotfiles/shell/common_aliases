@@ -3,7 +3,7 @@ alias l="ls -lFh"
 alias ll="ls -alFh"
 alias la="ls -A"
 alias ldev="ls -lFh /dev/ | grep"
-alias lmedia="tree /media"
+alias lmedia="tree -d -L 2 /media"
 
 # General comands
 alias die="sudo shutdown -P now"
