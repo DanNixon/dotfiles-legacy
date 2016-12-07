@@ -1,0 +1,5 @@
+order += "ethernet enp0s10"
+order += "cpu_usage"
+order += "load"
+order += "volume 0"
+order += "time"

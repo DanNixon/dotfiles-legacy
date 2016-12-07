@@ -172,6 +172,7 @@ bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+backslash exec i3-sensible-terminal
 bindsym $mod+c exec google-chrome
+bindsym $mod+x exec firefox
 bindsym $mod+p exec evince
 
 ## Screenshot shortcuts
@@ -186,3 +187,4 @@ for_window [class="MantidPlot" title="Catalog search"] floating enable
 for_window [class="MantidPlot" title="CatalogSelector"] floating enable
 for_window [class="Teensy" instance="teensy" title="Teensy"] floating enable
 for_window [class="Pidgin" instance="Pidgin" window_role="buddy_list"] floating enable
+for_window [class="Keepassx" instance="keepassx"] floating enable

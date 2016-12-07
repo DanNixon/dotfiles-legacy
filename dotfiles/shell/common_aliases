@@ -3,7 +3,7 @@ alias l="ls -lFh"
 alias ll="ls -alFh"
 alias la="ls -A"
 alias ldev="ls -lFh /dev/ | grep"
-alias lmedia="ls -lFh /media/"
+alias lmedia="tree -d -L 2 /media"
 
 # General comands
 alias die="sudo shutdown -P now"
@@ -35,8 +35,8 @@ alias vimtodo="vim ~/Dropbox/todo/todo.txt"
 alias texc="texcount *.tex"
 alias strip-exif="exiftool -all="
 
-alias udm="udisks --mount"
-alias udum="udisks --unmount"
+alias udm="udisksctl mount -b"
+alias udum="udisksctl unmount -b"
 
 # Apps used with screen
 alias music="screen -dR PlayMusicCL playmusiccl"
