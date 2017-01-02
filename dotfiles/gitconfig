@@ -1,32 +1,49 @@
 [github]
   user = DanNixon
+
 [user]
   email = dan@dan-nixon.com
   name = Dan Nixon
+
 [color]
   ui = true
+
 [core]
   editor = vim
+
+[pretty]
+  concise    = "%C(yellow)%h %C(reset)%ad %C(blue)%an %C(reset)%s%C(green)%d"
+  cleangraph = "%C(yellow)%h %C(reset)%ad %C(reset)%s%C(green)%d"
+  reflog     = "%C(yellow)%h %C(reset)%ad %C(blue)%an %C(reset)%gs%C(green)%d"
+
 [alias]
-  s = status --short --branch
-  p = pull
-  m = merge
-  l = log --pretty=oneline --graph --abbrev-commit
-  la = log --pretty=full --graph
-  com = commit
-  co = checkout
-  br = branch
-  tags = tag -l
-  brs = branch --list
-  stl = stash list
-  up = fetch -p
-  upp = !"git fetch -p; git pull"
-  rad = add -u
-  unbugger = reset --hard HEAD
-  test-pr = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
-  cla = clean -ixd
+  s         = status --short --branch
+  co        = checkout
+  com       = commit
+  ca        = commit --amend
+  g         = grep
+  d         = diff
+  ds        = diff --staged
+  br        = branch
+  brs       = branch --list
+  l         = log --pretty=concise -n 25
+  ll        = log --pretty=concise
+  la        = log --pretty=full --graph
+  lfp       = log --pretty=concise --first-parent
+  lg        = log --pretty=concise --graph
+  lb        = log --pretty=cleangraph --graph --branches --simplify-by-decoration
+  rl        = log --pretty=reflog --walk-reflogs
+  m         = merge
+  p         = pull
+  up        = fetch -p
+  upp       = !"git fetch -p; git pull"
+  unbugger  = reset --hard HEAD
+  cla       = clean -ixd
+  test-pr   = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
   bundleall = !"f() { git bundle create $1 --all; }; f"
+
 [merge]
   conflictstyle = diff3
+
 [push]
   default = current
