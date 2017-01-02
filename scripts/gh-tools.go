@@ -9,6 +9,19 @@ import (
 	"golang.org/x/oauth2"
 )
 
+func getClient(ctx climax.Context) (client *github.Client, err error) {
+	token, tokenSet := ctx.Get("token")
+	if !tokenSet {
+		err = fmt.Errorf("Must set API token")
+		return
+	}
+
+	ts := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: token})
+	tc := oauth2.NewClient(oauth2.NoContext, ts)
+	client = github.NewClient(tc)
+	return
+}
+
 func getStarred(client *github.Client, visibility string) (allRepos []*github.Repository) {
 	opt := &github.ActivityListStarredOptions{ListOptions: github.ListOptions{PerPage: 10, Page: 1}}
 	for {
@@ -53,20 +66,39 @@ func getMine(client *github.Client, visibility string) (allRepos []*github.Repos
 	return
 }
 
-func main() {
-	cli := climax.New("gh-list")
-	cli.Brief = "List GitHub repos."
+func deleteAllRepoLabels(client *github.Client, repo *github.Repository) (err error) {
+	opt := &github.ListOptions{PerPage: 10, Page: 0}
+	labels, _, err := client.Issues.ListLabels(*repo.Owner.Login, *repo.Name, opt)
+	if err != nil {
+		return
+	}
 
-	listCmd := climax.Command{
+	for _, label := range labels {
+		_, err := client.Issues.DeleteLabel(*repo.Owner.Login, *repo.Name, *label.Name)
+		if err != nil {
+			log.Printf("Failed to delete label \"%s\"\n", *label.Name)
+		}
+	}
+
+	return
+}
+
+func main() {
+	cli := climax.New("gh-tools")
+	cli.Brief = "Tools for speeding up GitHUb related tasks."
+
+	tokenFlag := climax.Flag{
+		Name:     "token",
+		Short:    "t",
+		Help:     `GitHub API token.`,
+		Variable: true,
+	}
+
+	cli.AddCommand(climax.Command{
 		Name: "list",
 
 		Flags: []climax.Flag{
-			{
-				Name:     "token",
-				Short:    "t",
-				Help:     `GitHub API token.`,
-				Variable: true,
-			},
+			tokenFlag,
 			{
 				Name:     "visibility",
 				Short:    "v",
@@ -88,23 +120,18 @@ func main() {
 		},
 
 		Handle: func(ctx climax.Context) int {
-			token, tokenSet := ctx.Get("token")
-			if !tokenSet {
-				fmt.Println("Must set API token.")
+			client, err := getClient(ctx)
+			if err != nil {
+				log.Fatal(err)
 				return 1
 			}
-
-			ts := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: token})
-			tc := oauth2.NewClient(oauth2.NoContext, ts)
-			client := github.NewClient(tc)
-
-			var allRepos []*github.Repository
 
 			visibility, visibilitySet := ctx.Get("visibility")
 			if !visibilitySet {
 				visibility = "all"
 			}
 
+			var allRepos []*github.Repository
 			if ctx.Is("starred") {
 				repos := getStarred(client, visibility)
 				allRepos = append(allRepos, repos...)
@@ -124,8 +151,66 @@ func main() {
 			}
 			return 0
 		},
-	}
+	})
 
-	cli.AddCommand(listCmd)
+	cli.AddCommand(climax.Command{
+		Name: "new",
+
+		Flags: []climax.Flag{
+			tokenFlag,
+			{
+				Name:     "private",
+				Short:    "p",
+				Help:     `Create this repository private.`,
+				Variable: false,
+			},
+			{
+				Name:     "description",
+				Short:    "d",
+				Help:     `Repository description.`,
+				Variable: true,
+			},
+		},
+
+		Handle: func(ctx climax.Context) int {
+			client, err := getClient(ctx)
+			if err != nil {
+				log.Fatal(err)
+				return 1
+			}
+
+			if len(ctx.Args) != 1 {
+				log.Fatal("Incorrect number of arguments")
+				return 1
+			}
+
+			description, _ := ctx.Get("description")
+
+			// New repo
+			newRepo := &github.Repository{
+				Name:        &ctx.Args[0],
+				Description: &description,
+				Private:     new(bool),
+				HasIssues:   new(bool),
+				HasWiki:     new(bool),
+			}
+			*newRepo.Private = ctx.Is("private")
+			*newRepo.HasIssues = true
+			*newRepo.HasWiki = false
+
+			// Create repo
+			repo, _, err := client.Repositories.Create("", newRepo)
+			if err != nil {
+				log.Fatal(err)
+				return 1
+			}
+
+			deleteAllRepoLabels(client, repo)
+
+			fmt.Printf("New repository created: %s\n", *repo.HTMLURL)
+			return 0
+		},
+	})
+
 	cli.Run()
 }
