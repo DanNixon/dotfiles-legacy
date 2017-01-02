@@ -57,7 +57,7 @@ func main() {
 	cli := climax.New("gh-list")
 	cli.Brief = "List GitHub repos."
 
-	joinCmd := climax.Command{
+	listCmd := climax.Command{
 		Name: "list",
 
 		Flags: []climax.Flag{
@@ -126,6 +126,6 @@ func main() {
 		},
 	}
 
-	cli.AddCommand(joinCmd)
+	cli.AddCommand(listCmd)
 	cli.Run()
 }
