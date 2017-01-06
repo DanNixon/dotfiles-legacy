@@ -141,7 +141,7 @@ func main() {
 				allRepos = append(allRepos, repos...)
 			}
 
-			fmt.Printf("Num repos: %d\n", len(allRepos))
+			log.Printf("Num repos: %d\n", len(allRepos))
 			for _, r := range allRepos {
 				if *r.Private {
 					fmt.Println(*r.SSHURL)
