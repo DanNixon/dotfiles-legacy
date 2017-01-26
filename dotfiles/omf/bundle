@@ -1,7 +1,6 @@
 package apt
 package battery
 package config
-package shark
 package thefuck
 package vundle
 theme lambda
