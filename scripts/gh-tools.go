@@ -85,7 +85,7 @@ func deleteAllRepoLabels(client *github.Client, repo *github.Repository) (err er
 
 func main() {
 	cli := climax.New("gh-tools")
-	cli.Brief = "Tools for speeding up GitHUb related tasks."
+	cli.Brief = "Tools for speeding up GitHub related tasks."
 
 	tokenFlag := climax.Flag{
 		Name:     "token",
@@ -141,7 +141,7 @@ func main() {
 				allRepos = append(allRepos, repos...)
 			}
 
-			fmt.Printf("Num repos: %d\n", len(allRepos))
+			log.Printf("Num repos: %d\n", len(allRepos))
 			for _, r := range allRepos {
 				if *r.Private {
 					fmt.Println(*r.SSHURL)
