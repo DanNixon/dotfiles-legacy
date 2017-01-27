@@ -1,5 +1,5 @@
-order += "wireless wlan0"
-order += "ethernet eth0"
+order += "wireless wlo1"
+order += "ethernet eno1"
 order += "cpu_usage"
 order += "load"
 order += "cpu_temperature 0"

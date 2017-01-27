@@ -6,6 +6,16 @@ general {
   interval = 1
 }
 
+wireless wlo1 {
+  format_up = "W: %ip (%quality at %essid)"
+  format_down = "W: down"
+}
+
+ethernet eno1 {
+  format_up = "E: %ip"
+  format_down = "E: down"
+}
+
 wireless wlan0 {
   format_up = "W: %ip (%quality at %essid)"
   format_down = "W: down"
