@@ -17,6 +17,8 @@
   reflog     = "%C(yellow)%h %C(reset)%ad %C(blue)%an %C(reset)%gs%C(green)%d"
 
 [alias]
+  a         = add
+  aa        = add --all
   s         = status --short --branch
   co        = checkout
   com       = commit
