@@ -40,8 +40,8 @@ Plug 'mrtazz/DoxygenToolkit.vim'
 Plug 'tpope/vim-jdaddy'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Chiel92/vim-autoformat'
-Plug 'Lokaltog/vim-distinguished'
-Plug 'jnurmine/Zenburn'
+Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
@@ -240,9 +240,9 @@ nnoremap <silent> <Leader>h :call InterestingWords('n')<cr>
 nnoremap <silent> <Leader>H :call UncolorAllWords()<cr>
 
 " Find shortcuts
-map <Leader>l :FufLine<CR>
-map <Leader>f :CtrlP<CR>
+map <Leader>f :FZF<CR>
 map <Leader>b :CtrlPBuffer<CR>
+map <Leader>l :CtrlPLine<CR>
 
 " Code format shortcut
 map <Leader>F :Autoformat<CR>

@@ -2,6 +2,7 @@ package apt
 package battery
 package config
 package fzf
+package hash
 package thefuck
 theme lambda
 theme nai
