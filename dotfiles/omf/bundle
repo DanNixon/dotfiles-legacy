@@ -1,8 +1,8 @@
 package apt
 package battery
 package config
+package fzf
 package thefuck
-package vundle
 theme lambda
 theme nai
 theme shellder

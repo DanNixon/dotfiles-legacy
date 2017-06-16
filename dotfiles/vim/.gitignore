@@ -1,5 +1,4 @@
-bundle
-!bundle/vundle
 view
 swap
 .netrwhist
+plugged/

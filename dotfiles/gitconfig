@@ -10,6 +10,7 @@
 
 [core]
   editor = vim
+	quotepath = false
 
 [pretty]
   concise    = "%C(yellow)%h %C(reset)%ad %C(blue)%an %C(reset)%s%C(green)%d"

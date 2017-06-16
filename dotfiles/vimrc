@@ -8,46 +8,42 @@ endif
 filetype off
 
 """""""""""""""""
-" VUNDLE CONFIG "
+" PLUGIN CONFIG "
 """""""""""""""""
 
-let g:vundle_default_git_proto='git'
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-commentary'
-Plugin 'restore_view.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/syntastic'
-Plugin 'l9'
-Plugin 'FuzzyFinder'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'fatih/vim-go'
-Plugin 'openscad.vim'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'majutsushi/tagbar'
-Plugin 'vasconcelloslf/vim-interestingwords'
-Plugin 'tpope/vim-abolish'
-Plugin 'kana/vim-operator-user'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'tpope/vim-surround'
-Plugin 'lervag/vim-latex'
-Plugin 'freitass/todo.txt-vim'
-Plugin 'reedes/vim-lexical'
-Plugin 'mrtazz/DoxygenToolkit.vim'
-Plugin 'tpope/vim-jdaddy'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'Lokaltog/vim-distinguished'
-Plugin 'jnurmine/Zenburn'
+Plug 'VundleVim/Vundle.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/restore_view.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim'
+Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
+Plug 'sirtaj/vim-openscad'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'majutsushi/tagbar'
+Plug 'vasconcelloslf/vim-interestingwords'
+Plug 'tpope/vim-abolish'
+Plug 'kana/vim-operator-user'
+Plug 'rhysd/vim-clang-format'
+Plug 'tpope/vim-surround'
+Plug 'lervag/vim-latex'
+Plug 'freitass/todo.txt-vim'
+Plug 'reedes/vim-lexical'
+Plug 'mrtazz/DoxygenToolkit.vim'
+Plug 'tpope/vim-jdaddy'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'Lokaltog/vim-distinguished'
+Plug 'jnurmine/Zenburn'
 
-call vundle#end()
+call plug#end()
 
 """"""""""""""""""
 " GENERAL CONFIG "
