@@ -30,6 +30,9 @@
     ~/.weechat:
         path: dotfiles/weechat/
 
+    ~/.gntrc:
+        path: dotfiles/gntrc
+
     ~/.gdbinit:
         path: dotfiles/gdb/gdbinit
 
