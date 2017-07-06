@@ -21,11 +21,8 @@
     ~/.screenrc:
         path: dotfiles/screenrc
 
-    ~/.bash_profile:
-        path: dotfiles/shell/bash_profile
-
-    ~/.bashrc:
-        path: dotfiles/shell/bash_profile
+    ~/.bash_aliases:
+        path: dotfiles/shell/bash_aliases
 
     ~/.weechat:
         path: dotfiles/weechat/
