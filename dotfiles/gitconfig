@@ -47,5 +47,8 @@
 [merge]
   conflictstyle = diff3
 
+[diff "bin"]
+  textconv = hexdump -v -C
+
 [push]
   default = current
