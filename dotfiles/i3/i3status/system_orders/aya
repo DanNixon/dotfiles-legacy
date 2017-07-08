@@ -1,4 +1,3 @@
-order += "ethernet eth0"
 order += "cpu_usage"
 order += "load"
 order += "cpu_temperature 0"
