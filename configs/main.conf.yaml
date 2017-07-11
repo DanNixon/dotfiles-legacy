@@ -36,5 +36,8 @@
     ~/.gdb:
         path: dotfiles/gdb/gdb/
 
+    ~/.elinks:
+        path: dotfiles/elinks
+
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
