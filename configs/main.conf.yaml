@@ -27,12 +27,6 @@
     ~/.gntrc:
         path: dotfiles/gntrc
 
-    ~/.gdbinit:
-        path: dotfiles/gdb/gdbinit
-
-    ~/.gdb:
-        path: dotfiles/gdb/gdb/
-
     ~/.elinks:
         path: dotfiles/elinks
 
