@@ -24,9 +24,6 @@
     ~/.bash_aliases:
         path: dotfiles/shell/bash_aliases
 
-    ~/.weechat:
-        path: dotfiles/weechat/
-
     ~/.gntrc:
         path: dotfiles/gntrc
 
