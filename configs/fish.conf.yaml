@@ -10,17 +10,7 @@
         stdout: true
         stderr: true
     -
-        command: sudo apt install curl python-pip python3-pip
-        stdin: true
-        stdout: true
-        stderr: true
-    -
-        command: sudo pip3 install thefuck
-        stdin: true
-        stdout: true
-        stderr: true
-    -
-        command: sudo pip install virtualfish
+        command: sudo apt install curl
         stdin: true
         stdout: true
         stderr: true

@@ -9,9 +9,6 @@ function b
   upower -i (upower -e | grep 'BAT') | grep -E "state|time\ to|percentage|energy-rate" --color=never
 end
 
-# Init VirtualFish
-eval (python -m virtualfish)
-
 # No greeting
 function fish_greeting
 end
