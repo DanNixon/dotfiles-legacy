@@ -14,7 +14,6 @@ alias du="du -h"
 alias free="free -h"
 
 alias q="exit"
-alias qa="exit"
 
 # Git commands
 alias g="git"
@@ -25,23 +24,19 @@ alias gl="git l"
 alias ..="cd .."
 
 # Misc app stuff
-alias ytdl="youtube-dl"
 alias ytmdl="youtube-dl -x -k --audio-format mp3"
 alias dbs="dropbox status"
 alias stripexif="exiftool -all= "
-alias calc="bc -lq"
 alias todo="todo.sh -d ~/dotfiles/dotfiles/todo.cfg"
 alias tdl="todo list"
 alias vimtodo="vim ~/Dropbox/todo/todo.txt"
 alias texc="texcount *.tex"
 alias strip-exif="exiftool -all="
+alias py="python"
 
 alias udm="udisksctl mount -b"
 alias udum="udisksctl unmount -b"
 
 # Apps used with screen
-alias music="screen -dR PlayMusicCL playmusiccl"
-alias irc="screen -dR irc weechat-curses"
 alias s="screen -dR"
-alias screens="screen -ls"
 alias sls="screen -ls"
