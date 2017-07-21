@@ -58,12 +58,6 @@ let mapleader = " "
 " Use mouse (really just do this for the sake of having a sensible scroll wheel)
 set mouse=a
 
-" Airline config
-let g:airline_theme = 'bubblegum'
-
-set laststatus=2
-set timeoutlen=250
-
 set wildignore+=*~,*.pyc,*.so,*.o
 
 " Tagbar config
@@ -125,10 +119,16 @@ if has("win32")
   colorscheme zenburn
 else
   set t_Co=256
-  colorscheme distinguished
+  colorscheme zenburn
 endif
 
-set colorcolumn=80
+" Airline config
+let g:airline_theme = 'base16_grayscale'
+
+set laststatus=2
+set timeoutlen=250
+
+" set colorcolumn=80
 
 " Set tab width to 2 spaces
 set tabstop=2
