@@ -1,65 +1,31 @@
 [global_config]
-  title_receive_bg_color = "#004f87"
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
-  title_transmit_bg_color = "#7b0001"
   tab_position = hidden
+  title_receive_bg_color = "#004f87"
+  title_transmit_bg_color = "#7b0001"
 [keybindings]
   new_tab = <Primary><Shift>t
   search = <Primary>f
-  split_vert = <Primary><Shift>s
   split_horiz = <Primary><Shift>h
-[profiles]
-  [[show-titles]]
-    scrollbar_position = hidden
-    use_system_font = False
-    font = Droid Sans Mono for Powerline 10
-    background_color = "#101010"
-    background_image = None
-  [[infinte-scrollback]]
-    scrollbar_position = hidden
-    use_system_font = False
-    background_image = None
-    scroll_on_output = False
-    show_titlebar = False
-    font = Droid Sans Mono for Powerline 10
-    background_color = "#101010"
-    scrollback_infinite = True
-  [[default]]
-    scrollbar_position = hidden
-    background_image = None
-    use_system_font = False
-    show_titlebar = False
-    font = Droid Sans Mono for Powerline 10
-    background_color = "#101010"
-  [[light]]
-    scrollbar_position = hidden
-    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
-    background_image = None
-    use_system_font = False
-    foreground_color = "#000000"
-    show_titlebar = False
-    font = Droid Sans Mono for Powerline 10
-    background_color = "#ffffff"
-  [[big]]
-    scrollbar_position = hidden
-    background_image = None
-    use_system_font = False
-    show_titlebar = False
-    font = Droid Sans Mono for Powerline 12
-    background_color = "#101010"
-  [[small]]
-    scrollbar_position = hidden
-    background_image = None
-    use_system_font = False
-    show_titlebar = False
-    font = Droid Sans Mono for Powerline 8
-    background_color = "#101010"
+  split_vert = <Primary><Shift>s
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#2b2d2e"
+    background_image = None
+    cursor_color = "#708284"
+    font = Droid Sans Mono for Powerline 10
+    foreground_color = "#d2d8d9"
+    palette = "#7d8b8f:#b23a52:#789b6a:#b9ac4a:#2a7fac:#bd4f5a:#44a799:#d2d8d9:#888888:#f24840:#80c470:#ffeb62:#4196ff:#fc5275:#53cdbd:#d2d8d9"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
