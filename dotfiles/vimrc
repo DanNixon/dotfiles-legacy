@@ -92,33 +92,14 @@ command SpellOff call lexical#init({'spell': 0})
 " easymotion matches uppercase using lowercase
 let g:EasyMotion_smartcase = 1
 
-" Handle ebackspace correctly under ConEmu
-if has("win32")
-  func ConEmuBackspace()
-    if col('.') == 1
-      if line('.')  != 1
-        return  "\<ESC>kA\<Del>"
-      else
-        return ""
-      endif
-    else
-      return "\<Left>\<Del>"
-    endif
-  endfunc
-
-  inoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
-  nnoremap <Char-0x07F> <c-r>=ConEmuBackspace()<CR>
-endif
-
 " Terminal colour
+set t_Co=256
+colorscheme zenburn
+
 if has("win32")
   set term=xterm
-  set t_Co=256
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
-  colorscheme zenburn
-else
-  set t_Co=256
   colorscheme zenburn
 endif
 
@@ -127,8 +108,6 @@ let g:airline_theme = 'base16_grayscale'
 
 set laststatus=2
 set timeoutlen=250
-
-" set colorcolumn=80
 
 " Set tab width to 2 spaces
 set tabstop=2
