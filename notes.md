@@ -1,7 +1,10 @@
-# Gotchas
+# Notes
 
-A few issues I've had to resolve during setup that I'd probably forget how to
-do.
+## Setting environment variables in Fish
+
+```
+set -Ux [VARIABLE] [VALUE]
+```
 
 ## Setting Fish PATH
 
