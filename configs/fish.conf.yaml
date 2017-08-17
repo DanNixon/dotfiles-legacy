@@ -20,3 +20,13 @@
         stdin: true
         stdout: true
         stderr: true
+    -
+        command: echo "set -Ux EDITOR vim" | fish
+        stdin: true
+        stdout: true
+        stderr: true
+    -
+        command: echo "set -Ux TODOTXT_DEFAULT_ACTION ls" | fish
+        stdin: true
+        stdout: true
+        stderr: true
