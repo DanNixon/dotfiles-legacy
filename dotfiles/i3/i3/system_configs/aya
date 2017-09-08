@@ -1,6 +1,3 @@
-## My Model M doesn't have a Super_L key :(
-set $mod Mod1
-
 ## Audio controls
 bindsym $mod+m exec --no-startup-id amixer -q set Master 2dB+ unmute & killall -SIGUSR1 i3status
 bindsym $mod+n exec --no-startup-id amixer -q set Master 2dB- unmute & killall -SIGUSR1 i3status
