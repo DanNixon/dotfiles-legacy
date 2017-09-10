@@ -1,0 +1,5 @@
+order += "cpu_usage"
+order += "load"
+order += "battery 0"
+order += "volume 0"
+order += "time"
