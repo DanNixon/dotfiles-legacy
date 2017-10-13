@@ -6,7 +6,7 @@ import itertools
 import json
 import requests
 
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 
 
 class GitHubClient(object):
@@ -126,8 +126,31 @@ def main(token):
     gh_client = GitHubClient(token)
     all_prs = gh_client.fetch_pull_requests()
 
-    result_colour = lambda good: Fore.GREEN if good else Fore.RED
-    result_mark = lambda good: '✔' if good else '✘'
+    result_colours = {
+            True: Fore.GREEN,
+            False: Fore.RED,
+            'ERROR':  Fore.RED,
+            'EXPECTED': Fore.YELLOW,
+            'FAILURE': Fore.RED,
+            'PENDING': Fore.YELLOW,
+            'SUCCESS': Fore.GREEN
+        }
+
+    result_marks = {
+            True: '✔',
+            False: '✘',
+            'ERROR':  '✘',
+            'EXPECTED': '●',
+            'FAILURE': '✘',
+            'PENDING': '●',
+            'SUCCESS': '✔'
+        }
+
+    def get_check_str(result):
+        return '{c}{mark}{rst}'.format(
+                    c=result_colours[result],
+                    mark=result_marks[result],
+                    rst=Style.RESET_ALL)
 
     for org, org_prs in itertools.groupby(all_prs, lambda p: p['repository']['owner']['login']):
         click.echo('- {}{}{}'.format(Fore.CYAN, org, Style.RESET_ALL))
@@ -136,23 +159,17 @@ def main(token):
             for pr in repo_prs:
                 mergeable = pr['mergeable'] == 'MERGEABLE'
                 last_commit = pr['commits']['nodes'][0]['commit']
-                ci_state = last_commit['status']['state'] == 'SUCCESS' if last_commit['status'] else None
+                ci_state = last_commit['status']['state'] if last_commit['status'] else None
 
-                checks = '{c}{mark}{rst}'.format(
-                        c=result_colour(mergeable),
-                        mark=result_mark(mergeable),
-                        rst=Style.RESET_ALL)
+                checks = get_check_str(mergeable)
 
                 if ci_state is not None:
-                    checks += ' {c}{mark}{rst}'.format(
-                            c=result_colour(ci_state),
-                            mark=result_mark(ci_state),
-                            rst=Style.RESET_ALL)
+                    checks += ' ' + get_check_str(ci_state)
 
                 click.echo('    - {y}#{pr[number]}{rst}: {pr[title]} {checks}'.format(
                     pr=pr, checks=checks, y=Fore.YELLOW, rst=Style.RESET_ALL))
 
-                if mergeable == False or ci_state == False:
+                if mergeable is False or (ci_state is not None and not ci_state == 'SUCCESS'):
                     click.echo('      {dim}{pr[url]}{rst}'.format(
                         pr=pr, dim=Style.DIM, rst=Style.RESET_ALL))
 
