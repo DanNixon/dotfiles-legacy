@@ -19,6 +19,7 @@
 [alias]
   a         = add
   aa        = add --all
+  ap        = add --patch
   s         = status --short --branch
   co        = checkout
   com       = commit
@@ -28,6 +29,8 @@
   ds        = diff --staged
   br        = branch
   brs       = branch --list
+  bra       = branch --all
+  brm       = branch --merged
   l         = log --pretty=concise -n 25
   ll        = log --pretty=concise
   la        = log --pretty=full --graph
@@ -37,8 +40,8 @@
   rl        = log --pretty=reflog --walk-reflogs
   m         = merge
   p         = pull
-  up        = fetch -p
-  upp       = !"git fetch -p; git pull"
+  f         = fetch -p
+  fp        = !"git fetch -p; git pull"
   unbugger  = reset --hard HEAD
   cla       = clean -ixd
   test-pr   = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
