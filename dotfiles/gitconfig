@@ -43,8 +43,8 @@
   m         = merge
   rb        = rebase
   rbi       = rebase --interactive
+  p         = push
   pfl       = push --force-with-lease
-  p         = pull
   f         = fetch -p
   fp        = !"git fetch -p; git pull"
   unbugger  = reset --hard HEAD
