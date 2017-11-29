@@ -44,6 +44,7 @@
   rb        = rebase
   rbi       = rebase --interactive
   p         = push
+  pu        = push --set-upstream
   pfl       = push --force-with-lease
   f         = fetch -p
   fp        = !"git fetch -p; git pull"
