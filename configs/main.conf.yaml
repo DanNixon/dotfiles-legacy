@@ -14,6 +14,9 @@
     ~/.gitconfig:
         path: dotfiles/gitconfig
 
+    ~/.gitignore:
+        path: dotfiles/gitignore
+
     ~/.putty/sessions:
         create: true
         path: dotfiles/putty_serial_sessions/

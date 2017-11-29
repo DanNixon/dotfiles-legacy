@@ -12,3 +12,5 @@ end
 # No greeting
 function fish_greeting
 end
+
+eval (direnv hook fish)
