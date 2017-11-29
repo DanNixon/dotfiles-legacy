@@ -10,7 +10,7 @@
 
 [core]
   editor = vim
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 
 [pretty]
   concise    = "%C(yellow)%h %C(reset)%ad %C(blue)%an %C(reset)%s%C(green)%d"
@@ -23,8 +23,9 @@
   ap        = add --patch
   s         = status --short --branch
   co        = checkout
-  com       = commit
+  c         = commit
   ca        = commit --amend
+  rbc       = rebase --continue
   g         = grep
   d         = diff
   ds        = diff --staged
@@ -40,6 +41,9 @@
   lb        = log --pretty=cleangraph --graph --branches --simplify-by-decoration
   rl        = log --pretty=reflog --walk-reflogs
   m         = merge
+  rb        = rebase
+  rbi       = rebase --interactive
+  pfl       = push --force-with-lease
   p         = pull
   f         = fetch -p
   fp        = !"git fetch -p; git pull"
