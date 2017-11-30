@@ -11,6 +11,9 @@
     ~/.vimrc:
         path: dotfiles/vimrc
 
+    ~/.direnvrc:
+        path: dotfiles/direnvrc
+
     ~/.gitconfig:
         path: dotfiles/gitconfig
 
