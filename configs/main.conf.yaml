@@ -27,6 +27,9 @@
     ~/.screenrc:
         path: dotfiles/screenrc
 
+    ~/.bash_history:
+        path: /dev/null
+
     ~/.bash_aliases:
         path: dotfiles/shell/bash_aliases
 
