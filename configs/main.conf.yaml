@@ -36,6 +36,14 @@
     ~/.gntrc:
         path: dotfiles/gntrc
 
+    ~/.gnupg/dirmngr.conf:
+        create: true
+        path: dotfiles/gnupg/dirmngr.conf
+
+    ~/.gnupg/gpg.conf:
+        create: true
+        path: dotfiles/gnupg/gpg.conf
+
     ~/.elinks:
         path: dotfiles/elinks
 
