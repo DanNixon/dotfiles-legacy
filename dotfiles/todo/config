@@ -1,5 +1,5 @@
 # Your todo.txt directory
-export TODO_DIR="/home/dan/Dropbox/todo"
+export TODO_DIR="/home/dan/.todo_data"
 
 export TODO_FILE="$TODO_DIR/todo.txt"
 export DONE_FILE="$TODO_DIR/done.txt"
