@@ -22,7 +22,7 @@ https://bugs.launchpad.net/ubuntu/+source/appmenu-qt5/+bug/1307619
 
 ## PGP smart card
 
-- `apt install scdaemon pcscd pcsc_tools`
+- `apt install scdaemon pcscd pcsc-tools`
 - `pcsc_scan -n`
 
 Reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port` if
