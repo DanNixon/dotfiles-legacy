@@ -25,7 +25,6 @@
   co        = checkout
   c         = commit
   ca        = commit --amend
-  rbc       = rebase --continue
   g         = grep
   d         = diff
   ds        = diff --staged
@@ -43,11 +42,14 @@
   m         = merge
   rb        = rebase
   rbi       = rebase --interactive
+  rbc       = rebase --continue
   p         = push
   pu        = push --set-upstream
   pfl       = push --force-with-lease
+  pl        = pull
   f         = fetch -p
   fp        = !"git fetch -p; git pull"
+  rs        = reset
   unbugger  = reset --hard HEAD
   cla       = clean -ixd
   test-pr   = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
