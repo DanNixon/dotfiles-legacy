@@ -6,8 +6,8 @@ action=$1
 
 function usage {
 	echo "  $(basename $0)"
-	echo "    Pushes all changes at $TODO_DIR to a remote repository."
-	echo "    Changes are always pushed to origin master."
+	echo "    Pull changes into git repository located at $TODO_DIR."
+	echo "    Always pulls from origin/master into local master branch."
 	echo ""
 	exit
 }
@@ -15,4 +15,4 @@ function usage {
 [ "$action" = "usage" ] && usage
 
 cd "$TODO_DIR"
-git push -u origin master
+"$@"
