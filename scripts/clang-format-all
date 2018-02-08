@@ -3,4 +3,4 @@
 CLANG_FORMAT=clang-format
 
 find . \( -name '*.h' -or -name '*.hpp' \) -print0 | xargs -0 "$CLANG_FORMAT" -i
-find . \( -name '*.c' -or -name '*.cpp' \) -print0 | xargs -0 "$CLANG_FORMAT" -i
+find . \( -name '*.c' -or -name '*.cpp' -or -name '*.cc' \) -print0 | xargs -0 "$CLANG_FORMAT" -i
