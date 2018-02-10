@@ -43,3 +43,7 @@ Section "Device"
         BusID       "PCI:0:2:0"
 EndSection
 ```
+
+## Broadcom wireless not working on Ubuntu
+
+See [here](https://ubuntuforums.org/showthread.php?t=2214110).
