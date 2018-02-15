@@ -1,7 +1,7 @@
 - link:
     ~/.config/omf:
         create: true
-        path: dotfiles/omf/
+        path: dotfiles/omf
 
 - shell:
     -

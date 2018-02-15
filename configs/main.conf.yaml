@@ -3,10 +3,10 @@
 - link:
     ~/.config/terminator:
         create: true
-        path: dotfiles/terminator/
+        path: dotfiles/terminator
 
     ~/.vim:
-        path: dotfiles/vim/
+        path: dotfiles/vim
 
     ~/.vimrc:
         path: dotfiles/vimrc
@@ -22,7 +22,7 @@
 
     ~/.putty/sessions:
         create: true
-        path: dotfiles/putty_serial_sessions/
+        path: dotfiles/putty_serial_sessions
 
     ~/.screenrc:
         path: dotfiles/screenrc
