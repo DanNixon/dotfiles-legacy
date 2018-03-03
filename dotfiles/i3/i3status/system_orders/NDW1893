@@ -1,4 +1,3 @@
-order += "ethernet eno1"
 order += "cpu_usage"
 order += "load"
 order += "volume 0"
