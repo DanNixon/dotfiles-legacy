@@ -52,7 +52,7 @@
   rs        = reset
   unbugger  = reset --hard HEAD
   cla       = clean -ixd
-  test-pr   = !"f() { git fetch origin pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
+  test-pr   = !"f() { git fetch $1 pull/$2/merge:pr/$2-merged && git checkout pr/$2-merged; }; f"
   bundleall = !"f() { git bundle create $1 --all; }; f"
 
 [merge]
