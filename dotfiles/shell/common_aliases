@@ -7,7 +7,6 @@ alias lmedia="tree -d -L 2 /media"
 
 # General comands
 alias die="sudo shutdown -P now"
-alias rb="sudo shutdown -r now"
 
 alias df="df -h"
 alias du="du -h"
@@ -18,7 +17,6 @@ alias q="exit"
 # Git commands
 alias g="git"
 alias gs="git s"
-alias gl="git l"
 
 # Directory commands
 alias ..="cd .."
@@ -33,10 +31,5 @@ alias stripexif="exiftool -all= "
 alias t="todo.sh"
 alias texc="texcount *.tex"
 alias buku_git="git -C ~/.local/share/buku/"
-
 alias udm="udisksctl mount -b"
 alias udum="udisksctl unmount -b"
-
-# Apps used with screen
-alias s="screen -dR"
-alias sls="screen -ls"
