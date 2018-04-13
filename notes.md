@@ -47,3 +47,7 @@ EndSection
 ## Broadcom wireless not working on Ubuntu
 
 See [here](https://ubuntuforums.org/showthread.php?t=2214110).
+
+## List available fonts
+
+`updmap-sys --listmaps`

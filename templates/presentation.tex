@@ -1,0 +1,69 @@
+\documentclass[10pt,serif,t]{beamer}
+
+\usepackage{minted}
+
+% Environment for a slide
+\newenvironment{Slide}[1]
+{
+\begin{frame}[fragile,environment=Slide]
+  \frametitle{#1}
+  \section{#1}
+}
+{
+\end{frame}
+}
+
+% Environment for a sub slide
+\newenvironment{SubSlide}[1]
+{
+\begin{frame}[fragile,environment=SubSlide]
+  \frametitle{#1}
+  \subsection{#1}
+}
+{
+\end{frame}
+}
+
+% Environment for a sub sub slide
+\newenvironment{SubSubSlide}[1]
+{
+\begin{frame}[fragile,environment=SubSubSlide]
+  \frametitle{#1}
+  \subsubsection{#1}
+}
+{
+\end{frame}
+}
+
+% \usetheme{Hannover}
+% \usetheme{Montpellier}
+
+\title{TITLE}
+\subtitle{SUBTITLE}
+\author{Dan Nixon}
+\date{01/01/2015}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{Slide}{Slide 1}
+Slide 1 content.
+\end{Slide}
+
+\begin{SubSlide}{Slide 1.1}
+Slide 1.1 content.
+\end{SubSlide}
+
+\begin{SubSubSlide}{Slide 1.1.1}
+Slide 1.1 content.
+\begin{minted}{python}
+  print "Hello, world!"
+\end{minted}
+\end{SubSubSlide}
+
+\begin{Slide}{Slide 2}
+Slide 2 content.
+\end{Slide}
+
+\end{document}
