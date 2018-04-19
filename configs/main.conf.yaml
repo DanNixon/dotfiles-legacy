@@ -5,10 +5,6 @@
         create: true
         path: dotfiles/terminator
 
-    ~/.config/buku_run/config:
-        create: true
-        path: dotfiles/buku_run_config
-
     ~/.vim:
         path: dotfiles/vim
 

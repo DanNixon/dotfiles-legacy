@@ -172,7 +172,6 @@ bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+backslash exec i3-sensible-terminal
 bindsym $mod+x exec firefox
-bindsym $mod+numbersign exec buku_run
 bindsym $mod+p exec evince
 
 ## Screenshot shortcuts
