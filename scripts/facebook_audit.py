@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # Requires https://github.com/mobolic/facebook-sdk
+# Grab a token from the API explorer: https://developers.facebook.com/tools/explorer/
 
 import sys
 import webbrowser
@@ -42,9 +43,17 @@ def query_yes_no(question, default="yes"):
                              "(or 'y' or 'n').\n")
 
 
+def get_display_field(l):
+    for n in ['name', 'message', 'id']:
+        if n in l:
+            return l[n]
+
+    return str(l)
+
+
 def process_batch(batch):
     for l in batch:
-        click.echo('> {}'.format(l['name']))
+        click.echo('> {}'.format(get_display_field(l)))
 
     if query_yes_no('Open in browser?', 'no'):
         for l in batch:
@@ -53,11 +62,12 @@ def process_batch(batch):
 
 @click.command()
 @click.option('--token', help='User access token')
-def main(token):
+@click.option('--connection', help='Connection type (likes, friends, posts, etc.)')
+def main(token, connection):
     graph = facebook.GraphAPI(access_token=token, version="3.0")
 
     batch = []
-    for l in graph.get_all_connections(id='me', connection_name='likes'):
+    for l in graph.get_all_connections(id='me', connection_name=connection):
         batch.append(l)
         if len(batch) >= 8:
             process_batch(batch)
