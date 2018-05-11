@@ -48,11 +48,11 @@ a valid GDB prompt, see the command `python print(gdb.prompt.prompt_help())`""",
                 'doc': """`{status}` when the target program is running.
 See the `prompt` attribute. This value is parsed as a Python format string in
 which `{pid}` is expanded with the process identifier of the target program.""",
-                'default': '\[\e[1;32m\](gdb)\[\e[0m\]'
+                'default': '\[\e[1;32m\]gdb>\[\e[0m\]'
             },
             'prompt_not_running': {
                 'doc': '`{status}` when the target program is not running.',
-                'default': '\[\e[1;31m\](gdb)\[\e[0m\]'
+                'default': '\[\e[1;31m\]gdb>\[\e[0m\]'
             },
             # divider
             'divider_fill_char_primary': {
