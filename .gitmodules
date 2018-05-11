@@ -4,3 +4,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts
+[submodule "dotfiles/gdb/gef"]
+	path = dotfiles/gdb/gef
+	url = https://github.com/hugsy/gef.git

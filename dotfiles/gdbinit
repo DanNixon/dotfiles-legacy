@@ -1,0 +1,12 @@
+set history save
+set verbose off
+
+source ~/dotfiles/dotfiles/gdb/gdb-dashboard.py
+dashboard -enabled off
+
+define gef-load
+  source ~/dotfiles/dotfiles/gdb/gef/gef.py
+end
+document gef-load
+Load GEF.
+end
