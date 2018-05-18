@@ -1,0 +1,3 @@
+#%Module1.0
+
+prepend-path PATH /home/dan/miniconda3/envs/mantidimaging/bin/
