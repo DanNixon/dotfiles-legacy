@@ -78,7 +78,7 @@ def init(verbose):
     import concurrent.futures
     from colorama import Fore, Style
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+    with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = {}
 
         for l in get_stdin():
@@ -109,7 +109,7 @@ def update(verbose):
     import concurrent.futures
     from colorama import Fore, Style
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+    with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = {}
 
         for repo_path in find_git_repos():
