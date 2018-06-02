@@ -73,12 +73,13 @@ def main():
 
 
 @main.command()
+@click.option('-w', '--workers', default=4)
 @click.option('-v', '--verbose', is_flag=True)
-def init(verbose):
+def init(workers, verbose):
     import concurrent.futures
     from colorama import Fore, Style
 
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {}
 
         for l in get_stdin():
@@ -104,12 +105,13 @@ def init(verbose):
 
 
 @main.command()
+@click.option('-w', '--workers', default=4)
 @click.option('-v', '--verbose', is_flag=True)
-def update(verbose):
+def update(workers, verbose):
     import concurrent.futures
     from colorama import Fore, Style
 
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {}
 
         for repo_path in find_git_repos():
