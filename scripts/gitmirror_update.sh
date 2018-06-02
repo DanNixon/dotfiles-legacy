@@ -1,6 +1,7 @@
 #!/bin/bash
 
 NORMAL='\033[0m'
+RED='\033[0;31m'
 CYAN='\033[0;36m'
 
 rootDir="."
@@ -34,8 +35,14 @@ do
 
   if [ "`git rev-parse --is-bare-repository`" == "true" ]
   then
-    printf "Updating ${CYAN}${dir}${NORMAL}\n"
+    printf "${CYAN}${dir}${NORMAL}\n"
     git fetch -p
+
+    rc=$?;
+    if [[ $rc != 0 ]];
+    then
+      printf "${RED}ERROR: Git exited with code ${rc}${NORMAL}\n"
+    fi
   fi
 
   popd > /dev/null
