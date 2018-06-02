@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 
@@ -23,9 +24,10 @@ func getClient(ctx climax.Context) (client *github.Client, err error) {
 }
 
 func getStarred(client *github.Client, visibility string) (allRepos []*github.Repository) {
+	ctx := context.Background()
 	opt := &github.ActivityListStarredOptions{ListOptions: github.ListOptions{PerPage: 10, Page: 1}}
 	for {
-		repos, resp, err := client.Activity.ListStarred("", opt)
+		repos, resp, err := client.Activity.ListStarred(ctx, "", opt)
 		if err != nil {
 			log.Println(err)
 		}
@@ -47,9 +49,10 @@ func getStarred(client *github.Client, visibility string) (allRepos []*github.Re
 }
 
 func getMine(client *github.Client, visibility string) (allRepos []*github.Repository) {
+	ctx := context.Background()
 	opt := &github.RepositoryListOptions{ListOptions: github.ListOptions{PerPage: 10, Page: 1}, Visibility: visibility}
 	for {
-		repos, resp, err := client.Repositories.List("", opt)
+		repos, resp, err := client.Repositories.List(ctx, "", opt)
 		if err != nil {
 			log.Println(err)
 		}
@@ -67,14 +70,15 @@ func getMine(client *github.Client, visibility string) (allRepos []*github.Repos
 }
 
 func deleteAllRepoLabels(client *github.Client, repo *github.Repository) (err error) {
+	ctx := context.Background()
 	opt := &github.ListOptions{PerPage: 10, Page: 0}
-	labels, _, err := client.Issues.ListLabels(*repo.Owner.Login, *repo.Name, opt)
+	labels, _, err := client.Issues.ListLabels(ctx, *repo.Owner.Login, *repo.Name, opt)
 	if err != nil {
 		return
 	}
 
 	for _, label := range labels {
-		_, err := client.Issues.DeleteLabel(*repo.Owner.Login, *repo.Name, *label.Name)
+		_, err := client.Issues.DeleteLabel(ctx, *repo.Owner.Login, *repo.Name, *label.Name)
 		if err != nil {
 			log.Printf("Failed to delete label \"%s\"\n", *label.Name)
 		}
@@ -199,7 +203,7 @@ func main() {
 			*newRepo.HasWiki = false
 
 			// Create repo
-			repo, _, err := client.Repositories.Create("", newRepo)
+			repo, _, err := client.Repositories.Create(context.Background(), "", newRepo)
 			if err != nil {
 				log.Fatal(err)
 				return 1
