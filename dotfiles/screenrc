@@ -9,11 +9,7 @@ defscrollback 5000
 
 hardstatus on
 hardstatus alwayslastline
-hardstatus string "%{= kG} %S (#%n)%?%=%Y/%m/%d %c:%s  "
-
-deflog on
-logfile $HOME/screenlogs/screenlog.%t
-logtstamp on
+hardstatus string "%{= Y}[%H] %{=b G}%S"
 
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 term 'xterm-256color'
