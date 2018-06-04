@@ -6,3 +6,6 @@
 
 # Log files
 *.log
+
+# GDB history
+.gdb_history
