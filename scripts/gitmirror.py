@@ -37,8 +37,19 @@ def do_mirror_clone(url, target_dir, verbose=False):
 
 def is_bare_git_repo(path):
     import subprocess
+    import os
+
+    env = os.environ.copy()
+    env['GIT_TERMINAL_PROMPT'] = '0'
+
+    args = {
+        'cwd': path,
+        'stderr': subprocess.DEVNULL,
+        'env': env
+    }
+
     try:
-        res = subprocess.check_output(['git', 'rev-parse', '--is-bare-repository'], cwd=path, stderr=subprocess.DEVNULL)
+        res = subprocess.check_output(['git', 'rev-parse', '--is-bare-repository'], **args)
         return res.strip() == b'true'
     except subprocess.CalledProcessError:
         return False
@@ -54,11 +65,24 @@ def find_git_repos():
 
 def do_git_fetch(repo_path, verbose=False):
     import subprocess
+    import os
+    from colorama import Fore, Style
+
+    env = os.environ.copy()
+    env['GIT_TERMINAL_PROMPT'] = '0'
 
     args = {
-        'cwd': repo_path
+        'cwd': repo_path,
+        'env': env
     }
-    if not verbose:
+
+    if verbose:
+        print(
+            Fore.YELLOW + '>',
+            Style.RESET_ALL,
+            repo_path
+        )
+    else:
         args['stdout'] = subprocess.DEVNULL
         args['stderr'] = subprocess.DEVNULL
 
