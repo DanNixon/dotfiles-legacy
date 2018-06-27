@@ -53,11 +53,5 @@
     ~/.todo.actions.d:
         path: dotfiles/todo_actions
 
-    ~/.modulerc:
-        path: dotfiles/modulerc
-
-    ~/.modules:
-        path: dotfiles/modules
-
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
