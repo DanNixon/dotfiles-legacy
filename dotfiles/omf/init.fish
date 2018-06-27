@@ -20,9 +20,6 @@ function b
   upower -i (upower -e | grep 'BAT') | grep -E "state|time\ to|percentage|energy-rate" --color=never
 end
 
-# Direnv
-eval (direnv hook fish)
-
 # Environment Modules
 set modules_path /usr/local/Modules/
 if test -d $modules_path;

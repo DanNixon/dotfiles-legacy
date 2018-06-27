@@ -11,9 +11,6 @@
     ~/.vimrc:
         path: dotfiles/vimrc
 
-    ~/.direnvrc:
-        path: dotfiles/direnvrc
-
     ~/.gdbinit:
         path: dotfiles/gdbinit
 
