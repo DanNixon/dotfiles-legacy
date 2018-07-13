@@ -10,7 +10,7 @@
         stdout: true
         stderr: true
     -
-        command: sudo apt install curl direnv virtualenv
+        command: sudo apt install curl
         stdin: true
         stdout: true
         stderr: true
