@@ -6,6 +6,7 @@
         path: dotfiles/terminator
 
     ~/.config/lxterminal/lxterminal.conf:
+        create: true
         path: dotfiles/lxterminal.conf
 
     ~/.vim:
