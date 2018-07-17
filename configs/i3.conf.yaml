@@ -1,3 +1,8 @@
+- link:
+    ~/.config/polybar:
+        create: true
+        path: dotfiles/polybar
+
 - shell:
     - ./dotfiles/i3/generate_config
     - i3-msg restart

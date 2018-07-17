@@ -1,8 +1,8 @@
+## Start Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 ## Set background image
 exec --no-startup-id feh --bg-fill ~/background_image
-
-## Start RescueTime
-exec --no-startup-id rescuetime
 
 ## Colours
 client.focused          #30404A #30404A #888888 #AA5555
@@ -147,19 +147,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-bar {
-  colors {
-    background #101010
-    statusline #888888
-    separator #555555
-    focused_workspace  #668899 #30404A #AAAAAA
-    active_workspace   #AAAAAA #555555 #AAAAAA
-    inactive_workspace #555555 #222222 #888888
-    urgent_workspace   #FF5555 #900000 #AAAAAA
-  }
-  status_command i3status
-}
 
 ## Lock shortcut
 bindsym $mod+Shift+L exec i3lock -d -c 182040

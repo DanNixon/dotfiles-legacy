@@ -1,8 +1,0 @@
-order += "wireless wlo1"
-order += "ethernet eno1"
-order += "cpu_usage"
-order += "load"
-order += "cpu_temperature 0"
-order += "battery 0"
-order += "volume 0"
-order += "time"
