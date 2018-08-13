@@ -17,6 +17,7 @@ alias q="exit"
 # Git commands
 alias g="git"
 alias gs="git s"
+alias lg="lazygit"
 
 # Directory commands
 alias ..="cd .."
