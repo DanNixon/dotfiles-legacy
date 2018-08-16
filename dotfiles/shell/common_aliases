@@ -30,7 +30,7 @@ alias udm="udisksctl mount -b"
 alias udum="udisksctl unmount -b"
 
 # Screen
-alias sc="screen"
+alias s="screen"
 alias sls="screen -ls"
 alias ss="screen -S"
 
