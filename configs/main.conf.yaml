@@ -1,13 +1,13 @@
 - clean: ['~']
 
 - link:
-    ~/.config/terminator:
+    ~/.config/alacritty:
         create: true
-        path: dotfiles/terminator
+        path: dotfiles/alacritty/
 
-    ~/.config/lxterminal/lxterminal.conf:
+    ~/.config/nvim:
         create: true
-        path: dotfiles/lxterminal.conf
+        path: dotfiles/nvim/
 
     ~/.vim:
         path: dotfiles/vim
@@ -23,10 +23,6 @@
 
     ~/.gitignore:
         path: dotfiles/gitignore
-
-    ~/.putty/sessions:
-        create: true
-        path: dotfiles/putty_serial_sessions
 
     ~/.screenrc:
         path: dotfiles/screenrc
@@ -47,9 +43,6 @@
     ~/.gnupg/gpg.conf:
         create: true
         path: dotfiles/gnupg/gpg.conf
-
-    ~/.elinks:
-        path: dotfiles/elinks
 
     ~/.todo:
         path: dotfiles/todo

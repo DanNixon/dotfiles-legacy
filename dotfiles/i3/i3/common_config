@@ -156,8 +156,8 @@ bindsym $mod+Shift+less move workspace to output left
 bindsym $mod+Shift+greater move workspace to output right
 
 ## Application launchers
-bindsym $mod+Return exec lxterminal
-bindsym $mod+backslash exec lxterminal
+bindsym $mod+Return exec alacritty
+bindsym $mod+backslash exec alacritty
 bindsym $mod+x exec firefox
 bindsym $mod+p exec evince
 
