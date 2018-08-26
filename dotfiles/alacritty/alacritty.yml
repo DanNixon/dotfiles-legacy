@@ -71,7 +71,7 @@ font:
     family: "DejaVu Sans Mono for Powerline"
     style: Oblique
 
-  size: 7.0
+  size: 10.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.

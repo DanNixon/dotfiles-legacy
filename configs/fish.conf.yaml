@@ -21,7 +21,7 @@
         stdout: true
         stderr: true
     -
-        command: echo "set -Ux EDITOR vim" | fish
+        command: echo "set -Ux EDITOR nvim" | fish
         stdin: true
         stdout: true
         stderr: true
