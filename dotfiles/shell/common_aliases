@@ -39,6 +39,7 @@ alias bm="voile"
 alias bmadd="voile add -cae"
 
 # Misc app stuff
+alias v="nvim"
 alias dbs="dropbox status"
 alias stripexif="exiftool -all= "
 alias t="todo.sh"
