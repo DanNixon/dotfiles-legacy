@@ -5,6 +5,10 @@
         create: true
         path: dotfiles/alacritty/
 
+    ~/.config/browsh:
+        create: true
+        path: dotfiles/browsh/
+
     ~/.config/lxterminal:
         create: true
         path: dotfiles/lxterminal/
