@@ -62,7 +62,7 @@ let g:tagbar_compact = 1
 let g:syntastic_mode_map = { 'mode': 'passive',
                           \ 'active_filetypes': [],
                           \ 'passive_filetypes': [] }
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_cppcheckers = ['gcc', 'clang']
@@ -85,6 +85,7 @@ colorscheme bubblegum-256-dark
 
 " Airline config
 let g:airline_theme = 'bubblegum'
+let g:airline_powerline_fonts = 1
 
 set laststatus=2
 set timeoutlen=250
@@ -131,9 +132,9 @@ set number
 set relativenumber
 
 " NERDTree config
-let g:NERDTreeChDirMode=2 " Change working dir to NERDTree dir
-let g:NERDTreeMinimalUI=1 " Use minimal UI
-let g:NERDTreeIgnore=['.pyc']
+let g:NERDTreeChDirMode = 2 " Change working dir to NERDTree dir
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = ['.pyc']
 
 
 """""""""""""""""""""""""""""""
@@ -206,15 +207,3 @@ vmap > >gv
 nmap <Leader>w :w<CR>
 nmap <Leader>x :x<CR>
 nmap <Leader>q :q<CR>
-
-
-"""""""""""""""""""""""""""
-" SYSTEM DEPENDANT CONFIG "
-"""""""""""""""""""""""""""
-
-" Use Powerline fonts if not on Windows
-if !has("win32unix")
-  let g:airline_powerline_fonts = 1
-else
-  call SSHMode()
-endif
