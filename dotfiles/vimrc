@@ -1,10 +1,6 @@
 set nocompatible
 set encoding=utf-8
 
-if !has("win32")
-  set shell=bash
-endif
-
 filetype off
 
 """""""""""""""""
@@ -56,9 +52,6 @@ syntax on
 " Use Space as Leader
 let mapleader = " "
 
-" Use mouse (really just do this for the sake of having a sensible scroll wheel)
-set mouse=a
-
 set wildignore+=*~,*.pyc,*.so,*.o
 
 " Tagbar config
@@ -74,7 +67,6 @@ let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_cppcheckers = ['gcc', 'clang']
 let g:syntastic_python_checkers = ['flake8', 'pylint']
-let g:syntastic_java_checkers = []
 
 " Clang Format config
 let g:clang_format#command = 'clang-format'
@@ -87,18 +79,9 @@ let g:lexical#spelllang = ['en_gb']
 command Spell call lexical#init({'spell': 1})
 command SpellOff call lexical#init({'spell': 0})
 
-" easymotion matches uppercase using lowercase
-let g:EasyMotion_smartcase = 1
-
 " Terminal colour
 set t_Co=256
 colorscheme bubblegum-256-dark
-
-if has("win32")
-  set term=xterm
-  let &t_AB="\e[48;5;%dm"
-  let &t_AF="\e[38;5;%dm"
-endif
 
 " Airline config
 let g:airline_theme = 'bubblegum'
@@ -124,18 +107,12 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:clang_complete_auto = 0
 
 " Set options to restore from last session
-set viewoptions=cursor,folds,slash,unix
-
-" Set indent folding with manual override
-set foldmethod=indent
+set viewoptions=cursor,slash,unix
 
 " Don't use swap and backup files
 set noswapfile
 set nobackup
 set nowritebackup
-
-" Auto read changes
-set autoread
 
 " Don't wrap on new line
 set nowrap
@@ -149,17 +126,13 @@ set novisualbell
 set incsearch
 set hlsearch
 
-" Show folds and line numbers on left, add highlights
-set foldcolumn=2
+" Show relative line numbers on left
 set number
-if exists('+relativenumber')
-  set relativenumber
-endif
+set relativenumber
 
 " NERDTree config
-let g:NERDTreeMouseMode=2   " Single click for folding directories
-let g:NERDTreeChDirMode=2   " Change working dir to NERDTree dir
-let g:NERDTreeMinimalUI=1   " Use minimal UI
+let g:NERDTreeChDirMode=2 " Change working dir to NERDTree dir
+let g:NERDTreeMinimalUI=1 " Use minimal UI
 let g:NERDTreeIgnore=['.pyc']
 
 
@@ -170,23 +143,9 @@ let g:NERDTreeIgnore=['.pyc']
 " Remove trailing whitespace
 command! RemTrailWhilespace :%s/\s\+$//
 
-function SSHMode()
-  let g:airline_powerline_fonts = 0
-  let g:NERDTreeDirArrows = 0
-endfunction
-
-command! SSH :call SSHMode()
-
+" Enable or disable text wrapping
 command! NoTextWrap :set formatoptions-=t
 command! TextWrap :set formatoptions+=t
-
-
-""""""""""""""""""""""
-" WHITESPACE WARNING "
-""""""""""""""""""""""
-
-highlight TrailingWhitespace ctermbg=130 guibg=#592929
-match TrailingWhitespace /\s\+\%#\@<!$/
 
 
 """"""""""""""""
@@ -222,10 +181,6 @@ map <Leader>l :CtrlPLine<CR>
 " Code format shortcut
 map <Leader>F :Autoformat<CR>
 
-" Toggle folding
-map <Leader>z zA
-map <Leader>a zR
-
 " Commenting
 map <C-X> gcc
 vmap <C-X> gc
@@ -241,12 +196,6 @@ nmap <Leader>t<Left> :tabp<CR>
 nmap <Leader>t<Right> :tabn<CR>
 nmap <Leader>tt :tab new<CR>
 
-" Easy window switching
-nmap <Leader>wk :wincmd k<CR>
-nmap <Leader>wj :wincmd j<CR>
-nmap <Leader>wh :wincmd h<CR>
-nmap <Leader>wl :wincmd l<CR>
-
 " Easy indent/unindent
 map <Leader>, <<
 map <Leader>. >>
@@ -258,17 +207,10 @@ nmap <Leader>w :w<CR>
 nmap <Leader>x :x<CR>
 nmap <Leader>q :q<CR>
 
-" I have a habit of not releasing shift fast enough
-command W :w
-command Q :q
-command Qa :qa
-
 
 """""""""""""""""""""""""""
 " SYSTEM DEPENDANT CONFIG "
 """""""""""""""""""""""""""
-
-let hostname = substitute(system('hostname'), '\n', '', '')
 
 " Use Powerline fonts if not on Windows
 if !has("win32unix")
