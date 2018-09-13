@@ -1,3 +1,0 @@
-#%Module1.0
-
-prepend-path PATH ~/miniconda3/bin/

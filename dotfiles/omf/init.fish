@@ -25,6 +25,5 @@ set modules_path /usr/local/Modules/
 if test -d $modules_path;
   . $modules_path"init/fish"
   . $modules_path"init/fish_completion"
-  module use ~/dotfiles/dotfiles/modules
   module use ~/.modules
 end
