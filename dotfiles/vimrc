@@ -39,6 +39,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'godlygeek/tabular'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -136,6 +137,9 @@ let g:NERDTreeChDirMode = 2 " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['.pyc']
 
+" Gitgutter
+let g:gitgutter_grep = ''
+let g:gitgutter_signs = 0
 
 """""""""""""""""""""""""""""""
 " MISC COMMANDS AND FUNCTIONS "
@@ -160,6 +164,7 @@ map <Leader>r :%s/\<<C-r><C-w>\>/
 map <Leader>gd :Gvdiff<CR>
 map <Leader>gb :Gblame<CR>
 map <Leader>gs :Gstatus<CR>
+map <Leader>gg :GitGutterSignsToggle<CR>
 
 " Syntax checking
 map <F6> :SyntasticCheck<CR>
