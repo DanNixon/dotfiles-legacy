@@ -1,81 +1,81 @@
-## Start Polybar
+# Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-## Set background image
+# Set background image
 exec --no-startup-id feh --bg-fill ~/background_image
 
-## Colours
+# Colours
 client.focused          #30404A #30404A #888888 #AA5555
 client.focused_inactive #444444 #444444 #888888 #AA3333
 client.unfocused        #333333 #222222 #888888 #AA3333
 client.urgent           #900000 #900000 #CCCCCC #AA3333
 
-## Use Super_L as mod key
+# Use Super_L as mod key
 set $mod Mod4
 
-## Font for window titles. ISO 10646 = Unicode
+# Font for window titles. ISO 10646 = Unicode
 font pango:DejaVu Sans Mono Bold 10
 
-## Use Mouse+$mod to drag floating windows to their wanted position
+# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-## Kill focused window
+# Kill focused window
 bindsym $mod+Shift+Q kill
 
-## Start dmenu (a program launcher)
+# Start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-## Change focus
+# Change focus
 bindsym $mod+h focus left
 bindsym $mod+i focus down
 bindsym $mod+j focus up
 bindsym $mod+k focus right
 
-## Arrow key change focus bindings
+# Arrow key change focus bindings
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-## Move focused window
+# Move focused window
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+I move down
 bindsym $mod+Shift+J move up
 bindsym $mod+Shift+K move right
 
-## Arrow keysmove window bindings
+# Arrow key move window bindings
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-## Split in horizontal orientation
+# Split in horizontal orientation
 bindsym $mod+b split h
 
-## Split in vertical orientation
+# Split in vertical orientation
 bindsym $mod+v split v
 
-## Enter fullscreen mode for the focused container
+# Toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
-## Change container layout (stacked, tabbed, default)
+# Change container layout
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
-## Toggle tiling / floating
+# Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-## Change focus between tiling / floating windows
+# Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-## Focus the parent container
+# Focus the parent container
 bindsym $mod+a focus parent
 
-## Focus the child container
+# Focus the child container
 bindcode $mod+d focus child
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+comma workspace prev
 bindsym $mod+period workspace next
 bindsym $mod+1 workspace 1
@@ -89,7 +89,7 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-## Move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1
 bindsym $mod+Shift+quotedbl move workspace 2
 bindsym $mod+Shift+sterling move workspace 3
@@ -101,72 +101,72 @@ bindsym $mod+Shift+asterisk move workspace 8
 bindsym $mod+Shift+parenleft move workspace 9
 bindsym $mod+Shift+parenright move workspace 10
 
-## Reload the configuration file
+# Reload the configuration file
 bindsym $mod+Shift+C reload
-## Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
-## Exit i3 (logs you out of your X session)
+# Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
 
-## Resize window (you can also use the mouse for that)
+# Resize window (you can also use the mouse for that)
 mode "resize" {
-  ## These bindings trigger as soon as you enter the resize mode
+  # These bindings trigger as soon as you enter the resize mode
 
-  ## They resize the border in the direction you pressed, e.g.
-  ## when pressing left, the window is resized so that it has
-  ## more space on its left
+  # They resize the border in the direction you pressed, e.g.
+  # when pressing left, the window is resized so that it has
+  # more space on its left
 
   bindsym h resize shrink left 10 px or 10 ppt
-  bindsym Shift+H resize grow   left 10 px or 10 ppt
+  bindsym Shift+H resize grow left 10 px or 10 ppt
 
   bindsym j resize shrink down 10 px or 10 ppt
-  bindsym Shift+J resize grow   down 10 px or 10 ppt
+  bindsym Shift+J resize grow down 10 px or 10 ppt
 
   bindsym k resize shrink up 10 px or 10 ppt
-  bindsym Shift+K resize grow   up 10 px or 10 ppt
+  bindsym Shift+K resize grow up 10 px or 10 ppt
 
   bindsym l resize shrink right 10 px or 10 ppt
-  bindsym Shift+L resize grow   right 10 px or 10 ppt
+  bindsym Shift+L resize grow right 10 px or 10 ppt
 
-  ## Arrow key bindings
+  # Arrow key bindings
   bindsym Left resize shrink left 10 px or 10 ppt
-  bindsym Shift+Left resize grow   left 10 px or 10 ppt
+  bindsym Shift+Left resize grow left 10 px or 10 ppt
 
   bindsym Down resize shrink down 10 px or 10 ppt
-  bindsym Shift+Down resize grow   down 10 px or 10 ppt
+  bindsym Shift+Down resize grow down 10 px or 10 ppt
 
   bindsym Up resize shrink up 10 px or 10 ppt
-  bindsym Shift+Up resize grow   up 10 px or 10 ppt
+  bindsym Shift+Up resize grow up 10 px or 10 ppt
 
   bindsym Right resize shrink right 10 px or 10 ppt
-  bindsym Shift+Right resize grow   right 10 px or 10 ppt
+  bindsym Shift+Right resize grow right 10 px or 10 ppt
 
-  ## Enter or Escape to go back to normal
+  # Enter or Escape to go back to normal
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
-## Lock shortcut
+# Lock shortcut
 bindsym $mod+Shift+L exec i3lock -d -c 182040
 
-## Move workspace shortcuts
+# Move workspace to display shortcuts
 bindsym $mod+Shift+less move workspace to output left
 bindsym $mod+Shift+greater move workspace to output right
 
-## Application launchers
+# Application shortcuts
 bindsym $mod+Return exec alacritty
 bindsym $mod+backslash exec alacritty
 bindsym $mod+x exec firefox
 bindsym $mod+p exec evince
 
-## Screenshot shortcuts
+# Screenshot shortcut
 bindsym $mod+Shift+p exec scrot -z
 
-## Graphical file browser for moments of insanity
+# Graphical file browser
 bindsym $mod+slash exec pcmanfm
 
-## Open some windows in floating mode
+# Open some windows in floating mode
 for_window [class="Teensy" instance="teensy" title="Teensy"] floating enable
 for_window [class="Pidgin" instance="Pidgin" window_role="buddy_list"] floating enable

@@ -1,18 +1,16 @@
-## Start dropbox
-exec --no-startup-id dropbox start
-
-## Use horizontal two finger scrolling
+# Use horizontal two finger scrolling
 exec --no-startup-id synclient HorizTwoFingerScroll=1
 
-## Audio controls
-bindsym $mod+m exec --no-startup-id amixer -q -c 1 set Master 2dB+ unmute & killall -SIGUSR1 i3status
-bindsym $mod+n exec --no-startup-id amixer -q -c 1 set Master 2dB- unmute & killall -SIGUSR1 i3status
-bindsym $mod+Shift+M exec --no-startup-id amixer -q -c 1 set Master toggle & killall -SIGUSR1 i3status
+# Audio controls
+bindsym $mod+m exec --no-startup-id amixer -q -c 1 set Master 2dB+ unmute
+bindsym $mod+n exec --no-startup-id amixer -q -c 1 set Master 2dB- unmute
+bindsym $mod+Shift+M exec --no-startup-id amixer -q -c 1 set Master toggle
 
-## Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -c 1 set Master 2dB+ unmute & killall -SIGUSR1 i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -c 1 set Master 2dB- unmute & killall -SIGUSR1 i3status
-bindsym XF86AudioMute exec --no-startup-id amixer -q -c 1 set Speaker toggle & amixer -q set Headphone toggle & killall -SIGUSR1 i3status
+# Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -c 1 set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -c 1 set Master 2dB- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q -c 1 set Speaker toggle & amixer -q set Headphone toggle
 
+# Backlight controls
 bindsym XF86MonBrightnessUp exec xbacklight +5
 bindsym XF86MonBrightnessDown exec xbacklight -5
