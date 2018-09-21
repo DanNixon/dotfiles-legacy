@@ -13,8 +13,8 @@ client.urgent           #900000 #900000 #CCCCCC #AA3333
 # Use Super_L as mod key
 set $mod Mod4
 
-# Font for window titles. ISO 10646 = Unicode
-font pango:DejaVu Sans Mono Bold 10
+# Font for window titles
+font pango:DejaVuSansMono Nerd Font Bold 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
