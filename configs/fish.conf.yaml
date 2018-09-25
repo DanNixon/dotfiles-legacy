@@ -10,12 +10,6 @@
         stdout: true
         stderr: true
     -
-        command: sudo apt install curl
-        stdin: true
-        stdout: true
-        stderr: true
-    - "./fonts/install.sh"
-    -
         command: curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
         stdin: true
         stdout: true
