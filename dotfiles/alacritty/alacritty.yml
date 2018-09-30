@@ -60,16 +60,16 @@ draw_bold_text_with_bright_colors: true
 # * file:///usr/share/doc/fontconfig/fontconfig-user.html
 font:
   normal:
-    family: "DejaVu Sans Mono for Powerline"
+    family: "DejaVuSansMono Nerd Font"
     style: Book
 
   bold:
-    family: "DejaVu Sans Mono for Powerline"
+    family: "DejaVuSansMono Nerd Font"
     style: Bold
 
   italic:
-    family: "DejaVu Sans Mono for Powerline"
-    style: Oblique
+    family: "DejaVuSansMono Nerd Font"
+    style: Italic
 
   size: 10.0
 
