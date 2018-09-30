@@ -1,8 +1,8 @@
-package apt
 package config
-package fzf
-package hash
+theme bobthefish
+theme cbjohnson
+theme kawasaki
 theme lambda
-theme nai
 theme shellder
-theme zish
+theme simple-ass-prompt
+theme yimmy

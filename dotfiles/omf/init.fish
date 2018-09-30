@@ -1,3 +1,11 @@
+# Theme (bobthefish) options
+set -g theme_color_scheme base16
+set -g theme_display_user yes
+set -g theme_title_display_process yes
+set -g theme_display_cmd_duration yes
+set -g theme_powerline_fonts yes
+set -g theme_nerd_fonts yes
+
 # Load aliases
 . ~/dotfiles/dotfiles/shell/common_aliases
 
