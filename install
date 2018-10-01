@@ -2,7 +2,6 @@
 
 set -e
 
-CONFIG="install.conf.yaml"
 CONFIG_SUFFIX=".conf.yaml"
 DOTBOT_DIR="dotbot"
 
@@ -14,6 +13,6 @@ CONFIGS_DIR="configs/"
 cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-for CONFIG in ${DEFAULT_CONFIG_PREFIX} ${@}; do
+for CONFIG in ${@}; do
   "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIGS_DIR}${CONFIG}${CONFIG_SUFFIX}"
 done
