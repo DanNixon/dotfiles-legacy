@@ -1,5 +1,5 @@
 [submodule "dotbot"]
-	path = dotbot
+	path = thrid_party/dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "dotfiles/gdb/gef"]
 	path = dotfiles/gdb/gef
