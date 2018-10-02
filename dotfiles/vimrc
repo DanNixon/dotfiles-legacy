@@ -40,6 +40,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'godlygeek/tabular'
 Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -81,8 +82,8 @@ command Spell call lexical#init({'spell': 1})
 command SpellOff call lexical#init({'spell': 0})
 
 " Terminal colour
-set t_Co=256
-colorscheme bubblegum-256-dark
+let base16colorspace = 256
+colorscheme base16-default-dark
 
 " Airline config
 let g:airline_theme = 'bubblegum'

@@ -1,5 +1,11 @@
+# Load base16-shell
+if status --is-interactive
+  set BASE16_SHELL "$HOME/.config/base16-shell/"
+  source "$BASE16_SHELL/profile_helper.fish"
+end
+
 # Theme (bobthefish) options
-set -g theme_color_scheme terminal-dark
+set -g theme_color_scheme terminal2
 set -g theme_title_display_process yes
 set -g theme_display_cmd_duration yes
 set -g theme_powerline_fonts yes
