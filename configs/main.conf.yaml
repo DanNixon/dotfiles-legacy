@@ -17,6 +17,10 @@
         create: true
         path: dotfiles/nvim/
 
+    ~/.config/cmus:
+        create: true
+        path: dotfiles/cmus/
+
     ~/.vim:
         path: dotfiles/vim
 

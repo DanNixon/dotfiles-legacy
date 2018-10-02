@@ -1,0 +1,8 @@
+cmusfm.conf
+
+*.pl
+
+autosave
+cache
+command-history
+search-history
