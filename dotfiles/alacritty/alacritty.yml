@@ -92,60 +92,8 @@ font:
   # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
   scale_with_dpi: true
 
-  # OS X only: use thin stroke font rendering. Thin strokes are suitable
-  # for retina displays, but for non-retina you probably want this set to
-  # false.
-  use_thin_strokes: true
-
 # Should display the render timer
 render_timer: false
-
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
-
-# Colors (Tomorrow Night Bright)
-colors:
-  # Default colors
-  primary:
-    background: '0x2B2B2E'
-    foreground: '0xD2D8D9'
-
-    # (Optional) Bright and Dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #
-    # dim_foreground: '0x9a9a9a'
-    # bright_foreground: '0xffffff'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x000000'
-    cursor: '0xffffff'
-
-  # Normal colors
-  normal:
-    black:   '0x545454'
-    red:     '0xB23A52'
-    green:   '0x789B6A'
-    yellow:  '0xB9AC4A'
-    blue:    '0x2A7FAC'
-    magenta: '0xBD4FA8'
-    cyan:    '0x44A799'
-    white:   '0xD2D8D9'
-
-  # Bright colors
-  bright:
-    black:   '0x888888'
-    red:     '0xF24840'
-    green:   '0x80C470'
-    yellow:  '0xFFEB62'
-    blue:    '0x4196FF'
-    magenta: '0xFC52D9'
-    cyan:    '0x53CDBD'
-    white:   '0xD2D8D9'
 
 # Visual Bell
 #
