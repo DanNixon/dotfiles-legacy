@@ -5,7 +5,7 @@ RUN apt-get update && \
 
 RUN add-apt-repository -y ppa:fish-shell/release-2 && \
     apt-get update && \
-    apt-get install -y fish secure-delete htop tree neovim exuberant-ctags
+    apt-get install -y fish secure-delete htop tree neovim exuberant-ctags mosh
 
 RUN useradd --create-home dan && \
     adduser dan sudo
@@ -15,8 +15,7 @@ WORKDIR /home/dan
 
 RUN git clone https://github.com/dannixon/dotfiles.git && \
     cd dotfiles && \
-    ./install main && \
-    ./install fish && \
+    ./install main fish && \
     nvim --headless -c PlugInstall -c q -c q
 
 ENTRYPOINT /usr/bin/fish
