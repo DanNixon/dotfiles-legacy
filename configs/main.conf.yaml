@@ -7,7 +7,7 @@
 
     ~/.config/base16-shell:
         create: true
-        path: thrid_party/base16-shell/
+        path: third_party/base16-shell/
 
     ~/.config/browsh:
         create: true
