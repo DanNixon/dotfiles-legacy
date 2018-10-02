@@ -4,3 +4,6 @@
 [submodule "dotfiles/gdb/gef"]
 	path = dotfiles/gdb/gef
 	url = https://github.com/hugsy/gef.git
+[submodule "thrid_party/base16-shell"]
+	path = thrid_party/base16-shell
+	url = https://github.com/chriskempson/base16-shell.git
