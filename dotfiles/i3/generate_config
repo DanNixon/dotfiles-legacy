@@ -1,18 +1,25 @@
 #!/bin/bash
 
+THEME="base16-black-metal"
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 HOSTNAME=$(cat /etc/hostname)
-I3_CONFIG_DIR=$HOME/.i3
-I3_CONFIG=$I3_CONFIG_DIR/config
 
-mkdir -p $I3_CONFIG_DIR
+# Make config directory
+I3_CONFIG_DIR=${HOME}/.i3
+mkdir -p ${I3_CONFIG_DIR}
 
-# Main config
-echo "## COMMON CONFIG\n" > $I3_CONFIG
-cat ${DIR}/common_config >> $I3_CONFIG
+# Config filename
+I3_CONFIG=${I3_CONFIG_DIR}/config
 
-echo "## SYSTEM SPECIFIC CONFIG" >> $I3_CONFIG
-if [ -e ${DIR}/system_configs/$HOSTNAME ]
+# Add the theme and common config
+THEME_CONFIG_FILE=${DIR}/base16-i3/colors/${THEME}.config
+COMMON_CONFIG_FILE=${DIR}/common_config
+cat ${THEME_CONFIG_FILE} ${COMMON_CONFIG_FILE} > ${I3_CONFIG}
+
+# Add the system specific config if it exists
+SYSTEM_CONFIG_FILE=${DIR}/system_configs/${HOSTNAME}
+if [ -e ${SYSTEM_CONFIG_FILE} ]
 then
-  cat ${DIR}/system_configs/$HOSTNAME >> $I3_CONFIG
+  cat ${SYSTEM_CONFIG_FILE} >> ${I3_CONFIG}
 fi
