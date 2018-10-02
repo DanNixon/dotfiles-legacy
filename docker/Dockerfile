@@ -15,7 +15,7 @@ WORKDIR /home/dan
 
 RUN git clone https://github.com/dannixon/dotfiles.git && \
     cd dotfiles && \
-    ./install main fish && \
+    ./install conf_main.yaml conf_fish.yaml && \
     nvim --headless -c PlugInstall -c q -c q
 
 ENTRYPOINT /usr/bin/fish
