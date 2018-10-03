@@ -86,7 +86,6 @@ let base16colorspace = 256
 colorscheme base16-default-dark
 
 " Airline config
-let g:airline_theme = 'bubblegum'
 let g:airline_powerline_fonts = 1
 
 set laststatus=2
