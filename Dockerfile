@@ -1,9 +1,8 @@
 FROM ubuntu:bionic
 
 RUN apt-get update && \
-    apt-get install -y software-properties-common curl git
-
-RUN add-apt-repository -y ppa:fish-shell/release-2 && \
+    apt-get install -y software-properties-common curl git && \
+    add-apt-repository -y ppa:fish-shell/release-2 && \
     apt-get update && \
     apt-get install -y fish secure-delete htop tree neovim exuberant-ctags mosh
 
