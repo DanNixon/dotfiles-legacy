@@ -161,7 +161,8 @@ bindsym $mod+Shift+greater move workspace to output right
 # Application shortcuts
 bindsym $mod+Return exec alacritty
 bindsym $mod+backslash exec alacritty
-bindsym $mod+x exec firefox
+bindsym $mod+x exec firefox --private-window
+bindsym $mod+Shift+x exec firefox
 bindsym $mod+p exec evince
 
 # Screenshot shortcut
