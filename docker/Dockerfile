@@ -5,7 +5,18 @@ RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:fish-shell/release-2 && \
     apt-get update && \
-    apt-get install -y language-pack-en fish git wget curl secure-delete htop tree exuberant-ctags mosh python3-pip && \
+    apt-get install -y \
+      language-pack-en \
+      fish \
+      git \
+      wget \
+      curl \
+      secure-delete \
+      htop \
+      tree \
+      exuberant-ctags \
+      mosh \
+      python3-pip && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Neovim
@@ -14,7 +25,12 @@ RUN curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/ni
     rm nvim.tar.gz
 
 # Install Python packages
-RUN pip3 install neovim numpy ipython
+RUN pip3 install \
+      neovim \
+      ipython \
+      numpy \
+      matplotlib \
+      h5py
 
 # Add user
 RUN useradd --create-home --uid 10000 --shell /usr/bin/fish dan
