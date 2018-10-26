@@ -1,0 +1,22 @@
+version: '2.3'
+
+services:
+  jupyterlab:
+    build: jupyterlab
+    command: "start.sh jupyter lab"
+    ports:
+      - "9001:8888"
+    volumes:
+      - "jupyterlab:/home/jovyan/work"
+
+  tensorflow:
+    image: tensorflow/tensorflow:latest-gpu-py3
+    runtime: nvidia
+    ports:
+      - "9002:8888"
+    volumes:
+      - "tensorflow:/work"
+
+volumes:
+  jupyterlab:
+  tensorflow:
