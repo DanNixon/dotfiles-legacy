@@ -3,7 +3,9 @@ version: '2.3'
 services:
   jupyterlab:
     build: jupyterlab
-    command: "start.sh jupyter lab"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GEN_CERT=yes
     ports:
       - "9001:8888"
     volumes:
