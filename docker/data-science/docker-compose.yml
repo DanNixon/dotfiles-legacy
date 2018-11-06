@@ -17,7 +17,7 @@ services:
     ports:
       - "9002:8888"
     volumes:
-      - "tensorflow:/work"
+      - "tensorflow:/notebooks"
 
 volumes:
   jupyterlab:
