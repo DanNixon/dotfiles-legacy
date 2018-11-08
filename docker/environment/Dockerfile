@@ -17,7 +17,13 @@ RUN apt-get update && \
       tree \
       exuberant-ctags \
       mosh \
-      python3-pip && \
+      python3-pip \
+      remmina \
+      gpg \
+      cryptsetup \
+      zsh \
+      steghide \
+      nmap && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
