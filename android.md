@@ -63,6 +63,10 @@ make life easier and work well for me.
   ([source](https://github.com/ccrama/Slide))
   ([Play](https://play.google.com/store/apps/details?id=me.ccrama.redditslide))
   ([F-Droid](https://f-droid.org/packages/me.ccrama.redditslide/))
+- StreetComplete
+  ([source](https://github.com/westnordost/StreetComplete))
+  ([Play](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete))
+  ([F-Droid](https://f-droid.org/packages/de.westnordost.streetcomplete/))
 - [Survival Manual](https://survivalmanual.github.io/)
   ([source](https://github.com/ligi/SurvivalManual))
   ([F-Droid](https://f-droid.org/packages/org.ligi.survivalmanual/))
@@ -72,6 +76,10 @@ make life easier and work well for me.
 - Barcode Scanner
   ([source](https://github.com/zxing/zxing))
   ([Play](https://play.google.com/store/apps/details?id=com.google.zxing.client.android))
+- [BatteryBot Pro](https://www.batterybot.info/)
+  ([source](https://github.com/darshan-/Battery-Indicator-Pro))
+  ([Play](https://play.google.com/store/apps/details?id=com.darshancomputing.BatteryIndicatorPro))
+  ([F-Droid](https://f-droid.org/en/packages/com.darshancomputing.BatteryIndicatorPro/))
 - Dir
   ([source](https://github.com/veniosg/Dir))
   ([Play](https://play.google.com/store/apps/details?id=com.veniosg.dir))
@@ -149,6 +157,9 @@ make life easier and work well for me.
 
 ## Device specific
 
+- [AndrOBD](https://github.com/fr3ts0n/AndrOBD/wiki)
+  ([source](https://github.com/fr3ts0n/AndrOBD))
+  ([F-Droid](https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/))
 - [Fitbit](https://fitbit.com)
   ([Play](https://play.google.com/store/apps/details?id=com.fitbit.FitbitMobile))
 - Fit Notifications
