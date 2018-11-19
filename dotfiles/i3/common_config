@@ -30,9 +30,9 @@ bindsym $mod+d exec dmenu_run
 
 # Change focus
 bindsym $mod+h focus left
-bindsym $mod+i focus down
-bindsym $mod+j focus up
-bindsym $mod+k focus right
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # Arrow key change focus bindings
 bindsym $mod+Left focus left
@@ -42,9 +42,9 @@ bindsym $mod+Right focus right
 
 # Move focused window
 bindsym $mod+Shift+H move left
-bindsym $mod+Shift+I move down
-bindsym $mod+Shift+J move up
-bindsym $mod+Shift+K move right
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
+bindsym $mod+Shift+L move right
 
 # Arrow key move window bindings
 bindsym $mod+Shift+Left move left
@@ -152,7 +152,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Lock shortcut
-bindsym $mod+Shift+L exec i3lock -d -c 182040
+bindsym $mod+Escape exec i3lock -d -c 182040
 
 # Move workspace to display shortcuts
 bindsym $mod+Shift+less move workspace to output left
