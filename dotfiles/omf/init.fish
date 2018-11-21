@@ -41,3 +41,9 @@ if test -d $modules_path;
   . $modules_path"init/fish_completion"
   module use ~/.modules
 end
+
+# Execute direnv hook if it is installed
+set direnv_binary (which direnv)
+if test -n "$direnv_binary" -a -x "$direnv_binary"
+  eval (direnv hook fish)
+end
