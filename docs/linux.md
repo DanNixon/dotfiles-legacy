@@ -1,0 +1,22 @@
+# Linux applications and tools
+
+- Shell
+  - [Fish](https://fishshell.com/)
+- Terminal emulator
+  - [Alacritty](https://github.com/jwilm/alacritty)
+  - LXterminal
+- Text editor
+  - [Neovim](https://neovim.io/)
+- Desktop environment
+  - [i3](https://i3wm.org/)
+  - [Polybar](https://github.com/jaagr/polybar)
+- Web browsers
+  - [Firefox](https://www.mozilla.org/firefox)
+    - [uBlock](https://github.com/gorhill/uBlock)
+    - [Tridactyl](https://github.com/tridactyl/tridactyl)
+  - [browsh](https://www.brow.sh/)
+- Media players
+  - [cmus](https://cmus.github.io/)
+  - [mpv](https://mpv.io/)
+- Remote access
+  - [mosh](https://mosh.org/)

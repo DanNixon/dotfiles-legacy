@@ -63,6 +63,10 @@ make life easier and work well for me.
   ([source](https://github.com/ccrama/Slide))
   ([Play](https://play.google.com/store/apps/details?id=me.ccrama.redditslide))
   ([F-Droid](https://f-droid.org/packages/me.ccrama.redditslide/))
+- StreetComplete
+  ([source](https://github.com/westnordost/StreetComplete))
+  ([Play](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete))
+  ([F-Droid](https://f-droid.org/packages/de.westnordost.streetcomplete/))
 - [Survival Manual](https://survivalmanual.github.io/)
   ([source](https://github.com/ligi/SurvivalManual))
   ([F-Droid](https://f-droid.org/packages/org.ligi.survivalmanual/))
@@ -72,6 +76,10 @@ make life easier and work well for me.
 - Barcode Scanner
   ([source](https://github.com/zxing/zxing))
   ([Play](https://play.google.com/store/apps/details?id=com.google.zxing.client.android))
+- [BatteryBot Pro](https://www.batterybot.info/)
+  ([source](https://github.com/darshan-/Battery-Indicator-Pro))
+  ([Play](https://play.google.com/store/apps/details?id=com.darshancomputing.BatteryIndicatorPro))
+  ([F-Droid](https://f-droid.org/en/packages/com.darshancomputing.BatteryIndicatorPro/))
 - Dir
   ([source](https://github.com/veniosg/Dir))
   ([Play](https://play.google.com/store/apps/details?id=com.veniosg.dir))
@@ -90,6 +98,10 @@ make life easier and work well for me.
   ([F-Droid](https://f-droid.org/packages/com.afollestad.nocknock/))
 - [Octo Remote](https://sites.google.com/view/octoremote/home)
   ([Play](https://play.google.com/store/apps/details?id=com.kabacon.octoremote))
+- Port Authority
+  ([source](https://github.com/aaronjwood/PortAuthority))
+  ([Play](https://play.google.com/store/apps/details?id=com.aaronjwood.portauthority.free))
+  ([F-Droid](https://f-droid.org/packages/com.aaronjwood.portauthority/))
 - [SatStat](http://mvglasow.github.io/satstat/index.html)
   ([source](https://github.com/mvglasow/satstat))
   ([F-Droid](https://f-droid.org/packages/com.vonglasow.michael.satstat/))
@@ -134,6 +146,10 @@ make life easier and work well for me.
   ([source](https://github.com/open-keychain/open-keychain))
   ([Play](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain))
   ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.keychain/))
+- [OpenVPN](http://ics-openvpn.blinkt.de/)
+  ([source](https://github.com/schwabe/ics-openvpn))
+  ([Play](https://play.google.com/store/apps/details?id=de.blinkt.openvpn))
+  ([F-Droid](https://f-droid.org/packages/de.blinkt.openvpn/))
 - [Orbot](https://guardianproject.info/apps/orbot/)
   ([source](https://gitweb.torproject.org/orbot.git))
   ([Play](https://play.google.com/store/apps/details?id=org.torproject.android))
@@ -149,6 +165,9 @@ make life easier and work well for me.
 
 ## Device specific
 
+- [AndrOBD](https://github.com/fr3ts0n/AndrOBD/wiki)
+  ([source](https://github.com/fr3ts0n/AndrOBD))
+  ([F-Droid](https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/))
 - [Fitbit](https://fitbit.com)
   ([Play](https://play.google.com/store/apps/details?id=com.fitbit.FitbitMobile))
 - Fit Notifications
