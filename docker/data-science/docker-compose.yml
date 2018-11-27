@@ -12,7 +12,7 @@ services:
       - "jupyterlab:/home/jovyan/work"
 
   tensorflow:
-    image: tensorflow/tensorflow:latest-gpu-py3
+    build: tensorflow
     runtime: nvidia
     ports:
       - "9002:8888"
