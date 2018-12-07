@@ -14,6 +14,7 @@ sudo apt-get install \
   libxcb-ewmh-dev \
   libxcb-icccm4-dev \
   libxcb-xkb-dev \
+  libxcb-xrm-dev \
   libxcb-cursor-dev \
   libasound2-dev \
   libpulse-dev \
