@@ -1,8 +1,15 @@
 #!/bin/bash
 
-docker run \
-  --rm \
-  -u $(id -u):$(id -g) \
-  -v $PWD:/data \
-  vimagick/youtube-dl \
-  $@
+# Check if Docker is available
+if [ -x "$(command -v docker)" ]; then
+  # If Docker is available then use the Docker image
+  docker run \
+    --rm \
+    -u $(id -u):$(id -g) \
+    -v $PWD:/data \
+    vimagick/youtube-dl \
+    $@
+else
+  # If not fall back to an installed version
+  youtube-dl $@
+fi
