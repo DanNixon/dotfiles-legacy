@@ -19,6 +19,9 @@ set $mod Mod4
 set $d_px 100
 set $d_ppt 10
 
+# Font for window titles (some popup/floating windows still show titles)
+font pango:DejaVuSansMono Nerd Font Bold 10
+
 # No title bars
 default_border pixel 1
 
