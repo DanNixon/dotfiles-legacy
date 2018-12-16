@@ -20,3 +20,7 @@
   - [mpv](https://mpv.io/)
 - Remote access
   - [mosh](https://mosh.org/)
+  - [sshfs](https://github.com/libfuse/sshfs)
+- File managment
+  - [rsync](https://rsync.samba.org/)
+  - [Syncthing](https://syncthing.net/)
