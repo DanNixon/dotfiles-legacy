@@ -12,8 +12,10 @@ make life easier and work well for me.
 
 ## Media
 
-- [Emby](https://emby.media/emby-for-android-mobile.html)
-  ([Play](https://play.google.com/store/apps/details?id=com.mb.android))
+- [AntennaPod](https://antennapod.org/)
+  ([source](https://github.com/antennapod/AntennaPod))
+  ([F-Droid](https://f-droid.org/packages/de.danoeh.antennapod/))
+  ([Play](https://play.google.com/store/apps/details?id=de.danoeh.antennapod))
 - [Gallery](https://simplemobiletools.github.io/)
   ([source](https://github.com/SimpleMobileTools/Simple-Gallery<Paste>))
   ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro))
