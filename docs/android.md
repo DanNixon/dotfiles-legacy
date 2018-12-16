@@ -84,6 +84,10 @@ make life easier and work well for me.
 
 ## Tools
 
+- [AnySoftKeyboard](http://anysoftkeyboard.github.io/)
+  ([source](https://github.com/AnySoftKeyboard/AnySoftKeyboard))
+  ([F-Droid](https://f-droid.org/packages/com.menny.android.anysoftkeyboard/<Paste>))
+  ([Play](https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard))
 - Barcode Scanner
   ([source](https://github.com/zxing/zxing))
   ([Play](https://play.google.com/store/apps/details?id=com.google.zxing.client.android))
