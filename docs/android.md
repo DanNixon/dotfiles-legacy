@@ -199,3 +199,5 @@ make life easier and work well for me.
   ([Play](https://play.google.com/store/apps/details?id=com.thetileapp.tile))
 - [Torque](https://torque-bhp.com/)
   ([Play](https://play.google.com/store/apps/details?id=org.prowl.torque))
+- UniFi
+  ([Play](https://play.google.com/store/apps/details?id=com.ubnt.easyunifi))
