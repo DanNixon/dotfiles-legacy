@@ -56,7 +56,7 @@ make life easier and work well for me.
   ([Play](https://play.google.com/store/apps/details?id=com.flightradar24free))
 - Forcastie
   ([source](https://github.com/martykan/forecastie))
-  ([F-Droid](://f-droid.org/packages/cz.martykan.forecastie/))
+  ([F-Droid](https://f-droid.org/packages/cz.martykan.forecastie/))
   ([Play](https://play.google.com/store/apps/details?id=com.casticalabs.forecastie))
 - Materialistic
   ([source](https://github.com/hidroh/materialistic))
