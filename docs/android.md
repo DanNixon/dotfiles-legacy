@@ -45,12 +45,19 @@ make life easier and work well for me.
 
 - [Arcus](http://arcusweather.com/)
   ([Play](https://play.google.com/store/apps/details?id=com.arcusweather.darksky))
+- Feeder
+  ([source](https://gitlab.com/spacecowboy/Feeder))
+  ([F-Droid](https://f-droid.org/packages/com.nononsenseapps.feeder/))
 - [Firefox Klar](https://www.mozilla.org/en-GB/firefox/mobile/)
   ([source](https://github.com/mozilla-mobile/focus-android))
   ([Play](https://play.google.com/store/apps/details?id=org.mozilla.focus))
   ([F-Droid](https://f-droid.org/en/packages/org.mozilla.klar/))
 - [Flightradar24](https://www.flightradar24.com)
   ([Play](https://play.google.com/store/apps/details?id=com.flightradar24free))
+- Forcastie
+  ([source](https://github.com/martykan/forecastie))
+  ([F-Droid](://f-droid.org/packages/cz.martykan.forecastie/))
+  ([Play](https://play.google.com/store/apps/details?id=com.casticalabs.forecastie))
 - Materialistic
   ([source](https://github.com/hidroh/materialistic))
   ([Play](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic))
@@ -59,6 +66,10 @@ make life easier and work well for me.
   ([source](https://github.com/osmandapp/Osmand))
   ([Play](https://play.google.com/store/apps/details?id=net.osmand))
   ([F-Droid](https://f-droid.org/en/packages/net.osmand.plus/))
+- The Kana Quiz
+  ([source](https://github.com/theblackwidower/KanaQuiz))
+  ([F-Droid](https://f-droid.org/packages/com.noprestige.kanaquiz/))
+  ([Play](https://play.google.com/store/apps/details?id=com.noprestige.kanaquiz))
 - [Slide](https://www.reddit.com/r/slideforreddit)
   ([source](https://github.com/ccrama/Slide))
   ([Play](https://play.google.com/store/apps/details?id=me.ccrama.redditslide))
@@ -84,11 +95,18 @@ make life easier and work well for me.
   ([source](https://github.com/veniosg/Dir))
   ([Play](https://play.google.com/store/apps/details?id=com.veniosg.dir))
   ([F-Droid](https://f-droid.org/packages/com.veniosg.dir/))
+- Document Viewer
+  ([source](https://github.com/PrivacyApps/document-viewer))
+  ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.viewer/))
 - Editor
   ([source](https://github.com/billthefarmer/editor))
   ([F-Droid](https://f-droid.org/packages/org.billthefarmer.editor/))
 - Hacker's Keyboard
   ([source](https://github.com/klausw/hackerskeyboard))
+- [LibreOffice Viewer](https://www.libreoffice.org/download/android-viewer/)
+  ([source](https://cgit.freedesktop.org/libreoffice/core/tree))
+  ([F-Droid](https://f-droid.org/en/packages/org.documentfoundation.libreoffice/))
+  ([Play](https://play.google.com/store/apps/details?id=org.documentfoundation.libreoffice))
 - Markor
   ([source](https://github.com/gsantner/markor))
   ([Play](https://play.google.com/store/apps/details?id=net.gsantner.markor))
