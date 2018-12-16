@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEME="base16-black-metal"
+THEME="base16-material"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 HOSTNAME=$(cat /etc/hostname)

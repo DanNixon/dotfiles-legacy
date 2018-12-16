@@ -11,13 +11,16 @@ client.background       $base07
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Set background image
-exec --no-startup-id feh --bg-fill ~/background_image
+exec --no-startup-id feh --bg-fill ~/.background_image
 
 # Use Super_L as mod key
 set $mod Mod4
 
-# Font for window titles
-font pango:DejaVuSansMono Nerd Font Bold 10
+# No title bars
+default_border pixel 1
+
+# Auto hide window borders when they are not needed
+hide_edge_borders smart
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -104,8 +107,6 @@ bindsym $mod+Shift+asterisk move workspace 8
 bindsym $mod+Shift+parenleft move workspace 9
 bindsym $mod+Shift+parenright move workspace 10
 
-# Reload the configuration file
-bindsym $mod+Shift+C reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # Exit i3 (logs you out of your X session)
@@ -154,9 +155,12 @@ bindsym $mod+r mode "resize"
 # Lock shortcut
 bindsym $mod+Escape exec i3lock -d -c 182040
 
-# Move workspace to display shortcuts
+# Move workspace to display
 bindsym $mod+Shift+less move workspace to output left
 bindsym $mod+Shift+greater move workspace to output right
+
+# Screenshot shortcut
+bindsym $mod+Shift+p exec scrot -z
 
 # Application shortcuts
 bindsym $mod+Return exec alacritty
@@ -164,11 +168,6 @@ bindsym $mod+backslash exec alacritty
 bindsym $mod+x exec firefox --private-window
 bindsym $mod+Shift+x exec firefox
 bindsym $mod+p exec evince
-
-# Screenshot shortcut
-bindsym $mod+Shift+p exec scrot -z
-
-# Graphical file browser
 bindsym $mod+slash exec pcmanfm
 
 # Open some windows in floating mode
