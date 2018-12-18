@@ -192,6 +192,8 @@ make life easier and work well for me.
 - [AndrOBD](https://github.com/fr3ts0n/AndrOBD/wiki)
   ([source](https://github.com/fr3ts0n/AndrOBD))
   ([F-Droid](https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/))
+- DisplayLink Presenter
+  ([Play](https://play.google.com/store/apps/details?id=com.displaylink.presenter))
 - [Fitbit](https://fitbit.com)
   ([Play](https://play.google.com/store/apps/details?id=com.fitbit.FitbitMobile))
 - Fit Notifications
@@ -201,6 +203,10 @@ make life easier and work well for me.
 - [Gadgetbridge](https://gadgetbridge.org/)
   ([source](https://github.com/Freeyourgadget/Gadgetbridge))
   ([F-Droid](https://f-droid.org/en/packages/nodomain.freeyourgadget.gadgetbridge/))
+- SecondScreen
+  ([source](https://github.com/farmerbb/SecondScreen))
+  ([F-Droid](https://f-droid.org/packages/com.farmerbb.secondscreen.free/))
+  ([Play](https://play.google.com/store/apps/details?id=com.farmerbb.secondscreen.free))
 - [Tile](https://www.thetileapp.com)
   ([Play](https://play.google.com/store/apps/details?id=com.thetileapp.tile))
 - [Torque](https://torque-bhp.com/)
