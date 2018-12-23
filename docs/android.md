@@ -110,6 +110,10 @@ make life easier and work well for me.
   ([source](https://github.com/darshan-/Battery-Indicator-Pro))
   ([Play](https://play.google.com/store/apps/details?id=com.darshancomputing.BatteryIndicatorPro))
   ([F-Droid](https://f-droid.org/en/packages/com.darshancomputing.BatteryIndicatorPro/))
+- [DAVdroid](https://www.davdroid.com/)
+  ([source](https://gitlab.com/bitfireAT/davdroid))
+  ([F-Droid](https://f-droid.org/en/packages/at.bitfire.davdroid/))
+  ([Play](https://play.google.com/store/apps/details?id=at.bitfire.davdroid))
 - Dir
   ([source](https://github.com/veniosg/Dir))
   ([Play](https://play.google.com/store/apps/details?id=com.veniosg.dir))
