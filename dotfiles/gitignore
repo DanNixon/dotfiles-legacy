@@ -1,4 +1,12 @@
 *~
+
+# Direnv
 .env
 .direnv
 .envrc
+
+# Tomb
+.host
+.last
+.tty
+.uid
