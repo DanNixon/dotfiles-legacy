@@ -10,18 +10,12 @@ make life easier and work well for me.
 
 - [LineageOS](https://lineageos.org/)
 
-## Launchers
+## Launcher/homescreen
 
 - Taskbar
   ([source](https://github.com/farmerbb/Taskbar))
   ([F-Droid](https://f-droid.org/packages/com.farmerbb.taskbar/))
   ([Play](https://play.google.com/store/apps/details?id=com.farmerbb.taskbar))
-- AIO Launcher
-  ([Play](https://play.google.com/store/apps/details?id=ru.execbit.aiolauncher))
-- [T-UI](https://forum.xda-developers.com/android/apps-games/t-ui-terminal-console-launcher-t3146288/post61606911#post61606911)
-  ([source](https://github.com/fAndreuzzi/TUI-ConsoleLauncher))
-  ([F-Droid](https://f-droid.org/packages/ohi.andre.consolelauncher/))
-  ([Play](https://play.google.com/store/apps/details?id=ohi.andre.consolelauncher))
 
 ## Media
 
