@@ -169,13 +169,13 @@ bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+p exec scrot -z
 
 # Application shortcuts
-bindsym $mod+Return exec alacritty
-bindsym $mod+backslash exec alacritty
-bindsym $mod+x exec firefox --private-window
-bindsym $mod+Shift+x exec firefox
-bindsym $mod+p exec evince
-bindsym $mod+slash exec pcmanfm
+bindsym $mod+Return     exec alacritty
+bindsym $mod+backslash  exec alacritty
+bindsym $mod+x          exec firefox --private-window
+bindsym $mod+Shift+x    exec firefox
+bindsym $mod+p          exec evince
+bindsym $mod+slash      exec pcmanfm
 
 # Open some windows in floating mode
-for_window [class="Teensy" instance="teensy" title="Teensy"] floating enable
-for_window [class="Pidgin" instance="Pidgin" window_role="buddy_list"] floating enable
+for_window [class="Teensy" instance="teensy" title="Teensy"]            floating enable
+for_window [class="Pidgin" instance="Pidgin" window_role="buddy_list"]  floating enable
