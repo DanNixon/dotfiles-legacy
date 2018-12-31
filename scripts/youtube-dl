@@ -5,6 +5,8 @@ if [ -x "$(command -v docker)" ]; then
   # If Docker is available then use the Docker image
   docker run \
     --rm \
+    --interactive \
+    --tty \
     -u $(id -u):$(id -g) \
     -v $PWD:/data \
     vimagick/youtube-dl \
