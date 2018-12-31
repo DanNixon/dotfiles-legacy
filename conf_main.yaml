@@ -63,5 +63,8 @@
     ~/.todo:
         path: dotfiles/todo
 
+    ~/.Slic3r:
+        path: dotfiles/slic3r/
+
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
