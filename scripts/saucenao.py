@@ -1,18 +1,39 @@
 #!/usr/bin/env python3
 
-# Super basic script to query saucenao with a local image.
-# Usage: saucenao.py [image filename]
-
-import sys
+import click
 import requests
+import sys
 
-image_filename = sys.argv[1]
 
-with open(image_filename, 'rb') as img_file:
-    r = requests.post(
+@click.command()
+@click.option('--username', type=str)
+@click.option('--api-key', type=str)
+@click.argument('image', type=click.File('rb'))
+def main(username, api_key, image):
+    """
+    Super basic script to query saucenao with a local image.
+    """
+    params = {
+        'output_type': 2
+    }
+
+    if username and api_key:
+        params.update({
+            'username': username,
+            'api_key': api_key,
+        })
+
+    req = requests.post(
             'https://saucenao.com/search.php',
-            files={'file': img_file},
-            params={'output_type': 2},
+            files={'file': image},
+            params=params,
         )
 
-    print(r.text)
+    print(req.text)
+
+    if req.status_code != requests.codes.ok:
+        sys.exit(1)
+
+
+if __name__=='__main__':
+    main()
