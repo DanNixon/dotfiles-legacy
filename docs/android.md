@@ -23,10 +23,6 @@ make life easier and work well for me.
   ([source](https://github.com/antennapod/AntennaPod))
   ([F-Droid](https://f-droid.org/packages/de.danoeh.antennapod/))
   ([Play](https://play.google.com/store/apps/details?id=de.danoeh.antennapod))
-- [Gallery](https://simplemobiletools.github.io/)
-  ([source](https://github.com/SimpleMobileTools/Simple-Gallery<Paste>))
-  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.gallery/))
-  ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro))
 - [NewPipe](https://newpipe.schabi.org/)
   ([source](https://github.com/TeamNewPipe/NewPipe))
   ([F-Droid](https://f-droid.org/packages/org.schabi.newpipe/))
@@ -42,6 +38,10 @@ make life easier and work well for me.
   ([source](https://github.com/segler-alex/RadioDroid))
   ([F-Droid](https://f-droid.org/en/packages/net.programmierecke.radiodroid2/))
   ([Play](https://play.google.com/store/apps/details?id=net.programmierecke.radiodroid2))
+- [Simple Gallery](https://simplemobiletools.github.io/)
+  ([source](https://github.com/SimpleMobileTools/Simple-Gallery))
+  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.gallery/))
+  ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro))
 - Simple Last.fm Scrobbler
   ([source](https://github.com/tgwizard/sls))
   ([F-Droid](https://f-droid.org/packages/com.adam.aslfms/))
@@ -108,10 +108,6 @@ make life easier and work well for me.
   ([source](https://gitlab.com/bitfireAT/davdroid))
   ([F-Droid](https://f-droid.org/en/packages/at.bitfire.davdroid/))
   ([Play](https://play.google.com/store/apps/details?id=at.bitfire.davdroid))
-- Dir
-  ([source](https://github.com/veniosg/Dir))
-  ([F-Droid](https://f-droid.org/packages/com.veniosg.dir/))
-  ([Play](https://play.google.com/store/apps/details?id=com.veniosg.dir))
 - Document Viewer
   ([source](https://github.com/PrivacyApps/document-viewer))
   ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.viewer/))
@@ -140,6 +136,10 @@ make life easier and work well for me.
 - [SatStat](http://mvglasow.github.io/satstat/index.html)
   ([source](https://github.com/mvglasow/satstat))
   ([F-Droid](https://f-droid.org/packages/com.vonglasow.michael.satstat/))
+- [Simple File Manager](https://simplemobiletools.github.io/)
+  ([source](https://github.com/SimpleMobileTools/Simple-File-Manager))
+  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.filemanager.pro))
+  ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager.pro))
 - Simply Solid
   ([source](https://github.com/enricocid/Simply-Solid))
   ([F-Droid](https://f-droid.org/packages/com.enrico.earthquake/))
