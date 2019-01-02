@@ -1,12 +1,22 @@
 #!/bin/bash
 
-FILENAME=$1
+label=$1
+filename_timestamp=`date "+%s"`
 
-date > ${FILENAME}
-echo >> ${FILENAME}
-echo >> ${FILENAME}
+if [ -n "${label}" ];
+then
+  filename="${filename_timestamp}_${label}.txt"
+else
+  filename="${filename_timestamp}.txt"
+fi
 
-${EDITOR} ${FILENAME}
+touch ${filename}
 
-echo >> ${FILENAME}
-date >> ${FILENAME}
+date >> ${filename}
+echo >> ${filename}
+echo >> ${filename}
+
+${EDITOR} ${filename}
+
+echo >> ${filename}
+date >> ${filename}
