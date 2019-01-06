@@ -49,9 +49,6 @@
     ~/.bash_aliases:
         path: dotfiles/shell/bash_aliases
 
-    ~/.gntrc:
-        path: dotfiles/gntrc
-
     ~/.gnupg/dirmngr.conf:
         create: true
         path: dotfiles/gnupg/dirmngr.conf
