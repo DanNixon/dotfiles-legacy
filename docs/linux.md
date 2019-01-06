@@ -24,3 +24,11 @@
 - File managment
   - [rsync](https://rsync.samba.org/)
   - [Syncthing](https://syncthing.net/)
+
+## Themes
+
+[base16](http://chriskempson.com/projects/base16/) themes I have used for a
+reasonable amount of time (most recent first):
+
+- `base16-eighties`
+- `base16-chalk`
