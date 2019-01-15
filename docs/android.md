@@ -23,6 +23,9 @@ make life easier and work well for me.
   ([source](https://github.com/antennapod/AntennaPod))
   ([F-Droid](https://f-droid.org/packages/de.danoeh.antennapod/))
   ([Play](https://play.google.com/store/apps/details?id=de.danoeh.antennapod))
+- mpv
+  ([source](https://github.com/mpv-android/mpv-android))
+  ([Play](https://play.google.com/store/apps/details?id=is.xyz.mpv))
 - [NewPipe](https://newpipe.schabi.org/)
   ([source](https://github.com/TeamNewPipe/NewPipe))
   ([F-Droid](https://f-droid.org/packages/org.schabi.newpipe/))
@@ -46,9 +49,9 @@ make life easier and work well for me.
   ([source](https://github.com/tgwizard/sls))
   ([F-Droid](https://f-droid.org/packages/com.adam.aslfms/))
   ([Play](https://play.google.com/store/apps/details?id=com.adam.aslfms))
-- [VLC](https://www.videolan.org/)
-  ([source](https://code.videolan.org/videolan/vlc-android))
-  ([Play](https://play.google.com/store/apps/details?id=org.videolan.vlc))
+- [Vanilla Music](http://vanillamusic.io/)
+  ([source](https://github.com/vanilla-music/vanilla))
+  ([F-Droid](https://f-droid.org/app/ch.blinkenlights.android.vanilla))
 
 ## Information
 
