@@ -203,9 +203,6 @@ make life easier and work well for me.
 
 ## Device specific
 
-- [AndrOBD](https://github.com/fr3ts0n/AndrOBD/wiki)
-  ([source](https://github.com/fr3ts0n/AndrOBD))
-  ([F-Droid](https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/))
 - DisplayLink Presenter
   ([Play](https://play.google.com/store/apps/details?id=com.displaylink.presenter))
 - [Fitbit](https://fitbit.com)

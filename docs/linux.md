@@ -13,7 +13,7 @@
 - Web browsers
   - [Firefox](https://www.mozilla.org/firefox)
     - [uBlock](https://github.com/gorhill/uBlock)
-    - [Tridactyl](https://github.com/tridactyl/tridactyl)
+    - [Dark Reader](https://github.com/darkreader/darkreader)
   - [browsh](https://www.brow.sh/)
 - Media players
   - [cmus](https://cmus.github.io/)
