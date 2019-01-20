@@ -16,6 +16,7 @@
     - [Decentraleyes](https://decentraleyes.org)
     - [HTTPS Everywhere](https://github.com/EFForg/https-everywhere)
     - [Privacy Badger](https://github.com/EFForg/privacybadger)
+    - [Privacy Settings](https://github.com/schomery/privacy-settings)
     - [uBlock](https://github.com/gorhill/uBlock)
   - [browsh](https://www.brow.sh)
 - Media players
