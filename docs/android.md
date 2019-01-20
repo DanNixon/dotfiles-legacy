@@ -96,7 +96,7 @@ make life easier and work well for me.
 
 ## Tools
 
-- [AnySoftKeyboard](http://anysoftkeyboard.github.io/)
+- [AnySoftKeyboard](https://anysoftkeyboard.github.io/)
   ([source](https://github.com/AnySoftKeyboard/AnySoftKeyboard))
   ([F-Droid](https://f-droid.org/packages/com.menny.android.anysoftkeyboard/<Paste>))
   ([Play](https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard))
@@ -136,7 +136,7 @@ make life easier and work well for me.
   ([source](https://github.com/aaronjwood/PortAuthority))
   ([F-Droid](https://f-droid.org/packages/com.aaronjwood.portauthority/))
   ([Play](https://play.google.com/store/apps/details?id=com.aaronjwood.portauthority.free))
-- [SatStat](http://mvglasow.github.io/satstat/index.html)
+- [SatStat](https://mvglasow.github.io/satstat)
   ([source](https://github.com/mvglasow/satstat))
   ([F-Droid](https://f-droid.org/packages/com.vonglasow.michael.satstat/))
 - [Simple File Manager](https://simplemobiletools.github.io/)
@@ -184,7 +184,7 @@ make life easier and work well for me.
   ([source](https://github.com/open-keychain/open-keychain))
   ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.keychain/))
   ([Play](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain))
-- [OpenVPN](http://ics-openvpn.blinkt.de/)
+- [OpenVPN](https://ics-openvpn.blinkt.de/)
   ([source](https://github.com/schwabe/ics-openvpn))
   ([F-Droid](https://f-droid.org/packages/de.blinkt.openvpn/))
   ([Play](https://play.google.com/store/apps/details?id=de.blinkt.openvpn))
