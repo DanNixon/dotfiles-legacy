@@ -20,7 +20,10 @@
     - [uBlock](https://github.com/gorhill/uBlock)
   - [browsh](https://www.brow.sh)
 - Media players
-  - [cmus](https://cmus.github.io)
+  - [mpd](https://www.musicpd.org/)
+    - [ncmpcpp](https://rybczak.net/ncmpcpp/)
+    - [mpc](https://www.musicpd.org/clients/mpc/)
+    - [mpscribble](https://www.musicpd.org/clients/mpdscribble/)
   - [mpv](https://mpv.io)
 - Remote access
   - [mosh](https://mosh.org)
