@@ -21,6 +21,10 @@
         create: true
         path: dotfiles/nvim/
 
+    ~/.config/mpd:
+        create: true
+        path: dotfiles/mpd/
+
     ~/.config/cmus:
         create: true
         path: dotfiles/cmus/
