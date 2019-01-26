@@ -25,10 +25,6 @@
         create: true
         path: dotfiles/mpd/
 
-    ~/.config/cmus:
-        create: true
-        path: dotfiles/cmus/
-
     ~/.vim:
         path: dotfiles/vim
 
