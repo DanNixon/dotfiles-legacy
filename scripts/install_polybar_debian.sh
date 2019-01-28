@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+
+REPO_DIR="/tmp/polybar"
 
 sudo apt-get install \
   cmake \
@@ -25,10 +27,14 @@ sudo apt-get install \
   libiw-dev \
   libnl-3-dev
 
-git clone --branch 3.2 --recursive https://github.com/jaagr/polybar
+git clone \
+  --branch 3.2 \
+  --recursive \
+  https://github.com/jaagr/polybar \
+  "$REPO_DIR"
 
-mkdir polybar/build
-cd polybar/build
+mkdir -p "$REPO_DIR"/build
+cd "$REPO_DIR"/build
 
 cmake ..
 make -j`nproc`
