@@ -7,6 +7,9 @@ client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
+# Start Compton
+exec --no-startup-id compton
+
 # Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -16,6 +19,7 @@ exec --no-startup-id feh --bg-fill ~/.background_image
 # Use Super_L as mod key
 set $mod Mod4
 
+# Magic numbers
 set $d_px 100
 set $d_ppt 10
 
