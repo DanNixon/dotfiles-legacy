@@ -6,7 +6,7 @@ if [ -x "$(command -v docker)" ]; then
   docker run \
     --rm \
     -u $(id -u):$(id -g) \
-    -v $PWD:/data \
+    -v "$PWD:/data" \
     vimagick/youtube-dl \
     $@
 else
