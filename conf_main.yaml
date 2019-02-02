@@ -25,6 +25,10 @@
         create: true
         path: dotfiles/mpd/
 
+    ~/.config/rofi:
+        create: true
+        path: dotfiles/rofi/
+
     ~/.vim:
         path: dotfiles/vim
 
