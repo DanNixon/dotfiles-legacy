@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cat common.conf text.conf > conky.conf
