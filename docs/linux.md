@@ -34,6 +34,8 @@
 - File managment
   - [rsync](https://rsync.samba.org)
   - [Syncthing](https://syncthing.net)
+- Fonts
+  - DejaVuSansMono [NerdFont](https://nerdfonts.com)
 
 ## Themes
 
