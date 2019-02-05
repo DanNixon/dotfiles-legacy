@@ -1,0 +1,2 @@
+${font DejaVuSansMono Nerd Font:size=40}${time %H:%M}${font DejaVuSansMono Nerd Font:size=25}${time :%S}${font}
+${time %A %d/%m/%Y}

@@ -1,5 +1,5 @@
-# System specific text config file
-text.conf
+# System specific config generator
+config.sh
 
 # Generated config file
 conky.conf

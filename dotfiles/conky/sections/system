@@ -1,0 +1,16 @@
+${color1}Host: ${color}${nodename}
+${color1}Uptime: ${color}${uptime}
+${color1} ${color} ${loadavg 1} ${loadavg 2} ${loadavg 3}
+${color1}CPU ${color}${cpu}%
+  ${color}${cpubar 6}
+  ${color1}Freq:${color} ${freq} MHz
+  ${color1}Proc:${color} ${processes} ${color1}Run:${color} ${running_processes}
+${color1}RAM ${color}${memperc}%
+  ${color}${membar 6}
+  ${color}${mem} / ${memmax}
+${color1}Swap ${color}${swapperc}%
+  ${color}${swapbar 6}
+  ${color}${swap} / ${swapmax}
+${color1}Entropy: ${color}${entropy_perc}%
+  ${color}${entropy_bar 6}
+  ${color}${entropy_avail} / ${entropy_poolsize}
