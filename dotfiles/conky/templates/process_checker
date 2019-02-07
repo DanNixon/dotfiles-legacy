@@ -1,9 +1,0 @@
-#!/bin/bash
-
-PROCESS=$1
-ICON=$2
-NAME=$3
-
-cat <<EOF
-\${if_running $PROCESS}\${color3}$ICON \${color}$NAME running\${else}\${color2}$ICON $NAME stopped\${color}\${endif}
-EOF

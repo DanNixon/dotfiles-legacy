@@ -1,9 +1,0 @@
-#!/bin/bash
-
-MOUNTPOINT=$1
-
-cat <<EOF
-\${color1}פּ $MOUNTPOINT
-  \${color}\${fs_bar 6 $MOUNTPOINT}
-  \${color}\${fs_used $MOUNTPOINT} / \${fs_size $MOUNTPOINT}
-EOF

@@ -29,10 +29,6 @@
         create: true
         path: dotfiles/rofi/
 
-    ~/.config/conky:
-        create: true
-        path: dotfiles/conky/
-
     ~/.vim:
         path: dotfiles/vim
 

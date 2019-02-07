@@ -1,4 +1,0 @@
-${color1}MPD: ${color}${mpd_status}
-${if_mpd_playing}${color1}ﱘ ${color}${mpd_title}
-${color1} ${color}${mpd_album}
-${color1}ﴁ ${color}${mpd_artist}${endif}

@@ -10,7 +10,6 @@
 - Desktop environment
   - [i3](https://i3wm.org/)
   - [Polybar](https://github.com/jaagr/polybar)
-  - [Conky](https://github.com/brndnmtthws/conky)
   - [Rofi](https://github.com/DaveDavenport/rofi)
   - [Compton](https://github.com/chjj/compton)
 - Web browsers
