@@ -13,9 +13,6 @@ exec --no-startup-id compton
 # Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Start Conky
-exec --no-startup-id conky
-
 # Set background image
 exec --no-startup-id feh --bg-fill ~/.background_image
 
