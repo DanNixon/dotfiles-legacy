@@ -183,6 +183,19 @@ bindsym $mod+Shift+x    exec firefox
 bindsym $mod+p          exec evince
 bindsym $mod+slash      exec pcmanfm
 
+# Audio controls (pulseaudio)
+bindsym $mod+m exec --no-startup-id pactl set-sink-volume 1 +5%
+bindsym $mod+n exec --no-startup-id pactl set-sink-volume 1 -5%
+bindsym $mod+Shift+M exec --no-startup-id pactl set-sink-mute 1 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec --no-startup-id  pactl set-sink-mute 1 toggle
+
+# Media controls (MPD)
+bindsym XF86AudioPause exec --no-startup-id mpc toggle
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
+bindsym XF86AudioNext exec --no-startup-id mpc next
+
 # Open some windows in floating mode
 for_window [class="Teensy" instance="teensy" title="Teensy"]            floating enable
 for_window [class="Pidgin" instance="Pidgin" window_role="buddy_list"]  floating enable
