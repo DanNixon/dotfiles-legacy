@@ -95,37 +95,38 @@ bindsym $mod+a focus parent
 bindcode $mod+d focus child
 
 # Switch to workspace
-bindsym $mod+comma workspace prev
+bindsym $mod+comma  workspace prev
 bindsym $mod+period workspace next
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1      workspace 1
+bindsym $mod+2      workspace 2
+bindsym $mod+3      workspace 3
+bindsym $mod+4      workspace 4
+bindsym $mod+5      workspace 5
+bindsym $mod+6      workspace 6
+bindsym $mod+7      workspace 7
+bindsym $mod+8      workspace 8
+bindsym $mod+9      workspace 9
+bindsym $mod+0      workspace 10
 
 # Move focused container to workspace
-bindsym $mod+Shift+exclam move workspace 1
-bindsym $mod+Shift+quotedbl move workspace 2
-bindsym $mod+Shift+sterling move workspace 3
-bindsym $mod+Shift+dollar move workspace 4
-bindsym $mod+Shift+percent move workspace 5
-bindsym $mod+Shift+asciicircum move workspace 6
-bindsym $mod+Shift+ampersand move workspace 7
-bindsym $mod+Shift+asterisk move workspace 8
-bindsym $mod+Shift+parenleft move workspace 9
-bindsym $mod+Shift+parenright move workspace 10
+bindsym $mod+Shift+exclam       move workspace 1
+bindsym $mod+Shift+quotedbl     move workspace 2
+bindsym $mod+Shift+sterling     move workspace 3
+bindsym $mod+Shift+dollar       move workspace 4
+bindsym $mod+Shift+percent      move workspace 5
+bindsym $mod+Shift+asciicircum  move workspace 6
+bindsym $mod+Shift+ampersand    move workspace 7
+bindsym $mod+Shift+asterisk     move workspace 8
+bindsym $mod+Shift+parenleft    move workspace 9
+bindsym $mod+Shift+parenright   move workspace 10
 
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
+
 # Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
 
-# Resize window (you can also use the mouse for that)
+# Resize window
 mode "resize" {
   # These bindings trigger as soon as you enter the resize mode
 
@@ -159,8 +160,8 @@ mode "resize" {
   bindsym Shift+Right resize grow   right $d_px px or $d_ppt ppt
 
   # Enter or Escape to go back to normal
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+  bindsym Return      mode "default"
+  bindsym Escape      mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -184,17 +185,17 @@ bindsym $mod+p          exec evince
 bindsym $mod+slash      exec pcmanfm
 
 # Audio controls (pulseaudio)
-bindsym $mod+m exec --no-startup-id pa.sh v +5%
-bindsym $mod+n exec --no-startup-id pa.sh v -5%
-bindsym $mod+Shift+M exec --no-startup-id pa.sh m toggle
-bindsym XF86AudioRaiseVolume exec --no-startup-id pa.sh v +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pa.sh v -5%
-bindsym XF86AudioMute exec --no-startup-id pa.sh m toggle
+bindsym $mod+m                exec --no-startup-id pa.sh v +5%
+bindsym $mod+n                exec --no-startup-id pa.sh v -5%
+bindsym $mod+Shift+M          exec --no-startup-id pa.sh m toggle
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pa.sh v +5%
+bindsym XF86AudioLowerVolume  exec --no-startup-id pa.sh v -5%
+bindsym XF86AudioMute         exec --no-startup-id pa.sh m toggle
 
 # Media controls (MPD)
-bindsym XF86AudioPause exec --no-startup-id mpc toggle
-bindsym XF86AudioPrev exec --no-startup-id mpc prev
-bindsym XF86AudioNext exec --no-startup-id mpc next
+bindsym XF86AudioPause  exec --no-startup-id mpc toggle
+bindsym XF86AudioPrev   exec --no-startup-id mpc prev
+bindsym XF86AudioNext   exec --no-startup-id mpc next
 
 # Open some windows in floating mode
 for_window [class="Teensy" instance="teensy" title="Teensy"]            floating enable

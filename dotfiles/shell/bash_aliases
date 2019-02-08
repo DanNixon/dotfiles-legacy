@@ -2,6 +2,3 @@ PATH=$PATH:~/dotfiles/scripts
 export PATH
 
 source ~/dotfiles/dotfiles/shell/common_aliases
-
-# The Fuck
-alias fuck='$(thefuck $(fc -ln -1))'
