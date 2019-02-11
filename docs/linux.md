@@ -43,3 +43,17 @@ reasonable amount of time (most recent first):
 
 - `base16-eighties`
 - `base16-chalk`
+
+## Notes
+
+- [Broadcom wireless not working on Ubuntu](https://ubuntuforums.org/showthread.php?t=2214110).
+- List available fonts: `updmap-sys --listmaps`
+- Reload `Xresources`: `xrdb ~/.Xresources`
+
+### PGP smart card setup
+
+- Install `scdaemon pcscd pcsc-tools`
+- `pcsc_scan -n`
+
+Reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port` if
+needed.
