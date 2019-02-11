@@ -168,7 +168,6 @@ map <Leader>gs :Gstatus<CR>
 map <Leader>gg :GitGutterSignsToggle<CR>
 
 " Syntax checking
-map <F6> :SyntasticCheck<CR>
 map <Leader>c :SyntasticCheck<CR>
 map <Leader>C :SyntasticReset<CR>
 
