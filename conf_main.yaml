@@ -67,5 +67,8 @@
     ~/.Slic3r:
         path: dotfiles/slic3r/
 
+    ~/.xsessionrc:
+        path: dotfiles/xsessionrc
+
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
