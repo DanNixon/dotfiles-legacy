@@ -13,3 +13,6 @@
 [submodule "third_party/x11docker"]
 	path = third_party/x11docker
 	url = https://github.com/mviereck/x11docker.git
+[submodule "third_party/gitignore"]
+	path = third_party/gitignore
+	url = https://github.com/github/gitignore.git
