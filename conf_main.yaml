@@ -61,6 +61,10 @@
         create: true
         path: dotfiles/gnupg/gpg.conf
 
+    ~/.gnupg/gpg-agent.conf:
+        create: true
+        path: dotfiles/gnupg/gpg-agent.conf
+
     ~/.todo:
         path: dotfiles/todo
 
