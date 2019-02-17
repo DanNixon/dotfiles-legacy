@@ -25,6 +25,10 @@
         create: true
         path: dotfiles/mpd/
 
+    ~/.config/mpv:
+        create: true
+        path: dotfiles/mpv/
+
     ~/.config/rofi:
         create: true
         path: dotfiles/rofi/
