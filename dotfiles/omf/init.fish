@@ -12,34 +12,19 @@ set -g theme_title_display_process yes
 set -g theme_display_cmd_duration yes
 set -g theme_display_git_master_branch yes
 
-# Load aliases
-. ~/dotfiles/dotfiles/shell/common_aliases
-
 # No greeting
 function fish_greeting
 end
 
+# Load aliases
+. ~/dotfiles/dotfiles/shell/common_aliases
+
+# Set GPG_TTY
+set --export --global GPG_TTY (tty)
+
 # Append to PATH helper function
 function fish_add_dir_to_path
   set --universal fish_user_paths $fish_user_paths $argv
-end
-
-# Print voile output via less
-function bmless
-  voile $argv | less -r
-end
-
-# Battery status
-function b
-  upower -i (upower -e | grep 'BAT') | grep -E "state|time\ to|percentage|energy-rate" --color=never
-end
-
-# Environment Modules
-set modules_path /usr/local/Modules/
-if test -d $modules_path;
-  . $modules_path"init/fish"
-  . $modules_path"init/fish_completion"
-  module use ~/.modules
 end
 
 # Execute direnv hook if it is installed
