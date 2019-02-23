@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COLOUR_BAD="cc9090"
+. script_connon.sh
 
 if [ "$(pgrep -x syncthing)" ]; then
   echo "痢"
