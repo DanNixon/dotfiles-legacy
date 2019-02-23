@@ -17,7 +17,7 @@ function fish_greeting
 end
 
 # Load aliases
-. ~/dotfiles/dotfiles/shell/common_aliases
+. ~/dotfiles/dotfiles/shell_aliases
 
 # Set GPG_TTY
 set --export --global GPG_TTY (tty)

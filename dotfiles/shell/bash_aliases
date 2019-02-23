@@ -1,4 +1,0 @@
-PATH=$PATH:~/dotfiles/scripts
-export PATH
-
-source ~/dotfiles/dotfiles/shell/common_aliases

@@ -1,0 +1,10 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+source ~/dotfiles/dotfiles/shell_aliases
+export PATH=$PATH:~/dotfiles/scripts
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

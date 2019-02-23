@@ -54,8 +54,8 @@
     ~/.bash_history:
         path: /dev/null
 
-    ~/.bash_aliases:
-        path: dotfiles/shell/bash_aliases
+    ~/.bashrc:
+        path: dotfiles/bashrc
 
     ~/.gnupg/dirmngr.conf:
         create: true
