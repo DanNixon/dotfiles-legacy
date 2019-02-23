@@ -30,6 +30,16 @@ function port_name_to_icon {
 }
 
 
+function get_volume {
+  if [ `pulsemixer --get-mute` -eq 1 ];
+  then
+    echo "mute"
+  else
+    echo "`pulsemixer --get-volume | cut --delimiter=' ' --fields=1`%"
+  fi
+}
+
+
 case "$1" in
   "v")
     pactl set-sink-volume "$default_sink" "$2"
@@ -44,6 +54,6 @@ case "$1" in
     port_name_to_icon `active_port`
     ;;
   *)
-    echo "nope"
+    echo "墳`get_volume`"
     ;;
 esac
