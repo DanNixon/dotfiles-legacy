@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. script_connon.sh
+COLOUR_BAD="cc9090"
 
 IFACE=$(ifconfig | grep tun | awk '{print $1}')
 
