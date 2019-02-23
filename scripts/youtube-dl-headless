@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker run \
+  --rm \
+  --detach \
+  --user $(id -u):$(id -g) \
+  --volume "$PWD:/data" \
+  vimagick/youtube-dl \
+  $@
