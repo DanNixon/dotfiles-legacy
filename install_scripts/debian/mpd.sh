@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 VERSION_MM=0.21
 VERSION_PATCH=4
 VERSION="${VERSION_MM}.${VERSION_PATCH}"

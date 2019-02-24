@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 REPO_DIR="/tmp/polybar"
 
 sudo apt-get install \

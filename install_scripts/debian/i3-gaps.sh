@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 REPO_DIR="/tmp/i3-gaps"
 
 sudo apt-get install \
