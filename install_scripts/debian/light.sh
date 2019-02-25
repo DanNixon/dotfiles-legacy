@@ -8,6 +8,7 @@ cd /tmp
 
 curl \
   --location \
+  --output "${ARCHIVE}" \
   "https://github.com/haikarainen/light/releases/download/v1.2/$ARCHIVE"
 
 tar \
@@ -15,9 +16,9 @@ tar \
   --gzip \
   --file $ARCHIVE
 
-cd light-1.2
+cd "light-1.2"
 
-./configure.sh --with-udev="/etc/udev/rules.d/"
+./configure --with-udev="/etc/udev/rules.d/"
 make -j `nproc`
 
 sudo make install
