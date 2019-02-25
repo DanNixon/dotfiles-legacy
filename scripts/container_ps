@@ -1,0 +1,16 @@
+#!/bin/bash
+
+C_YELLOW='\033[0;33m'
+C_NONE='\033[0m'
+
+if [ $(command -v docker) ];
+then
+  printf "${C_YELLOW}Docker containers${C_NONE}\n"
+  docker ps
+fi
+
+if [ $(command -v singularity) ];
+then
+  printf "${C_YELLOW}Singularity instances${C_NONE}\n"
+  singularity instance list
+fi
