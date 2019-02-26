@@ -13,4 +13,7 @@ if [ $(command -v singularity) ];
 then
   printf "${C_YELLOW}Singularity instances${C_NONE}\n"
   singularity instance list
+
+  printf "${C_YELLOW}Singularity instances (root)${C_NONE}\n"
+  sudo singularity instance list
 fi
