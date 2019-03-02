@@ -1,6 +1,3 @@
 [submodule "dotbot"]
 	path = third_party/dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "dotfiles/gdb/gef"]
-	path = dotfiles/gdb/gef
-	url = https://github.com/hugsy/gef.git
