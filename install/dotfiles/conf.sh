@@ -39,7 +39,7 @@ function df_link {
     return 2
   fi
 
-  # Target did not exist, should be OK to create it now
+  # Link did not exist, should be OK to create it now
   printf "${C_GREEN}Link ${name} => ${target}${C_NONE}\n"
   ln -s "$target" "$name"
 }
