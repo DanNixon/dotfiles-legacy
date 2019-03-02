@@ -7,6 +7,3 @@
 [submodule "dotfiles/i3/base16-i3"]
 	path = dotfiles/i3/base16-i3
 	url = https://github.com/khamer/base16-i3.git
-[submodule "third_party/gitignore"]
-	path = templates/gitignore
-	url = https://github.com/github/gitignore.git
