@@ -1,0 +1,9 @@
+*.out
+*.pyc
+TAGS
+*/__pycache__/
+tests/*.pyc
+tests/pylint.html
+tests/pylint.txt
+tests/pylint3.html
+.vscode
