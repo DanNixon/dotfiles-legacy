@@ -4,6 +4,3 @@
 [submodule "dotfiles/gdb/gef"]
 	path = dotfiles/gdb/gef
 	url = https://github.com/hugsy/gef.git
-[submodule "dotfiles/i3/base16-i3"]
-	path = dotfiles/i3/base16-i3
-	url = https://github.com/khamer/base16-i3.git
