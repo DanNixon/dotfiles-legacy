@@ -28,7 +28,6 @@ function fish_add_dir_to_path
 end
 
 # Execute direnv hook if it is installed
-set direnv_binary (which direnv)
-if test -n "$direnv_binary" -a -x "$direnv_binary"
+if command -s direnv > /dev/null
   eval (direnv hook fish)
 end
