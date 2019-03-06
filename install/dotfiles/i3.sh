@@ -9,5 +9,5 @@ df_link \
 
 set -x
 
-./dotfiles/i3/generate_config
+"$DOTFILES"/dotfiles/i3/generate_config
 i3-msg restart
