@@ -1,30 +1,6 @@
 #!/bin/bash
 
-C_RED='\033[0;31m'
-C_GREEN='\033[0;32m'
-C_YELLOW='\033[0;33m'
-C_CYAN='\033[0;36m'
-C_NONE='\033[0m'
-
 EXTERNAL_IP=`dig +short myip.opendns.com @resolver1.opendns.com`
-printf "${C_CYAN}External IP: ${C_GREEN}${EXTERNAL_IP}${C_NONE}\n"
+echo "External IP: ${EXTERNAL_IP}"
 
-FIELDS="status,country,regionName,city,lat,lon,timezone,isp,org,mobile,proxy"
-LOCATION=`curl --silent http://ip-api.com/json/${EXTERNAL_IP}?fields=${FIELDS}`
-
-function parse {
-  echo "${LOCATION}" | jq --raw-output .${1}
-}
-
-STATUS=`parse status`
-
-if [[ ${STATUS} = "success" ]]; then
-  printf "${C_CYAN}Address: ${C_YELLOW}`parse city`, `parse regionName`, `parse country`${C_NONE}\n"
-  printf "${C_CYAN}Lat/lon: ${C_YELLOW}`parse lat`, `parse lon`${C_NONE}\n"
-  printf "${C_CYAN}Timezone: ${C_YELLOW}`parse timezone`${C_NONE}\n"
-  printf "${C_CYAN}ISP (org): ${C_YELLOW}`parse isp` ${C_CYAN}(${C_YELLOW}`parse org`${C_CYAN})${C_NONE}\n"
-  printf "${C_CYAN}Mobile: ${C_YELLOW}`parse mobile`${C_NONE}\n"
-  printf "${C_CYAN}Proxy: ${C_YELLOW}`parse proxy`${C_NONE}\n"
-else
-  printf "${C_RED}IP lookup failed (${STATUS})${C_NONE}\n"
-fi
+ip-api-lookup "${EXTERNAL_IP}"
