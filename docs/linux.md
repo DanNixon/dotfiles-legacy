@@ -50,10 +50,10 @@ reasonable amount of time (most recent first):
 - List available fonts: `updmap-sys --listmaps`
 - Reload `Xresources`: `xrdb ~/.Xresources`
 
-### PGP smart card setup
+### PGP smart card dependencies
 
-- Install `scdaemon pcscd pcsc-tools`
-- `pcsc_scan -n`
+- Debian/Ubuntu: `apt install scdaemon pcscd pcsc-tools`
+- Fedora: `dnf install pcsc-lite pcsc-lite-ccid`
 
-Reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port` if
-needed.
+If needed, reader can be manually selected in `.gnupg/scdaemon.conf` using
+`reader-port`.
