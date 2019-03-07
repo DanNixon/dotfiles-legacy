@@ -1,15 +1,7 @@
 #!/bin/bash
 
-# Check if Docker is available
-if [ -x "$(command -v docker)" ]; then
-  # If Docker is available then use the Docker image
-  docker run \
-    --rm \
-    --user $(id -u):$(id -g) \
-    --volume "$PWD:/data" \
-    vimagick/youtube-dl \
-    $@
-else
-  # If not fall back to an installed version
-  youtube-dl $@
-fi
+docker run \
+  --rm \
+  --user $(id -u):$(id -g) \
+  --volume "$PWD:/data" \
+  vimagick/youtube-dl $@

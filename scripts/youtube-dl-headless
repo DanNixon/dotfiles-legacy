@@ -5,5 +5,4 @@ docker run \
   --detach \
   --user $(id -u):$(id -g) \
   --volume "$PWD:/data" \
-  vimagick/youtube-dl \
-  $@
+  vimagick/youtube-dl $@
