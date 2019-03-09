@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xclip -o -sel clip | xargs curl --silent --location | saucenao-search -

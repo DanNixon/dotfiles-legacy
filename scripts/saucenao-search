@@ -1,3 +1,10 @@
 #!/bin/sh
 
-saucenao.py $1 | jq -r "(.header.long_remaining, .header.short_remaining, .results[].data.ext_urls)"
+response=`saucenao.py $1`
+
+api_limit_long=`echo $response | jq '.header.long_remaining'`
+api_limit_short=`echo $response | jq '.header.short_remaining'`
+
+echo "API: long=$api_limit_long, short=$api_limit_short"
+
+echo "$response" | jq -r '.results[].data? | .ext_urls[]'
