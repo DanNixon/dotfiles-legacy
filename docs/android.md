@@ -36,7 +36,7 @@ make life easier and work well for me.
   ([Play](https://play.google.com/store/apps/details?id=net.programmierecke.radiodroid2))
 - [Simple Gallery](https://simplemobiletools.github.io/)
   ([source](https://github.com/SimpleMobileTools/Simple-Gallery))
-  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.gallery/))
+  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.gallery.pro/))
   ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro))
 - Simple Last.fm Scrobbler
   ([source](https://github.com/tgwizard/sls))
