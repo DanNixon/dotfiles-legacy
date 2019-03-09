@@ -22,10 +22,6 @@ make life easier and work well for me.
 - [NewPipe](https://newpipe.schabi.org/)
   ([source](https://github.com/TeamNewPipe/NewPipe))
   ([F-Droid](https://f-droid.org/packages/org.schabi.newpipe/))
-- Nori
-  ([source](https://github.com/tjg1/nori))
-  ([F-Droid](https://f-droid.org/packages/io.github.tjg1.nori/))
-  ([Play](https://play.google.com/store/apps/details?id=io.github.tjg1.nori))
 - [OpenCamera](https://opencamera.sourceforge.io/)
   ([source](https://sourceforge.net/p/opencamera/code/ci/master/tree/))
   ([F-Droid](https://f-droid.org/en/packages/net.sourceforge.opencamera/))
@@ -59,10 +55,6 @@ make life easier and work well for me.
   ([Play](https://play.google.com/store/apps/details?id=org.mozilla.focus))
 - [Flightradar24](https://www.flightradar24.com)
   ([Play](https://play.google.com/store/apps/details?id=com.flightradar24free))
-- Forcastie
-  ([source](https://github.com/martykan/forecastie))
-  ([F-Droid](https://f-droid.org/packages/cz.martykan.forecastie/))
-  ([Play](https://play.google.com/store/apps/details?id=com.casticalabs.forecastie))
 - Materialistic
   ([source](https://github.com/hidroh/materialistic))
   ([Play](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic))
@@ -71,10 +63,6 @@ make life easier and work well for me.
   ([source](https://github.com/osmandapp/Osmand))
   ([Play](https://play.google.com/store/apps/details?id=net.osmand))
   ([F-Droid](https://f-droid.org/en/packages/net.osmand.plus/))
-- The Kana Quiz
-  ([source](https://github.com/theblackwidower/KanaQuiz))
-  ([F-Droid](https://f-droid.org/packages/com.noprestige.kanaquiz/))
-  ([Play](https://play.google.com/store/apps/details?id=com.noprestige.kanaquiz))
 - [Slide](https://www.reddit.com/r/slideforreddit)
   ([source](https://github.com/ccrama/Slide))
   ([F-Droid](https://f-droid.org/packages/me.ccrama.redditslide/))
@@ -100,8 +88,8 @@ make life easier and work well for me.
   ([source](https://github.com/darshan-/Battery-Indicator-Pro))
   ([F-Droid](https://f-droid.org/en/packages/com.darshancomputing.BatteryIndicatorPro/))
   ([Play](https://play.google.com/store/apps/details?id=com.darshancomputing.BatteryIndicatorPro))
-- [DAVdroid](https://www.davdroid.com/)
-  ([source](https://gitlab.com/bitfireAT/davdroid))
+- [DAVx5](https://www.davx5.com/)
+  ([source](https://gitlab.com/bitfireAT/davx5-ose))
   ([F-Droid](https://f-droid.org/en/packages/at.bitfire.davdroid/))
   ([Play](https://play.google.com/store/apps/details?id=at.bitfire.davdroid))
 - Document Viewer
@@ -185,14 +173,6 @@ make life easier and work well for me.
   ([source](https://gitweb.torproject.org/orbot.git))
   ([F-Droid](https://guardianproject.info/fdroid/))
   ([Play](https://play.google.com/store/apps/details?id=org.torproject.android))
-- Password Store
-  ([source](https://github.com/zeapo/Android-Password-Store))
-  ([F-Droid](https://f-droid.org/packages/com.zeapo.pwdstore/))
-  ([Play](https://play.google.com/store/apps/details?id=com.zeapo.pwdstore))
-- [Wireguard](https://www.wireguard.com/)
-  ([source](https://git.zx2c4.com/wireguard-android))
-  ([F-Droid](https://f-droid.org/en/packages/com.wireguard.android/))
-  ([Play](https://play.google.com/store/apps/details?id=com.wireguard.android))
 
 ## Device specific
 
@@ -202,8 +182,8 @@ make life easier and work well for me.
   ([Play](https://play.google.com/store/apps/details?id=com.fitbit.FitbitMobile))
 - Fit Notifications
   ([source](https://github.com/abhijitvalluri/fitnotifications))
-  ([Play](https://play.google.com/store/apps/details?id=com.abhijitvalluri.android.fitnotifications))
   ([F-Droid](https://f-droid.org/packages/com.abhijitvalluri.android.fitnotifications/))
+  ([Play](https://play.google.com/store/apps/details?id=com.abhijitvalluri.android.fitnotifications))
 - [Gadgetbridge](https://gadgetbridge.org/)
   ([source](https://github.com/Freeyourgadget/Gadgetbridge))
   ([F-Droid](https://f-droid.org/en/packages/nodomain.freeyourgadget.gadgetbridge/))
