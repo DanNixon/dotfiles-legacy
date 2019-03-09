@@ -1,9 +1,0 @@
-#!/bin/bash
-
-docker run \
-  --rm \
-  --interactive \
-  --tty \
-  --volume $PWD:/config \
-  ottowinter/esphomeyaml \
-  $@
