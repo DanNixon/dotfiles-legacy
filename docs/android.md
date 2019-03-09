@@ -10,13 +10,6 @@ make life easier and work well for me.
 
 - [LineageOS](https://lineageos.org/)
 
-## Launcher/homescreen
-
-- Taskbar
-  ([source](https://github.com/farmerbb/Taskbar))
-  ([F-Droid](https://f-droid.org/packages/com.farmerbb.taskbar/))
-  ([Play](https://play.google.com/store/apps/details?id=com.farmerbb.taskbar))
-
 ## Media
 
 - [AntennaPod](https://antennapod.org/)
@@ -51,7 +44,7 @@ make life easier and work well for me.
   ([Play](https://play.google.com/store/apps/details?id=com.adam.aslfms))
 - [Vanilla Music](http://vanillamusic.io/)
   ([source](https://github.com/vanilla-music/vanilla))
-  ([F-Droid](https://f-droid.org/app/ch.blinkenlights.android.vanilla))
+  ([F-Droid](https://f-droid.org/app/ch.blinkenlights.android.vanilla/))
 
 ## Information
 
@@ -98,7 +91,7 @@ make life easier and work well for me.
 
 - [AnySoftKeyboard](https://anysoftkeyboard.github.io/)
   ([source](https://github.com/AnySoftKeyboard/AnySoftKeyboard))
-  ([F-Droid](https://f-droid.org/packages/com.menny.android.anysoftkeyboard/<Paste>))
+  ([F-Droid](https://f-droid.org/packages/com.menny.android.anysoftkeyboard/))
   ([Play](https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard))
 - Barcode Scanner
   ([source](https://github.com/zxing/zxing))
@@ -141,7 +134,7 @@ make life easier and work well for me.
   ([F-Droid](https://f-droid.org/packages/com.vonglasow.michael.satstat/))
 - [Simple File Manager](https://simplemobiletools.github.io/)
   ([source](https://github.com/SimpleMobileTools/Simple-File-Manager))
-  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.filemanager.pro))
+  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.filemanager.pro/))
   ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager.pro))
 - Simply Solid
   ([source](https://github.com/enricocid/Simply-Solid))
