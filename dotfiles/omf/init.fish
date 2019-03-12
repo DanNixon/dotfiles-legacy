@@ -16,12 +16,6 @@ set -g theme_display_git_master_branch yes
 function fish_greeting
 end
 
-# Load aliases
-. ~/dotfiles/dotfiles/shell_aliases
-
-# Set GPG_TTY
-set --export --global GPG_TTY (tty)
-
 # Append to PATH helper function
 function fish_add_dir_to_path
   set --universal fish_user_paths $fish_user_paths $argv
@@ -31,3 +25,11 @@ end
 if command -s direnv > /dev/null
   eval (direnv hook fish)
 end
+
+# Load aliases
+. ~/dotfiles/dotfiles/shell_aliases
+
+# Set environment
+set --export --global EDITOR nvim
+set --export --global TODOTXT_DEFAULT_ACTION ls
+set --export --global GPG_TTY (tty)

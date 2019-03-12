@@ -12,6 +12,3 @@ set -x
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install > omf_install && \
   fish omf_install --noninteractive && \
   rm omf_install
-
-echo "set -Ux EDITOR nvim" | fish
-echo "set -Ux TODOTXT_DEFAULT_ACTION ls" | fish
