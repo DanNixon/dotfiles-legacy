@@ -1,0 +1,51 @@
+#!/bin/sh
+
+function _start_container {
+  docker run \
+    --detach \
+    --rm \
+    --name "firefox_$1" \
+    --publish "127.0.0.1::5800" \
+    --publish "127.0.0.1::5900" \
+    --volume "firefox_data_$1:/config:rw" \
+    --shm-size 2g \
+    jlesage/firefox
+}
+
+
+function _web_url {
+  port=`docker inspect $1| jq -r '.[0].NetworkSettings.Ports["5800/tcp"][0].HostPort'`
+  url="http://127.0.0.1:$port"
+  echo "$url"
+}
+
+
+function _web_open {
+  firefox --private-window `_web_url $1`
+}
+
+
+function _vnc_url {
+  port=`docker inspect $1| jq -r '.[0].NetworkSettings.Ports["5900/tcp"][0].HostPort'`
+  url="127.0.0.1:$port"
+  vinagre "$url"
+}
+
+
+case $1 in
+  start)
+    _start_container $2
+    ;;
+  stop)
+    docker stop "firefox_$2"
+    ;;
+  web)
+    _web_url "firefox_$2"
+    ;;
+  open)
+    _web_open "firefox_$2"
+    ;;
+  vnc)
+    _vnc_url "firefox_$2"
+    ;;
+esac
