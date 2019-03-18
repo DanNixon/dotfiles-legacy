@@ -17,8 +17,10 @@
     - [Dark Reader](https://github.com/darkreader/darkreader)
     - [Decentraleyes](https://decentraleyes.org)
     - [HTTPS Everywhere](https://github.com/EFForg/https-everywhere)
+    - [Octotree](https://github.com/ovity/octotree)
     - [Privacy Badger](https://github.com/EFForg/privacybadger)
     - [Privacy Settings](https://github.com/schomery/privacy-settings)
+    - [Refined GitHub](https://github.com/sindresorhus/refined-github)
     - [uBlock](https://github.com/gorhill/uBlock)
   - [browsh](https://www.brow.sh)
 - Media players
