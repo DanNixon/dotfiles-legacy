@@ -22,13 +22,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
-Plug 'vasconcelloslf/vim-interestingwords'
 Plug 'tpope/vim-abolish'
 Plug 'kana/vim-operator-user'
 Plug 'tpope/vim-surround'
 Plug 'freitass/todo.txt-vim'
 Plug 'reedes/vim-lexical'
-Plug 'tpope/vim-jdaddy'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -93,8 +91,6 @@ set expandtab
 " Complete options (disable preview scratch window, limit popup items)
 set completeopt=menu,menuone,longest
 set pumheight=15
-
-let g:interestingWordsRandomiseColors = 1
 
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
@@ -167,10 +163,6 @@ map <Leader>C :SyntasticReset<CR>
 " Manual spelling toggle
 map <Leader>s :Spell<CR>
 map <Leader>S :SpellOff<CR>
-
-" Highlight shortcuts
-nnoremap <silent> <Leader>h :call InterestingWords('n')<cr>
-nnoremap <silent> <Leader>H :call UncolorAllWords()<cr>
 
 " Find shortcuts
 map <Leader>f :FZF<CR>
