@@ -11,10 +11,10 @@ client.background       $base07
 exec --no-startup-id compton
 
 # Start Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id polybar-launch
 
 # Set background image
-exec --no-startup-id feh --bg-fill ~/.background_image
+exec --no-startup-id $HOME/.fehbg
 
 # Use Super_L as mod key
 set $mod Mod4
