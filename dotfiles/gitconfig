@@ -18,13 +18,11 @@
 
 [alias]
   a         = add
-  aa        = add --all
   ap        = add --patch
   s         = status --short --branch
   co        = checkout
   c         = commit
   ca        = commit --amend
-  g         = grep
   d         = diff
   ds        = diff --staged
   br        = branch
@@ -45,8 +43,7 @@
   p         = push
   pu        = push --set-upstream
   pfl       = push --force-with-lease
-  pl        = pull
-  f         = fetch -p
+  f         = fetch --prune
   fp        = !"git fetch -p; git pull"
   rs        = reset
   unbugger  = reset --hard HEAD
