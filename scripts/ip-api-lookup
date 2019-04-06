@@ -1,6 +1,6 @@
 #!/bin/bash
 
 IP="$1"
-FIELDS="status,country,regionName,city,lat,lon,timezone,isp,org,mobile,proxy"
+FIELDS="status,message,country,regionName,city,zip,lat,lon,timezone,isp,org,mobile,proxy"
 
 curl --silent "http://ip-api.com/json/${IP}?fields=${FIELDS}" | jq
