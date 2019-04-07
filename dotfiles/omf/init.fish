@@ -18,7 +18,7 @@ end
 
 # Append to PATH helper function
 function fish_add_dir_to_path
-  set --universal fish_user_paths $fish_user_paths $argv
+  set --universal fish_user_paths $fish_user_paths (pwd)
 end
 
 # Execute direnv hook if it is installed
