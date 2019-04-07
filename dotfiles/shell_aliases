@@ -11,6 +11,7 @@ alias die="sudo shutdown -P now"
 alias df="df -h"
 alias du="du -h"
 alias free="free -h"
+alias lb="lsblk"
 
 alias q="exit"
 
