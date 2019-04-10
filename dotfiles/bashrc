@@ -1,10 +1,17 @@
-# If not running interactively, don't do anything
+# If not running interactively exit without doing anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-source ~/dotfiles/dotfiles/shell_aliases
-export PATH=$PATH:~/dotfiles/scripts
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source $HOME/dotfiles/dotfiles/shell_aliases
+
+export PATH=$PATH:$HOME/dotfiles/scripts
+
+[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
