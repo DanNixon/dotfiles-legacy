@@ -1,0 +1,3 @@
+check process sshd with pidfile /var/run/sshd.pid
+  mode passive
+  if failed port 22 protocol ssh then alert

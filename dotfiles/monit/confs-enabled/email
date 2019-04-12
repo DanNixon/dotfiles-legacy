@@ -1,0 +1,17 @@
+set mail-format {
+  from:    Monit <SENDER>
+  subject: Monit alert ($HOST)
+  message: $DESCRIPTION
+           Host:        $HOST
+           Date:        $DATE
+           Action:      $ACTION
+           Service:     $SERVICE
+           Event:       $EVENT
+}
+
+set mailserver smtp.gmail.com port 587
+  username "USER"
+  password "PASS"
+  using tlsv12
+
+set alert RECIPIENT

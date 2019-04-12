@@ -1,0 +1,2 @@
+check program NAME with path "/etc/monit/scripts/check_docker_container.sh CONTAINER_NAME"
+  if status != 0 then alert
