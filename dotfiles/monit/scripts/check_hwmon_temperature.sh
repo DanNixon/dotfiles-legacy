@@ -17,6 +17,6 @@ if [[ `echo "$check" | bc` -eq 1 ]]; then
   echo "Temperature \"$device_name\" exceeds threshold ($check)"
   exit 1
 else
-  echo "Temperature \"$device_name\" below threshold"
+  echo "Temperature \"$device_name\" below threshold ($reading)"
   exit 0
 fi
