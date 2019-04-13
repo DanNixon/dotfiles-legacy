@@ -23,7 +23,7 @@ Documentation=man:monit(1) https://mmonit.com/wiki/Monit/HowTo
 [Service]
 Type=simple
 KillMode=process
-ExecStart=/usr/local/bin/monit -I -c /etc/monit/monitrc
+ExecStart=/usr/local/bin/monit -I
 ExecStop=/usr/local/bin/monit quit
 ExecReload=/usr/local/bin/monit reload
 Restart = on-abnormal
