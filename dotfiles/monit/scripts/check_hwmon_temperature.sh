@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Sample Monit config:
+# check program NAME with path "/etc/monit/scripts/check_hwmon_temperature.sh HWMON_PATH THRESHOLD"
+#   if status != 0 then alert
+
 DEVICE_PATH="$1"
 THRESHOLD="$2"
 
