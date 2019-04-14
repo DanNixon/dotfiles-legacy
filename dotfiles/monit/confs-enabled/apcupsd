@@ -1,0 +1,2 @@
+check process apcupsd with pidfile /var/run/apcupsd.pid
+  if failed host 127.0.0.1 port 3551 type TCP then alert
