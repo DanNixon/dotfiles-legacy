@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pwname=`pass-choose`
+result=$?
+
+if [ $result -eq 0 ]; then
+  pass "$pwname" -q
+else
+  exit $result
+fi

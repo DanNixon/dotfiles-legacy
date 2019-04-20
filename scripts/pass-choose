@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find ".password-store/" -name "*.gpg" -printf "%P\n" | sed -e "s/\.gpg//g" | rofi -dmenu -i
