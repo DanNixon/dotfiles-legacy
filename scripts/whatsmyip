@@ -1,6 +1,0 @@
-#!/bin/bash
-
-EXTERNAL_IP=`dig +short myip.opendns.com @resolver1.opendns.com`
-echo "External IP: ${EXTERNAL_IP}"
-
-ip-api-lookup "${EXTERNAL_IP}"
