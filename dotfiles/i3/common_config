@@ -68,10 +68,8 @@ bindsym $mod+Shift+Down   move down   $d_px
 bindsym $mod+Shift+Up     move up     $d_px
 bindsym $mod+Shift+Right  move right  $d_px
 
-# Split in horizontal orientation
+# Set split orientation
 bindsym $mod+b split h
-
-# Split in vertical orientation
 bindsym $mod+v split v
 
 # Toggle fullscreen mode for the focused container
@@ -88,11 +86,9 @@ bindsym $mod+Shift+space floating toggle
 # Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# Focus the parent container
-bindsym $mod+a focus parent
-
-# Focus the child container
-bindcode $mod+d focus child
+# Focus parent / child containers
+bindsym $mod+Shift+a  focus parent
+bindsym $mod+a        focus child
 
 # Switch to workspace
 bindsym $mod+comma  workspace prev
@@ -181,8 +177,7 @@ bindsym $mod+Return     exec alacritty
 bindsym $mod+backslash  exec alacritty
 bindsym $mod+x          exec firefox --private-window
 bindsym $mod+Shift+x    exec firefox
-bindsym $mod+p          exec evince
-bindsym $mod+slash      exec pcmanfm
+bindsym $mod+p          exec pass-clip
 
 # Audio controls (pulseaudio)
 bindsym $mod+m                exec --no-startup-id pa.sh v +5%
