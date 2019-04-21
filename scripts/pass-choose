@@ -1,7 +1,12 @@
 #!/bin/bash
 
+prompt="password-store"
+if [ ! -z "$1" ]; then
+  prompt="$prompt $1"
+fi
+
 find "$HOME/.password-store/" \
   -name "*.gpg" \
   -printf "%P\n" \
 | sed -e "s/\.gpg//g" \
-| rofi -dmenu -i -p "password-store"
+| rofi -dmenu -i -p "$prompt"
