@@ -16,10 +16,6 @@ df_link \
   "$HOME/.config/browsh"
 
 df_link \
-  "$DOTFILES/dotfiles/lxterminal" \
-  "$HOME/.config/lxterminal"
-
-df_link \
   "$DOTFILES/dotfiles/nvim" \
   "$HOME/.config/nvim"
 

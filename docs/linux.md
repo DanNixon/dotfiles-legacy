@@ -4,7 +4,6 @@
   - [Fish](https://fishshell.com)
 - Terminal emulator
   - [Alacritty](https://github.com/jwilm/alacritty)
-  - LXterminal
 - Text editor
   - [Neovim](https://neovim.io)
 - Desktop environment
