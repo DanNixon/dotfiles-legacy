@@ -1,26 +1,20 @@
 #!/bin/bash
 
 # Sample Monit config:
-# check program NAME with path "/etc/monit/scripts/check_hwmon_temperature.sh HWMON_PATH THRESHOLD"
+# check program NAME with path "/etc/monit/scripts/check_hwmon_temperature.sh CHIP SENSOR THRESHOLD"
 #   if status != 0 then alert
 
-DEVICE_PATH="$1"
-THRESHOLD="$2"
+chip="$1"
+sensor="$2"
+threshold="$3"
 
-if [ -e "${DEVICE_PATH}_label" ]; then
-  device_name=`cat "${DEVICE_PATH}_label"`
-else
-  device_name="unknown"
-fi
+value=`sensors -u "$chip" | grep "${sensor}_input" | cut -d ":" -f 2 | awk '{printf("%0.0f", $1)}'`
 
-device_input=`cat "${DEVICE_PATH}_input"`
-reading=`echo "$device_input / 1000" | bc`
-
-check="$reading > $THRESHOLD"
+check="$value > $threshold"
 if [[ `echo "$check" | bc` -eq 1 ]]; then
-  echo "Temperature \"$device_name\" exceeds threshold ($check)"
+  echo "Temperature \"$sensor\" exceeds threshold (compare $check)"
   exit 1
 else
-  echo "Temperature \"$device_name\" below threshold ($reading)"
+  echo "Temperature \"$sensor\" below threshold (compare $check)"
   exit 0
 fi
