@@ -1,5 +1,22 @@
 #!/bin/sh
 
+function _usage {
+  program=`basename $0`
+
+  printf "$program: helper script for launching Dockerized Firefox instances.\n\n"
+  printf "Usage:\n"
+  printf "\t$program start NAME   Starts a new or existing container\n"
+  printf "\t$program stop NAME    Stops a running container\n"
+  printf "\t$program web NAME     Retireves the URL to access the container via a web browser\n"
+  printf "\t$program open NAME    Opens the result of $program web in a private Firefox window\n"
+  printf "\t$program vnc NAME     Opens a VNC session to a given container in Vinagre\n"
+}
+
+function _bad_args {
+  _usage
+  exit 1
+}
+
 function _start_container {
   docker run \
     --detach \
@@ -32,6 +49,10 @@ function _vnc_url {
 }
 
 
+if [ ! $# -eq 2 ]; then
+  _bad_args
+fi
+
 case $1 in
   start)
     _start_container $2
@@ -48,4 +69,6 @@ case $1 in
   vnc)
     _vnc_url "firefox_$2"
     ;;
+  *)
+    _bad_args
 esac
