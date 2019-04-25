@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function _usage {
   program=`basename $0`
@@ -31,21 +31,39 @@ function _start_container {
 
 
 function _web_url {
-  port=`docker inspect $1| jq -r '.[0].NetworkSettings.Ports["5800/tcp"][0].HostPort'`
-  url="http://127.0.0.1:$port"
-  echo "$url"
+  info=`docker inspect $1`
+  result=$?
+  if [ $result -eq 0 ]; then
+    port=`echo "$info" | jq -r '.[0].NetworkSettings.Ports["5800/tcp"][0].HostPort'`
+    url="http://127.0.0.1:$port"
+    echo "$url"
+  else
+    exit $result
+  fi
 }
 
 
 function _web_open {
-  firefox --private-window `_web_url $1`
+  url=`_web_url $1`
+  result=$?
+  if [ $result -eq 0 ]; then
+    firefox --private-window "$url"
+  else
+    exit $result
+  fi
 }
 
 
 function _vnc_url {
-  port=`docker inspect $1| jq -r '.[0].NetworkSettings.Ports["5900/tcp"][0].HostPort'`
-  url="127.0.0.1:$port"
-  vinagre "$url"
+  info=`docker inspect $1`
+  result=$?
+  if [ $result -eq 0 ]; then
+    port=`echo "$info" | jq -r '.[0].NetworkSettings.Ports["5900/tcp"][0].HostPort'`
+    url="127.0.0.1:$port"
+    vinagre "$url"
+  else
+    exit $result
+  fi
 }
 
 
