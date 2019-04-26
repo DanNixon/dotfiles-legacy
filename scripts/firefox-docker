@@ -1,15 +1,20 @@
 #!/bin/bash
 
-function _usage {
-  program=`basename $0`
+PROGRAM=`basename $0`
 
-  printf "$program: helper script for launching Dockerized Firefox instances.\n\n"
+CONTAINER_PREFIX="${PROGRAM}-"
+VOLUME_PREFIX="${PROGRAM}-data-"
+
+function _usage {
+  printf "$PROGRAM: helper script for launching Dockerized Firefox instances.\n\n"
   printf "Usage:\n"
-  printf "\t$program start NAME   Starts a new or existing container\n"
-  printf "\t$program stop NAME    Stops a running container\n"
-  printf "\t$program web NAME     Retireves the URL to access the container via a web browser\n"
-  printf "\t$program open NAME    Opens the result of $program web in a private Firefox window\n"
-  printf "\t$program vnc NAME     Opens a VNC session to a given container in Vinagre\n"
+  printf "\t$PROGRAM ls           List existing volumes created with $PROGRAM\n"
+  printf "\t$PROGRAM ls           List running containers created with $PROGRAM\n"
+  printf "\t$PROGRAM start NAME   Starts a new or existing container\n"
+  printf "\t$PROGRAM stop NAME    Stops a running container\n"
+  printf "\t$PROGRAM web NAME     Retireves the URL to access the container via a web browser\n"
+  printf "\t$PROGRAM open NAME    Opens the result of $PROGRAM web in a private Firefox window\n"
+  printf "\t$PROGRAM vnc NAME     Opens a VNC session to a given container in Vinagre\n"
 }
 
 function _bad_args {
@@ -21,10 +26,10 @@ function _start_container {
   docker run \
     --detach \
     --rm \
-    --name "firefox_$1" \
+    --name "$CONTAINER_PREFIX$1" \
     --publish "127.0.0.1::5800" \
     --publish "127.0.0.1::5900" \
-    --volume "firefox_data_$1:/config:rw" \
+    --volume "$VOLUME_PREFIX$1:/config:rw" \
     --shm-size 2g \
     jlesage/firefox
 }
@@ -66,26 +71,48 @@ function _vnc_url {
   fi
 }
 
-
-if [ ! $# -eq 2 ]; then
-  _bad_args
-fi
-
 case $1 in
+  ls)
+    if [ ! $# -eq 1 ]; then
+      _bad_args
+    fi
+    docker volume ls --format="{{.Name}}" | grep "$VOLUME_PREFIX" | sed -e "s/$VOLUME_PREFIX//g"
+    ;;
+  ps)
+    if [ ! $# -eq 1 ]; then
+      _bad_args
+    fi
+    docker ps --format="{{.Names}}" | grep "$CONTAINER_PREFIX" | sed -e "s/$CONTAINER_PREFIX//g"
+    ;;
   start)
+    if [ ! $# -eq 2 ]; then
+      _bad_args
+    fi
     _start_container $2
     ;;
   stop)
-    docker stop "firefox_$2"
+    if [ ! $# -eq 2 ]; then
+      _bad_args
+    fi
+    docker stop "$CONTAINER_PREFIX$2"
     ;;
   web)
-    _web_url "firefox_$2"
+    if [ ! $# -eq 2 ]; then
+      _bad_args
+    fi
+    _web_url "$CONTAINER_PREFIX$2"
     ;;
   open)
-    _web_open "firefox_$2"
+    if [ ! $# -eq 2 ]; then
+      _bad_args
+    fi
+    _web_open "$CONTAINER_PREFIX$2"
     ;;
   vnc)
-    _vnc_url "firefox_$2"
+    if [ ! $# -eq 2 ]; then
+      _bad_args
+    fi
+    _vnc_url "$CONTAINER_PREFIX$2"
     ;;
   *)
     _bad_args
