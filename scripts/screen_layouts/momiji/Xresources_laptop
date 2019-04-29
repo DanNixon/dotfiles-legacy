@@ -1,8 +1,8 @@
 Xft.dpi: 144
 rofi.font: mono 30
 
-polybar.font0: DejaVuSansMono Nerd Font:weight=bold:size=20;4
-polybar.font1: unifont:weight=bold:size=20;4
+polybar.font0: DejaVuSansMono Nerd Font:size=24;4
+polybar.font1: unifont:size=24;4
 
 polybar.height: 54
 
