@@ -6,4 +6,5 @@ polybar.font1: unifont:weight=bold:size=20;4
 
 polybar.height: 54
 
-polybar.modules_right: vpn syncthing wireless-network cpu_temp memory load battery backlight volume datetime
+polybar.modules_centre: datetime
+polybar.modules_right: vpn syncthing wireless-network battery backlight volume

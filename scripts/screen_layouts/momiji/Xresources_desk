@@ -1,2 +1,3 @@
+polybar.position_bottom: true
 polybar.modules_centre: datetime
-polybar.modules_right: vpn syncthing wireless-network cpu_temp memory load battery volume
+polybar.modules_right: vpn syncthing wireless-network battery volume
