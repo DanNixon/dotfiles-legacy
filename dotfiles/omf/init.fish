@@ -1,17 +1,3 @@
-# Load base16-shell
-if status --is-interactive
-  set BASE16_SHELL "$HOME/.config/base16-shell/"
-  source "$BASE16_SHELL/profile_helper.fish"
-end
-
-# Theme (bobthefish) options
-set -g theme_color_scheme terminal2
-set -g theme_powerline_fonts yes
-set -g theme_nerd_fonts yes
-set -g theme_title_display_process yes
-set -g theme_display_cmd_duration yes
-set -g theme_display_git_master_branch yes
-
 # No greeting
 function fish_greeting
 end
@@ -22,6 +8,18 @@ function fish_add_dir_to_path
 end
 
 if status --is-interactive
+  # Load base16-shell
+  set BASE16_SHELL "$HOME/.config/base16-shell/"
+  source "$BASE16_SHELL/profile_helper.fish"
+
+  # Theme (bobthefish) options
+  set -g theme_color_scheme terminal2
+  set -g theme_powerline_fonts yes
+  set -g theme_nerd_fonts yes
+  set -g theme_title_display_process yes
+  set -g theme_display_cmd_duration yes
+  set -g theme_display_git_master_branch yes
+
   # Execute direnv hook if it is installed
   if command -s direnv > /dev/null
     eval (direnv hook fish)
