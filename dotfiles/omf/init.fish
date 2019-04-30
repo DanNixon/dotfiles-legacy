@@ -7,6 +7,9 @@ function fish_add_dir_to_path
   set --universal fish_user_paths $fish_user_paths (pwd)
 end
 
+# Set environment
+set --export --global GPG_TTY (tty)
+
 if status --is-interactive
   # Load base16-shell
   set BASE16_SHELL "$HOME/.config/base16-shell/"
@@ -28,10 +31,9 @@ if status --is-interactive
     eval (direnv hook fish)
   end
 
-  # Set environment
+  # Set interactive environment
   set --export --global EDITOR nvim
   set --export --global TODOTXT_DEFAULT_ACTION ls
-  set --export --global GPG_TTY (tty)
 
   # ls commands
   abbr --add --global l "ls -lFh"
