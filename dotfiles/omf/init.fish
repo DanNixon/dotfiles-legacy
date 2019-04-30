@@ -50,6 +50,7 @@ if status --is-interactive
 
   abbr --add --global q "exit"
   abbr --add --global c "clear"
+  abbr --add --global histcla "echo 'yes' | history clear"
 
   # Git commands
   abbr --add --global g "git"
