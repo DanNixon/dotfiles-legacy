@@ -72,11 +72,16 @@ if status --is-interactive
   abbr --add --global bm "voile"
   abbr --add --global bmadd "voile add -cae"
 
+  # Docker
+  abbr --add --global dk "docker"
+  abbr --add --global dkc "docker-compose"
+  abbr --add --global dkps "docker ps --format '{{.ID}} ~ {{.Names}} ~ {{.Status}} ~ {{.Image}}'"
+  abbr --add --global dkpsa "docker ps | less -S"
+  abbr --add --global dke "docker exec -it"
+
   # Misc app stuff
   abbr --add --global v "nvim"
   abbr --add --global t "todo.sh"
   abbr --add --global m "ncmpcpp"
   abbr --add --global stripexif "exiftool -all= "
-  abbr --add --global d "docker"
-  abbr --add --global dps "docker ps | less -S"
 end
