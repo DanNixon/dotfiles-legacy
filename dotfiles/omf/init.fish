@@ -46,6 +46,7 @@ if status --is-interactive
   abbr --add --global lb "lsblk"
 
   abbr --add --global q "exit"
+  abbr --add --global c "clear"
 
   # Git commands
   abbr --add --global g "git"
