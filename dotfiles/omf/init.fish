@@ -20,6 +20,9 @@ if status --is-interactive
   set -g theme_display_cmd_duration yes
   set -g theme_display_git_master_branch yes
 
+  # Use Vi key bindings
+  fish_vi_key_bindings
+
   # Execute direnv hook if it is installed
   if command -s direnv > /dev/null
     eval (direnv hook fish)
