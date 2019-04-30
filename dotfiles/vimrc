@@ -146,6 +146,9 @@ command! RemTrailWhilespace :%s/\s\+$//
 command! NoTextWrap :set formatoptions-=t
 command! TextWrap :set formatoptions+=t
 
+" Copy filename and line number
+command! CopyPlace :let @+ = expand("%") . ":" . line(".")
+
 
 """"""""""""""""
 " KEY MAPPINGS "
