@@ -1,0 +1,30 @@
+#!/bin/bash
+
+PROGRAM=`basename $0`
+
+function _usage {
+  printf "$PROGRAM: helper script for running Conan builds in Docker.\n"
+  printf "See https://github.com/conan-io/conan-docker-tools.\n\n"
+  printf "Usage:\n"
+  printf "\t$PROGRAM COMPILER [ARGS...]\n"
+}
+
+function _bad_args {
+  _usage
+  exit 1
+}
+
+if [ $# -lt 1 ]; then
+  _bad_args
+fi
+
+COMPILER="$1"
+shift 1
+
+docker run \
+  --rm \
+  --interactive \
+  --tty \
+  --volume "conan-$COMPILER:/home/conan/.conan" \
+  $@ \
+  "conanio/$COMPILER"
