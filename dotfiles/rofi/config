@@ -1,2 +1,3 @@
-rofi.modi: window,run
 rofi.theme: glue_pro_blue
+rofi.modi: window,run,ssh
+rofi.terminal: alacritty
