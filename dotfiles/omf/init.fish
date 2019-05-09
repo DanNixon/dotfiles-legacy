@@ -85,6 +85,7 @@ if status --is-interactive
   abbr --add --global dke "docker exec -it"
 
   # Misc app stuff
+  abbr --add --global mm "media.sh pause"
   abbr --add --global v "nvim"
   abbr --add --global t "todo.sh"
   abbr --add --global m "ncmpcpp"
