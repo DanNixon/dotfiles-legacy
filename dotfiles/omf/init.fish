@@ -2,11 +2,6 @@
 function fish_greeting
 end
 
-# Append to PATH helper function
-function fish_add_dir_to_path
-  set --universal fish_user_paths $fish_user_paths (pwd)
-end
-
 # Set environment
 set --export --global GPG_TTY (tty)
 
@@ -53,6 +48,8 @@ if status --is-interactive
   abbr --add --global q "exit"
   abbr --add --global c "clear"
   abbr --add --global histcla "echo 'yes' | history clear"
+
+  abbr --add --global fish-add-user-path "set --universal --prepend fish_user_paths (pwd)"
 
   # Git commands
   abbr --add --global g "git"
