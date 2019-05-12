@@ -40,7 +40,6 @@ if status --is-interactive
   abbr --add --global ll "ls -alFh"
   abbr --add --global la "ls -A"
   abbr --add --global ldev "ls -lFh /dev/ | grep"
-  abbr --add --global lmedia "tree -d -L 2 /media"
 
   # General comands
   abbr --add --global die "sudo shutdown -P now"
@@ -90,4 +89,5 @@ if status --is-interactive
   abbr --add --global t "todo.sh"
   abbr --add --global m "ncmpcpp"
   abbr --add --global stripexif "exiftool -all= "
+  abbr --add --global ytdl "youtube-dl"
 end
