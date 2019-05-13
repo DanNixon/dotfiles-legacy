@@ -75,10 +75,10 @@ if status --is-interactive
 
   # Docker
   abbr --add --global dk "docker"
-  abbr --add --global dkc "docker-compose"
   abbr --add --global dkps "docker ps --format '{{.ID}} ~ {{.Names}} ~ {{.Status}} ~ {{.Image}}'"
   abbr --add --global dkpsa "docker ps | less -S"
   abbr --add --global dke "docker exec -it"
+  abbr --add --global dkc "docker-compose"
 
   # Misc app stuff
   abbr --add --global mm "media.sh pause"
@@ -87,4 +87,8 @@ if status --is-interactive
   abbr --add --global m "ncmpcpp"
   abbr --add --global stripexif "exiftool -all= "
   abbr --add --global ytdl "youtube-dl"
+
+  # Clipboard copy and paste
+  abbr --add --global xcc "xclip -sel clip"
+  abbr --add --global xcp "xclip -sel clip -o"
 end
