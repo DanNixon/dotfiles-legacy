@@ -7,7 +7,7 @@
 device="$1"
 threshold="$2"
 
-reading=`smartctl --attributes $device | grep Temperature_Celsius | awk '{printf "%d", $4}'`
+reading=`smartctl --attributes $device | grep Temperature_Celsius | awk '{printf "%d", $10}'`
 
 check="$reading > $threshold"
 if [[ `echo "$check" | bc` -eq 1 ]]; then
