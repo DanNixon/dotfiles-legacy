@@ -64,3 +64,4 @@ abbr --add --global xcp "xclip -sel clip -o"
 abbr --add --global on-file-change "inotifywait -q -e modify"
 
 abbr --add --global system-information "sudo lshw | less"
+abbr --add --global b "upower -i (upower -e | grep 'BAT')"
