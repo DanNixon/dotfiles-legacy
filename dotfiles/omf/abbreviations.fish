@@ -62,3 +62,5 @@ abbr --add --global xcp "xclip -sel clip -o"
 
 # Handy for doing stuff when files change
 abbr --add --global on-file-change "inotifywait -q -e modify"
+
+abbr --add --global system-information "sudo lshw | less"
