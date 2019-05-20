@@ -18,6 +18,25 @@ if status --is-interactive
   set -g theme_display_cmd_duration yes
   set -g theme_display_git_master_branch yes
 
+  set -g fish_color_normal  white --bold
+  set -g fish_color_command white --bold
+  set -g fish_color_quote green
+  set -g fish_color_redirection brown
+  set -g fish_color_end white --bold
+  set -g fish_color_error red
+  set -g fish_color_param blue
+  set -g fish_color_comment white
+  # set -g fish_color_match white
+  # set fish_color_selection
+  # set fish_color_search_match
+  # set fish_color_operator
+  # set fish_color_escape
+  # set fish_color_cwd
+  # set fish_color_autosuggestion
+  # set fish_color_user
+  # set fish_color_host
+  set -g fish_color_cancel red --bold
+
   # Use Vi key bindings
   fish_vi_key_bindings
 
