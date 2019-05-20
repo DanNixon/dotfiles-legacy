@@ -19,7 +19,7 @@ if status --is-interactive
   set -g fish_color_cwd green
   set -g fish_color_autosuggestion brblack
   set -g fish_color_user blue
-  set -g fish_color_host magenta
+  set -g fish_color_host cyan
   set -g fish_color_cancel red --bold
 
   set -g fish_color_vi_normal blue
