@@ -29,19 +29,19 @@ function fish_prompt
   switch $fish_bind_mode
     case default
         _powerline_section_begin $fish_color_vi_normal
-        printf '[N]'
+        printf 'N'
         _powerline_section_transition $fish_color_vi_normal $fish_color_host
     case insert
         _powerline_section_begin $fish_color_vi_insert
-        printf '[I]'
+        printf 'I'
         _powerline_section_transition $fish_color_vi_insert $fish_color_host
     case replace_one replace-one
         _powerline_section_begin $fish_color_vi_replace
-        printf '[R]'
+        printf 'R'
         _powerline_section_transition $fish_color_vi_replace $fish_color_host
     case visual
         _powerline_section_begin $fish_color_vi_visual
-        printf '[V]'
+        printf 'V'
         _powerline_section_transition $fish_color_vi_visual $fish_color_host
   end
 
