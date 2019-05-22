@@ -1,56 +1,66 @@
-function _powerline_section_begin
+function _powerline_section_begin --no-scope-shadowing
+  set bg $argv[1]
+
   set_color --background $argv[1]
-  set_color $fish_color_normal
-  set_color black
-  printf ' '
-end
+  set_color normal
 
-function _powerline_section_transition
-  printf ' '
-  set_color $argv[1]
-  set_color --background $argv[2]
-  printf ''
-  printf ' '
-  set_color black
-end
+  switch "$__powerline_current_background"
+    case ''
+      # If there's no background, just start one
+      set_color --background $bg
+      printf ' '
+    case "$bg"
+      # If the background is already the same color, draw a separator
+      set_color --background $__powerline_current_background
+      printf '  '
+    case '*'
+      # otherwise, draw the end of the previous segment and the start of the next
+      set_color --background $__powerline_current_background
+      printf ' '
+      set_color $__powerline_current_background
+      set_color --background $bg
+      printf ' '
+  end
 
-function _powerline_section_end
-  set_color $argv[1]
-  printf ' '
-  set_color --background black
-  printf ''
-  set_color black
+  set __powerline_current_background $bg
 end
 
 function fish_prompt
+  set -l __powerline_current_background
+
   set user (whoami)
   set host (hostname)
 
   switch $fish_bind_mode
     case default
         _powerline_section_begin $fish_color_vi_normal
+        set_color brblack --bold
         printf 'N'
-        _powerline_section_transition $fish_color_vi_normal $fish_color_host
     case insert
         _powerline_section_begin $fish_color_vi_insert
+        set_color brblack --bold
         printf 'I'
-        _powerline_section_transition $fish_color_vi_insert $fish_color_host
     case replace_one replace-one
         _powerline_section_begin $fish_color_vi_replace
+        set_color brblack --bold
         printf 'R'
-        _powerline_section_transition $fish_color_vi_replace $fish_color_host
     case visual
         _powerline_section_begin $fish_color_vi_visual
+        set_color brblack --bold
         printf 'V'
-        _powerline_section_transition $fish_color_vi_visual $fish_color_host
   end
 
+  _powerline_section_begin $fish_color_host
+  set_color white
   printf "$host"
-  _powerline_section_transition $fish_color_host $fish_color_cwd
-  printf "$PWD"
-  _powerline_section_end $fish_color_cwd
 
-  printf ' '
+  _powerline_section_begin $fish_color_cwd
+  set_color white
+  printf "$PWD"
+
+  _powerline_section_begin black
+
+  set_color normal
 end
 
 function fish_right_prompt
