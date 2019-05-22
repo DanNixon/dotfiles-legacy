@@ -1,0 +1,2 @@
+polybar.modules_centre: datetime
+polybar.modules_right: vpn syncthing wireless-network battery backlight volume
