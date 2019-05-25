@@ -21,6 +21,19 @@ if status --is-interactive
   set -g theme_show_exit_status yes
   set -g theme_display_cmd_duration no
 
+  # Colors
+  set -g fish_color_normal white
+  set -g fish_color_command white --bold
+  set -g fish_color_quote green
+  set -g fish_color_redirection yellow
+  set -g fish_color_end yellow
+  set -g fish_color_error red
+  set -g fish_color_param blue
+  set -g fish_color_comment white
+  set -g fish_color_cancel red --bold
+  set -g fish_color_operator yellow
+  set -g fish_color_escape cyan
+
   # Use Vi key bindings
   fish_vi_key_bindings
 
