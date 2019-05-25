@@ -1,70 +1,100 @@
-function _powerline_section_begin --no-scope-shadowing
-  set bg $argv[1]
+function __fish_powerline_being_section --no-scope-shadowing
+  set side $argv[1]
+  set bg $argv[2]
+  set fg $argv[3..-1]
 
-  set_color --background $argv[1]
-  set_color normal
+  switch "$side"
+    case 'left'
+      set powerline_filled ''
+      set powerline_thin ''
+    case 'right'
+      set powerline_filled ''
+      set powerline_thin ''
+  end
 
-  switch "$__powerline_current_background"
+  switch "$powerline_current_bg_color"
     case ''
       # If there's no background, just start one
       set_color --background $bg
       printf ' '
     case "$bg"
       # If the background is already the same color, draw a separator
-      set_color --background $__powerline_current_background
-      printf '  '
+      __fish_powerline_set_bg_color
+      set_color $fg
+      printf " $powerline_thin "
     case '*'
       # otherwise, draw the end of the previous segment and the start of the next
-      set_color --background $__powerline_current_background
+      __fish_powerline_set_bg_color
       printf ' '
-      set_color $__powerline_current_background
+      set_color $powerline_current_bg_color
       set_color --background $bg
-      printf ' '
+      printf "$powerline_filled "
   end
 
-  set __powerline_current_background $bg
+  set powerline_current_bg_color $bg
+
+  set_color $fg
+end
+
+function __fish_powerline_set_bg_color --no-scope-shadowing
+  set_color normal
+  set_color --background $powerline_current_bg_color
 end
 
 function fish_prompt
-  set -l __powerline_current_background
+  set -l powerline_current_bg_color
 
   set user (whoami)
   set host (hostname)
 
+  # Vi mode status
   switch $fish_bind_mode
     case default
-        _powerline_section_begin $fish_color_vi_normal
-        set_color brblack --bold
-        printf 'N'
+      set vi_mode_color $fish_color_vi_normal
+      set vi_mode_letter 'N'
     case insert
-        _powerline_section_begin $fish_color_vi_insert
-        set_color brblack --bold
-        printf 'I'
+      set vi_mode_color $fish_color_vi_insert
+      set vi_mode_letter 'I'
     case replace_one replace-one
-        _powerline_section_begin $fish_color_vi_replace
-        set_color brblack --bold
-        printf 'R'
+      set vi_mode_color $fish_color_vi_replace
+      set vi_mode_letter 'R'
     case visual
-        _powerline_section_begin $fish_color_vi_visual
-        set_color brblack --bold
-        printf 'V'
+      set vi_mode_color $fish_color_vi_visual
+      set vi_mode_letter 'V'
   end
+  __fish_powerline_being_section 'left' $vi_mode_color brblack --bold
+  printf "$vi_mode_letter"
 
-  _powerline_section_begin $fish_color_host
-  set_color white
-  printf "$host"
+  # User and hostname
+  __fish_powerline_being_section 'left' $fish_color_user_host_bg
+  set_color $fish_color_user
+  printf "$user"
+  __fish_powerline_set_bg_color
+  set_color $fish_color_host
+  printf "@$host"
 
-  _powerline_section_begin $fish_color_cwd
-  set_color white
+  # Current working directory
+  __fish_powerline_being_section 'left' $fish_color_cwd_bg $fish_color_cwd
   printf "$PWD"
 
-  _powerline_section_begin black
-
-  set_color normal
+  # Prompt
+  __fish_powerline_being_section 'left' black normal
 end
 
 function fish_right_prompt
+  set last_status $status
+
+  # Last command exit code
+  if [ $last_status != '0' ]
+    __fish_powerline_being_section 'right' black $fish_color_error
+    printf "$last_status"
+  end
+
+  # Date and time
+  __fish_powerline_being_section 'right' black brblack
+  date
 end
 
 function fish_mode_prompt
+  # Disable separate Vi mode prompt (handled in fish_prompt)
 end

@@ -16,10 +16,13 @@ if status --is-interactive
   # set -g fish_color_search_match
   # set -g fish_color_operator
   # set -g fish_color_escape
-  set -g fish_color_cwd brblack
+  set -g fish_color_cwd_bg brblack
+  set -g fish_color_cwd white --bold
+  set -g fish_color_cwd_parent white
   set -g fish_color_autosuggestion brblack
-  set -g fish_color_user brblack
-  set -g fish_color_host brblack
+  set -g fish_color_user_host_bg brblack
+  set -g fish_color_user white --bold
+  set -g fish_color_host white
   set -g fish_color_cancel red --bold
 
   set -g fish_color_vi_normal blue
