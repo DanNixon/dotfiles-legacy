@@ -74,8 +74,26 @@ function fish_prompt
   printf "@$host"
 
   # Current working directory
-  __fish_powerline_being_section 'left' $fish_color_cwd_bg $fish_color_cwd
-  printf "$PWD"
+  __fish_powerline_being_section 'left' $fish_color_cwd_bg $fish_color_cwd_parent
+  switch "$PWD"
+    case '/'
+      set_color $fish_color_cwd
+      printf '/'
+    case "$HOME"
+      set_color $fish_color_cwd
+      printf '~'
+    case '*'
+      set dirn (dirname "$PWD")
+
+      if test "$dirn" != '/'
+        echo -n (string replace -r "^$HOME" '~' "$dirn")
+      end
+      printf '/'
+
+      set_color $fish_color_cwd
+      echo -n (basename "$PWD")
+  end
+
 
   # Prompt
   __fish_powerline_being_section 'left' black normal
