@@ -63,5 +63,11 @@ abbr --add --global xcp "xclip -sel clip -o"
 # Handy for doing stuff when files change
 abbr --add --global on-file-change "inotifywait -q -e modify"
 
+# System info
 abbr --add --global system-information "sudo lshw | less"
 abbr --add --global b "upower -i (upower -e | grep 'BAT')"
+
+# i3wm
+abbr --add --global i3-layout-default "i3-msg layout default"
+abbr --add --global i3-layout-stacking "i3-msg layout stacking"
+abbr --add --global i3-layout-tabbed "i3-msg layout tabbed"

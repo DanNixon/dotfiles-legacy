@@ -79,11 +79,6 @@ bindsym $mod+v split v
 # Toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
-# Change container layout
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout default
-
 # Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
@@ -127,7 +122,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
 # Resize window
-mode "resize" {
+mode resize {
   # These bindings trigger as soon as you enter the resize mode
 
   # They resize the border in the direction you pressed, e.g.
@@ -160,11 +155,11 @@ mode "resize" {
   bindsym Shift+Right resize grow   right $d_px px or $d_ppt ppt
 
   # Enter or Escape to go back to normal
-  bindsym Return      mode "default"
-  bindsym Escape      mode "default"
+  bindsym Return      mode default
+  bindsym Escape      mode default
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode resize
 
 # Lock shortcut
 bindsym $mod+Escape exec i3lock -d -c 182040
