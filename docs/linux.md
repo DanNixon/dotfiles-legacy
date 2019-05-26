@@ -7,7 +7,7 @@
 - Text editor
   - [Neovim](https://neovim.io)
 - Desktop environment
-  - [i3](https://i3wm.org/)
+  - [i3-gaps](https://github.com/Airblader/i3)
   - [Polybar](https://github.com/jaagr/polybar)
   - [Rofi](https://github.com/DaveDavenport/rofi)
   - [Compton](https://github.com/chjj/compton)
@@ -39,8 +39,7 @@
 
 ## Themes
 
-[base16](http://chriskempson.com/projects/base16/) themes I have used for a
-reasonable amount of time (most recent first):
+[base16](http://chriskempson.com/projects/base16/) themes I have used for a reasonable amount of time (most recent first):
 
 - `base16-eighties`
 - `base16-chalk`
@@ -56,5 +55,4 @@ reasonable amount of time (most recent first):
 - Debian/Ubuntu: `apt install scdaemon pcscd pcsc-tools`
 - Fedora: `dnf install pcsc-lite pcsc-lite-ccid`
 
-If needed, reader can be manually selected in `.gnupg/scdaemon.conf` using
-`reader-port`.
+If needed, reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port`.

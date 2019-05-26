@@ -88,10 +88,6 @@ make life easier and work well for me.
   ([source](https://github.com/darshan-/Battery-Indicator-Pro))
   ([F-Droid](https://f-droid.org/en/packages/com.darshancomputing.BatteryIndicatorPro/))
   ([Play](https://play.google.com/store/apps/details?id=com.darshancomputing.BatteryIndicatorPro))
-- [DAVx5](https://www.davx5.com/)
-  ([source](https://gitlab.com/bitfireAT/davx5-ose))
-  ([F-Droid](https://f-droid.org/en/packages/at.bitfire.davdroid/))
-  ([Play](https://play.google.com/store/apps/details?id=at.bitfire.davdroid))
 - Document Viewer
   ([source](https://github.com/PrivacyApps/document-viewer))
   ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.viewer/))
