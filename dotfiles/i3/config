@@ -29,11 +29,8 @@ font pango:DejaVuSansMono Nerd Font Bold 10
 # No title bars
 default_border pixel 1
 
-# Auto hide window borders when they are not needed
-hide_edge_borders smart
-
-# Use gaps with more than one container on a window
-smart_gaps on
+# Window gaps
+gaps outer -2
 gaps inner 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
