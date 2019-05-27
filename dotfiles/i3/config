@@ -30,8 +30,10 @@ font pango:DejaVuSansMono Nerd Font Bold 10
 default_border pixel 1
 
 # Window gaps
-gaps outer -2
-gaps inner 10
+set_from_resource $gaps_outer i3wm.gaps_outer -2
+set_from_resource $gaps_inner i3wm.gaps_inner 10
+gaps outer $gaps_outer
+gaps inner $gaps_inner
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
