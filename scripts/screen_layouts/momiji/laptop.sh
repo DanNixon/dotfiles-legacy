@@ -6,3 +6,4 @@ cp Xresources_laptop ~/.Xresources
 xrdb ~/.Xresources
 
 polybar-launch
+i3-msg restart

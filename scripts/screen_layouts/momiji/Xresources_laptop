@@ -8,3 +8,6 @@ polybar.height: 54
 
 polybar.modules_centre: datetime
 polybar.modules_right: vpn syncthing wireless-network battery backlight volume
+
+i3wm.gaps_outer: -5
+i3wm.gaps_inner: 20
