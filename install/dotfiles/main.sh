@@ -16,6 +16,10 @@ df_link \
   "$HOME/.config/browsh"
 
 df_link \
+  "$DOTFILES/dotfiles/compton.conf" \
+  "$HOME/.config/compton.conf"
+
+df_link \
   "$DOTFILES/dotfiles/nvim" \
   "$HOME/.config/nvim"
 
