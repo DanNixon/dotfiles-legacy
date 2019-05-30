@@ -1,0 +1,72 @@
+{
+  "layout": "splith",
+  "type": "con",
+  "nodes": [
+    {
+      "layout": "splitv",
+      "type": "con",
+      "nodes": [
+        {
+          "swallows": [
+            {
+              "class": "^Alacritty$"
+            }
+          ],
+          "type": "con"
+        },
+        {
+          "swallows": [
+            {
+              "class": "^Alacritty$"
+            }
+          ],
+          "type": "con"
+        }
+      ]
+    },
+    {
+      "layout": "splitv",
+      "type": "con",
+      "nodes": [
+        {
+          "swallows": [
+            {
+              "class": "^Alacritty$"
+            }
+          ],
+          "type": "con"
+        },
+        {
+          "swallows": [
+            {
+              "class": "^Alacritty$"
+            }
+          ],
+          "type": "con"
+        }
+      ]
+    },
+    {
+      "layout": "splitv",
+      "type": "con",
+      "nodes": [
+        {
+          "swallows": [
+            {
+              "class": "^Firefox$"
+            }
+          ],
+          "type": "con"
+        },
+        {
+          "swallows": [
+            {
+              "class": "^Firefox$"
+            }
+          ],
+          "type": "con"
+        }
+      ]
+    }
+  ]
+}
