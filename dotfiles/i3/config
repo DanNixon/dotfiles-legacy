@@ -53,23 +53,11 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# Arrow key change focus bindings
-bindsym $mod+Left   focus left
-bindsym $mod+Down   focus down
-bindsym $mod+Up     focus up
-bindsym $mod+Right  focus right
-
 # Move focused window
 bindsym $mod+Shift+H move left  $d_px
 bindsym $mod+Shift+J move down  $d_px
 bindsym $mod+Shift+K move up    $d_px
 bindsym $mod+Shift+L move right $d_px
-
-# Arrow key move window bindings
-bindsym $mod+Shift+Left   move left   $d_px
-bindsym $mod+Shift+Down   move down   $d_px
-bindsym $mod+Shift+Up     move up     $d_px
-bindsym $mod+Shift+Right  move right  $d_px
 
 # Set split orientation
 bindsym $mod+b split h
@@ -139,19 +127,6 @@ mode resize {
 
   bindsym l           resize shrink right $d_px px or $d_ppt ppt
   bindsym Shift+L     resize grow   right $d_px px or $d_ppt ppt
-
-  # Arrow key bindings
-  bindsym Left        resize shrink left  $d_px px or $d_ppt ppt
-  bindsym Shift+Left  resize grow   left  $d_px px or $d_ppt ppt
-
-  bindsym Down        resize shrink down  $d_px px or $d_ppt ppt
-  bindsym Shift+Down  resize grow   down  $d_px px or $d_ppt ppt
-
-  bindsym Up          resize shrink up    $d_px px or $d_ppt ppt
-  bindsym Shift+Up    resize grow   up    $d_px px or $d_ppt ppt
-
-  bindsym Right       resize shrink right $d_px px or $d_ppt ppt
-  bindsym Shift+Right resize grow   right $d_px px or $d_ppt ppt
 
   # Enter or Escape to go back to normal
   bindsym Return      mode default
