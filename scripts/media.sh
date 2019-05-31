@@ -3,7 +3,7 @@
 # Finds the active media player
 # Checks for mpv, falls back to mpd/mpc
 function which_player {
-  if [ -z `pgrep mpv` ];
+  if [ -z "$(pgrep mpv)" ];
   then
     echo "mpd"
   else
@@ -50,20 +50,20 @@ function mpd_stop {
 }
 
 
-echo "Player: `which_player`"
+echo "Player: $(which_player)"
 
 case "$1" in
   "pause" | "play")
-    `which_player`_pause
+    "$(which_player)_pause"
     ;;
   "prev")
-    `which_player`_prev
+    "$(which_player)_prev"
     ;;
   "next")
-    `which_player`_next
+    "$(which_player)_next"
     ;;
   "stop")
-    `which_player`_stop
+    "$(which_player)_stop"
     ;;
   *)
     exit 1

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pwname=`pass-choose qr`
+pwname=$(pass-choose qr)
 result=$?
 
 if [ $result -eq 0 ]; then

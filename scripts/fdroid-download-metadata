@@ -13,7 +13,7 @@ function download_package_metadata {
   curl --location --silent "$url" | fdroid.py | jq '.' > "$data_dir/$package.json"
 }
 
-for package in `find_fdroid_packages`; do
+for package in $(find_fdroid_packages); do
   echo "$package"
   download_package_metadata "$package"
 done

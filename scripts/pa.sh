@@ -1,6 +1,6 @@
 #!/bin/bash
 
-default_sink=`pacmd dump | grep default-sink | awk '{print $2}'`
+default_sink=$(pacmd dump | grep default-sink | awk '{print $2}')
 
 case "$1" in
   "v")

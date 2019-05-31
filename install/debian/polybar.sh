@@ -35,10 +35,10 @@ git clone \
   https://github.com/jaagr/polybar \
   "$REPO_DIR"
 
-mkdir -p "$REPO_DIR"/build
-cd "$REPO_DIR"/build
+mkdir -p "$REPO_DIR/build"
+cd "$REPO_DIR/build" || exit
 
 cmake ..
-make -j`nproc`
+make -j "$(nproc)"
 
 sudo make install

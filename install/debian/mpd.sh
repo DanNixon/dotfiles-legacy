@@ -40,12 +40,12 @@ sudo apt-get install \
 pip3 install meson
 
 # Download mpd
-cd /tmp
+cd "/tmp" || exit
 curl -L \
   -o mpd.tar.xz \
-  https://www.musicpd.org/download/mpd/${VERSION_MM}/mpd-${VERSION}.tar.xz
+  https://www.musicpd.org/download/mpd/$VERSION_MM/mpd-$VERSION.tar.xz
 tar xf mpd.tar.xz
-cd mpd-${VERSION}
+cd "mpd-$VERSION" || exit
 
 # Build mpd
 meson . output/release --buildtype=debugoptimized -Db_ndebug=true

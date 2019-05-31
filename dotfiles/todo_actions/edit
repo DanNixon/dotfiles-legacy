@@ -4,7 +4,7 @@
 
 case $1 in
 "usage")
-  echo "$(basename $0) [BASENAME]"
+  echo "$(basename "$0") [BASENAME]"
   echo "  Open \$TODO_DIR/BASENAME.txt in \$EDITOR."
   echo "  If BASENAME is not given, defaults to 'todo'."
   ;;
@@ -15,7 +15,7 @@ case $1 in
     FILE=$TODO_DIR/$2.txt
   fi
   if [ -n "$EDITOR" ]; then
-    $EDITOR $FILE
+    $EDITOR "$FILE"
   else
     echo "Error: The EDITOR environment variable is not set"
   fi

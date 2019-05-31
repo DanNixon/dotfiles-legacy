@@ -1,5 +1,5 @@
 #!/bin/bash
 
 printf "%s / %s\n" \
-  `cat /proc/sys/kernel/random/entropy_avail` \
-  `cat /proc/sys/kernel/random/poolsize`
+  "$(cat /proc/sys/kernel/random/entropy_avail)" \
+  "$(cat /proc/sys/kernel/random/poolsize)"

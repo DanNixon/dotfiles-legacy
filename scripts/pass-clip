@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pwname=`pass-choose clipboard`
+pwname=$(pass-choose clipboard)
 result=$?
 
 if [ $result -eq 0 ]; then

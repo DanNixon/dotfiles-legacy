@@ -1,20 +1,20 @@
 #!/bin/bash
 
-PROGRAM=`basename $0`
+PROGRAM=$(basename "$0")
 
 CONTAINER_PREFIX="${PROGRAM}-"
 VOLUME_PREFIX="${PROGRAM}-data-"
 
 function _usage {
-  printf "$PROGRAM: helper script for launching Dockerized Firefox instances.\n\n"
+  printf "%s: helper script for launching Dockerized Firefox instances.\n\n" "$PROGRAM"
   printf "Usage:\n"
-  printf "\t$PROGRAM ls           List existing volumes created with $PROGRAM\n"
-  printf "\t$PROGRAM ls           List running containers created with $PROGRAM\n"
-  printf "\t$PROGRAM start NAME   Starts a new or existing container\n"
-  printf "\t$PROGRAM stop NAME    Stops a running container\n"
-  printf "\t$PROGRAM web NAME     Retireves the URL to access the container via a web browser\n"
-  printf "\t$PROGRAM open NAME    Opens the result of $PROGRAM web in a private Firefox window\n"
-  printf "\t$PROGRAM vnc NAME     Opens a VNC session to a given container in Vinagre\n"
+  printf "\t%s ls           List existing volumes created with %s\n" "$PROGRAM" "$PROGRAM"
+  printf "\t%s ls           List running containers created with %s\n" "$PROGRAM" "$PROGRAM"
+  printf "\t%s start NAME   Starts a new or existing container\n" "$PROGRAM"
+  printf "\t%s stop NAME    Stops a running container\n" "$PROGRAM"
+  printf "\t%s web NAME     Retireves the URL to access the container via a web browser\n" "$PROGRAM"
+  printf "\t%s open NAME    Opens the result of %s web in a private Firefox window\n" "$PROGRAM" "$PROGRAM"
+  printf "\t%s vnc NAME     Opens a VNC session to a given container in Vinagre\n" "$PROGRAM"
 }
 
 function _bad_args {
@@ -36,10 +36,10 @@ function _start_container {
 
 
 function _web_url {
-  info=`docker inspect $1`
+  info=$(docker inspect "$1")
   result=$?
   if [ $result -eq 0 ]; then
-    port=`echo "$info" | jq -r '.[0].NetworkSettings.Ports["5800/tcp"][0].HostPort'`
+    port=$(echo "$info" | jq -r '.[0].NetworkSettings.Ports["5800/tcp"][0].HostPort')
     url="http://127.0.0.1:$port"
     echo "$url"
   else
@@ -49,7 +49,7 @@ function _web_url {
 
 
 function _web_open {
-  url=`_web_url $1`
+  url=$(_web_url "$1")
   result=$?
   if [ $result -eq 0 ]; then
     firefox --private-window "$url"
@@ -60,10 +60,10 @@ function _web_open {
 
 
 function _vnc_url {
-  info=`docker inspect $1`
+  info=$(docker inspect "$1")
   result=$?
   if [ $result -eq 0 ]; then
-    port=`echo "$info" | jq -r '.[0].NetworkSettings.Ports["5900/tcp"][0].HostPort'`
+    port=$(echo "$info" | jq -r '.[0].NetworkSettings.Ports["5900/tcp"][0].HostPort')
     url="127.0.0.1:$port"
     vinagre "$url"
   else
@@ -71,7 +71,7 @@ function _vnc_url {
   fi
 }
 
-case $1 in
+case "$1" in
   ls)
     if [ ! $# -eq 1 ]; then
       _bad_args
@@ -88,7 +88,7 @@ case $1 in
     if [ ! $# -eq 2 ]; then
       _bad_args
     fi
-    _start_container $2
+    _start_container "$2"
     ;;
   stop)
     if [ ! $# -eq 2 ]; then

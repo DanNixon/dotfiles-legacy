@@ -1,12 +1,12 @@
 #!/bin/bash
 
-PROGRAM=`basename $0`
+PROGRAM=$(basename "$0")
 
 function _usage {
-  printf "$PROGRAM: helper script for running Conan builds in Docker.\n"
+  printf "%s: helper script for running Conan builds in Docker.\n" "$PROGRAM"
   printf "See https://github.com/conan-io/conan-docker-tools.\n\n"
   printf "Usage:\n"
-  printf "\t$PROGRAM COMPILER [ARGS...]\n"
+  printf "\t%s COMPILER [ARGS...]\n" "$PROGRAM"
 }
 
 function _bad_args {

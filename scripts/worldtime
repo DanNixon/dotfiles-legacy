@@ -1,9 +1,9 @@
 #!/bin/bash
 
-T_DATE=`env TZ=$1 date "+%a %e %b %Y"`
-T_TIME=`env TZ=$1 date "+%T"`
-T_ZONE=`env TZ=$1 date "+%Z"`
-T_OFFSET=`env TZ=$1 date "+(UTC%z)"`
+T_DATE=$(env TZ="$1" date "+%a %e %b %Y")
+T_TIME=$(env TZ="$1" date "+%T")
+T_ZONE=$(env TZ="$1" date "+%Z")
+T_OFFSET=$(env TZ="$1" date "+(UTC%z)")
 
 C_GREEN='\033[0;32m'
 C_YELLOW='\033[0;33m'

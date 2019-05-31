@@ -17,14 +17,14 @@ git clone \
   https://www.github.com/Airblader/i3 \
   "$REPO_DIR"
 
-cd "$REPO_DIR"
+cd "$REPO_DIR" || exit
 
 autoreconf --force --install
 
-mkdir -p "$REPO_DIR"/build
-cd "$REPO_DIR"/build
+mkdir -p "$REPO_DIR/build"
+cd "$REPO_DIR/build" || exit
 
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
-make -j`nproc`
+make -j "$(nproc)"
 
 sudo make install

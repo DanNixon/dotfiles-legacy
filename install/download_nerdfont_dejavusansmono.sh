@@ -3,7 +3,7 @@
 temp_dir="/tmp/nerdfont"
 
 mkdir -p "$temp_dir"
-cd "$temp_dir"
+cd "$temp_dir" || exit
 
 font_url="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/DejaVuSansMono.zip"
 
