@@ -66,6 +66,6 @@ case "$1" in
     `which_player`_stop
     ;;
   *)
-    echo "nope"
+    exit 1
     ;;
 esac
