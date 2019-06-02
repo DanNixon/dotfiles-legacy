@@ -1,27 +1,10 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator
-
-
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty it self.
 env:
-  # TERM env customization.
-  #
-  # If this property is not set, alacritty will set it to xterm-256color.
-  #
-  # Note that some xterm terminfo databases don't declare support for italics.
-  # You can verify this by checking for the presence of `smso` and `sitm` in
-  # `infocmp xterm-256color`.
   TERM: xterm-256color
 
 window:
-  # Window dimensions in character columns and lines
-  # Falls back to size specified by window manager if set to 0x0.
-  # (changes require restart)
-  dimensions:
-    columns: 80
-    lines: 24
-
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
@@ -32,7 +15,6 @@ window:
   # Window decorations
   decorations: full
 
-# Display tabs using this many cells (changes require restart)
 tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
@@ -85,55 +67,12 @@ font:
     x: 0
     y: 0
 
-# Should display the render timer
 render_timer: false
 
-# Visual Bell
-#
-# Any time the BEL code is received, Alacritty "rings" the visual bell. Once
-# rung, the terminal background will be set to white and transition back to the
-# default background color. You can control the rate of this transition by
-# setting the `duration` property (represented in milliseconds). You can also
-# configure the transition function by setting the `animation` property.
-#
-# Possible values for `animation`
-# `Ease`
-# `EaseOut`
-# `EaseOutSine`
-# `EaseOutQuad`
-# `EaseOutCubic`
-# `EaseOutQuart`
-# `EaseOutQuint`
-# `EaseOutExpo`
-# `EaseOutCirc`
-# `Linear`
-#
-# To completely disable the visual bell, set its duration to 0.
-#
 visual_bell:
-  animation: EaseOutExpo
   duration: 0
 
-# Background opacity
 background_opacity: 0.95
-
-# Mouse bindings
-#
-# Currently doesn't support modifiers. Both the `mouse` and `action` fields must
-# be specified.
-#
-# Values for `mouse`:
-# - Middle
-# - Left
-# - Right
-# - Numeric identifier such as `5`
-#
-# Values for `action`:
-# - Paste
-# - PasteSelection
-# - Copy (TODO)
-mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
 
 mouse:
   # Click settings
@@ -168,18 +107,7 @@ cursor:
   # Whether the cursor should be a hollow block on window focus loss
   unfocused_hollow: true
 
-# Live config reload (changes require restart)
 live_config_reload: true
-
-# Shell
-#
-# You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
-# Entries in shell.args are passed unmodified as arguments to the shell.
-#
-# shell:
-#   program: /bin/bash
-#   args:
-#     - --login
 
 # Key bindings
 #
