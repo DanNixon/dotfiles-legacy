@@ -55,6 +55,7 @@ abbr --add --global t "todo.sh"
 abbr --add --global m "ncmpcpp"
 abbr --add --global stripexif "exiftool -all= "
 abbr --add --global ytdl "youtube-dl"
+abbr --add --global cava-spec "alacritty --config-file ~/.config/alacritty/cava.yml -e cava &; disown;"
 
 # Clipboard copy and paste
 abbr --add --global xcc "xclip -sel clip"

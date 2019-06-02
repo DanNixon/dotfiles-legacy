@@ -16,6 +16,10 @@ df_link \
   "$HOME/.config/browsh"
 
 df_link \
+  "$DOTFILES/dotfiles/cava" \
+  "$HOME/.config/cava"
+
+df_link \
   "$DOTFILES/dotfiles/compton.conf" \
   "$HOME/.config/compton.conf"
 

@@ -1,0 +1,19 @@
+[general]
+bar_width = 1
+bar_spacing = 1
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = ncurses
+# 'stereo' mirrors both channels with low frequencies in center.
+# 'mono' averages both channels and outputs left to right lowest to highest frequencies.
+channels = mono
+
+[color]
+gradient = 1
+gradient_count = 2
+gradient_color_1 = '#0099ff'
+gradient_color_2 = '#ff0000'
