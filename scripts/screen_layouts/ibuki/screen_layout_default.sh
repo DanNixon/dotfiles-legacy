@@ -6,7 +6,7 @@ WORKSPACE=${1:-1}
 echo "Workspace: $WORKSPACE"
 
 HERE="$( cd "$(dirname "$0")" ; pwd -P )"
-i3-msg "workspace $WORKSPACE; append_layout $HERE/default.json"
+i3-msg "workspace $WORKSPACE; append_layout $HERE/i3_layout_default.json"
 
 function launch_app {
   $1 &
