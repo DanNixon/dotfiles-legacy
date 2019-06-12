@@ -72,3 +72,7 @@ abbr --add --global b "upower -i (upower -e | grep 'BAT')"
 abbr --add --global i3-layout-default "i3-msg layout default"
 abbr --add --global i3-layout-stacking "i3-msg layout stacking"
 abbr --add --global i3-layout-tabbed "i3-msg layout tabbed"
+
+# Batch processing
+abbr --add --global cmake-format-all "find . -type f -name 'CMakeLists.txt' | xargs cmake-format -i"
+abbr --add --global clang-format-all "find . -type f -regex '.*\.\(c\|cpp\|h\|hpp\)' | xargs clang-format -i"
