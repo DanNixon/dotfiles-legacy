@@ -136,7 +136,7 @@ mode resize {
 bindsym $mod+r mode resize
 
 # Lock shortcut
-bindsym $mod+Escape exec i3lock -d -c 182040
+bindsym $mod+Escape exec i3lock --color 000000
 
 # Move workspace to display
 bindsym $mod+Shift+less     move workspace to output left
