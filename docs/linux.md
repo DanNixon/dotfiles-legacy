@@ -11,17 +11,17 @@
   - [Polybar](https://github.com/jaagr/polybar)
   - [Rofi](https://github.com/DaveDavenport/rofi)
   - [Compton](https://github.com/chjj/compton)
-- Web browsers
+- Web browser
   - [Firefox](https://www.mozilla.org/firefox)
     - [Dark Reader](https://github.com/darkreader/darkreader)
     - [Decentraleyes](https://decentraleyes.org)
     - [HTTPS Everywhere](https://github.com/EFForg/https-everywhere)
-    - [Octotree](https://github.com/ovity/octotree)
+    - [Multi-Account Containers](https://github.com/mozilla/multi-account-containers)
     - [Privacy Badger](https://github.com/EFForg/privacybadger)
     - [Privacy Settings](https://github.com/schomery/privacy-settings)
     - [Refined GitHub](https://github.com/sindresorhus/refined-github)
     - [uBlock](https://github.com/gorhill/uBlock)
-  - [browsh](https://www.brow.sh)
+    - [Vim Vixen](https://github.com/ueokande/vim-vixen)
 - Media players
   - [mpd](https://www.musicpd.org/)
     - [ncmpcpp](https://rybczak.net/ncmpcpp/)
