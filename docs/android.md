@@ -46,9 +46,6 @@ make life easier and work well for me.
 
 - [Arcus](http://arcusweather.com/)
   ([Play](https://play.google.com/store/apps/details?id=com.arcusweather.darksky))
-- Feeder
-  ([source](https://gitlab.com/spacecowboy/Feeder))
-  ([F-Droid](https://f-droid.org/packages/com.nononsenseapps.feeder/))
 - [Firefox Klar](https://www.mozilla.org/en-GB/firefox/mobile/)
   ([source](https://github.com/mozilla-mobile/focus-android))
   ([F-Droid](https://f-droid.org/en/packages/org.mozilla.klar/))
@@ -63,14 +60,6 @@ make life easier and work well for me.
   ([source](https://github.com/osmandapp/Osmand))
   ([Play](https://play.google.com/store/apps/details?id=net.osmand))
   ([F-Droid](https://f-droid.org/en/packages/net.osmand.plus/))
-- [Slide](https://www.reddit.com/r/slideforreddit)
-  ([source](https://github.com/ccrama/Slide))
-  ([F-Droid](https://f-droid.org/packages/me.ccrama.redditslide/))
-  ([Play](https://play.google.com/store/apps/details?id=me.ccrama.redditslide))
-- StreetComplete
-  ([source](https://github.com/westnordost/StreetComplete))
-  ([F-Droid](https://f-droid.org/packages/de.westnordost.streetcomplete/))
-  ([Play](https://play.google.com/store/apps/details?id=de.westnordost.streetcomplete))
 - [Survival Manual](https://survivalmanual.github.io/)
   ([source](https://github.com/ligi/SurvivalManual))
   ([F-Droid](https://f-droid.org/packages/org.ligi.survivalmanual/))
@@ -94,8 +83,6 @@ make life easier and work well for me.
 - Editor
   ([source](https://github.com/billthefarmer/editor))
   ([F-Droid](https://f-droid.org/packages/org.billthefarmer.editor/))
-- Hacker's Keyboard
-  ([source](https://github.com/klausw/hackerskeyboard))
 - [LibreOffice Viewer](https://www.libreoffice.org/download/android-viewer/)
   ([source](https://cgit.freedesktop.org/libreoffice/core/tree))
   ([F-Droid](https://f-droid.org/en/packages/org.documentfoundation.libreoffice/))
@@ -104,15 +91,6 @@ make life easier and work well for me.
   ([source](https://github.com/gsantner/markor))
   ([F-Droid](https://f-droid.org/packages/net.gsantner.markor/))
   ([Play](https://play.google.com/store/apps/details?id=net.gsantner.markor))
-- Nock Nock
-  ([source](https://github.com/afollestad/nock-nock))
-  ([F-Droid](https://f-droid.org/packages/com.afollestad.nocknock/))
-- [Octo Remote](https://sites.google.com/view/octoremote/home)
-  ([Play](https://play.google.com/store/apps/details?id=com.kabacon.octoremote))
-- Port Authority
-  ([source](https://github.com/aaronjwood/PortAuthority))
-  ([F-Droid](https://f-droid.org/packages/com.aaronjwood.portauthority/))
-  ([Play](https://play.google.com/store/apps/details?id=com.aaronjwood.portauthority.free))
 - [SatStat](https://mvglasow.github.io/satstat)
   ([source](https://github.com/mvglasow/satstat))
   ([F-Droid](https://f-droid.org/packages/com.vonglasow.michael.satstat/))
@@ -143,10 +121,6 @@ make life easier and work well for me.
   ([source](https://github.com/physphil/UnitConverterUltimate))
   ([F-Droid](https://f-droid.org/packages/com.physphil.android.unitconverterultimate/))
   ([Play](https://play.google.com/store/apps/details?id=com.physphil.android.unitconverterultimate))
-- [Wifi Analyzer](https://vremsoftwaredevelopment.github.io/WiFiAnalyzer/)
-  ([source](https://github.com/VREMSoftwareDevelopment/WifiAnalyzer))
-  ([F-Droid](https://f-droid.org/packages/com.vrem.wifianalyzer/))
-  ([Play](https://play.google.com/store/apps/details?id=com.vrem.wifianalyzer))
 
 ## Security
 
@@ -172,8 +146,6 @@ make life easier and work well for me.
 
 ## Device specific
 
-- DisplayLink Presenter
-  ([Play](https://play.google.com/store/apps/details?id=com.displaylink.presenter))
 - [Fitbit](https://fitbit.com)
   ([Play](https://play.google.com/store/apps/details?id=com.fitbit.FitbitMobile))
 - Fit Notifications
@@ -183,13 +155,7 @@ make life easier and work well for me.
 - [Gadgetbridge](https://gadgetbridge.org/)
   ([source](https://github.com/Freeyourgadget/Gadgetbridge))
   ([F-Droid](https://f-droid.org/en/packages/nodomain.freeyourgadget.gadgetbridge/))
-- SecondScreen
-  ([source](https://github.com/farmerbb/SecondScreen))
-  ([F-Droid](https://f-droid.org/packages/com.farmerbb.secondscreen.free/))
-  ([Play](https://play.google.com/store/apps/details?id=com.farmerbb.secondscreen.free))
 - [Tile](https://www.thetileapp.com)
   ([Play](https://play.google.com/store/apps/details?id=com.thetileapp.tile))
-- [Torque](https://torque-bhp.com/)
-  ([Play](https://play.google.com/store/apps/details?id=org.prowl.torque))
 - UniFi
   ([Play](https://play.google.com/store/apps/details?id=com.ubnt.easyunifi))
