@@ -55,7 +55,6 @@ abbr --add --global t "todo.sh"
 abbr --add --global m "ncmpcpp"
 abbr --add --global stripexif "exiftool -all= "
 abbr --add --global ytdl "youtube-dl"
-abbr --add --global cava-spec "alacritty --config-file ~/.config/alacritty/cava.yml -e cava &; disown;"
 abbr --add --global tok "tomb open -k -"
 
 # Clipboard copy and paste
