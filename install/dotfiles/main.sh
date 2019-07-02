@@ -24,6 +24,10 @@ df_link \
   "$HOME/.config/compton.conf"
 
 df_link \
+  "$DOTFILES/dotfiles/direnvrc" \
+  "$HOME/.config/direnv/direnvrc"
+
+df_link \
   "$DOTFILES/dotfiles/nvim" \
   "$HOME/.config/nvim"
 
