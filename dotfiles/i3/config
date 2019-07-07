@@ -137,6 +137,7 @@ bindsym $mod+r mode resize
 
 # Lock shortcut
 bindsym $mod+Escape exec i3lock --color 000000
+bindsym $mod+Shift+Escape exec suspend.sh
 
 # Move workspace to display
 bindsym $mod+Shift+less     move workspace to output left
