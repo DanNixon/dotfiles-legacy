@@ -43,7 +43,7 @@
 
 - `base16-chalk`
 - `base16-eighties`
-- `base16-material`
+- `base16-material-darker`
 
 ## Notes
 
