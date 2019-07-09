@@ -59,6 +59,3 @@
 
 [push]
   default = current
-
-[gpg]
-  program = gpg2
