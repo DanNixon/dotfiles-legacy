@@ -9,7 +9,7 @@
         {
           "swallows": [
             {
-              "class": "^Alacritty$"
+              "class": "^Firefox$"
             }
           ],
           "type": "con"
@@ -17,7 +17,7 @@
         {
           "swallows": [
             {
-              "class": "^Alacritty$"
+              "class": "^Firefox$"
             }
           ],
           "type": "con"
@@ -53,7 +53,7 @@
         {
           "swallows": [
             {
-              "class": "^Firefox$"
+              "class": "^Alacritty$"
             }
           ],
           "type": "con"
@@ -61,7 +61,7 @@
         {
           "swallows": [
             {
-              "class": "^Firefox$"
+              "class": "^Alacritty$"
             }
           ],
           "type": "con"
