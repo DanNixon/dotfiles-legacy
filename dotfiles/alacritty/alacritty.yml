@@ -67,8 +67,6 @@ font:
     x: 0
     y: 0
 
-render_timer: false
-
 visual_bell:
   duration: 0
 
