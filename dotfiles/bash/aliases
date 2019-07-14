@@ -14,6 +14,7 @@ alias free="free -h"
 alias lb="lsblk"
 
 alias q="exit"
+alias c="clear"
 
 # Git commands
 alias g="git"
