@@ -27,7 +27,7 @@ set $d_ppt 10
 font pango:DejaVuSansMono Nerd Font Bold 10
 
 # No title bars
-default_border pixel 2
+default_border pixel 3
 
 # Window gaps
 set_from_resource $gaps_outer i3wm.gaps_outer -2
