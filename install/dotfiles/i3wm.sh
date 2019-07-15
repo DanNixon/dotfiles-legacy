@@ -10,7 +10,7 @@ df_link \
 set -x
 
 # base16 theme
-theme="base16-black-metal"
+theme="base16-atelier-savanna"
 
 # Make config directory
 i3_config_dir="$HOME/.config/i3"
