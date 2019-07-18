@@ -53,6 +53,7 @@
 
 [merge]
   conflictstyle = diff3
+  tool = meld
 
 [diff "bin"]
   textconv = hexdump -v -C
