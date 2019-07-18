@@ -1,7 +1,15 @@
 #!/bin/bash
 
+image='vimagick/youtube-dl'
+
+if [[ "$1" == 'docker-pull' ]]; then
+  docker pull "$image"
+  exit
+fi
+
 docker run \
   --rm \
   --user "$(id -u):$(id -g)" \
   --volume "$PWD:/data" \
-  vimagick/youtube-dl $@
+  "$image" \
+  $@
