@@ -17,5 +17,6 @@ launch_app alacritty
 launch_app alacritty
 launch_app alacritty
 launch_app alacritty
+launch_app alacritty
 launch_app firefox
 launch_app firefox
