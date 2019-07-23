@@ -1,9 +1,14 @@
 #!/bin/sh
 
+publish_arg=${1:-'127.0.0.1:19999'}
+
+set -x
+
 docker run \
   --name=netdata \
+  --detach \
   --rm \
-  --publish 19999:19999 \
+  --publish "$publish_arg":19999 \
   --volume /etc/passwd:/host/etc/passwd:ro \
   --volume /etc/group:/host/etc/group:ro \
   --volume /proc:/host/proc:ro \
