@@ -56,6 +56,7 @@ abbr --add --global stripexif "exiftool -all= "
 abbr --add --global ytdl "youtube-dl"
 abbr --add --global tok "tomb open -k -"
 abbr --add --global conda-init "eval $HOME/miniconda3/bin/conda 'shell.fish' 'hook' $argv | source"
+abbr --add --global ipy "ipython"
 
 # Clipboard copy and paste
 abbr --add --global xcc "xclip -sel clip"
