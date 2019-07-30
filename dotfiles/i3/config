@@ -137,8 +137,8 @@ mode resize {
 bindsym $mod+r mode resize
 
 # Lock shortcut
-bindsym $mod+Escape exec i3lock --color 000000
-bindsym $mod+Shift+Escape exec suspend.sh
+bindsym $mod+Escape exec power.sh lock
+bindsym $mod+Shift+Escape exec power.sh
 
 # Move workspace to display
 bindsym $mod+Shift+less     move workspace to output left
