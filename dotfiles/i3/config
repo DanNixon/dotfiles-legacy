@@ -136,9 +136,8 @@ mode resize {
 
 bindsym $mod+r mode resize
 
-# Lock shortcut
-bindsym $mod+Escape exec power.sh lock
-bindsym $mod+Shift+Escape exec power.sh
+# Power menu shortcut
+bindsym $mod+Escape exec power.sh
 
 # Move workspace to display
 bindsym $mod+Shift+less     move workspace to output left
