@@ -7,36 +7,20 @@
       "type": "con",
       "nodes": [
         {
-          "layout": "splitv",
-          "type": "con",
-          "percent": 0.8,
-          "nodes": [
+          "swallows": [
             {
-              "swallows": [
-                {
-                  "class": "^Firefox$"
-                }
-              ],
-              "type": "con"
-            },
-            {
-              "swallows": [
-                {
-                  "class": "^Firefox$"
-                }
-              ],
-              "type": "con"
+              "class": "^Firefox$"
             }
-          ]
+          ],
+          "type": "con"
         },
         {
           "swallows": [
             {
-              "class": "^Alacritty$"
+              "class": "^Firefox$"
             }
           ],
-          "type": "con",
-          "percent": 0.2
+          "type": "con"
         }
       ]
     },
