@@ -2,9 +2,9 @@
 
 set -x
 
-ARCHIVE="light-1.2.tar.gz"
+ARCHIVE='light-1.2.tar.gz'
 
-cd "/tmp" || exit
+cd '/tmp' || exit
 
 curl \
   --location \
@@ -16,9 +16,9 @@ tar \
   --gzip \
   --file $ARCHIVE
 
-cd "light-1.2" || exit
+cd 'light-1.2' || exit
 
-./configure --with-udev="/etc/udev/rules.d/"
+./configure --with-udev='/etc/udev/rules.d/'
 make -j "$(nproc)"
 
 sudo make install
