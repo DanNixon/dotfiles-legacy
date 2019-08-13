@@ -13,6 +13,13 @@ function df_link {
   target="$1"
   name="$2"
 
+  # Ensure the parent directory of the link exists
+  name_parent=$(dirname "$name")
+  if [ ! -d "$name_parent" ]; then
+    printf "${C_GREEN}mkdir -p $name_parent${C_NONE}\n"
+    mkdir -p "$name_parent"
+  fi
+
   printf "${C_CYAN}${name}${C_NONE} : "
 
   # Check if the name is already a symlink
