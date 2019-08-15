@@ -18,7 +18,6 @@
     - [HTTPS Everywhere](https://github.com/EFForg/https-everywhere)
     - [Multi-Account Containers](https://github.com/mozilla/multi-account-containers)
     - [Privacy Badger](https://github.com/EFForg/privacybadger)
-    - [Privacy Settings](https://github.com/schomery/privacy-settings)
     - [Refined GitHub](https://github.com/sindresorhus/refined-github)
     - [uBlock](https://github.com/gorhill/uBlock)
     - [Vim Vixen](https://github.com/ueokande/vim-vixen)
@@ -47,7 +46,6 @@
 
 ## Notes
 
-- [Broadcom wireless not working on Ubuntu](https://ubuntuforums.org/showthread.php?t=2214110).
 - List available fonts: `updmap-sys --listmaps`
 - Reload `Xresources`: `xrdb ~/.Xresources`
 
