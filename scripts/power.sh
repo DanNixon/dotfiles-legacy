@@ -3,7 +3,7 @@
 if [ $# -eq 1 ]; then
   action="$1"
 else
-  action=$(echo -e 'lock\nsleep\nshutdown' | rofi -dmenu -i -p 'power/lock')
+  action=$(echo -e 'lock\nsleep\nshutdown\nreboot' | rofi -dmenu -i -p 'power/lock')
 fi
 
 case "$action" in
@@ -15,6 +15,9 @@ case "$action" in
     ;;
   "shutdown")
     rofi_confirm 'shutdown now?' && sync && poweroff
+    ;;
+  "reboot")
+    rofi_confirm 'reboot now?' && sync && reboot
     ;;
   *)
     exit 1
