@@ -46,12 +46,4 @@
 
 ## Notes
 
-- List available fonts: `updmap-sys --listmaps`
-- Reload `Xresources`: `xrdb ~/.Xresources`
-
-### PGP smart card dependencies
-
-- Debian/Ubuntu: `apt install scdaemon pcscd pcsc-tools`
-- Fedora: `dnf install pcsc-lite pcsc-lite-ccid`
-
-If needed, reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port`.
+- If needed, smart card reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port`.
