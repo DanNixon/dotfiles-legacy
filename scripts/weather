@@ -9,8 +9,9 @@ function __jq_get {
 location_query="$1"
 if [ -z "$location_query" ];
 then
-  resp="$(curl --silent 'http://ip-api.com/json/?fields=lat,lon')"
-  location_query="$(echo $resp | jq '.lat'),$(echo $resp | jq '.lon')"
+  resp="$(curl --silent 'http://ip-api.com/json/?fields=lat,lon,city,regionName')"
+  location_query="$(echo "$resp" | jq -r '.lat'),$(echo "$resp" | jq -r '.lon')"
+  echo "$(echo "$resp" | jq -r '.city'), $(echo "$resp" | jq -r '.regionName')"
 fi
 
 # Get the forecast data
@@ -58,7 +59,7 @@ function __icon {
 }
 
 printf "%s  %s\n" \
-  "$(__icon $(__forecast_get '.currently.icon'))" \
+  "$(__icon "$(__forecast_get '.currently.icon')")" \
   "$(__forecast_get '.currently.summary')"
 
 printf "   %.1f 糖\n" \
@@ -72,5 +73,5 @@ printf "   %.1f (%.1f) mph\n" \
   "$(__forecast_get '.currently.windGust')"
 
 printf "%s  %s\n" \
-  "$(__icon $(__forecast_get '.minutely.icon'))" \
+  "$(__icon "$(__forecast_get '.minutely.icon')")" \
   "$(__forecast_get '.minutely.summary')"
