@@ -5,9 +5,9 @@
 function which_player {
   if [ -z "$(pgrep mpv)" ];
   then
-    echo "mpd"
+    echo 'mpd'
   else
-    echo "mpv"
+    echo 'mpv'
   fi
 }
 
@@ -17,19 +17,19 @@ function mpv_command {
 }
 
 function mpv_pause {
-  mpv_command "cycle pause"
+  mpv_command 'cycle pause'
 }
 
 function mpv_prev {
-  mpv_command "playlist-prev"
+  mpv_command 'playlist-prev'
 }
 
 function mpv_next {
-  mpv_command "playlist-next"
+  mpv_command 'playlist-next'
 }
 
 function mpv_stop {
-  mpv_command "stop"
+  mpv_command 'stop'
 }
 
 

@@ -68,7 +68,7 @@ df_link \
   "$HOME/.screenrc"
 
 df_link \
-  "/dev/null" \
+  '/dev/null' \
   "$HOME/.bash_history"
 
 df_link \

@@ -7,5 +7,4 @@ curl \
 
 chmod +x nvim
 
-sudo mkdir -p '/usr/local/bin'
-sudo mv nvim '/usr/local/bin'
+sudo mkdir -p '/usr/local/bin' && sudo mv nvim '/usr/local/bin'
