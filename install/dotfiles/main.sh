@@ -20,6 +20,10 @@ df_link \
   "$HOME/.config/compton.conf"
 
 df_link \
+  "$DOTFILES/dotfiles/dunst" \
+  "$HOME/.config/dunst"
+
+df_link \
   "$DOTFILES/dotfiles/direnvrc" \
   "$HOME/.config/direnv/direnvrc"
 
