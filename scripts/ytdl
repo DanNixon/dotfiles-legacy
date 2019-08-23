@@ -6,6 +6,8 @@ url="$(xclip -o)"
 
 format="$(rofi-youtube-dl-select-format "$url")"
 
+notify-send --urgency=low 'youtube-dl' 'Starting download...'
+
 youtube-dl --format="$format" "$url" \
   && notify-send 'youtube-dl' 'Download complete.' \
-  || notify-send 'youtube-dl' 'Download failed!'
+  || notify-send --urgency=critical 'youtube-dl' 'Download failed!'

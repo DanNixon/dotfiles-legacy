@@ -4,4 +4,7 @@ set -xe
 
 url="$(xclip -o)"
 format="$(rofi-youtube-dl-select-format "$url")"
-mpv --ytdl-format="$format" "$url"
+
+notify-send --urgency=low 'youtube-dl' 'Starting playback...'
+mpv --ytdl-format="$format" "$url" \
+  || notify-send --urgency=critical 'youtube-dl' 'Playback failed!'
