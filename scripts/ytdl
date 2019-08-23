@@ -4,7 +4,7 @@ set -xe
 
 url="$(xclip -o)"
 
-format="$(rofi-youtube-dl-quality "$url")"
+format="$(rofi-youtube-dl-select-format "$url")"
 
 youtube-dl --format="$format" "$url" \
   && notify-send 'youtube-dl' 'Download complete.' \
