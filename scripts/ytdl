@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -xe
+
+url="$(xclip -o)"
+
+format="$(rofi-youtube-dl-quality "$url")"
+
+youtube-dl --format="$format" "$url" \
+  && notify-send 'youtube-dl' 'Download complete.' \
+  || notify-send 'youtube-dl' 'Download failed!'

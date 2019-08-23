@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -xe
+
+url="$(xclip -o)"
+format="$(rofi-youtube-dl-quality "$url")"
+mpv --ytdl-format="$format" "$url"
