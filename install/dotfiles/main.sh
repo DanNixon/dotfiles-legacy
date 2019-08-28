@@ -40,6 +40,10 @@ df_link \
   "$HOME/.config/mpv"
 
 df_link \
+  "$DOTFILES/dotfiles/ncmpcpp" \
+  "$HOME/.config/ncmpcpp"
+
+df_link \
   "$DOTFILES/dotfiles/rofi" \
   "$HOME/.config/rofi"
 

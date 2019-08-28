@@ -1,0 +1,2 @@
+external_editor = nvim
+playlist_disable_highlight_delay = 0
