@@ -23,7 +23,7 @@ SAVEHIST=1000
 bindkey -v
 
 # Prompts
-PROMPT='%F{cyan}%n%f at %F{yellow}%m%f in %F{green}%~%f > '
+PROMPT='%B%F{cyan}%n%f%b %F{248}at%f %B%F{yellow}%m%f%b %F{248}in%f %B%F{green}%~%f%b %B%F{248}>%f%b '
 RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
 
 # Base16 Shell
