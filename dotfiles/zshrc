@@ -1,0 +1,45 @@
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _approximate
+zstyle ':completion:*' format '%d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '/home/dan/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
+# Vi style key bindings
+bindkey -v
+
+# Prompts
+PROMPT='%F{cyan}%n%f at %F{yellow}%m%f in %F{green}%~%f > '
+RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# Fzf
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+# Aliases
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+
+# Custom ls colors
+[ -f $HOME/.ls_colors ] && source $HOME/.ls_colors
+
+# Custom PATH additions
+PATH=/home/dan/dotfiles/scripts:$PATH
