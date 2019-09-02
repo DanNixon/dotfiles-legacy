@@ -9,16 +9,19 @@ C_NONE='\033[0m'
 DOTFILES="$( cd "$(dirname "$0")/../.." ; pwd -P )"
 printf "${C_YELLOW}\$DOTFILES=${DOTFILES}${C_NONE}\n"
 
-function df_link {
-  target="$1"
-  name="$2"
-
-  # Ensure the parent directory of the link exists
-  name_parent=$(dirname "$name")
+function ensure_parent_dir_exists {
+  name_parent=$(dirname "$1")
   if [ ! -d "$name_parent" ]; then
     printf "${C_GREEN}mkdir -p $name_parent${C_NONE}\n"
     mkdir -p "$name_parent"
   fi
+}
+
+function df_link {
+  target="$1"
+  name="$2"
+
+  ensure_parent_dir_exists "$name"
 
   printf "${C_CYAN}${name}${C_NONE} : "
 
@@ -49,4 +52,14 @@ function df_link {
   # Link did not exist, should be OK to create it now
   printf "${C_GREEN}Link ${name} => ${target}${C_NONE}\n"
   ln -s "$target" "$name"
+}
+
+function shell_aliases {
+  shell="$1"
+  name="$2"
+
+  ensure_parent_dir_exists "$name"
+
+  printf "${C_CYAN}${name}${C_NONE} : $shell shell aliases ${C_GREEN}✓${C_NONE}\n"
+  cat "$DOTFILES/dotfiles/shell_aliases.txt" | "$DOTFILES/scripts/format-shell-aliases" "$shell" > "$name"
 }

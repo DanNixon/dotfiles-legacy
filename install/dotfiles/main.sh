@@ -102,3 +102,7 @@ df_link \
 df_link \
   "$DOTFILES/dotfiles/xsessionrc" \
   "$HOME/.xsessionrc"
+
+shell_aliases \
+  "bash" \
+  "$HOME/.bash_aliases"

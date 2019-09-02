@@ -46,5 +46,5 @@ if status --is-interactive
   set --export --global EDITOR nvim
   set --export --global TODOTXT_DEFAULT_ACTION ls
 
-  source "$OMF_CONFIG/abbreviations.fish"
+  source "$HOME/.config/fish/abbreviations.fish"
 end
