@@ -28,7 +28,13 @@ bindkey "$terminfo[kcuu1]" history-beginning-search-backward
 bindkey "$terminfo[kcud1]" history-beginning-search-forward
 
 # Prompts
-PROMPT='%B%F{cyan}%n%f%b %F{248}at%f %B%F{yellow}%m%f%b %F{248}in%f %B%F{green}%~%f%b %B%F{248}>%f%b '
+if (( ${+SSH_CONNECTION} )); then
+  HOSTNAME_COLOR='magenta'
+else
+  HOSTNAME_COLOR='yellow'
+fi
+
+PROMPT="%B%F{cyan}%n%f%b %F{248}at%f %B%F{$HOSTNAME_COLOR}%m%f%b %F{248}in%f %B%F{green}%~%f%b %B%F{248}>%f%b "
 RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
 
 # Base16 Shell
