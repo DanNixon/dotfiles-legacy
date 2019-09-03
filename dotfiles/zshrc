@@ -60,6 +60,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # Environment
 export EDITOR='nvim'
 export TODOTXT_DEFAULT_ACTION='ls'
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 # Aliases
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
