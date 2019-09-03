@@ -65,7 +65,7 @@ export TODOTXT_DEFAULT_ACTION='ls'
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
 
 # Custom PATH additions
-export PATH="$HOME/dotfiles/scripts:$HOME/dotfiles/third_party/scripts:$PATH"
+export PATH="$HOME/dotfiles/scripts/:$HOME/dotfiles/third_party/scripts/:$HOME/dotfiles/third_party/bin/:$PATH"
 
 # Customisations
 [ -f $HOME/.ls_colors ] && source $HOME/.ls_colors
