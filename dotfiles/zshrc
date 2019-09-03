@@ -23,18 +23,29 @@ SAVEHIST=1000
 # Vi style key bindings
 bindkey -v
 
+function zle-line-init zle-keymap-select {
+  PROMPT_VI_MODE="${${KEYMAP/vicmd/N}/(main|viins)/I}"
+  PROMPT_VI_COLOR="${${KEYMAP/vicmd/blue}/(main|viins)/green}"
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 # History search
 bindkey "$terminfo[kcuu1]" history-beginning-search-backward
 bindkey "$terminfo[kcud1]" history-beginning-search-forward
 
 # Prompts
 if (( ${+SSH_CONNECTION} )); then
-  HOSTNAME_COLOR='magenta'
+  PROMPT_HOSTNAME_COLOR='magenta'
 else
-  HOSTNAME_COLOR='yellow'
+  PROMPT_HOSTNAME_COLOR='yellow'
 fi
 
-PROMPT="%B%F{cyan}%n%f%b %F{248}at%f %B%F{$HOSTNAME_COLOR}%m%f%b %F{248}in%f %B%F{green}%~%f%b %B%F{248}>%f%b "
+setopt PROMPT_SUBST
+PROMPT_GREY='248'
+PROMPT='%B%F{cyan}%n%f%b %F{$PROMPT_GREY}at%f %B%F{$PROMPT_HOSTNAME_COLOR}%m%f%b %F{$PROMPT_GREY}in%f %B%F{blue}%~%f%b %F{$PROMPT_GREY}[%B%F{$PROMPT_VI_COLOR}$PROMPT_VI_MODE%F{$PROMPT_GREY}%b]%B>%f%b '
 RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
 
 # Base16 Shell
