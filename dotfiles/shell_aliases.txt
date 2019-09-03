@@ -9,8 +9,6 @@ free	free -h
 lb	lsblk
 q	exit
 c	clear
-histcla	echo 'yes' | history clear
-fish-add-user-path	set --universal --prepend fish_user_paths (pwd)
 g	git
 gs	git s
 ..	cd ..
@@ -32,7 +30,7 @@ t	todo.sh
 m	ncmpcpp
 stripexif	exiftool -all=
 tok	tomb open -k -
-conda-init	eval $HOME/miniconda3/bin/conda 'shell.fish' 'hook' $argv | source
+conda-init	eval $HOME/miniconda3/bin/conda 'shell.zsh' 'hook' $argv | source
 ipy	ipython
 xcc	xclip -sel clip
 xcp	xclip -sel clip -o

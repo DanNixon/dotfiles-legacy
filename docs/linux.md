@@ -2,7 +2,6 @@
 
 - Shell
   - [zsh](https://www.zsh.org)
-  - [Fish](https://fishshell.com)
 - Terminal emulator
   - [Alacritty](https://github.com/jwilm/alacritty)
 - Text editor
