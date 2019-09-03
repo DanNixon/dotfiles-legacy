@@ -1,6 +1,7 @@
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
+zstyle ':completion:*' completions 1
 zstyle ':completion:*' format '%d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -22,8 +23,9 @@ SAVEHIST=1000
 # Vi style key bindings
 bindkey -v
 
-export EDITOR='nvim'
-export TODOTXT_DEFAULT_ACTION='ls'
+# History search
+bindkey "$terminfo[kcuu1]" history-beginning-search-backward
+bindkey "$terminfo[kcud1]" history-beginning-search-forward
 
 # Prompts
 PROMPT='%B%F{cyan}%n%f%b %F{248}at%f %B%F{yellow}%m%f%b %F{248}in%f %B%F{green}%~%f%b %B%F{248}>%f%b '
@@ -35,15 +37,19 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
+# Environment
+export EDITOR='nvim'
+export TODOTXT_DEFAULT_ACTION='ls'
+
 # Aliases
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+
+# Custom PATH additions
+export PATH="$HOME/dotfiles/scripts:$HOME/dotfiles/third_party/scripts:$PATH"
 
 # Customisations
 [ -f $HOME/.ls_colors ] && source $HOME/.ls_colors
 [ -f $HOME/.host_sh_rc ] && source $HOME/.host_sh_rc
-
-# Custom PATH additions
-export PATH="$HOME/dotfiles/scripts:$HOME/dotfiles/third_party/scripts:$PATH"
 
 # Fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
