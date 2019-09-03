@@ -1,7 +1,7 @@
-l	ls -lFh
-ll	ls -alFh
-la	ls -A
-ldev	ls -lFh /dev/ | grep
+l	ls --color=auto -lFh
+ll	ls --color=auto -alFh
+la	ls --color=auto -A
+ldev	ls --color=auto -lFh /dev/ | grep
 die	sudo shutdown -P now
 df	df -h
 du	du -h
