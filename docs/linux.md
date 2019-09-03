@@ -1,6 +1,7 @@
 # Linux applications and tools
 
 - Shell
+  - [zsh](https://www.zsh.org)
   - [Fish](https://fishshell.com)
 - Terminal emulator
   - [Alacritty](https://github.com/jwilm/alacritty)
@@ -25,7 +26,6 @@
   - [mpd](https://www.musicpd.org/)
     - [ncmpcpp](https://rybczak.net/ncmpcpp/)
     - [mpc](https://www.musicpd.org/clients/mpc/)
-    - [mpscribble](https://www.musicpd.org/clients/mpdscribble/)
   - [mpv](https://mpv.io)
 - Remote access
   - [mosh](https://mosh.org)
