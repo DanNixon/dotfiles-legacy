@@ -22,6 +22,9 @@ SAVEHIST=1000
 # Vi style key bindings
 bindkey -v
 
+export EDITOR='nvim'
+export TODOTXT_DEFAULT_ACTION='ls'
+
 # Prompts
 PROMPT='%B%F{cyan}%n%f%b %F{248}at%f %B%F{yellow}%m%f%b %F{248}in%f %B%F{green}%~%f%b %B%F{248}>%f%b '
 RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
@@ -32,14 +35,15 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-# Fzf
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
 # Aliases
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
 
-# Custom ls colors
+# Customisations
 [ -f $HOME/.ls_colors ] && source $HOME/.ls_colors
+[ -f $HOME/.host_sh_rc ] && source $HOME/.host_sh_rc
 
 # Custom PATH additions
-PATH=/home/dan/dotfiles/scripts:$PATH
+export PATH="$HOME/dotfiles/scripts:$HOME/dotfiles/third_party/scripts:$PATH"
+
+# Fzf
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
