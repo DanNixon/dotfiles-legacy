@@ -36,7 +36,7 @@ xcc	xclip -sel clip
 xcp	xclip -sel clip -o
 on-file-change	inotifywait -q -e modify
 system-information	sudo lshw | less
-b	upower -i (upower -e | grep 'BAT')
+b	upower -i $(upower -e | grep 'BAT')
 i3-layout-default	i3-msg layout default
 i3-layout-stacking	i3-msg layout stacking
 i3-layout-tabbed	i3-msg layout tabbed
