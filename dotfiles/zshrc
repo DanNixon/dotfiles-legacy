@@ -55,10 +55,7 @@ RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
 source "$HOME/dotfiles/dotfiles/shell/base16.sh"
 source "$HOME/dotfiles/dotfiles/shell/aliases.sh"
 source "$HOME/dotfiles/dotfiles/shell/environment.sh"
-
-# Customisations
-[ -f $HOME/.ls_colors ] && source $HOME/.ls_colors
-[ -f $HOME/.host_sh_rc ] && source $HOME/.host_sh_rc
+source "$HOME/dotfiles/dotfiles/shell/local_customizations.sh"
 
 # Fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh

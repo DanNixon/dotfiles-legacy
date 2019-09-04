@@ -8,6 +8,7 @@ esac
 source "$HOME/dotfiles/dotfiles/shell/base16.sh"
 source "$HOME/dotfiles/dotfiles/shell/aliases.sh"
 source "$HOME/dotfiles/dotfiles/shell/environment.sh"
+source "$HOME/dotfiles/dotfiles/shell/local_customizations.sh"
 
 # Fzf
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash

@@ -109,4 +109,4 @@ df_link \
 
 set +x
 
-dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > ~/.ls_colors
+dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > ~/.ls_colors.sh
