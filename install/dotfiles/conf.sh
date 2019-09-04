@@ -53,13 +53,3 @@ function df_link {
   printf "${C_GREEN}Link ${name} => ${target}${C_NONE}\n"
   ln -s "$target" "$name"
 }
-
-function shell_aliases {
-  shell="$1"
-  name="$2"
-
-  ensure_parent_dir_exists "$name"
-
-  printf "${C_CYAN}${name}${C_NONE} : $shell shell aliases ${C_GREEN}✓${C_NONE}\n"
-  cat "$DOTFILES/dotfiles/shell_aliases.txt" | "$DOTFILES/scripts/format-shell-aliases" "$shell" > "$name"
-}

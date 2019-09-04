@@ -107,10 +107,6 @@ df_link \
   "$DOTFILES/dotfiles/zshrc" \
   "$HOME/.zshrc"
 
-shell_aliases \
-  "bash" \
-  "$HOME/.bash_aliases"
-
 set +x
 
 dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > ~/.ls_colors

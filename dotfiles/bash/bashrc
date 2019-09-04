@@ -10,7 +10,11 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-export PATH=$PATH:$HOME/dotfiles/scripts
+# Custom PATH additions
+export PATH="$HOME/dotfiles/scripts/:$HOME/dotfiles/third_party/scripts/:$HOME/dotfiles/third_party/bin/:$PATH"
 
-[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+# Aliases
+source "$HOME/dotfiles/dotfiles/aliases.sh"
+
+# Fzf
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
