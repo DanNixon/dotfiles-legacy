@@ -100,7 +100,11 @@ df_link \
   "$HOME/.Slic3r"
 
 df_link \
-  "$DOTFILES/dotfiles/xsessionrc" \
+  "$DOTFILES/dotfiles/xprofile" \
+  "$HOME/.profile"
+
+df_link \
+  "$DOTFILES/dotfiles/xprofile" \
   "$HOME/.xsessionrc"
 
 df_link \
