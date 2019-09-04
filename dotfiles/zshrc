@@ -51,23 +51,10 @@ PROMPT_GREY='248'
 PROMPT='%B%F{cyan}%n%f%b %F{$PROMPT_GREY}at%f %B%F{$PROMPT_HOSTNAME_COLOR}%m%f%b %F{$PROMPT_GREY}in%f %B%F{blue}%~%f%b %F{$PROMPT_GREY}[%B%F{$PROMPT_VI_COLOR}$PROMPT_VI_MODE%F{$PROMPT_GREY}%b]%B>%f%b '
 RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-# Environment
-export EDITOR='nvim'
-export TODOTXT_DEFAULT_ACTION='ls'
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-
-# Aliases
-source "$HOME/dotfiles/dotfiles/aliases.sh"
-
-# Custom PATH additions
-export PATH="$HOME/dotfiles/scripts/:$HOME/dotfiles/third_party/scripts/:$HOME/dotfiles/third_party/bin/:$PATH"
+# Shared config
+source "$HOME/dotfiles/dotfiles/shell/base16.sh"
+source "$HOME/dotfiles/dotfiles/shell/aliases.sh"
+source "$HOME/dotfiles/dotfiles/shell/environment.sh"
 
 # Customisations
 [ -f $HOME/.ls_colors ] && source $HOME/.ls_colors
