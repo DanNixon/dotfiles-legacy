@@ -76,7 +76,7 @@ df_link \
   "$HOME/.bash_history"
 
 df_link \
-  "$DOTFILES/dotfiles/bash/bashrc" \
+  "$DOTFILES/dotfiles/bashrc" \
   "$HOME/.bashrc"
 
 df_link \
