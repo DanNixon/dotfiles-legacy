@@ -1,1 +1,1 @@
-PATH="$HOME/dotfiles/scripts:$PATH"
+PATH="$HOME/dotfiles/scripts/:/home/dan/.local/bin/:$PATH"
