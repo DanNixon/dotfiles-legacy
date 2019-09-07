@@ -40,6 +40,8 @@ alias dkpsa="docker ps | less -S"
 alias dke="docker exec -it"
 alias dkc="docker-compose"
 
+alias zfs-mounted="zfs list -o name,mounted,encryption,mountpoint"
+
 alias cmake-format-all="find . -type f -name 'CMakeLists.txt' | xargs cmake-format -i"
 alias clang-format-all="find . -type f -regex '.*\.\(c\|cpp\|h\|hpp\)' | xargs clang-format -i"
 
