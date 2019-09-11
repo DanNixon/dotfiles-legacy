@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Check if there is an SSH port open, that is a good enough sign that a
-# machine is online
-nc "$1" 22 -z
