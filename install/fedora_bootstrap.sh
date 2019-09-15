@@ -33,7 +33,8 @@ sudo dnf install \
   xclip \
   i3lock \
   compton \
-  feh
+  feh \
+  progress
 
 # Install some more things
 ./dotfiles/install/neovim.sh
