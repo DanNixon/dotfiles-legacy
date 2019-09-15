@@ -1,11 +1,12 @@
 #!/bin/bash
 
-temp_dir='/tmp/nerdfont'
+set -ex
 
-mkdir -p "$temp_dir"
-cd "$temp_dir" || exit
-
+font_dir="$HOME/.fonts"
 font_url='https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/DejaVuSansMono.zip'
+
+mkdir -p "$font_dir"
+cd "$font_dir"
 
 archive='nerdfont.zip'
 
@@ -14,4 +15,8 @@ curl \
   --output "$archive" \
   "$font_url"
 
-unzip "$archive" && rm "$archive"
+unzip "$archive"
+rm "$archive"
+
+# Rebuild font cache
+fc-cache --force --verbose

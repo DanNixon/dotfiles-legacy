@@ -9,8 +9,8 @@ Last tested with Fedora 30.
 - `sudo dnf copr enable mhartgring/polybar`
 - `sudo dnf copr enable pschyska/alacritty`
 - `sudo dnf install alacritty i3-gaps polybar rofi zsh pcsc-lite pcsc-lite-ccid mpv jq`
-- `./dotfiles/install/download_nerdfont_dejavusansmono.sh`
 - `./dotfiles/install/neovim.sh`
+- `./dotfiles/install/nerdfont_dejavusansmono.sh`
 - `./dotfiles/install/dotfiles/main.sh`
 - `./dotfiles/install/dotfiles/su.sh`
 - `./dotfiles/install/dotfiles/i3wm.sh`
