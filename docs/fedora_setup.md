@@ -8,7 +8,7 @@ Last tested with Fedora 30.
 - `sudo dnf copr enable gregw/i3desktop`
 - `sudo dnf copr enable mhartgring/polybar`
 - `sudo dnf copr enable pschyska/alacritty`
-- `sudo dnf install alacritty i3-gaps polybar rofi zsh pcsc-lite pcsc-lite-ccid mpv jq lm_sensors`
+- `sudo dnf install alacritty i3-gaps polybar rofi zsh pcsc-lite pcsc-lite-ccid mpv jq lm_sensors xclip`
 - `./dotfiles/install/neovim.sh`
 - `./dotfiles/install/nerdfont_dejavusansmono.sh`
 - `./dotfiles/install/dotfiles/main.sh`
