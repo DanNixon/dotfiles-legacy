@@ -31,7 +31,9 @@ sudo dnf install \
   jq \
   lm_sensors \
   xclip \
-  i3lock
+  i3lock \
+  compton \
+  feh
 
 # Install some more things
 ./dotfiles/install/neovim.sh
