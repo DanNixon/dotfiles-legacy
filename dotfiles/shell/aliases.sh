@@ -55,3 +55,5 @@ alias on-file-change="inotifywait -q -e modify"
 alias system-information="sudo lshw | less"
 alias b="upower -i $(upower -e | grep 'BAT')"
 alias fif="grep -rnw . -e"
+
+alias today="date '+%Y-%m-%d'"
