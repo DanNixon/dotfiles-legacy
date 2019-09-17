@@ -81,6 +81,9 @@ command SpellOff call lexical#init({'spell': 0})
 let base16colorspace = 256
 colorscheme base16-default-dark
 
+" Terminal title
+set title
+
 " Airline config
 let g:airline_powerline_fonts = 1
 
