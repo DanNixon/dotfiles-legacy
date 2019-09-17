@@ -104,9 +104,6 @@ bindsym $mod+Shift+asterisk     move workspace 8
 bindsym $mod+Shift+parenleft    move workspace 9
 bindsym $mod+Shift+parenright   move workspace 10
 
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+R restart
-
 # Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
 
