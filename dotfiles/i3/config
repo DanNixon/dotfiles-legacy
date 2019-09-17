@@ -49,6 +49,7 @@ bindsym $mod+w exec rofi -show window
 
 # Change focus
 focus_wrapping no
+focus_follows_mouse no
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
