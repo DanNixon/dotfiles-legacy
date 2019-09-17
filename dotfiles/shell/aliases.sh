@@ -1,7 +1,6 @@
 alias l="ls --color=auto -lFh"
-alias ll="ls --color=auto -alFh"
-alias la="ls --color=auto -A"
-alias ldev="ls --color=auto -lFh /dev/ | grep"
+alias ll="ls --color=auto -lFa"
+alias ldev="ls --color=auto -lF /dev/ | grep"
 
 alias df="df -h"
 alias du="du -h"
