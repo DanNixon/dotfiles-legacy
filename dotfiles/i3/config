@@ -152,19 +152,19 @@ bindsym $mod+Shift+x    exec firefox
 bindsym $mod+p          exec pass-clip
 
 # Audio controls (pulseaudio)
-bindsym $mod+plus               exec --no-startup-id pa.sh v +5%
-bindsym $mod+minus              exec --no-startup-id pa.sh v -5%
-bindsym $mod+Shift+underscore   exec --no-startup-id pa.sh m toggle
-bindsym XF86AudioRaiseVolume    exec --no-startup-id pa.sh v +5%
-bindsym XF86AudioLowerVolume    exec --no-startup-id pa.sh v -5%
-bindsym XF86AudioMute           exec --no-startup-id pa.sh m toggle
+bindsym $mod+plus               exec --no-startup-id pulseaudio-control v +5%
+bindsym $mod+minus              exec --no-startup-id pulseaudio-control v -5%
+bindsym $mod+Shift+underscore   exec --no-startup-id pulseaudio-control m toggle
+bindsym XF86AudioRaiseVolume    exec --no-startup-id pulseaudio-control v +5%
+bindsym XF86AudioLowerVolume    exec --no-startup-id pulseaudio-control v -5%
+bindsym XF86AudioMute           exec --no-startup-id pulseaudio-control m toggle
 
 # Media controls
-bindsym $mod+m          exec --no-startup-id media.sh pause
-bindsym XF86AudioPause  exec --no-startup-id media.sh pause
-bindsym XF86AudioPrev   exec --no-startup-id media.sh prev
-bindsym XF86AudioNext   exec --no-startup-id media.sh next
-bindsym XF86AudioStop   exec --no-startup-id media.sh stop
+bindsym $mod+m          exec --no-startup-id media-control pause
+bindsym XF86AudioPause  exec --no-startup-id media-control pause
+bindsym XF86AudioPrev   exec --no-startup-id media-control prev
+bindsym XF86AudioNext   exec --no-startup-id media-control next
+bindsym XF86AudioStop   exec --no-startup-id media-control stop
 
 # Screen backlight controls
 bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
