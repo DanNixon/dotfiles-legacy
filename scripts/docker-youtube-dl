@@ -2,7 +2,7 @@
 
 image='vimagick/youtube-dl'
 
-if [[ "$1" == 'docker-pull' ]]; then
+if [[ "$1" == 'pull' ]]; then
   docker pull "$image"
   exit
 fi
