@@ -56,7 +56,7 @@ df_link \
   "$HOME/.vimrc"
 
 df_link \
-  "$DOTFILES/dotfiles/gdbinit" \
+  "$DOTFILES/dotfiles/gdb/gdbinit" \
   "$HOME/.gdbinit"
 
 df_link \
