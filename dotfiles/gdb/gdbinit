@@ -1,5 +1,4 @@
-set history save
 set verbose off
 
-source ~/dotfiles/dotfiles/gdb/gdb-dashboard.py
-dashboard -enabled off
+set history filename ~/.gdb_history
+set history save
