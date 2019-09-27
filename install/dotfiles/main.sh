@@ -72,6 +72,10 @@ df_link \
   "$HOME/.screenrc"
 
 df_link \
+  "$DOTFILES/dotfiles/tmux.conf" \
+  "$HOME/.tmux.conf"
+
+df_link \
   '/dev/null' \
   "$HOME/.bash_history"
 
