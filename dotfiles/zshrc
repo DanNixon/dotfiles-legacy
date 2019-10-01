@@ -22,6 +22,7 @@ SAVEHIST=10000
 
 # Vi style key bindings
 bindkey -v
+KEYTIMEOUT=10
 
 function zle-line-init zle-keymap-select {
   PROMPT_VI_MODE="${${KEYMAP/vicmd/N}/(main|viins)/I}"
