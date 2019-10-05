@@ -31,7 +31,9 @@ sudo dnf install \
   i3lock \
   compton \
   feh \
-  progress
+  progress \
+  make \
+  smartmontools
 
 # Install some more things
 ./dotfiles/install/neovim.sh
