@@ -26,18 +26,10 @@ make life easier and work well for me.
   ([source](https://sourceforge.net/p/opencamera/code/ci/master/tree/))
   ([F-Droid](https://f-droid.org/en/packages/net.sourceforge.opencamera/))
   ([Play](https://play.google.com/store/apps/details?id=net.sourceforge.opencamera))
-- RadioDroid
-  ([source](https://github.com/segler-alex/RadioDroid))
-  ([F-Droid](https://f-droid.org/en/packages/net.programmierecke.radiodroid2/))
-  ([Play](https://play.google.com/store/apps/details?id=net.programmierecke.radiodroid2))
 - [Simple Gallery](https://simplemobiletools.github.io/)
   ([source](https://github.com/SimpleMobileTools/Simple-Gallery))
   ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.gallery.pro/))
   ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro))
-- Simple Last.fm Scrobbler
-  ([source](https://github.com/tgwizard/sls))
-  ([F-Droid](https://f-droid.org/packages/com.adam.aslfms/))
-  ([Play](https://play.google.com/store/apps/details?id=com.adam.aslfms))
 - [Vanilla Music](http://vanillamusic.io/)
   ([source](https://github.com/vanilla-music/vanilla))
   ([F-Droid](https://f-droid.org/app/ch.blinkenlights.android.vanilla/))
@@ -60,6 +52,10 @@ make life easier and work well for me.
   ([source](https://github.com/osmandapp/Osmand))
   ([Play](https://play.google.com/store/apps/details?id=net.osmand))
   ([F-Droid](https://f-droid.org/en/packages/net.osmand.plus/))
+- [Slide](https://reddit.com/r/slideforreddit)
+  ([source](https://github.com/ccrama/Slide))
+  ([Play](https://play.google.com/store/apps/details?id=me.ccrama.redditslide))
+  ([F-Droid](https://f-droid.org/packages/me.ccrama.redditslide/))
 - [Survival Manual](https://survivalmanual.github.io/)
   ([source](https://github.com/ligi/SurvivalManual))
   ([F-Droid](https://f-droid.org/packages/org.ligi.survivalmanual/))
@@ -73,16 +69,9 @@ make life easier and work well for me.
 - Barcode Scanner
   ([source](https://github.com/zxing/zxing))
   ([Play](https://play.google.com/store/apps/details?id=com.google.zxing.client.android))
-- [BatteryBot Pro](https://www.batterybot.info/)
-  ([source](https://github.com/darshan-/Battery-Indicator-Pro))
-  ([F-Droid](https://f-droid.org/en/packages/com.darshancomputing.BatteryIndicatorPro/))
-  ([Play](https://play.google.com/store/apps/details?id=com.darshancomputing.BatteryIndicatorPro))
 - Document Viewer
   ([source](https://github.com/PrivacyApps/document-viewer))
   ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.viewer/))
-- Editor
-  ([source](https://github.com/billthefarmer/editor))
-  ([F-Droid](https://f-droid.org/packages/org.billthefarmer.editor/))
 - [LibreOffice Viewer](https://www.libreoffice.org/download/android-viewer/)
   ([source](https://cgit.freedesktop.org/libreoffice/core/tree))
   ([F-Droid](https://f-droid.org/en/packages/org.documentfoundation.libreoffice/))
@@ -98,29 +87,10 @@ make life easier and work well for me.
   ([source](https://github.com/SimpleMobileTools/Simple-File-Manager))
   ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.filemanager.pro/))
   ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager.pro))
-- Simply Solid
-  ([source](https://github.com/enricocid/Simply-Solid))
-  ([F-Droid](https://f-droid.org/packages/com.enrico.earthquake/))
 - [Syncthing](https://syncthing.net)
   ([source](https://github.com/syncthing/syncthing-android))
   ([F-Droid](https://f-droid.org/en/packages/com.nutomic.syncthingandroid/))
   ([Play](https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid))
-- [Termux](https://termux.com/)
-  ([source](https://github.com/termux/termux-app))
-  ([F-Droid](https://f-droid.org/packages/com.termux/))
-  ([Play](https://play.google.com/store/apps/details?id=com.termux))
-- [Termux:API](https://termux.com/)
-  ([source](https://github.com/termux/termux-api))
-  ([F-Droid](https://f-droid.org/en/packages/com.termux.api/))
-  ([Play](https://play.google.com/store/apps/details?id=com.termux.api))
-- [Termux:Styling](https://termux.com/)
-  ([source](https://github.com/termux/termux-styling))
-  ([F-Droid](https://f-droid.org/en/packages/com.termux.styling/))
-  ([Play](https://play.google.com/store/apps/details?id=com.termux.styling))
-- Unit Converter Ultimate
-  ([source](https://github.com/physphil/UnitConverterUltimate))
-  ([F-Droid](https://f-droid.org/packages/com.physphil.android.unitconverterultimate/))
-  ([Play](https://play.google.com/store/apps/details?id=com.physphil.android.unitconverterultimate))
 
 ## Security
 
@@ -139,10 +109,6 @@ make life easier and work well for me.
   ([source](https://github.com/schwabe/ics-openvpn))
   ([F-Droid](https://f-droid.org/packages/de.blinkt.openvpn/))
   ([Play](https://play.google.com/store/apps/details?id=de.blinkt.openvpn))
-- [Orbot](https://guardianproject.info/apps/orbot/)
-  ([source](https://gitweb.torproject.org/orbot.git))
-  ([F-Droid](https://guardianproject.info/fdroid/))
-  ([Play](https://play.google.com/store/apps/details?id=org.torproject.android))
 
 ## Device specific
 
@@ -157,5 +123,3 @@ make life easier and work well for me.
   ([F-Droid](https://f-droid.org/en/packages/nodomain.freeyourgadget.gadgetbridge/))
 - [Tile](https://www.thetileapp.com)
   ([Play](https://play.google.com/store/apps/details?id=com.thetileapp.tile))
-- UniFi
-  ([Play](https://play.google.com/store/apps/details?id=com.ubnt.easyunifi))
