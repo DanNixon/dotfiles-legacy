@@ -1,4 +1,4 @@
-set daemon 60
+set daemon 30
 
 set log syslog
 
@@ -6,4 +6,4 @@ set eventqueue
   basedir /var/monit
   slots 1000
 
-include /etc/monit/confs-enabled/*
+include /etc/monit.d/
