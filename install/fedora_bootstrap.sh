@@ -33,7 +33,8 @@ sudo dnf install \
   feh \
   progress \
   make \
-  smartmontools
+  smartmontools \
+  socat
 
 # Install some more things
 ./dotfiles/install/neovim.sh
