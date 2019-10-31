@@ -34,7 +34,8 @@ sudo dnf install \
   progress \
   make \
   smartmontools \
-  socat
+  socat \
+  git-subtree
 
 # Install some more things
 ./dotfiles/install/neovim.sh
