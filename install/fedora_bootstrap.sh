@@ -35,7 +35,14 @@ sudo dnf install \
   make \
   smartmontools \
   socat \
-  git-subtree
+  git-subtree \
+  perl-Config-IniFiles \
+  perl-Data-Dumper \
+  perl-Capture-Tiny \
+  lzop \
+  mbuffer \
+  mhash \
+  pv
 
 # Install some more things
 ./dotfiles/install/neovim.sh
