@@ -47,6 +47,10 @@ bindsym $mod+d exec rofi -show run
 # Show window switcher
 bindsym $mod+w exec rofi -show window
 
+# Bookmark manager
+bindsym $mod+z exec rofi-voile firefox --private-window
+bindsym $mod+Shift+Z exec rofi-voile firefox
+
 # Change focus
 focus_wrapping no
 focus_follows_mouse no

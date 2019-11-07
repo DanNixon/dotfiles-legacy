@@ -1,1 +1,2 @@
 PATH="$HOME/dotfiles/scripts/:/home/dan/.local/bin/:$PATH"
+source "$HOME/dotfiles/dotfiles/shell/local_customizations.sh"

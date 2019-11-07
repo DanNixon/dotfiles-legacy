@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e -o pipefail
+
+url=$(voile --json | jq -r '.[] | "\(.title) | \(.uri)"' | rofi -dmenu -i -p "open bookmark with $@" | cut -d'|' -f2 | cut -c 2-)
+$@ "$url"
