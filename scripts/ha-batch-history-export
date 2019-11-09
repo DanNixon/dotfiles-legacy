@@ -31,7 +31,7 @@ do
   if [ ! -f "$filename" ]
   then
     printf "${C_GREEN}Saving to ${filename}${C_NONE}\n"
-    ha-history-export.py \
+    ha-history-export \
       --time-from "$date_from" \
       --time-to "$date_to" \
       "$entity_id" > "$filename"
