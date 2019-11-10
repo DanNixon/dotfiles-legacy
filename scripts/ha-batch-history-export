@@ -21,7 +21,7 @@ fi
 
 # Always export in UTC
 date_from="$1T00:00:00+00:00"
-date_to="$2T23:59:59+00:00"
+date_to="$2T00:00:00+00:00"
 
 while read entity_id
 do
