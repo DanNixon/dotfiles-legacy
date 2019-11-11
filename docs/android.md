@@ -112,12 +112,6 @@ make life easier and work well for me.
 
 ## Device specific
 
-- [Fitbit](https://fitbit.com)
-  ([Play](https://play.google.com/store/apps/details?id=com.fitbit.FitbitMobile))
-- Fit Notifications
-  ([source](https://github.com/abhijitvalluri/fitnotifications))
-  ([F-Droid](https://f-droid.org/packages/com.abhijitvalluri.android.fitnotifications/))
-  ([Play](https://play.google.com/store/apps/details?id=com.abhijitvalluri.android.fitnotifications))
 - [Gadgetbridge](https://gadgetbridge.org/)
   ([source](https://github.com/Freeyourgadget/Gadgetbridge))
   ([F-Droid](https://f-droid.org/en/packages/nodomain.freeyourgadget.gadgetbridge/))

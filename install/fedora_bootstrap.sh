@@ -33,7 +33,16 @@ sudo dnf install \
   feh \
   progress \
   make \
-  smartmontools
+  smartmontools \
+  socat \
+  git-subtree \
+  perl-Config-IniFiles \
+  perl-Data-Dumper \
+  perl-Capture-Tiny \
+  lzop \
+  mbuffer \
+  mhash \
+  pv
 
 # Install some more things
 ./dotfiles/install/neovim.sh
