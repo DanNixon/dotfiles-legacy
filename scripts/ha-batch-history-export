@@ -35,7 +35,6 @@ do
       --time-from "$date_from" \
       --time-to "$date_to" \
       "$entity_id" > "$filename"
-    chmod -w "$filename"
   else
     printf "${C_RED}Already exists: ${filename}\n"
   fi
