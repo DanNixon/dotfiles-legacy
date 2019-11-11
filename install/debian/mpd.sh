@@ -56,6 +56,5 @@ sudo ninja -C output/release install
 
 # Install clients
 sudo apt install \
-  ncmpcpp \
   mpc \
-  mpdscribble
+  ncmpcpp
