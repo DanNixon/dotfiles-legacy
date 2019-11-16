@@ -25,16 +25,21 @@ date_to="$2T00:00:00+00:00"
 
 while read entity_id
 do
-  printf "${C_YELLOW}Entity \"${C_CYAN}${entity_id}${C_YELLOW}\"${C_NONE}\n"
+  printf "${C_YELLOW}Entity ${C_CYAN}${entity_id}${C_NONE}\n"
   filename="${entity_id}_${date_from}_${date_to}.tsv"
 
   if [ ! -f "$filename" ]
   then
     printf "${C_GREEN}Saving to ${filename}${C_NONE}\n"
+
+    # Do export
     ha-history-export \
       --time-from "$date_from" \
       --time-to "$date_to" \
       "$entity_id" > "$filename"
+
+    # Output line count for debugging
+    wc -l "$filename"
   else
     printf "${C_RED}Already exists: ${filename}\n"
   fi
