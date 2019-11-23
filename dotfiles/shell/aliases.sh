@@ -26,10 +26,6 @@ alias i3-layout-default="i3-msg layout default"
 alias i3-layout-stacking="i3-msg layout stacking"
 alias i3-layout-tabbed="i3-msg layout tabbed"
 
-alias s="screen"
-alias sls="screen -ls"
-alias ss="screen -S"
-
 alias bm="voile"
 alias bmadd="voile add -cae"
 
