@@ -12,10 +12,6 @@ df_link \
   "$HOME/.config/base16-shell"
 
 df_link \
-  "$DOTFILES/dotfiles/browsh" \
-  "$HOME/.config/browsh"
-
-df_link \
   "$DOTFILES/dotfiles/compton.conf" \
   "$HOME/.config/compton.conf"
 
