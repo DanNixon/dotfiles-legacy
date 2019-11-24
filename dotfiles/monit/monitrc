@@ -1,9 +1,0 @@
-set daemon 30
-
-set log syslog
-
-set eventqueue
-  basedir /var/monit
-  slots 1000
-
-include /etc/monit.d/

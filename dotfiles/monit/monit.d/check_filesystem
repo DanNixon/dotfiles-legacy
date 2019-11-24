@@ -1,5 +1,0 @@
-check filesystem rootfs with path /
-  if space usage > 60% then alert
-
-check program smart_sda with path "/usr/sbin/smartctl -a /dev/sda"
-  if status != 0 then alert

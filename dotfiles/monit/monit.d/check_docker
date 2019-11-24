@@ -1,2 +1,0 @@
-check process docker with pidfile /var/run/docker.pid
-  mode passive
