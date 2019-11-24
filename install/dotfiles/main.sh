@@ -64,10 +64,6 @@ df_link \
   "$HOME/.gitignore"
 
 df_link \
-  "$DOTFILES/dotfiles/screenrc" \
-  "$HOME/.screenrc"
-
-df_link \
   "$DOTFILES/dotfiles/tmux.conf" \
   "$HOME/.tmux.conf"
 
