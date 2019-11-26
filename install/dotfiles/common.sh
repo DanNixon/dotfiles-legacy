@@ -124,3 +124,13 @@ function df_update_patch {
     rm "$patch_filename"
   fi
 }
+
+function df_add_secrets {
+  filename="$1"
+
+  # Find everything that matches "<< pass something >>" and replace it with the value of something from pass
+  for password in $(perl -ne 'while(/<< pass ([\w\/]+) >>/g){print "$1\n";}' "$filename" | sort --unique); do
+    echo $password
+    perl -pe "s{<< pass $password >>}{$(pass "$password")}" -i $filename
+  done
+}

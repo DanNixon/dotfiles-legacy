@@ -57,6 +57,9 @@ df_copy \
   "$DOTFILES/dotfiles/dot_config/shell_common/environment.sh" \
   "$HOME/.config/shell_common/environment.sh"
 
+df_add_secrets \
+  "$HOME/.config/shell_common/environment.sh"
+
 df_copy \
   "$DOTFILES/dotfiles/home/vim" \
   "$HOME/.vim"

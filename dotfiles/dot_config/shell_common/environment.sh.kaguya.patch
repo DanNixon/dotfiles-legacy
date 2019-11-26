@@ -1,0 +1,6 @@
+11a12,16
+> 
+> export PATH="$HOME/.local/bin/:/home/dan/go/bin/:$PATH"
+> 
+> export HA_HISTORY_EXPORT_URL="<< pass ShellSecrets/HA_HISTORY_EXPORT_URL >>"
+> export HA_HISTORY_EXPORT_TOKEN="<< pass ShellSecrets/HA_HISTORY_EXPORT_TOKEN >>"
