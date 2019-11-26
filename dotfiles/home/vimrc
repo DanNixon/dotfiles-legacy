@@ -88,7 +88,7 @@ set title
 let g:airline_powerline_fonts = 1
 
 set laststatus=2
-set timeoutlen=250
+set timeoutlen=500
 
 " Set tab width to 2 spaces
 set tabstop=2
