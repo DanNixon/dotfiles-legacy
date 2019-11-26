@@ -1,7 +1,7 @@
 #!/bin/bash
 
-HERE="$( cd "$(dirname "$0")" ; pwd -P )"
-. "$HERE/conf.sh"
+here="$( cd "$(dirname "$0")" ; pwd -P )"
+. "$here/common.sh"
 
 df_link \
   "$DOTFILES/dotfiles/polybar" \
