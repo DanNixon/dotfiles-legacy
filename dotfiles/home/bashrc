@@ -4,11 +4,18 @@ case $- in
       *) return;;
 esac
 
+# Base16 shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 # Shared config
-source "$HOME/dotfiles/dotfiles/shell/base16.sh"
-source "$HOME/dotfiles/dotfiles/shell/aliases.sh"
-source "$HOME/dotfiles/dotfiles/shell/environment.sh"
-source "$HOME/dotfiles/dotfiles/shell/local_customizations.sh"
+source "$HOME/.config/shell_common/aliases.sh"
+source "$HOME/.config/shell_common/environment.sh"
+
+# File colors
+[ -f $HOME/.ls_colors.sh ] && source $HOME/.ls_colors.sh
 
 # Fzf
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash

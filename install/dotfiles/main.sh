@@ -3,73 +3,81 @@
 here="$( cd "$(dirname "$0")" ; pwd -P )"
 . "$here/common.sh"
 
-operation="df_$1"
+patch_operation="df_$1"
 
-"$operation"\
+"$patch_operation"\
   "$DOTFILES/dotfiles/dot_config/alacritty/alacritty.yml" \
   "$HOME/.config/alacritty/alacritty.yml"
 
-df_link \
+df_copy \
   "$DOTFILES/third_party/base16-shell" \
   "$HOME/.config/base16-shell"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/compton.conf" \
   "$HOME/.config/compton.conf"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/dunst/dunstrc" \
   "$HOME/.config/dunst/dunstrc"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/nvim/init.vim" \
   "$HOME/.config/nvim/init.vim"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/mpd/mpd.conf" \
   "$HOME/.config/mpd/mpd.conf"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/mpv/config" \
   "$HOME/.config/mpv/config"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/mpv/input.conf" \
   "$HOME/.config/mpv/input.conf"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/ncmpcpp/bindings" \
   "$HOME/.config/ncmpcpp/bindings"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/ncmpcpp/config" \
   "$HOME/.config/ncmpcpp/config"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/dot_config/rofi/config" \
   "$HOME/.config/rofi/config"
 
-df_link \
+"$patch_operation" \
+  "$DOTFILES/dotfiles/dot_config/shell_common/aliases.sh" \
+  "$HOME/.config/shell_common/aliases.sh"
+
+"$patch_operation" \
+  "$DOTFILES/dotfiles/dot_config/shell_common/environment.sh" \
+  "$HOME/.config/shell_common/environment.sh"
+
+df_copy \
   "$DOTFILES/dotfiles/home/vim" \
   "$HOME/.vim"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/vimrc" \
   "$HOME/.vimrc"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/gdbinit" \
   "$HOME/.gdbinit"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/gitconfig" \
   "$HOME/.gitconfig"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/gitignore" \
   "$HOME/.gitignore"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/tmux.conf" \
   "$HOME/.tmux.conf"
 
@@ -77,23 +85,23 @@ df_link \
   '/dev/null' \
   "$HOME/.bash_history"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/bashrc" \
   "$HOME/.bashrc"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/gnupg/dirmngr.conf" \
   "$HOME/.gnupg/dirmngr.conf"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/gnupg/gpg.conf" \
   "$HOME/.gnupg/gpg.conf"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/gnupg/gpg-agent.conf" \
   "$HOME/.gnupg/gpg-agent.conf"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/todo/config" \
   "$HOME/.todo/config"
 
@@ -101,18 +109,18 @@ df_link \
   "$DOTFILES/dotfiles/home/slic3r/" \
   "$HOME/.Slic3r"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/xprofile" \
   "$HOME/.profile"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/xprofile" \
   "$HOME/.xsessionrc"
 
-"$operation" \
+"$patch_operation" \
   "$DOTFILES/dotfiles/home/zshrc" \
   "$HOME/.zshrc"
 
 set +x
 
-dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > ~/.ls_colors.sh
+dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > "$HOME/.ls_colors.sh"

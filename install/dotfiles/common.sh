@@ -29,35 +29,43 @@ function df_link {
 
   df_ensure_parent_dir_exists "$dest"
 
-  printf "${C_CYAN}${dest}${C_NONE} : "
-
   # Check if the destination is already a symlink
   if [ -L "$dest" ]; then
     # Check if it points to the correct place
     if [[ "$dest" -ef "$src" ]]; then
-      printf "${C_GREEN}✓${C_NONE}\n"
+      printf "${C_GREEN}Link ${dest} => ${src}${C_NONE}\n"
       return 0
     else
-      printf "${C_YELLOW}Incorrect link${C_NONE}\n"
+      printf "{C_CYAN}${dest}${C_NONE} : ${C_YELLOW}Incorrect link${C_NONE}\n"
       return 1
     fi
   fi
 
   # Check if the destination is an existing file
   if [ -f "$dest" ]; then
-    printf "${C_RED}Existing file${C_NONE}\n"
+    printf "{C_CYAN}${dest}${C_NONE} : ${C_RED}Existing file${C_NONE}\n"
     return 2
   fi
 
   # Check if the destimation is an existing directory
   if [ -d "$dest" ]; then
-    printf "${C_RED}Existing directory${C_NONE}\n"
+    printf "{C_CYAN}${dest}${C_NONE} : ${C_RED}Existing directory${C_NONE}\n"
     return 2
   fi
 
   # Link did not exist, should be OK to create it now
   printf "${C_GREEN}Link ${dest} => ${src}${C_NONE}\n"
   ln -s "$src" "$dest"
+}
+
+function df_copy {
+  src="$1"
+  dest="$2"
+
+  df_ensure_parent_dir_exists "$dest"
+
+  printf "${C_GREEN}Copy ${src} => ${dest}${C_NONE}\n"
+  cp -r "$src" "$dest"
 }
 
 function df_patch_and_copy {
@@ -75,16 +83,19 @@ function df_patch_and_copy {
   # Search for candidate patch files
   patch_filename=$(df_get_patch_filename "$src")
   if [ -f "$patch_filename" ]; then
-    # Copy source file and apply patch
+    # Copy source file
     patched=$(mktemp)
     cp "$src" "$patched"
-    printf "${C_YELLOW}Patching copy of ${src} with ${patch_filename} as ${patched}${C_NONE}\n"
+
+    # Apply patch
+    printf "${C_YELLOW}Patching copy of ${src} with ${patch_filename}${C_NONE}\n"
     patch "$patched" "$patch_filename"
 
+    # Move patched file to destination
     printf "${C_GREEN}Move ${patched} => ${dest}${C_NONE}\n"
     mv "$patched" "$dest"
   else
-    # If no patch then just copy the original file
+    # If no patch then just copy the original file to destination
     printf "${C_GREEN}Copy ${src} => ${dest}${C_NONE}\n"
     cp "$src" "$dest"
   fi
