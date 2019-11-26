@@ -1,1 +1,0 @@
-polybar.modules_right: vpn syncthing wireless-network cpu_temp memory load battery backlight volume datetime
