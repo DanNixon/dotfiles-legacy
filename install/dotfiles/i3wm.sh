@@ -4,7 +4,7 @@ here="$( cd "$(dirname "$0")" ; pwd -P )"
 . "$here/common.sh"
 
 df_link \
-  "$DOTFILES/dotfiles/polybar" \
+  "$DOTFILES/dotfiles/dot_config/polybar" \
   "$HOME/.config/polybar"
 
 set -x
