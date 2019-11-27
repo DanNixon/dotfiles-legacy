@@ -26,7 +26,7 @@ function df_print_good {
   printf "${C_GREEN}-OK-${C_NONE}: ${msg}\n"
 }
 
-DOTFILES="$( cd "$(dirname "$0")/../.." ; pwd -P )"
+DOTFILES="$( cd "$(dirname "$0")/.." ; pwd -P )"
 df_print_info "Dotfiles directory is \"$DOTFILES\""
 
 function df_ensure_parent_dir_exists {
@@ -41,6 +41,10 @@ function df_get_patch_filename {
   base_file="$1"
   patch_target=${PATCH_TARGET:-$(hostname)}
   echo "$base_file.$patch_target.patch"
+}
+
+function df_noop {
+  df_print_info "No Op"
 }
 
 function df_link {
@@ -88,7 +92,7 @@ function df_copy {
   cp -r "$src" "$dest"
 }
 
-function df_patch_and_copy {
+function df_copy_patched {
   src="$1"
   dest="$2"
 
@@ -153,4 +157,24 @@ function df_add_secrets {
     df_print_info "Inject secret ${password}"
     perl -pe "s{<< pass $password >>}{$(pass "$password")}" -i $filename
   done
+}
+
+function df_target {
+  operation="$1"
+  user_action="$2"
+
+  if [[ "$user_action" == "install" ]]; then
+    echo "df_$operation"
+  elif [[ "$user_action" == "update" ]] && [[ "$operation" == "copy_patched" ]]; then
+    echo "df_update_patch"
+  else
+    echo "df_noop"
+  fi
+}
+
+function df_exit_if_not_install {
+  user_action="$1"
+  if [[ "$user_action" != "install" ]]; then
+    exit 0
+  fi
 }
