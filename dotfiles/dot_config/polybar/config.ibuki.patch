@@ -1,0 +1,8 @@
+13c13
+< bottom = false
+---
+> bottom = true
+29c29
+< modules-right = syncthing wireless-network cpu_temp memory load battery backlight volume
+---
+> modules-right = syncthing memory load volume

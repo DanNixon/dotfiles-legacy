@@ -74,7 +74,7 @@ function df_patch_and_copy {
 
   # Check destination either does not exist, or exists and is a regular file, not a symlink
   if [ -e "$dest" -a ! -f "$dest" -o -h "$dest" ]; then
-    printf "${C_RED}Destination file must not exists or be a regular file${C_NONE}\n"
+    printf "${C_RED}Destination file must not exists or be a regular file: ${dest}${C_NONE}\n"
     return 1
   fi
 

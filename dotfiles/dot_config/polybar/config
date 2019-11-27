@@ -122,7 +122,7 @@ exec = cat /proc/loadavg | awk '{print $1" "$2" "$3}'
 
 [module/wired-network]
 type = internal/network
-interface = ${network.wired-interface}
+interface = eno1
 
 format-connected = <label-connected>
 label-connected = 
@@ -133,7 +133,7 @@ label-disconnected-foreground = ${colours.foreground-bad}
 
 [module/wireless-network]
 type = internal/network
-interface = ${network.wireless-interface}
+interface = wlan1
 
 format-connected = <label-connected>
 label-connected = 直 %essid%
