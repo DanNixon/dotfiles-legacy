@@ -7,7 +7,7 @@ from datetime import datetime
 import click
 import requests
 from aiohttp import ClientSession
-from pytile import Client
+from pytile.client import Client
 from pytile.errors import TileError
 
 
@@ -77,7 +77,7 @@ def pretty_print_tiles(tiles):
     Outputs the list of Tiles in a user friendly manner.
     """
     for tile in tiles:
-        state = tile["tileState"]
+        state = tile["last_tile_state"]
         state_timestamp = datetime.fromtimestamp(float(state["timestamp"]) / 1000)
 
         click.echo(tile["name"])
