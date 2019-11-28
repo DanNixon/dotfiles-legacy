@@ -53,5 +53,6 @@ alias b="upower -i $(upower -e | grep 'BAT')"
 alias fif="grep -rnw . -e"
 alias ytdl="youtube-dl"
 alias netstat-list-listening-ports="netstat --tcp --udp --listening --numeric --program"
+alias tile-locate="pass Internet/Tile/Password | xargs tile-locate --password"
 
 alias today="date '+%Y-%m-%d'"

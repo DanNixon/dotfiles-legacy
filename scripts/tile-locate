@@ -103,4 +103,4 @@ def main(username, password, output_json, show_all):
 
 
 if __name__ == "__main__":
-    main()
+    main(auto_envvar_prefix="TILE")
