@@ -155,7 +155,7 @@ function df_add_secrets {
   # Find everything that matches "<< pass something >>" and replace it with the value of something from pass
   for password in $(perl -ne 'while(/<< pass ([\w\/]+) >>/g){print "$1\n";}' "$filename" | sort --unique); do
     df_print_info "Inject secret ${password}"
-    perl -pe "s{<< pass $password >>}{$(pass "$password")}" -i $filename
+    pw="$(pass "$password")" perl -pe 's{<< pass '"$password"' >>}{$ENV{pw}}' -i $filename
   done
 }
 
