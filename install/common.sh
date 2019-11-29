@@ -1,29 +1,23 @@
 #!/bin/bash
 
-C_NONE='\033[0m'
-
 function df_print_info {
   msg="$1"
-  C_CYAN='\033[0;36m'
-  printf "${C_CYAN}INFO${C_NONE}: ${msg}\n"
+  printf '\033[0;36mINFO\033[0m: %s\n' "${msg}"
 }
 
 function df_print_bad {
   msg="$1"
-  C_RED='\033[0;31m'
-  printf "${C_RED}FAIL${C_NONE}: ${msg}\n"
+  printf '\033[0;31mFAIL\033[0m: %s\n' "${msg}"
 }
 
 function df_print_warn {
   msg="$1"
-  C_YELLOW='\033[0;33m'
-  printf "${C_YELLOW}WARN${C_NONE}: ${msg}\n"
+  printf '\033[0;33mWARN\033[0m: %s\n' "${msg}"
 }
 
 function df_print_good {
   msg="$1"
-  C_GREEN='\033[0;32m'
-  printf "${C_GREEN}-OK-${C_NONE}: ${msg}\n"
+  printf '\033[0;32m-OK-\033[0m: %s\n' "${msg}"
 }
 
 DOTFILES="$( cd "$(dirname "$0")/.." ; pwd -P )"
@@ -155,7 +149,7 @@ function df_add_secrets {
   # Find everything that matches "<< pass something >>" and replace it with the value of something from pass
   for password in $(perl -ne 'while(/<< pass ([\w\/]+) >>/g){print "$1\n";}' "$filename" | sort --unique); do
     df_print_info "Inject secret ${password}"
-    pw="$(pass "$password")" perl -pe 's{<< pass '"$password"' >>}{$ENV{pw}}' -i $filename
+    pw="$(pass "$password")" perl -pe 's{<< pass '"$password"' >>}{$ENV{pw}}' -i "$filename"
   done
 }
 
