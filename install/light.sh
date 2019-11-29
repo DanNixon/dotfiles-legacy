@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -x
+set -ex
 
 ARCHIVE='light-1.2.tar.gz'
 
