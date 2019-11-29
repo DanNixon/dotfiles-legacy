@@ -139,13 +139,17 @@ function df_update_patch {
   fi
 }
 
-function df_query_password {
-  # Check if pass is installed
-  if $(command -v pass >/dev/null 2>&1); then
-    # Grab the password from pass
+function df_secrets_available {
+  # Checks if password-store (pass) is available
+  command -v pass >/dev/null 2>&1
+}
+
+function df_get_secret {
+  if $(df_secrets_available); then
+    # Grab the secret from pass
     pass "$1"
   else
-    # Just return an empty string if pass is unavailable
+    # Just return an empty string if secrets are unavailable
     echo
   fi
 }
@@ -153,10 +157,15 @@ function df_query_password {
 function df_add_secrets {
   filename="$1"
 
+  # Warn if we cannot inject secrets
+  if ! $(df_secrets_available); then
+    df_print_warn "Secrets are not available"
+  fi
+
   # Find everything that matches "<< pass something >>" and replace it with the value of something from pass
   for password in $(perl -ne 'while(/<< pass ([\w\/]+) >>/g){print "$1\n";}' "$filename" | sort --unique); do
     df_print_info "Inject secret ${password}"
-    pw="$(df_query_password "$password")" perl -pe 's{<< pass '"$password"' >>}{$ENV{pw}}' -i "$filename"
+    pw="$(df_get_secret "$password")" perl -pe 's{<< pass '"$password"' >>}{$ENV{pw}}' -i "$filename"
   done
 }
 
