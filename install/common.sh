@@ -1,23 +1,19 @@
 #!/bin/bash
 
 function df_print_info {
-  msg="$1"
-  printf '\033[0;36mINFO\033[0m: %s\n' "${msg}"
+  printf '\033[0;36mINFO\033[0m: %s\n' "$1"
 }
 
 function df_print_bad {
-  msg="$1"
-  printf '\033[0;31mFAIL\033[0m: %s\n' "${msg}"
+  printf '\033[0;31mFAIL\033[0m: %s\n' "$1"
 }
 
 function df_print_warn {
-  msg="$1"
-  printf '\033[0;33mWARN\033[0m: %s\n' "${msg}"
+  printf '\033[0;33mWARN\033[0m: %s\n' "$1"
 }
 
 function df_print_good {
-  msg="$1"
-  printf '\033[0;32m-OK-\033[0m: %s\n' "${msg}"
+  printf '\033[0;32m-OK-\033[0m: %s\n' "$1"
 }
 
 DOTFILES="$( cd "$(dirname "$0")/.." ; pwd -P )"
@@ -143,13 +139,24 @@ function df_update_patch {
   fi
 }
 
+function df_query_password {
+  # Check if pass is installed
+  if $(command -v pass >/dev/null 2>&1); then
+    # Grab the password from pass
+    pass "$1"
+  else
+    # Just return an empty string if pass is unavailable
+    echo
+  fi
+}
+
 function df_add_secrets {
   filename="$1"
 
   # Find everything that matches "<< pass something >>" and replace it with the value of something from pass
   for password in $(perl -ne 'while(/<< pass ([\w\/]+) >>/g){print "$1\n";}' "$filename" | sort --unique); do
     df_print_info "Inject secret ${password}"
-    pw="$(pass "$password")" perl -pe 's{<< pass '"$password"' >>}{$ENV{pw}}' -i "$filename"
+    pw="$(df_query_password "$password")" perl -pe 's{<< pass '"$password"' >>}{$ENV{pw}}' -i "$filename"
   done
 }
 
@@ -158,17 +165,21 @@ function df_target {
   user_action="$2"
 
   if [[ "$user_action" == "install" ]]; then
+    # If we are installing then just do the thing
     echo "df_$operation"
   elif [[ "$user_action" == "update" ]] && [[ "$operation" == "copy_patched" ]]; then
+    # If we are updating the repo, do nothing unless it was a patch target, in which case update it
     echo "df_update_patch"
   else
+    # Do nothing if the arguments are not sensible
     echo "df_noop"
   fi
 }
 
 function df_exit_if_not_install {
-  user_action="$1"
-  if [[ "$user_action" != "install" ]]; then
+  # Exit if the user did not specify "install"
+  # Useful for extra actons that do not use a df_ target
+  if [[ "$1" != "install" ]]; then
     exit 0
   fi
 }
