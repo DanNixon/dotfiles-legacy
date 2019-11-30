@@ -2,3 +2,7 @@
 < modules-right = syncthing wireless-network cpu_temp memory load battery backlight volume
 ---
 > modules-right = wireless-network memory load battery backlight volume
+136c136
+< interface = wlan1
+---
+> interface = wlp8s0
