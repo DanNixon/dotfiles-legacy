@@ -70,7 +70,7 @@ font:
 visual_bell:
   duration: 0
 
-background_opacity: 0.95
+background_opacity: 0.92
 
 mouse:
   # Click settings
