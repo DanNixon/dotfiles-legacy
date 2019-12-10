@@ -1,0 +1,4 @@
+6c6
+< export TODO_DIR="$HOME/docs/markor"
+---
+> export TODO_DIR="$HOME/syncthing/docs/markor"
