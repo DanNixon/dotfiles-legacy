@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo -n "$1 (y/N)? "
+read answer
+
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+  echo 'y'
+else
+  exit 1
+fi
