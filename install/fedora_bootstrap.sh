@@ -42,7 +42,8 @@ sudo dnf install \
   lzop \
   mbuffer \
   mhash \
-  pv
+  pv \
+  perl-Image-ExifTool
 
 # Install some more things
 ./dotfiles/install/neovim.sh
