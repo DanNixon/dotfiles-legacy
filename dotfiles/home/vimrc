@@ -142,16 +142,12 @@ let g:gitgutter_signs = 0
 " MISC COMMANDS AND FUNCTIONS "
 """""""""""""""""""""""""""""""
 
-" Remove trailing whitespace
-command! RemTrailWhilespace :%s/\s\+$//
-
 " Enable or disable text wrapping
 command! NoTextWrap :set formatoptions-=t
 command! TextWrap :set formatoptions+=t
 
 " Copy filename and line number
 command! CopyPlace :let @+ = expand("%") . ":" . line(".")
-
 
 """"""""""""""""
 " KEY MAPPINGS "
@@ -180,7 +176,7 @@ map <Leader>b :CtrlPBuffer<CR>
 map <Leader>l :CtrlPLine<CR>
 
 " easymotion word jumping
-map  <Leader>j <Plug>(easymotion-bd-w)
+map <Leader>j <Plug>(easymotion-bd-w)
 nmap <Leader>j <Plug>(easymotion-overwin-w)
 
 " Code format shortcut
@@ -202,8 +198,6 @@ nmap <Leader>t<Right> :tabn<CR>
 nmap <Leader>tt :tab new<CR>
 
 " Easy indent/unindent
-map <Leader>, <<
-map <Leader>. >>
 vmap < <gv
 vmap > >gv
 
