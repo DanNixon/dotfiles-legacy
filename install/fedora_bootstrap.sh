@@ -43,16 +43,17 @@ sudo dnf install \
   mbuffer \
   mhash \
   pv \
-  perl-Image-ExifTool
+  perl-Image-ExifTool \
+  hddtemp
 
 # Install some more things
 ./dotfiles/install/neovim.sh
 ./dotfiles/install/nerdfont_dejavusansmono.sh
 
 # Install configs
-./dotfiles/install/dotfiles/main.sh
-./dotfiles/install/dotfiles/su.sh
-./dotfiles/install/dotfiles/i3wm.sh
+./dotfiles/install/main_configs.sh install
+./dotfiles/install/su.sh install
+./dotfiles/install/desktop_environment_config.sh install
 
 # Set shell
 sudo usermod --shell /bin/zsh dan
