@@ -8,7 +8,7 @@ export TODOTXT_DEFAULT_ACTION='ls'
 
 export VOILE_BOOKMARK_FILE="/media/personal/bookmarks/bookmarks.json"
 
-export TILE_USERNAME="<< pass Internet/Tile/Email >>"
+export TILE_USERNAME="<< pass Passwords/Internet/Tile/Email >>"
 
 export DARKSKY_API_KEY="<< pass ShellSecrets/DARKSKY_API_KEY >>"
 
