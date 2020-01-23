@@ -182,10 +182,6 @@ nmap <Leader>j <Plug>(easymotion-overwin-w)
 " Code format shortcut
 map <Leader>F :Autoformat<CR>
 
-" Commenting
-map <C-X> gcc
-vmap <C-X> gc
-
 " Toggle NERDTree
 map <Leader>n :NERDTreeToggle<CR>
 
