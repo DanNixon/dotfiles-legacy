@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z ${NOTE_DIR+x} ]; then
+  echo "aaa"
+  exit 1
+fi
+
+cd "$NOTE_DIR" && timestamped-writing $@
