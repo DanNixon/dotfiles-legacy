@@ -3,4 +3,4 @@
 < modules-right = syncthing wireless-network cpu_temp memory load battery backlight volume
 ---
 > modules-center =
-> modules-right = syncthing wireless-network memory load battery backlight volume datetime
+> modules-right = syncthing wireless-network load battery backlight volume datetime
