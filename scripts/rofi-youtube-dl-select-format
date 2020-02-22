@@ -27,7 +27,7 @@ else
   if [ "$status" -eq 0 ]; then
     # Ask which format is desired, still present the common formats at the end of
     # the list if none of the queried formats are acceptable
-    printf "$formats\n$preset_formats\n" | rofi -dmenu -i -p 'format' | awk '{print $1}'
+    printf "$formats\n$preset_formats\n" | rofi -dmenu -i -p 'format' | awk '{print $1"+bestaudio"}'
   else
     notify-send --urgency=critical 'youtube-dl' 'Failed to get formats!'
     exit "$status"
