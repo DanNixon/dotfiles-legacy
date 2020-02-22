@@ -13,6 +13,7 @@
   - [Compton](https://github.com/chjj/compton)
 - Web browser
   - [Firefox](https://www.mozilla.org/firefox)
+    - [ClearURLs](https://gitlab.com/KevinRoebert/ClearUrls)
     - [Dark Reader](https://github.com/darkreader/darkreader)
     - [Decentraleyes](https://decentraleyes.org)
     - [HTTPS Everywhere](https://github.com/EFForg/https-everywhere)
