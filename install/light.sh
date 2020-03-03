@@ -4,7 +4,8 @@ set -ex
 
 ARCHIVE='light-1.2.tar.gz'
 
-cd '/tmp' || exit
+TEMP_DIR=$(mktemp -d)
+cd "$TEMP_DIR"
 
 curl \
   --location \
@@ -16,9 +17,11 @@ tar \
   --gzip \
   --file $ARCHIVE
 
-cd 'light-1.2' || exit
+cd 'light-1.2'
 
 ./configure --with-udev='/etc/udev/rules.d/'
 make -j "$(nproc)"
 
 sudo make install
+
+rm -rf "$TEMP_DIR"
