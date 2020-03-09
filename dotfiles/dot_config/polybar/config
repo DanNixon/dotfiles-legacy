@@ -143,23 +143,9 @@ format-disconnected = <label-disconnected>
 label-disconnected = 睊
 label-disconnected-foreground = ${colours.foreground-bad}
 
-[module/mpd]
-type = internal/mpd
-
-icon-play = 
-icon-pause = 
-
-label-song = ﴁ %artist% ﱘ %title%
-format-online = <toggle> <label-song>
-
 [module/syncthing]
 type = custom/script
 exec = ~/.config/polybar/syncthing_status.sh
-interval = 10
-
-[module/vpn]
-type = custom/script
-exec = ~/.config/polybar/vpn_status.sh
 interval = 10
 
 [module/backlight]
