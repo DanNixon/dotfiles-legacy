@@ -44,7 +44,9 @@ sudo dnf install \
   mhash \
   pv \
   perl-Image-ExifTool \
-  hddtemp
+  hddtemp \
+  libtool \
+  ncurses-devl
 
 # Install some more things
 ./dotfiles/install/neovim.sh

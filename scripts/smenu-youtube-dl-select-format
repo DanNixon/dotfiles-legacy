@@ -7,7 +7,7 @@ preset_formats='bestvideo+bestaudio\nbestvideo[height<=1080]+bestaudio\nbestvide
 
 # Ask if a common format is good enough (best to ask this first as it covers
 # 90% of my use cases and requires no bandwidth)
-format=$(printf "$preset_formats\nquery...\n" | rofi -dmenu -i -p 'format')
+format=$(printf "$preset_formats\nquery...\n" | smenu -c -d -m 'Select format')
 status="$?"
 if [ "$status" -ne 0 ]; then
   exit "$status"
@@ -18,8 +18,6 @@ if [ "$format" != 'query...' ]; then
   echo "$format"
   exit
 else
-  notify-send --urgency=low 'youtube-dl' 'Getting formats...'
-
   # If query was selected then see what formats the remote resource has
   formats=$(youtube-dl -F "$1" | sed -n '6,50p')
   status="$?"
@@ -27,9 +25,8 @@ else
   if [ "$status" -eq 0 ]; then
     # Ask which format is desired, still present the common formats at the end of
     # the list if none of the queried formats are acceptable
-    printf "$formats\n$preset_formats\n" | rofi -dmenu -i -p 'format' | awk '{print $1"+bestaudio"}'
+    printf "$formats\n$preset_formats\n" | smenu -W $':\t\n' -c -n 10 -d -m 'Select format' | awk '{print $1"+bestaudio"}'
   else
-    notify-send --urgency=critical 'youtube-dl' 'Failed to get formats!'
     exit "$status"
   fi
 fi
