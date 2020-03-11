@@ -4,7 +4,6 @@ export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 export TODO_DIR="$HOME/docs/markor"
-export TODOTXT_DEFAULT_ACTION='ls'
 
 export NOTE_DIR="$HOME/docs/markor"
 

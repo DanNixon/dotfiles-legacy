@@ -4,6 +4,10 @@ export REPORT_FILE="$TODO_DIR/report.txt"
 
 export TODO_ACTIONS_DIR="$HOME/dotfiles/dotfiles/todo_actions/"
 
+export TODOTXT_DATE_ON_ADD=1
+export TODOTXT_DEFAULT_ACTION='ls'
+export TODOTXT_PRESERVE_LINE_NUMBERS=0
+
 export RED='\\033[0;31m'
 export GREEN='\\033[0;32m'
 export BLUE='\\033[0;34m'
