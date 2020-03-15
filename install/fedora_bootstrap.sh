@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Last tested with Fedora 30.
+# Last tested with Fedora 31.
 
 set -ex
 
@@ -11,7 +11,7 @@ sudo dnf install \
 
 # Add COPRs
 sudo dnf copr enable gregw/i3desktop
-sudo dnf copr enable mhartgring/polybar
+sudo dnf copr enable audron/polybar
 sudo dnf copr enable pschyska/alacritty
 
 # Update and install packages (trim this list down if need be)
@@ -46,7 +46,8 @@ sudo dnf install \
   perl-Image-ExifTool \
   hddtemp \
   libtool \
-  ncurses-devl
+  ncurses-devel \
+  nnn
 
 # Install some more things
 ./dotfiles/install/neovim.sh
@@ -55,7 +56,7 @@ sudo dnf install \
 # Install configs
 ./dotfiles/install/main_configs.sh install
 ./dotfiles/install/su.sh install
-./dotfiles/install/desktop_environment_config.sh install
+./dotfiles/install/desktop_environment_config.sh install || true
 
 # Set shell
 sudo usermod --shell /bin/zsh dan
