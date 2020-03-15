@@ -47,7 +47,9 @@ sudo dnf install \
   hddtemp \
   libtool \
   ncurses-devel \
-  nnn
+  nnn \
+  light \
+  network-manager-applet
 
 # Install some more things
 ./dotfiles/install/neovim.sh
