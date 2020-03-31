@@ -26,7 +26,7 @@ module-margin-right = 2
 
 modules-left = i3
 modules-center = datetime
-modules-right = syncthing wireless-network battery backlight volume
+modules-right = syncthing battery backlight volume
 
 tray-position = right
 tray-background = ${colours.background}
@@ -121,28 +121,6 @@ interval = 5
 format-prefix = " "
 exec = cat /proc/loadavg | awk '{print $1" "$2" "$3}'
 
-[module/wired-network]
-type = internal/network
-interface = eno1
-
-format-connected = <label-connected>
-label-connected = 
-
-format-disconnected = <label-disconnected>
-label-disconnected = 
-label-disconnected-foreground = ${colours.foreground-bad}
-
-[module/wireless-network]
-type = internal/network
-interface = wlan1
-
-format-connected = <label-connected>
-label-connected = 直 %essid%
-
-format-disconnected = <label-disconnected>
-label-disconnected = 睊
-label-disconnected-foreground = ${colours.foreground-bad}
-
 [module/syncthing]
 type = custom/script
 exec = ~/.config/polybar/syncthing_status.sh
@@ -154,7 +132,3 @@ format =  <label>%
 exec = light | cut --delimiter="." --fields="1"
 scroll-up = light -A 5
 scroll-down = light -U 5
-
-[module/cpu_temp]
-type = custom/script
-exec = ~/.config/polybar/sensor.sh coretemp-isa-0000 temp 1

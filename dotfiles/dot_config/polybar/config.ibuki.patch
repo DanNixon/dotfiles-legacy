@@ -3,6 +3,6 @@
 ---
 > bottom = true
 29c29
-< modules-right = syncthing wireless-network battery backlight volume
+< modules-right = syncthing battery backlight volume
 ---
 > modules-right = syncthing memory load volume

@@ -37,8 +37,12 @@ exec --no-startup-id compton
 # Start Polybar
 exec_always --no-startup-id polybar-launch
 
+# Start NetworkManager and Bluetooth tray applets
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
+
 # Set background image
-exec --no-startup-id $HOME/.fehbg
+exec_always --no-startup-id "$HOME/.fehbg"
 
 # Use Super_L as mod key
 set $mod Mod4

@@ -5,4 +5,3 @@ xrandr \
   --output HDMI-1 --off
 
 $HOME/dotfiles/install/desktop_environment_config.sh install
-$HOME/.fehbg
