@@ -1,13 +1,22 @@
 #!/bin/bash
 
+set -ex
+
 # Terminate already running bar instances
 killall -q polybar
 
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
+primary_monitor="$(polybar --list-monitors | grep 'primary' | cut -d':' -f1)"
+
 # Launch main bar on all connected monitors
-# See: https://github.com/polybar/polybar/issues/763#issuecomment-392960721
-for m in $(polybar --list-monitors | cut -d":" -f1); do
-  MONITOR=$m polybar main &
+for mon in $(polybar --list-monitors | cut -d':' -f1); do
+  if [ "$mon" == "$primary_monitor" ]; then
+    tray='right'
+  else
+    tray='none'
+  fi
+
+  MONITOR="$mon" TRAY_POSITION="$tray" polybar main &
 done

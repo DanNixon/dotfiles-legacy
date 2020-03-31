@@ -28,7 +28,7 @@ modules-left = i3
 modules-center = datetime
 modules-right = syncthing battery backlight volume
 
-tray-position = right
+tray-position = ${env:TRAY_POSITION:right}
 tray-background = ${colours.background}
 
 [module/i3]
