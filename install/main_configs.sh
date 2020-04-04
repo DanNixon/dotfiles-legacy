@@ -63,6 +63,10 @@ $(df_target "copy_patched" "$1") \
   "$HOME/.gitignore"
 
 $(df_target "copy_patched" "$1") \
+  "$DOTFILES/dotfiles/home/newsboat/config" \
+  "$HOME/.newsboat/config"
+
+$(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/tmux.conf" \
   "$HOME/.tmux.conf"
 
