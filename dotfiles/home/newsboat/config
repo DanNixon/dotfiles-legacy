@@ -13,7 +13,6 @@ bind-key j down
 bind-key k up
 bind-key l open
 
-auto-reload yes
 max-items 100
 
 bookmark-cmd          "voile add-newsboat --edit"
