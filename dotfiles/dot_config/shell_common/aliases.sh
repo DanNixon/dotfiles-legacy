@@ -47,5 +47,6 @@ alias ytdl="youtube-dl"
 alias netstat-list-listening-ports="netstat --tcp --udp --listening --numeric --program"
 alias tile-locate="pass Passwords/Internet/Tile/Password | xargs tile-locate --password"
 alias nb="newsboat"
+alias pb="podboat"
 
 alias today="date '+%Y-%m-%d'"
