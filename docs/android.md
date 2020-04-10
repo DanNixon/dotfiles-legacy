@@ -12,10 +12,9 @@ make life easier and work well for me.
 
 ## Media
 
-- [AntennaPod](https://antennapod.org/)
-  ([source](https://github.com/antennapod/AntennaPod))
-  ([F-Droid](https://f-droid.org/packages/de.danoeh.antennapod/))
-  ([Play](https://play.google.com/store/apps/details?id=de.danoeh.antennapod))
+- AudioAnchor
+  ([source](https://github.com/flackbash/AudioAnchor))
+  ([F-Droid](https://f-droid.org/packages/com.prangesoftwaresolutions.audioanchor/))
 - mpv
   ([source](https://github.com/mpv-android/mpv-android))
   ([Play](https://play.google.com/store/apps/details?id=is.xyz.mpv))
@@ -26,18 +25,14 @@ make life easier and work well for me.
   ([source](https://sourceforge.net/p/opencamera/code/ci/master/tree/))
   ([F-Droid](https://f-droid.org/en/packages/net.sourceforge.opencamera/))
   ([Play](https://play.google.com/store/apps/details?id=net.sourceforge.opencamera))
-- [Simple Gallery](https://simplemobiletools.github.io/)
-  ([source](https://github.com/SimpleMobileTools/Simple-Gallery))
-  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.gallery.pro/))
-  ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro))
 - [Vanilla Music](http://vanillamusic.io/)
   ([source](https://github.com/vanilla-music/vanilla))
   ([F-Droid](https://f-droid.org/app/ch.blinkenlights.android.vanilla/))
+- [VLC](https://www.videolan.org/vlc/download-android.html)
+  ([Play](https://play.google.com/store/apps/details?id=org.videolan.vlc))
 
 ## Information
 
-- [Arcus](http://arcusweather.com/)
-  ([Play](https://play.google.com/store/apps/details?id=com.arcusweather.darksky))
 - [Firefox Klar](https://www.mozilla.org/en-GB/firefox/mobile/)
   ([source](https://github.com/mozilla-mobile/focus-android))
   ([F-Droid](https://f-droid.org/en/packages/org.mozilla.klar/))
@@ -48,6 +43,10 @@ make life easier and work well for me.
   ([source](https://github.com/hidroh/materialistic))
   ([Play](https://play.google.com/store/apps/details?id=io.github.hidroh.materialistic))
   ([F-Droid](https://f-droid.org/en/packages/io.github.hidroh.materialistic/))
+- Forecastie
+  ([source](https://github.com/martykan/forecastie))
+  ([Play](https://play.google.com/store/apps/details?id=com.casticalabs.forecastie))
+  ([F-Droid](https://f-droid.org/packages/cz.martykan.forecastie/))
 - [OsmAnd](https://osmand.net/)
   ([source](https://github.com/osmandapp/Osmand))
   ([Play](https://play.google.com/store/apps/details?id=net.osmand))
@@ -62,10 +61,6 @@ make life easier and work well for me.
 
 ## Tools
 
-- [AnySoftKeyboard](https://anysoftkeyboard.github.io/)
-  ([source](https://github.com/AnySoftKeyboard/AnySoftKeyboard))
-  ([F-Droid](https://f-droid.org/packages/com.menny.android.anysoftkeyboard/))
-  ([Play](https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard))
 - Barcode Scanner
   ([source](https://github.com/zxing/zxing))
   ([Play](https://play.google.com/store/apps/details?id=com.google.zxing.client.android))
@@ -83,10 +78,6 @@ make life easier and work well for me.
 - [SatStat](https://mvglasow.github.io/satstat)
   ([source](https://github.com/mvglasow/satstat))
   ([F-Droid](https://f-droid.org/packages/com.vonglasow.michael.satstat/))
-- [Simple File Manager](https://simplemobiletools.github.io/)
-  ([source](https://github.com/SimpleMobileTools/Simple-File-Manager))
-  ([F-Droid](https://f-droid.org/packages/com.simplemobiletools.filemanager.pro/))
-  ([Play](https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager.pro))
 - [Syncthing](https://syncthing.net)
   ([source](https://github.com/syncthing/syncthing-android))
   ([F-Droid](https://f-droid.org/en/packages/com.nutomic.syncthingandroid/))
@@ -94,21 +85,10 @@ make life easier and work well for me.
 
 ## Security
 
-- [AdAway](https://adaway.org/)
-  ([source](https://github.com/AdAway/AdAway))
-  ([F-Droid](https://f-droid.org/packages/org.adaway/))
 - AndOTP
   ([source](https://github.com/andOTP/andOTP))
   ([F-Droid](https://f-droid.org/packages/org.shadowice.flocke.andotp/))
   ([Play](https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp))
-- [OpenKeychain](https://www.openkeychain.org/)
-  ([source](https://github.com/open-keychain/open-keychain))
-  ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.keychain/))
-  ([Play](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain))
-- [OpenVPN](https://ics-openvpn.blinkt.de/)
-  ([source](https://github.com/schwabe/ics-openvpn))
-  ([F-Droid](https://f-droid.org/packages/de.blinkt.openvpn/))
-  ([Play](https://play.google.com/store/apps/details?id=de.blinkt.openvpn))
 
 ## Device specific
 
