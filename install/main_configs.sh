@@ -94,10 +94,6 @@ $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/todo/config" \
   "$HOME/.todo/config"
 
-$(df_target "link" "$1") \
-  "$DOTFILES/dotfiles/home/slic3r/" \
-  "$HOME/.Slic3r"
-
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/zshrc" \
   "$HOME/.zshrc"
