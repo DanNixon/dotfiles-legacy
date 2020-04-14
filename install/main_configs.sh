@@ -42,6 +42,10 @@ $(df_target "copy_patched" "$1") \
 $(df_target "add_secrets" "$1") \
   "$HOME/.config/shell_common/environment.sh"
 
+$(df_target "copy_patched" "$1") \
+  "$DOTFILES/dotfiles/dot_config/shell_common/global_aliases.sh" \
+  "$HOME/.config/shell_common/global_aliases.sh"
+
 $(df_target "copy" "$1") \
   "$DOTFILES/dotfiles/home/vim" \
   "$HOME/.vim"
