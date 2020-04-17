@@ -1,5 +1,5 @@
 [colours]
-background = #a4000000
+background = #00000000
 foreground = #eeeeee
 
 foreground-good = #aaddaa
@@ -21,8 +21,10 @@ foreground = ${colours.foreground}
 padding-left = 0
 padding-right = 2
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 3
+
+line-size = 2
 
 modules-left = i3
 modules-center = datetime
@@ -47,10 +49,11 @@ label-mode-background = ${colours.background}
 label-focused = %icon% %index%
 label-focused-padding = 1
 label-focused-foreground = ${colours.foreground}
+label-focused-underline = #80d0d0
 
 label-unfocused = %icon% %index%
 label-unfocused-padding = 1
-label-unfocused-foreground = #808080
+label-unfocused-foreground = ${colours.foreground}
 
 label-visible = %icon% %index%
 label-visible-padding = 1
