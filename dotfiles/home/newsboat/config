@@ -20,7 +20,7 @@ bookmark-interactive  yes
 
 browser "firefox --private-window %u"
 
-macro m set browser "mpv %u"; open-in-browser ; set browser "firefox --private-window %u"
+macro p set browser "newsboat-mpv %u"; open-in-browser ; set browser "firefox --private-window %u"
 
 podlist-format            "%4i [%5p %%] %-20S %b"
 download-path             ~/.newsboat/podcasts
