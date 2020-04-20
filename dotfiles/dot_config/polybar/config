@@ -57,7 +57,7 @@ label-unfocused-foreground = ${colours.foreground}
 
 label-visible = %icon% %index%
 label-visible-padding = 1
-label-visible-foreground = #808080
+label-visible-foreground = ${colours.foreground}
 
 label-urgent = %icon% %index%
 label-urgent-padding = 1
