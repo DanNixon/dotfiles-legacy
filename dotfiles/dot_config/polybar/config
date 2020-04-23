@@ -1,7 +1,7 @@
 [colours]
 background = #00000000
 foreground = #eeeeee
-
+foreground-dim = #809090
 foreground-good = #aaddaa
 foreground-indifferent = #ffeeaa
 foreground-bad = #ffaaaa
@@ -49,7 +49,7 @@ label-mode-background = ${colours.background}
 label-focused = %icon% %index%
 label-focused-padding = 1
 label-focused-foreground = ${colours.foreground}
-label-focused-underline = #80d0d0
+label-focused-underline = ${colours.foreground}
 
 label-unfocused = %icon% %index%
 label-unfocused-padding = 1
@@ -58,10 +58,12 @@ label-unfocused-foreground = ${colours.foreground}
 label-visible = %icon% %index%
 label-visible-padding = 1
 label-visible-foreground = ${colours.foreground}
+label-visible-underline = ${colours.foreground-dim}
 
 label-urgent = %icon% %index%
 label-urgent-padding = 1
 label-urgent-foreground = ${colours.foreground-bad}
+label-urgent-underline = ${colours.foreground-bad}
 
 [module/datetime]
 type = internal/date
