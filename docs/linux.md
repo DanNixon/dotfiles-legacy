@@ -47,3 +47,4 @@
 ## Notes
 
 - If needed, smart card reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port`.
+- https://bugzilla.mindrot.org/show_bug.cgi?id=2824#c9

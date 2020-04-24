@@ -1,0 +1,51 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "DejaVuSansMono Nerd Font";
+  font-size: 15px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: white;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: white;
+  border-top: 2px solid transparent;
+}
+
+#workspaces button.focused {
+  border-top: 2px solid white;
+}
+
+#workspaces button.urgent {
+  color: #ffaaaa;
+  border-top: 2px solid #ffaaaa;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#clock, #battery, #pulseaudio, #mode {
+  padding: 0 20px;
+  margin: 0 2px;
+}
+
+#tray {
+  padding-right: 20px;
+}
+
+#battery.warning:not(.charging) {
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
