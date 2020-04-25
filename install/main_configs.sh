@@ -74,10 +74,6 @@ $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/tmux.conf" \
   "$HOME/.tmux.conf"
 
-$(df_target "link" "$1") \
-  '/dev/null' \
-  "$HOME/.bash_history"
-
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/bashrc" \
   "$HOME/.bashrc"
