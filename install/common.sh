@@ -29,7 +29,7 @@ function df_ensure_parent_dir_exists {
 
 function df_get_patch_filename {
   base_file="$1"
-  patch_target=${PATCH_TARGET:-$(hostname)}
+  patch_target=${PATCH_TARGET:-$HOSTNAME}
   echo "$base_file.$patch_target.patch"
 }
 
