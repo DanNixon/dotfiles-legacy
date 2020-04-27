@@ -4,3 +4,6 @@
 [submodule "third_party/aur/tomb"]
 	path = third_party/aur/tomb
 	url = https://aur.archlinux.org/tomb.git
+[submodule "third_party/aur/wdisplays-git"]
+	path = third_party/aur/wdisplays-git
+	url = https://aur.archlinux.org/wdisplays-git.git

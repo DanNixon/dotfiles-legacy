@@ -8,10 +8,6 @@ $(df_target "copy_patched" "$1") \
   "$HOME/.config/alacritty/alacritty.yml"
 
 $(df_target "copy_patched" "$1") \
-  "$DOTFILES/dotfiles/dot_config/rofi/config" \
-  "$HOME/.config/rofi/config"
-
-$(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/dot_config/sway/config" \
   "$HOME/.config/sway/config"
 
@@ -22,6 +18,10 @@ $(df_target "copy_patched" "$1") \
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/dot_config/waybar/style.css" \
   "$HOME/.config/waybar/style.css"
+
+$(df_target "copy_patched" "$1") \
+  "$DOTFILES/dotfiles/dot_config/wofi/style.css" \
+  "$HOME/.config/wofi/style.css"
 
 df_exit_if_not_install "$1"
 

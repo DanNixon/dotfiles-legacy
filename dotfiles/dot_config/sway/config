@@ -69,7 +69,7 @@ floating_modifier $mod
 bindsym $mod+Shift+Q kill
 
 # Show launcher
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec wofi --show run
 
 # Change focus
 focus_wrapping no

@@ -1,0 +1,33 @@
+* {
+  font-family: "DejaVuSansMono Nerd Font";
+  font-size: 16px;
+}
+
+window {
+  opacity: 0.9;
+  margin: 5px;
+  border: 1px solid white;
+  background-color: #333;
+}
+
+#input {
+  color: white;
+  font-weight: bold;
+  margin: 1px;
+  border: 0px;
+  border-bottom: 1px solid white;
+  background: transparent; 
+}
+
+#scroll {
+  margin: 5px 0;
+}
+
+#inner-box {
+  margin: 0 5px;
+}
+
+#text {
+  color: white;
+  margin: 0 5px;
+}
