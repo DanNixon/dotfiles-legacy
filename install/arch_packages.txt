@@ -2,10 +2,12 @@ base-devel
 blueman
 ccid
 dnscrypt-proxy
+feh
 ffmpeg
 firefox
 git
 gpg
+grim
 htop
 jq
 kbfs
