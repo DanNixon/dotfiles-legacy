@@ -16,15 +16,8 @@ alias ..="cd .."
 alias udm="udisksctl mount -b"
 alias udum="udisksctl unmount -b"
 
-alias xcc="xclip -sel clip"
-alias xcp="xclip -sel clip -o"
-
 alias g="git"
 alias gs="git s"
-
-alias i3-layout-default="i3-msg layout default"
-alias i3-layout-stacking="i3-msg layout stacking"
-alias i3-layout-tabbed="i3-msg layout tabbed"
 
 alias bm="voile"
 alias bmadd="voile add -cae"
@@ -45,7 +38,6 @@ alias b="upower -e | grep 'BAT' | xargs upower -i"
 alias fif="grep -rnw . -e"
 alias ytdl="youtube-dl"
 alias netstat-list-listening-ports="netstat --tcp --udp --listening --numeric --program"
-alias tile-locate="pass Passwords/Internet/Tile/Password | xargs tile-locate --password"
 alias nb="newsboat"
 alias pb="podboat"
 
