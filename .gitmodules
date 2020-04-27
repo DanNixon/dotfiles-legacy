@@ -1,0 +1,6 @@
+[submodule "third_party/aur/smenu"]
+	path = third_party/aur/smenu
+	url = https://aur.archlinux.org/smenu.git
+[submodule "third_party/aur/tomb"]
+	path = third_party/aur/tomb
+	url = https://aur.archlinux.org/tomb.git
