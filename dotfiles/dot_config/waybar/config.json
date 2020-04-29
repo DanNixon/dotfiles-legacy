@@ -7,11 +7,14 @@
   "modules-right": ["backlight", "pulseaudio", "battery", "clock", "tray"],
   "sway/workspaces": {
     "disable-scroll": false,
-    "all-outputs": false,
-    "format": "{name}"
+    "disable-scroll-wraparound": true,
+    "all-outputs": false
   },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
+  },
+  "sway/window": {
+    "max-length": 50
   },
   "clock": {
     "interval": 1,

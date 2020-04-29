@@ -18,6 +18,10 @@ window#waybar {
   border-top: 2px solid transparent;
 }
 
+#workspaces button.visible {
+  border-top: 2px solid grey;
+}
+
 #workspaces button.focused {
   border-top: 2px solid white;
 }
