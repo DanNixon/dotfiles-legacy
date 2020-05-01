@@ -5,8 +5,14 @@ if [ -n "$1" ]; then
   prompt="$prompt $1"
 fi
 
+if command -v wofi > /dev/null; then
+  chooser="wofi --dmenu --insensitive --prompt"
+else
+  chooser="rofi -dmenu -i -p"
+fi
+
 find "$HOME/.password-store/" \
   -name "*.gpg" \
   -printf "%P\n" \
 | sed -e "s/\.gpg//g" \
-| rofi -dmenu -i -p "$prompt"
+| $chooser "$prompt"

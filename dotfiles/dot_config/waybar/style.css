@@ -18,6 +18,10 @@ window#waybar {
   border-top: 2px solid transparent;
 }
 
+#workspaces button.visible {
+  border-top: 2px solid grey;
+}
+
 #workspaces button.focused {
   border-top: 2px solid white;
 }
@@ -32,8 +36,8 @@ window#waybar {
   text-shadow: inherit;
 }
 
-#clock, #battery, #pulseaudio, #mode {
-  padding: 0 20px;
+#backlight, #battery, #clock, #mode, #pulseaudio {
+  padding: 0 10px;
   margin: 0 2px;
 }
 
@@ -42,10 +46,9 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
-  color: white;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  color: yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: red;
 }

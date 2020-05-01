@@ -14,10 +14,10 @@ case "$action" in
     sync && i3lock --color 000000 && systemctl suspend
     ;;
   "shutdown")
-    rofi-confirm 'shutdown now?' && sync && poweroff
+    confirm-de 'shutdown now?' && sync && poweroff
     ;;
   "reboot")
-    rofi-confirm 'reboot now?' && sync && reboot
+    confirm-de 'reboot now?' && sync && reboot
     ;;
   *)
     exit 1

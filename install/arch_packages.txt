@@ -24,6 +24,8 @@ pass
 pcsclite
 pulseaudio
 qrencode
+rsync
+sshfs
 sway
 swaylock
 syncthing

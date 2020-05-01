@@ -4,14 +4,17 @@
   "height": 30,
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray"],
+  "modules-right": ["backlight", "pulseaudio", "battery", "clock", "tray"],
   "sway/workspaces": {
     "disable-scroll": false,
-    "all-outputs": false,
-    "format": "{name}"
+    "disable-scroll-wraparound": true,
+    "all-outputs": false
   },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
+  },
+  "sway/window": {
+    "max-length": 50
   },
   "clock": {
     "interval": 1,
@@ -32,7 +35,6 @@
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ﮣ",
-    "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", "", ""]
   },
   "pulseaudio": {

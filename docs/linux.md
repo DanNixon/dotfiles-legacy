@@ -6,11 +6,17 @@
   - [Alacritty](https://github.com/jwilm/alacritty)
 - Text editor
   - [Neovim](https://neovim.io)
-- Desktop environment
+- Desktop environment (Xorg)
   - [i3-gaps](https://github.com/Airblader/i3)
   - [Polybar](https://github.com/jaagr/polybar)
   - [Rofi](https://github.com/DaveDavenport/rofi)
+  - [dunst](https://github.com/dunst-project/dunst)
   - [Compton](https://github.com/chjj/compton)
+- Desktop environment (Wayland)
+  - [Sway](https://github.com/swaywm/sway)
+  - [Waybar](https://github.com/Alexays/Waybar)
+  - [Wofi](https://hg.sr.ht/~scoopta/wofi)
+  - [mako](https://github.com/emersion/mako)
 - Web browser
   - [Firefox](https://www.mozilla.org/firefox)
     - [ClearURLs](https://gitlab.com/KevinRoebert/ClearUrls)
