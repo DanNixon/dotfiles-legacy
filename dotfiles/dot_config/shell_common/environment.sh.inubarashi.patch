@@ -1,3 +1,5 @@
-11a12,13
+4d3
+< export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+10a10,11
 > 
 > export PATH="$PATH:$HOME/scripts"
