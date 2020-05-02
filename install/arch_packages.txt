@@ -13,12 +13,14 @@ htop
 jq
 kbfs
 keybase
+libnotify
 light
 mako
 mpc
 mpv
 ncmpcpp
 neovim
+net-tools
 networkmanager
 newsboat
 pass
@@ -28,6 +30,7 @@ pulseaudio
 qrencode
 rsync
 sshfs
+sshuttle
 sway
 swaylock
 syncthing
