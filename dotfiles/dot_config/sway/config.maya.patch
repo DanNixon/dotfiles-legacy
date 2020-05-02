@@ -1,0 +1,5 @@
+190a191,194
+> 
+> # Displays
+> set $wallpaper "~/Downloads/img.png"
+> output eDP-1    scale 2 enable
