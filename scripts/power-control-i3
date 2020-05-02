@@ -8,10 +8,10 @@ fi
 
 case "$action" in
   "lock")
-    i3lock --color 000000
+    i3lock --color 002030
     ;;
   "sleep")
-    sync && i3lock --color 000000 && systemctl suspend
+    sync && i3lock --color 002030 && systemctl suspend
     ;;
   "shutdown")
     confirm-de 'shutdown now?' && sync && poweroff

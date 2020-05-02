@@ -8,10 +8,10 @@ fi
 
 case "$action" in
   "lock")
-    swaylock --color 000000
+    swaylock --color 002030
     ;;
   "sleep")
-    sync && swaylock --color 000000 --daemonize && systemctl suspend
+    sync && swaylock --color 002030 --daemonize && systemctl suspend
     ;;
   "shutdown")
     confirm-de 'shutdown now?' && sync && poweroff
