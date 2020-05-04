@@ -1,4 +1,0 @@
-33c33
-< music_directory "/path/to/music"
----
-> music_directory "/home/dan/music"

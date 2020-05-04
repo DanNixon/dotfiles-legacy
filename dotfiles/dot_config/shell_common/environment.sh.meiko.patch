@@ -1,4 +1,0 @@
-16c16
-< export PATH="$HOME/dotfiles/scripts/:$HOME/.local/bin/:$HOME/dotfiles/third_party/scripts/:$HOME/dotfiles/third_party/bin/:$PATH"
----
-> export PATH="$HOME/dotfiles/scripts/:$HOME/.local/bin/:$HOME/dotfiles/third_party/scripts/:$HOME/dotfiles/third_party/bin/:/home/dan/go/bin/:$HOME/dotfiles/scripts/screen_layouts/$(hostname)/:$PATH"
