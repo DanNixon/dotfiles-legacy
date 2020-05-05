@@ -7,3 +7,6 @@
 [submodule "third_party/aur/wdisplays-git"]
 	path = third_party/aur/wdisplays-git
 	url = https://aur.archlinux.org/wdisplays-git.git
+[submodule "third_party/aur/gtypist"]
+	path = third_party/aur/gtypist
+	url = https://aur.archlinux.org/gtypist.git
