@@ -1,0 +1,8 @@
+8c8
+< export VOILE_BOOKMARK_FILE="/media/personal/bookmarks/bookmarks.json"
+---
+> export VOILE_BOOKMARK_FILE="/run/media/$(whoami)/personal/bookmarks/bookmarks.json"
+10c10
+< export PATH="$HOME/dotfiles/scripts/:$HOME/.local/bin/:$HOME/dotfiles/third_party/scripts/:$HOME/dotfiles/third_party/bin/:$PATH"
+---
+> export PATH="$HOME/dotfiles/scripts/:$HOME/.local/bin/:$HOME/dotfiles/third_party/scripts/:$HOME/dotfiles/third_party/bin/:$HOME/go/bin/:$PATH"
