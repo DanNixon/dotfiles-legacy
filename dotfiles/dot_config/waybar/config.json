@@ -4,7 +4,7 @@
   "height": 30,
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["backlight", "pulseaudio", "battery", "clock", "tray"],
+  "modules-right": ["backlight", "pulseaudio", "battery", "clock"],
   "sway/workspaces": {
     "disable-scroll": false,
     "disable-scroll-wraparound": true,

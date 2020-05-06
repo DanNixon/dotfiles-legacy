@@ -31,10 +31,6 @@ client.background       $base07
 
 ### Config
 
-# Start NetworkManager and Bluetooth tray applets
-# exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
-
 # Keyboard layout
 input type:keyboard {
   xkb_layout gb

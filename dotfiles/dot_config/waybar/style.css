@@ -41,10 +41,6 @@ window#waybar {
   margin: 0 2px;
 }
 
-#tray {
-  padding-right: 20px;
-}
-
 #battery.warning:not(.charging) {
   color: yellow;
 }
