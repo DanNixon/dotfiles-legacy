@@ -1,12 +1,7 @@
 export EDITOR='nvim'
 
 export GPG_TTY="$(tty)"
-
-# Check if a SSH agent is already set (e.g. via agent forwarding)
-if [ -z ${SSH_AUTH_SOCK+x} ]; then
-  # Use gpg-agent as SSH agent
-  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-fi
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 export TODO_DIR="$HOME/docs/markor"
 export NOTE_DIR="$HOME/docs/markor"
