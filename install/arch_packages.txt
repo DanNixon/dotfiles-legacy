@@ -12,8 +12,6 @@ gnupg
 grim
 htop
 jq
-kbfs
-keybase
 libnotify
 light
 mako
