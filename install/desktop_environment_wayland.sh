@@ -8,6 +8,10 @@ $(df_target "copy_patched" "$1") \
   "$HOME/.config/alacritty/alacritty.yml"
 
 $(df_target "copy_patched" "$1") \
+  "$DOTFILES/dotfiles/dot_config/mako/config" \
+  "$HOME/.config/mako/config"
+
+$(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/dot_config/sway/config" \
   "$HOME/.config/sway/config"
 
@@ -27,4 +31,5 @@ df_exit_if_not_install "$1"
 
 set -x
 
+makoctl reload
 swaymsg reload
