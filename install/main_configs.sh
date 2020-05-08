@@ -79,10 +79,6 @@ $(df_target "copy_patched" "$1") \
   "$HOME/.bashrc"
 
 $(df_target "copy_patched" "$1") \
-  "$DOTFILES/dotfiles/home/gnupg/dirmngr.conf" \
-  "$HOME/.gnupg/dirmngr.conf"
-
-$(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/gnupg/gpg.conf" \
   "$HOME/.gnupg/gpg.conf"
 

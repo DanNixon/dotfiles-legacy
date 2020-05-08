@@ -9,6 +9,7 @@ ffmpeg
 firefox
 git
 gnupg
+go-pie
 grim
 htop
 jq
