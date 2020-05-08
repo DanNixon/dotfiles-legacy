@@ -13,8 +13,6 @@ go-pie
 grim
 htop
 jq
-kbfs
-keybase
 libnotify
 light
 mako
