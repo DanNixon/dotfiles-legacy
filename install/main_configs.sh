@@ -7,9 +7,9 @@ $(df_target "copy" "$1") \
   "$DOTFILES/third_party/base16-shell" \
   "$HOME/.config/base16-shell"
 
-$(df_target "copy_patched" "$1") \
-  "$DOTFILES/dotfiles/dot_config/nvim/init.vim" \
-  "$HOME/.config/nvim/init.vim"
+$(df_target "copy" "$1") \
+  "$DOTFILES/dotfiles/dot_config/nvim" \
+  "$HOME/.config/nvim"
 
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/dot_config/mpd/mpd.conf" \
@@ -45,14 +45,6 @@ $(df_target "add_secrets" "$1") \
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/dot_config/shell_common/global_aliases.sh" \
   "$HOME/.config/shell_common/global_aliases.sh"
-
-$(df_target "copy" "$1") \
-  "$DOTFILES/dotfiles/home/vim" \
-  "$HOME/.vim"
-
-$(df_target "copy_patched" "$1") \
-  "$DOTFILES/dotfiles/home/vimrc" \
-  "$HOME/.vimrc"
 
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/gdbinit" \
