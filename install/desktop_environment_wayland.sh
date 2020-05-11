@@ -31,5 +31,7 @@ df_exit_if_not_install "$1"
 
 set -x
 
+makoctl dismiss
 makoctl reload
+
 swaymsg reload
