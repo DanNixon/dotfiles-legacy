@@ -26,4 +26,4 @@ podlist-format            "%4i [%5p %%] %-20S %b"
 download-path             ~/.newsboat/podcasts
 download-filename-format  "%F - %n - %t.%e"
 player                    "mpv --no-audio-display"
-#delete-played-files       yes
+delete-played-files       yes
