@@ -35,5 +35,6 @@ alias fif="grep -rnw . -e"
 alias netstat-list-listening-ports="netstat --tcp --udp --listening --numeric --program"
 alias nb="newsboat"
 alias pb="podboat"
+alias nm="neomutt"
 
 alias today="date '+%Y-%m-%d'"
