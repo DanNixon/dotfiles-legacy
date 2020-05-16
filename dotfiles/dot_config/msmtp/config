@@ -1,0 +1,32 @@
+# Global defaults
+defaults
+auth      on
+tls       on
+logfile   ~/.msmtp.log
+
+# Outlook 1
+account       outlook-1
+host          smtp.office365.com
+port          587
+from          "<< pass Passwords/Internet/Microsoft_1/Email >>"
+user          "<< pass Passwords/Internet/Microsoft_1/Email >>"
+passwordeval  "pass Passwords/Internet/Microsoft_1/Password"
+
+# Outlook 2
+account       outlook-2
+host          smtp.office365.com
+port          587
+from          "<< pass Passwords/Internet/Microsoft_2/Email >>"
+user          "<< pass Passwords/Internet/Microsoft_2/Email >>"
+passwordeval  "pass Passwords/Internet/Microsoft_2/Password"
+
+# GMail
+account       gmail
+host          smtp.gmail.com
+port          587
+from          "<< pass Passwords/Internet/Google/Email >>"
+user          "<< pass Passwords/Internet/Google/Email >>"
+passwordeval  "pass Passwords/Internet/Google/EmailPassword"
+
+# ProtonMail
+# TODO

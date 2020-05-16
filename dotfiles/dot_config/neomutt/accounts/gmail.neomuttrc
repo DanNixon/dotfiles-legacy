@@ -1,0 +1,4 @@
+# vim: filetype=neomuttrc
+set from = "<< pass Passwords/Internet/Google/Email >>"
+set sendmail = "msmtp -a gmail"
+echo "Sending from $from"
