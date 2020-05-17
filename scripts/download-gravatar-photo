@@ -1,7 +1,0 @@
-#!/bin/bash
-
-email="$1"
-size="${2:-200}"
-
-hash=$(echo -n "$email" | openssl md5 | awk '{print $2}')
-curl "https://www.gravatar.com/avatar/$hash?s=$size"
