@@ -1,75 +1,96 @@
 # Outlook 1
 
 IMAPAccount outlook-1
-Host "outlook.office365.com"
-SSLType IMAPS
-User "<< pass Passwords/Internet/Microsoft_1/Email >>"
-PassCmd "pass Passwords/Internet/Microsoft_1/Password"
+Host        "outlook.office365.com"
+SSLType     IMAPS
+User        "<< pass Passwords/Internet/Microsoft_1/Email >>"
+PassCmd     "pass Passwords/Internet/Microsoft_1/Password"
 
 IMAPStore outlook-1-remote
-Account outlook-1
+Account   outlook-1
 
-MaildirStore outlook-1-local
-Subfolders Verbatim
-Path "~/.mail/outlook-1/"
-Inbox "~/.mail/outlook-1/Inbox/"
+MaildirStore  outlook-1-local
+Subfolders    Verbatim
+Path          "~/.mail/outlook-1/"
+Inbox         "~/.mail/outlook-1/Inbox/"
 
-Channel outlook-1
-Master :outlook-1-remote:
-Slave :outlook-1-local:
-Patterns *
-Create Both
+Channel   outlook-1
+Master    :outlook-1-remote:
+Slave     :outlook-1-local:
+Patterns  *
+Create    Both
 SyncState *
 
 
 # Outlook 2
 
 IMAPAccount outlook-2
-Host "outlook.office365.com"
-SSLType IMAPS
-User "<< pass Passwords/Internet/Microsoft_2/Email >>"
-PassCmd "pass Passwords/Internet/Microsoft_2/Password"
+Host        "outlook.office365.com"
+SSLType     IMAPS
+User        "<< pass Passwords/Internet/Microsoft_2/Email >>"
+PassCmd     "pass Passwords/Internet/Microsoft_2/Password"
 
 IMAPStore outlook-2-remote
-Account outlook-2
+Account   outlook-2
 
-MaildirStore outlook-2-local
-Subfolders Verbatim
-Path "~/.mail/outlook-2/"
-Inbox "~/.mail/outlook-2/Inbox/"
+MaildirStore  outlook-2-local
+Subfolders    Verbatim
+Path          "~/.mail/outlook-2/"
+Inbox         "~/.mail/outlook-2/Inbox/"
 
-Channel outlook-2
-Master :outlook-2-remote:
-Slave :outlook-2-local:
-Patterns *
-Create Both
+Channel   outlook-2
+Master    :outlook-2-remote:
+Slave     :outlook-2-local:
+Patterns  *
+Create    Both
 SyncState *
 
 
 # GMail
 
 IMAPAccount gmail
-Host "imap.gmail.com"
-SSLType IMAPS
-User "<< pass Passwords/Internet/Google/Email >>"
-PassCmd "pass Passwords/Internet/Google/EmailPassword"
+Host        "imap.gmail.com"
+SSLType     IMAPS
+User        "<< pass Passwords/Internet/Google/Email >>"
+PassCmd     "pass Passwords/Internet/Google/EmailPassword"
 
 IMAPStore gmail-remote
-Account gmail
+Account   gmail
 
-MaildirStore gmail-local
-Subfolders Verbatim
-Path "~/.mail/gmail/"
-Inbox "~/.mail/gmail/Inbox"
+MaildirStore  gmail-local
+Subfolders    Verbatim
+Path          "~/.mail/gmail/"
+Inbox         "~/.mail/gmail/Inbox"
 
-Channel gmail
-Master :gmail-remote:
-Slave :gmail-local:
-Patterns * !"[Google Mail]/All Mail"
-Create Both
+Channel   gmail
+Master    :gmail-remote:
+Slave     :gmail-local:
+Patterns  * !"[Google Mail]/All Mail"
+Create    Both
 SyncState *
 
 
 # ProtonMail
 
-# TODO
+IMAPAccount     protonmail
+Host            "127.0.0.1"
+Port            1143
+SSLType         STARTTLS
+CertificateFile "~/.protonmail-bridge.pem"
+User            "<< pass Passwords/Internet/ProtonMail/Email2 >>"
+PassCmd         "pass ShellSecrets/ProtonmailBridgePassword"
+
+IMAPStore protonmail-remote
+Account   protonmail
+
+MaildirStore  protonmail-local
+Subfolders    Verbatim
+Path          "~/.mail/protonmail/"
+Inbox         "~/.mail/protonmail/Inbox"
+
+Channel   protonmail
+Master    :protonmail-remote:
+Slave     :protonmail-local:
+Patterns  * !"All Mail"
+Create    Both
+SyncState *

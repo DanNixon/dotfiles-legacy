@@ -95,6 +95,7 @@ mailboxes ="local" ="local/Inbox" ="local/Sent" ="local/Archive" ="local/Drafts"
 mailboxes ="gmail" ="gmail/Inbox" ="gmail/[Google Mail]" ="gmail/[Google Mail]/Spam"
 mailboxes ="outlook-1" ="outlook-1/Inbox" ="outlook-1/Junk"
 mailboxes ="outlook-2" ="outlook-2/Inbox" ="outlook-2/Junk"
+mailboxes ="protonmail" ="protonmail/Inbox" ="protonmail/Spam"
 
 macro index o '<shell-escape>mbsync -a<enter>' 'Sync all mailboxes'
 
@@ -102,3 +103,4 @@ bind index,pager i noop
 macro index,pager i2 '<enter-command>source ~/.config/neomutt/accounts/gmail.neomuttrc<enter>'      'Send from Gmail account'
 macro index,pager i3 '<enter-command>source ~/.config/neomutt/accounts/outlook-1.neomuttrc<enter>'  'Send from Outlook 1 account'
 macro index,pager i4 '<enter-command>source ~/.config/neomutt/accounts/outlook-2.neomuttrc<enter>'  'Send from Outlook 2 account'
+macro index,pager i5 '<enter-command>source ~/.config/neomutt/accounts/protonmail.neomuttrc<enter>' 'Send from ProtonMail account'

@@ -29,4 +29,10 @@ user          "<< pass Passwords/Internet/Google/Email >>"
 passwordeval  "pass Passwords/Internet/Google/EmailPassword"
 
 # ProtonMail
-# TODO
+account       protonmail
+host          127.0.0.1
+port          1025
+tls_certcheck off
+from          "<< pass Passwords/Internet/ProtonMail/Email2 >>"
+user          "<< pass Passwords/Internet/ProtonMail/Email2 >>"
+passwordeval  "pass ShellSecrets/ProtonmailBridgePassword"

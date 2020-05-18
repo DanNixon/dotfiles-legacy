@@ -1,0 +1,4 @@
+# vim: filetype=neomuttrc
+set from = "<< pass Passwords/Internet/ProtonMail/Email2 >>"
+set sendmail = "msmtp -a protonmail"
+echo "Sending from $from"
