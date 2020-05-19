@@ -28,6 +28,7 @@ netdata
 net-tools
 networkmanager
 newsboat
+nnn
 pass
 pavucontrol
 pcsclite
