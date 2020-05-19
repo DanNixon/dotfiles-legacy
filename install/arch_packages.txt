@@ -45,6 +45,7 @@ tree
 ufw
 unzip
 waybar
+wl-clipboard
 wofi
 xorg-server-xwayland
 zsh
