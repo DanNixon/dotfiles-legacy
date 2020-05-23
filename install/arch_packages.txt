@@ -32,6 +32,7 @@ nnn
 pass
 pavucontrol
 pcsclite
+progress
 pulseaudio
 qrencode
 rsync
