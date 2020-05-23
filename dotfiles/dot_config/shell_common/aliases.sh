@@ -11,9 +11,6 @@ alias c="clear"
 
 alias ..="cd .."
 
-alias udm="udisksctl mount -b"
-alias udum="udisksctl unmount -b"
-
 alias g="git"
 alias gs="git s"
 

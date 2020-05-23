@@ -42,6 +42,7 @@ swaylock
 syncthing
 tmux
 tree
+udevil
 ufw
 unzip
 waybar
