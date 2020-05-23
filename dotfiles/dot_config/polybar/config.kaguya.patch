@@ -1,6 +1,0 @@
-28,29c28,29
-< modules-center = datetime
-< modules-right = syncthing battery backlight volume
----
-> modules-center =
-> modules-right = syncthing load battery backlight volume datetime
