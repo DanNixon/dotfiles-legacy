@@ -12,8 +12,8 @@ set include                                               # include message in r
 set mark_old                = no                          # Unread mail stay unread until read
 set mime_forward            = yes		                      # attachments are forwarded with mail
 set rfc2047_parameters      = yes
-auto_view text/html
-auto_view application/pgp-encrypted
+set date_format             = "%Y-%m-%d"
+set index_format            = "%4C %Z %d %-25.25L %s"
 alternative_order text/plain text/enriched text/html
 
 # Sidebar
