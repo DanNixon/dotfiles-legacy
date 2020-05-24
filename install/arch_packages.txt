@@ -13,6 +13,7 @@ go-pie
 gpxsee
 grim
 htop
+hugo
 isync
 jq
 libnotify
