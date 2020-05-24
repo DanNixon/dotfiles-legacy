@@ -81,12 +81,6 @@ bindsym $mod+Shift+j move down  $d_px
 bindsym $mod+Shift+k move up    $d_px
 bindsym $mod+Shift+l move right $d_px
 
-# Move active workspace between outputs
-bindsym $mod+Control+Shift+h move workspace to output left
-bindsym $mod+Control+Shift+j move workspace to output down
-bindsym $mod+Control+Shift+k move workspace to output up
-bindsym $mod+Control+Shift+l move workspace to output right
-
 # Set split orientation
 bindsym $mod+b split h
 bindsym $mod+v split v
