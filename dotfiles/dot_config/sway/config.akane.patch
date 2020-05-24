@@ -1,0 +1,5 @@
+192a193,196
+> 
+> # Displays
+> set $wallpaper "~/docs/wallpapers/shameimaru\ aya\ \(touhou\)\ drawn\ by\ fjsmu\ -\ 68e92ca324796a9712eb35ca357eaf9e.png"
+> output LVDS-1 bg $wallpaper fill enable
