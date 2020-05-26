@@ -22,6 +22,7 @@ alias zfs-ls="zfs list -o name,referenced,used,available,encryption,keystatus,mo
 alias cmake-format-all="find . -type f -name 'CMakeLists.txt' | xargs cmake-format -i"
 alias clang-format-all="find . -type f -regex '.*\.\(c\|cpp\|h\|hpp\)' | xargs clang-format -i"
 
+alias open="xdg-open"
 alias v="nvim"
 alias t="todo.sh"
 alias m="ncmpcpp"

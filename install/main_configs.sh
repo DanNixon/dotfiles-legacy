@@ -88,6 +88,14 @@ $(df_target "copy_patched" "$1") \
 
 df_exit_if_not_install "$1"
 
-set +x
+set -x
 
 dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > "$HOME/.ls_colors.sh"
+
+desktop-file-install --dir="$HOME/.local/share/applications" "$DOTFILES/dotfiles/zathura.desktop"
+update-desktop-database "$HOME/.local/share/applications"
+
+xdg-mime default 'feh.desktop'      'image/jpeg'
+xdg-mime default 'feh.desktop'      'image/webp'
+xdg-mime default 'mpv.desktop'      'image/gif'
+xdg-mime default 'zathura.desktop'  'application/pdf'
