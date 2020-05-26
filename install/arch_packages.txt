@@ -51,4 +51,6 @@ waybar
 wl-clipboard
 wofi
 xorg-server-xwayland
+zathura
+zathura-pdf-mupdf
 zsh
