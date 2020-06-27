@@ -1,8 +1,0 @@
-13c13
-< bottom = false
----
-> bottom = true
-29c29
-< modules-right = syncthing battery backlight volume
----
-> modules-right = syncthing memory load volume

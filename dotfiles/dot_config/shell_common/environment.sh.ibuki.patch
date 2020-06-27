@@ -1,7 +1,0 @@
-4d3
-< export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-10a10,13
-> 
-> export PATH="/home/dan/go/bin/:$HOME/dotfiles/scripts/screen_layouts/ibuki/:$PATH"
-> 
-> alias conda-init="source $HOME/miniconda3/etc/profile.d/conda.sh"
