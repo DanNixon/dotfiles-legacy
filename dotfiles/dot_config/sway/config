@@ -94,10 +94,6 @@ bindsym $mod+Shift+space floating toggle
 # Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# Focus parent / child containers
-bindsym $mod+Shift+a  focus parent
-bindsym $mod+a        focus child
-
 # Switch to workspace
 bindsym $mod+comma  workspace prev
 bindsym $mod+period workspace next
@@ -165,7 +161,6 @@ bindsym $mod+Shift+p exec grim
 
 # Application shortcuts
 bindsym $mod+Return     exec alacritty
-bindsym $mod+backslash  exec alacritty
 bindsym $mod+x          exec firefox --private-window
 bindsym $mod+Shift+x    exec firefox
 bindsym $mod+p          exec pass-clip

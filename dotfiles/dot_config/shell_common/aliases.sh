@@ -11,9 +11,6 @@ alias c="clear"
 
 alias ..="cd .."
 
-alias g="git"
-alias gs="git s"
-
 alias bm="voile"
 alias bmadd="voile add -cae"
 
@@ -23,7 +20,8 @@ alias cmake-format-all="find . -type f -name 'CMakeLists.txt' | xargs cmake-form
 alias clang-format-all="find . -type f -regex '.*\.\(c\|cpp\|h\|hpp\)' | xargs clang-format -i"
 
 alias open="xdg-open"
-alias v="nvim"
+alias g="git"
+alias v="$EDITOR"
 alias t="todo.sh"
 alias m="ncmpcpp"
 alias stripexif="exiftool -all="
