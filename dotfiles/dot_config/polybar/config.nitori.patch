@@ -1,4 +1,0 @@
-29c29
-< modules-right = syncthing battery backlight volume
----
-> modules-right = memory load battery backlight volume
