@@ -13,3 +13,6 @@
 [submodule "third_party/aur/protonmail-bridge-nogui"]
 	path = third_party/aur/protonmail-bridge-nogui
 	url = https://aur.archlinux.org/protonmail-bridge-nogui.git
+[submodule "third_party/aur/qmk"]
+	path = third_party/aur/qmk
+	url = https://aur.archlinux.org/qmk.git
