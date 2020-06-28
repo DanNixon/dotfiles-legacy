@@ -64,9 +64,6 @@ floating_modifier $mod
 # Kill focused window
 bindsym $mod+Shift+Q kill
 
-# Show launcher
-bindsym $mod+d exec wofi --show run
-
 # Change focus
 focus_wrapping no
 focus_follows_mouse no
@@ -160,9 +157,8 @@ bindsym $mod+Escape exec power-control-sway
 bindsym $mod+Shift+p exec grim
 
 # Application shortcuts
+bindsym $mod+Semicolon  exec wofi --show run
 bindsym $mod+Return     exec alacritty
-bindsym $mod+x          exec firefox --private-window
-bindsym $mod+Shift+x    exec firefox
 bindsym $mod+p          exec pass-clip
 
 # Audio controls (pulseaudio)
