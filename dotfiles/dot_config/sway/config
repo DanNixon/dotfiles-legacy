@@ -41,8 +41,8 @@ bar {
   swaybar_command waybar
 }
 
-# Use Super_L as mod key
-set $mod Mod4
+# Use Alt as mod key
+set $mod Mod1
 
 # Magic numbers
 set $d_px 100
