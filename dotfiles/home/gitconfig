@@ -17,7 +17,6 @@
   reflog     = "%C(yellow)%h %C(reset)%ad %C(blue)%an %C(reset)%gs%C(green)%d"
 
 [alias]
-  a         = add
   ap        = add --patch
   s         = status --short --branch
   co        = checkout
@@ -45,7 +44,6 @@
   pfl       = push --force-with-lease
   f         = fetch --prune
   fp        = !"git fetch -p; git pull"
-  rs        = reset
   unbugger  = reset --hard HEAD
   cla       = clean -ixd
   test-pr   = !"f() { git fetch $1 pull/$2/merge:pr/$2-merged && git checkout pr/$2-merged; }; f"
