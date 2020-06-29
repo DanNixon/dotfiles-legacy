@@ -156,12 +156,6 @@ command! CopyPlace :let @+ = expand("%") . ":" . line(".")
 " Handy shortcut for replacing words
 map <Leader>r :%s/\<<C-r><C-w>\>/
 
-" Git tools
-map <Leader>gd :Gvdiff<CR>
-map <Leader>gb :Gblame<CR>
-map <Leader>gs :Gstatus<CR>
-map <Leader>gg :GitGutterSignsToggle<CR>
-
 " Syntax checking
 map <Leader>c :SyntasticCheck<CR>
 map <Leader>C :SyntasticReset<CR>
@@ -187,11 +181,6 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Toggle tagbar
 map <Leader>t :TagbarToggle<CR>
-
-" Tab shortcuts
-nmap <Leader>t<Left> :tabp<CR>
-nmap <Leader>t<Right> :tabn<CR>
-nmap <Leader>tt :tab new<CR>
 
 " Easy indent/unindent
 vmap < <gv
