@@ -8,10 +8,8 @@ color listfocus_unread    blue      default   bold
 color info                yellow    default   underline
 color article             default   default
 
-bind-key h quit
 bind-key j down
 bind-key k up
-bind-key l open
 
 max-items 500
 
