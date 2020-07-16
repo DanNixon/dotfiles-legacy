@@ -99,3 +99,7 @@ xdg-mime default 'feh.desktop'      'image/jpeg'
 xdg-mime default 'feh.desktop'      'image/webp'
 xdg-mime default 'mpv.desktop'      'image/gif'
 xdg-mime default 'zathura.desktop'  'application/pdf'
+
+if $(df_secrets_available); then
+  pass ShellSecrets/HSXKPASSWDRC > "$HOME/.hsxkpasswdrc"
+fi
