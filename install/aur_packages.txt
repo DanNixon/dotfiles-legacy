@@ -1,0 +1,7 @@
+gtypist
+protonmail-bridge-nogui
+qmk
+smenu
+tomb
+wdisplays
+yay
