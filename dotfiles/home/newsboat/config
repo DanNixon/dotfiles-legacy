@@ -11,10 +11,7 @@ color article             default   default
 bind-key j down
 bind-key k up
 
-max-items 500
-
-bookmark-cmd          "voile add-newsboat --edit"
-bookmark-interactive  yes
+max-items 1000
 
 browser "firefox --private-window %u"
 
