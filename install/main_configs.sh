@@ -39,9 +39,6 @@ $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/dot_config/shell_common/environment.sh" \
   "$HOME/.config/shell_common/environment.sh"
 
-$(df_target "add_secrets" "$1") \
-  "$HOME/.config/shell_common/environment.sh"
-
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/dot_config/shell_common/global_aliases.sh" \
   "$HOME/.config/shell_common/global_aliases.sh"
@@ -89,6 +86,8 @@ $(df_target "copy_patched" "$1") \
 df_exit_if_not_install "$1"
 
 set -x
+
+pass-add-secrets-to-file "$HOME/.config/shell_common/environment.sh"
 
 dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > "$HOME/.ls_colors.sh"
 
