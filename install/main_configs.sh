@@ -60,10 +60,6 @@ $(df_target "copy_patched" "$1") \
   "$HOME/.newsboat/config"
 
 $(df_target "copy_patched" "$1") \
-  "$DOTFILES/dotfiles/home/tmux.conf" \
-  "$HOME/.tmux.conf"
-
-$(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/bashrc" \
   "$HOME/.bashrc"
 
@@ -79,6 +75,14 @@ $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/todo/config" \
   "$HOME/.todo/config"
 
+$(df_target "copy" "$1") \
+  "$DOTFILES/dotfiles/home/hsxkpasswdrc" \
+  "$HOME/.hsxkpasswdrc"
+
+$(df_target "copy_patched" "$1") \
+  "$DOTFILES/dotfiles/home/tmux.conf" \
+  "$HOME/.tmux.conf"
+
 $(df_target "copy_patched" "$1") \
   "$DOTFILES/dotfiles/home/zshrc" \
   "$HOME/.zshrc"
@@ -88,6 +92,7 @@ df_exit_if_not_install "$1"
 set -x
 
 pass-add-secrets-to-file "$HOME/.config/shell_common/environment.sh"
+pass-add-secrets-to-file "$HOME/.hsxkpasswdrc"
 
 dircolors -b "$DOTFILES/dotfiles/dircolors.conf" > "$HOME/.ls_colors.sh"
 
@@ -98,7 +103,3 @@ xdg-mime default 'feh.desktop'      'image/jpeg'
 xdg-mime default 'feh.desktop'      'image/webp'
 xdg-mime default 'mpv.desktop'      'image/gif'
 xdg-mime default 'zathura.desktop'  'application/pdf'
-
-if $(df_secrets_available); then
-  pass ShellSecrets/HSXKPASSWDRC > "$HOME/.hsxkpasswdrc"
-fi
