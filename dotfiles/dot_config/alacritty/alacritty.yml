@@ -12,8 +12,8 @@ window:
     x: 2
     y: 2
 
-  # Window decorations
   decorations: full
+  dynamic_title: true
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -65,9 +65,6 @@ font:
     x: 0
     y: 0
 
-visual_bell:
-  duration: 0
-
 background_opacity: 0.92
 
 mouse:
@@ -93,8 +90,6 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-
-dynamic_title: true
 
 cursor:
   # Style of the cursor (block, underline, beam)
