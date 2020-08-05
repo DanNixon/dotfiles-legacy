@@ -115,30 +115,6 @@ function df_copy_patched {
   fi
 }
 
-function df_update_patch {
-  src="$1"
-  dest="$2"
-
-  # Check if destination is an existing file
-  if [ ! -f "$dest" ]; then
-    df_print_bad "Destination file does not exist"
-    return 1
-  fi
-
-  patch_filename=$(df_get_patch_filename "$src")
-
-  # Create patch
-  diff "$src" "$dest" > "$patch_filename"
-
-  # Check if the patch actually has any changes
-  if [ -s "$patch_filename" ]; then
-    df_print_good "Created patch ${patch_filename}"
-  else
-    df_print_warn "Created patch was empty so was not kept"
-    rm "$patch_filename"
-  fi
-}
-
 function df_target {
   operation="$1"
   user_action="$2"
