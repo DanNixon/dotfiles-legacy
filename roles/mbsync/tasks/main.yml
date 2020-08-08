@@ -1,0 +1,15 @@
+---
+- name: Ensure mbsync is installed
+  become: yes
+  package:
+    name: isync
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure mbsync configuration is present
+  import_role:
+    name: copy_secret_injected_file
+  vars:
+    src: 'mbsyncrc'
+    dest: "{{ ansible_facts['env']['HOME'] }}/.mbsyncrc"

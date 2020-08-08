@@ -1,0 +1,17 @@
+---
+- name: Ensure clients are installed
+  package:
+    name:
+      - mpc
+      - ncmpcpp
+    state: present
+
+- name: Ensure Ncmpcpp configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure Ncmpcpp configuration is present
+  copy:
+    src: 'ncmpcpp/'
+    dest: '{{ config_dir }}'

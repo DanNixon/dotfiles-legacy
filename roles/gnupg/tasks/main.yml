@@ -1,0 +1,23 @@
+---
+- name: Ensure GnuPG is installed
+  package:
+    name: "{{ packages['common'] + packages[ansible_os_family] if ansible_os_family in packages else packages['common'] }}"
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure GnuPG home directory exists
+  file:
+    path: '{{ gpg_home }}'
+    state: directory
+
+- name: Ensure GnuPG configuration is present
+  copy:
+    src: '.'
+    dest: '{{ gpg_home }}'
+
+- name: Ensure my public key is present
+  changed_when: no
+  shell:
+    cmd: curl 'https://dan-nixon.com/pubkey.txt' | gpg --import -
+    warn: no

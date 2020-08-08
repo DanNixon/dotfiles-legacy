@@ -1,0 +1,12 @@
+---
+- name: Ensure Tmux is installed
+  package:
+    name: tmux
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Tmux configuration is present
+  copy:
+    src: 'tmux.conf'
+    dest: "{{ ansible_facts['env']['HOME'] }}/.tmux.conf"

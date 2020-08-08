@@ -1,0 +1,15 @@
+---
+- name: Ensure Newsboat is installed
+  package:
+    name: newsboat
+    state: present
+
+- name: Ensure Newsboat configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure Newsboat configuration is present
+  copy:
+    src: 'config'
+    dest: '{{ config_dir }}/config'

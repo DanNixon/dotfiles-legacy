@@ -1,0 +1,17 @@
+---
+- name: Ensure Neovim is installed
+  package:
+    name: neovim
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Neovim configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure Neovim configuration is present
+  copy:
+    src: 'nvim'
+    dest: '{{ config_dir }}'

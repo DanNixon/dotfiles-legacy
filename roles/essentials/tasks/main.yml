@@ -1,0 +1,14 @@
+---
+- name: Ensure essential tools are installed
+  become: yes
+  package:
+    name:
+      - htop
+      - jq
+      - nnn
+      - progress
+      - rsync
+      - tree
+    state: present
+  tags:
+    - package_installation

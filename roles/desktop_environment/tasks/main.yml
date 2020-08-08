@@ -1,0 +1,25 @@
+---
+- name: Ensure general desktop environment pakages are installed
+  become: yes
+  package:
+    name:
+      - adobe-source-han-sans-otc-fonts
+      - grim
+      - libnotify
+      - light
+      - wl-clipboard
+      - xorg-server-xwayland
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure script directory exists
+  file:
+    path: '{{ script_dir }}'
+    state: directory
+
+- name: Ensure scripts are present
+  copy:
+    src: 'scripts/'
+    dest: '{{ script_dir }}'
+    mode: '+x'

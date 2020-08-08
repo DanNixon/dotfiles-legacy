@@ -1,0 +1,21 @@
+---
+- name: Ensure MPV is installed
+  package:
+    name:
+      - mpv
+      - xdg-utils
+    state: present
+
+- name: Ensure MPV configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure MPV configuration is present
+  copy:
+    src: '.'
+    dest: '{{ config_dir }}'
+
+- name: Ensure MPV is the default viewer for GIFs
+  changed_when: no
+  command: xdg-mime default 'mpv.desktop' 'image/gif'

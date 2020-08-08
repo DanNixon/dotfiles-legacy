@@ -1,0 +1,24 @@
+---
+- name: Ensure Waybar is installed
+  package:
+    name: waybar
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Waybar configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure Waybar configuration is present
+  import_role:
+    name: copy_maybe_patched_file
+  vars:
+    src: 'config.json'
+    dest: '{{ config_dir }}/config.json'
+
+- name: Ensure Waybar style is present
+  copy:
+    src: 'style.css'
+    dest: '{{ config_dir }}/style.css'

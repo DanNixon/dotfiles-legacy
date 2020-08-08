@@ -1,0 +1,26 @@
+---
+- name: Ensure Sway is installed
+  package:
+    name:
+      - sway
+      - swaylock
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Sway configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure Sway configuration is present
+  import_role:
+    name: copy_maybe_patched_file
+  vars:
+    src: 'config'
+    dest: '{{ config_dir }}/config'
+
+- name: Reload Sway
+  changed_when: no
+  command: swaymsg reload
+  when: reload|bool

@@ -1,0 +1,20 @@
+---
+- name: Ensure msmtp is installed
+  become: yes
+  package:
+    name: msmtp
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure msmtp configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure msmtp configuration is present
+  import_role:
+    name: copy_secret_injected_file
+  vars:
+    src: 'config'
+    dest: '{{ config_dir }}/config'

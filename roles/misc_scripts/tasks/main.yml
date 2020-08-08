@@ -1,0 +1,11 @@
+---
+- name: Ensure target directory exists
+  file:
+    path: '{{ target_dir }}'
+    state: directory
+
+- name: Ensure scripts are present
+  copy:
+    src: 'scripts/'
+    dest: '{{ target_dir }}'
+    mode: '+x'

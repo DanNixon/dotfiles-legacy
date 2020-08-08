@@ -1,0 +1,34 @@
+---
+- name: Ensure WireGuard tools are installed
+  become: yes
+  package:
+    name: wireguard-tools
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure WireGuard configuration is present and up to date
+  become: yes
+  notify:
+    - Restart WireGuard service
+  template:
+    src: wg.conf.j2
+    dest: '/etc/wireguard/{{ config }}.conf'
+
+- name: Ensure the WireGuard service is enabled and started
+  become: yes
+  when: service
+  service:
+    name: 'wg-quick@{{ config }}'
+    state: started
+    enabled: yes
+
+- name: Ensure a UFW firewall rule exists that allows peers to connect
+  become: yes
+  when: "interface['listen_port'] is defined"
+  ufw:
+    rule: allow
+    direction: in
+    interface: '{{ external_interface }}'
+    proto: udp
+    to_port: "{{ interface['listen_port'] }}"

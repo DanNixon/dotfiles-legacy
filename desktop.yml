@@ -1,0 +1,11 @@
+---
+- name: Setup default desktop environment
+
+  hosts: localhost
+  connection: local
+
+  vars:
+    reload_sway: no
+
+  roles:
+    - desktop_environment

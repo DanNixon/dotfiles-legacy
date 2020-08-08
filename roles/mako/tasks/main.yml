@@ -1,0 +1,18 @@
+---
+- name: Ensure Mako is installed
+  become: yes
+  package:
+    name: mako
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Mako configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure Mako configuration is present
+  copy:
+    src: 'config'
+    dest: '{{ config_dir }}/config'

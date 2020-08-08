@@ -1,0 +1,20 @@
+---
+- name: Ensure Alacritty is installed
+  become: yes
+  package:
+    name: alacritty
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Alacritty configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure Alacritty configuration is present
+  import_role:
+    name: copy_maybe_patched_file
+  vars:
+    src: 'alacritty.yml'
+    dest: '{{ config_dir }}/alacritty.yml'

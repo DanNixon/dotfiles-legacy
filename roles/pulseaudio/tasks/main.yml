@@ -1,0 +1,6 @@
+---
+- name: Ensure Pulse Audio is installed
+  become: yes
+  package:
+    name: pulseaudio
+    state: present

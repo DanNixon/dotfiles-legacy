@@ -1,0 +1,8 @@
+---
+dependencies:
+  - role: gnupg
+  - role: pass
+
+  - role: mbsync
+  - role: msmtp
+  - role: neomutt

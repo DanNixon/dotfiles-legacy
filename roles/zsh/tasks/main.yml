@@ -1,0 +1,14 @@
+---
+- name: Ensure Zsh is installed
+  package:
+    name: zsh
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Zsh configuration is present
+  import_role:
+    name: copy_maybe_patched_file
+  vars:
+    src: 'zshrc'
+    dest: "{{ ansible_facts['env']['HOME'] }}/.zshrc"

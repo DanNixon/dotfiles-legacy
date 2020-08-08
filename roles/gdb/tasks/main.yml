@@ -1,0 +1,13 @@
+---
+- name: Ensure GDB is installed
+  become: yes
+  package:
+    name: gdb
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure GDB configuration is present
+  copy:
+    src: 'gdbinit'
+    dest: "{{ ansible_facts['env']['HOME'] }}/.gdbinit"

@@ -1,0 +1,30 @@
+---
+- name: Ensure Neomutt is installed
+  become: yes
+  package:
+    name: neomutt
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Neomutt configuration directories exist
+  file:
+    path: '{{ config_dir }}/accounts/'
+    state: directory
+
+- name: Ensure Neomutt configuration is present
+  copy:
+    src: 'neomuttrc'
+    dest: '{{ config_dir }}'
+
+- name: Ensure Neomutt account configurations are present
+  include_role:
+    name: copy_secret_injected_file
+  vars:
+    src: 'accounts/{{ item }}.neomuttrc'
+    dest: '{{ config_dir }}/accounts/{{ item }}.neomuttrc'
+  loop:
+    - 'gmail'
+    - 'outlook-1'
+    - 'outlook-2'
+    - 'protonmail'

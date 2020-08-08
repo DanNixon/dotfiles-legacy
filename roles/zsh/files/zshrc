@@ -1,0 +1,136 @@
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _approximate
+zstyle ':completion:*' completions 1
+zstyle ':completion:*' format '%d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '/home/dan/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Vi style key bindings
+bindkey -v
+KEYTIMEOUT=10
+
+function zle-line-init zle-keymap-select {
+  PROMPT_VI_MODE="${${KEYMAP/vicmd/N}/(main|viins)/I}"
+  PROMPT_VI_COLOR="${${KEYMAP/vicmd/blue}/(main|viins)/green}"
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# Use Vi style navigation in menu completion
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Prompts
+if (( ${+SSH_CONNECTION} )); then
+  PROMPT_HOSTNAME_COLOR='magenta'
+else
+  PROMPT_HOSTNAME_COLOR='yellow'
+fi
+
+setopt PROMPT_SUBST
+PROMPT_GREY='248'
+PROMPT='%B%F{cyan}%n%f%b %F{$PROMPT_GREY}at%f %B%F{$PROMPT_HOSTNAME_COLOR}%m%f%b %F{$PROMPT_GREY}in%f %B%F{blue}%~%f%b %F{$PROMPT_GREY}[%B%F{$PROMPT_VI_COLOR}$PROMPT_VI_MODE%F{$PROMPT_GREY}%b]%B>%f%b '
+RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
+
+# Terminal title
+case "$TERM" in
+  *xterm*)
+    precmd () { print -Pn "\e]2;$(pwd)\a" }
+    ;;
+esac
+
+# Expand aliases
+# See https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/globalias/globalias.plugin.zsh
+globalias() {
+   zle _expand_alias
+   zle expand-word
+}
+zle -N globalias
+bindkey '^E' globalias
+
+# Base16 shell
+BASE16_SHELL="$HOME/.local/share/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# File colors
+source "$HOME/.local/share/ls_colors.sh"
+
+# Environment
+export EDITOR='nvim'
+
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+
+export TODO_DIR="$HOME/docs/markor"
+export NOTE_DIR="$HOME/docs/markor"
+export VOILE_BOOKMARK_FILE="$HOME/.voile/bookmarks.json"
+
+export PATH="$HOME/.local/bin/:$PATH"
+
+# Aliases
+alias l="ls --color=auto -lFh"
+alias ll="ls --color=auto -lFa"
+
+alias df="df -h"
+alias du="du -h"
+
+alias lb="lsblk"
+
+alias q="exit"
+alias c="clear"
+
+alias ..="cd .."
+
+alias bm="voile"
+alias bmadd="voile add -cae"
+
+alias zfs-ls="zfs list -o name,referenced,used,available,encryption,keystatus,mounted,mountpoint"
+
+alias cmake-format-all="find . -type f -name 'CMakeLists.txt' | xargs cmake-format -i"
+alias clang-format-all="find . -type f -regex '.*\.\(c\|cpp\|h\|hpp\)' | xargs clang-format -i"
+
+alias open="xdg-open"
+alias g="git"
+alias v="$EDITOR"
+alias t="todo.sh"
+alias m="ncmpcpp"
+alias stripexif="exiftool -all="
+alias tok="tomb open -k -"
+alias on-file-change="inotifywait -q -e modify"
+alias fif="grep -rnw . -e"
+alias netstat-list-listening-ports="netstat --tcp --udp --listening --numeric --program"
+alias nb="newsboat"
+alias pb="podboat"
+alias nm="neomutt"
+
+alias today="date '+%Y-%m-%d'"
+
+# Global aliases
+alias -g fwd-gpg='-R /run/user/1000/gnupg/S.gpg-agent:$(gpgconf --list-dirs agent-extra-socket)'
+alias -g fwd-nd='-L localhost:29999:localhost:19999'
+alias -g fwd-st='-L localhost:9999:localhost:8384'
+
+# Fzf
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh

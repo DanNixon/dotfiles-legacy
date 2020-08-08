@@ -1,0 +1,19 @@
+---
+- name: Ensure password store is installed
+  become: yes
+  package:
+    name: pass
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure script directory exists
+  file:
+    path: '{{ script_dir }}'
+    state: directory
+
+- name: Ensure scripts are present
+  copy:
+    src: 'scripts/'
+    dest: '{{ script_dir }}'
+    mode: '+x'

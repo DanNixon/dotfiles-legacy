@@ -1,0 +1,2 @@
+---
+source_filename: "{{ ansible_parent_role_paths[0] }}/files/{{ src }}"

@@ -1,0 +1,17 @@
+---
+- name: Ensure Git is installed
+  package:
+    name: git
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure Git configuration is present
+  copy:
+    src: 'gitconfig'
+    dest: "{{ ansible_facts['env']['HOME'] }}/.gitconfig"
+
+- name: Ensure Git global ignore rules are present
+  copy:
+    src: 'gitignore'
+    dest: "{{ ansible_facts['env']['HOME'] }}/.gitignore"

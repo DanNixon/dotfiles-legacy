@@ -1,0 +1,22 @@
+---
+- name: Ensure MPD is installed
+  package:
+    name: mpd
+    state: present
+
+- name: Ensure MPD configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure MPD configuration is present
+  copy:
+    src: 'mpd.conf'
+    dest: '{{ config_dir }}/mpd.conf'
+
+- name: Ensure MPD service is started
+  systemd:
+    name: mpd
+    scope: user
+    enabled: yes
+    state: started

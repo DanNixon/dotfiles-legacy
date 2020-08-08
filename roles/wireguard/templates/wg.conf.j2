@@ -1,0 +1,22 @@
+[Interface]
+Address = {{ interface['address'] }}
+PrivateKey = {{ interface['private_key'] }}
+{% if 'listen_port' in interface %}
+ListenPort = {{ interface['listen_port'] }}
+{% endif %}
+
+{% for peer in peers %}
+[Peer]
+PublicKey = {{ peer['public_key'] }}
+{% if 'preshared_key' in peer %}
+PresharedKey = {{ peer['preshared_key'] }}
+{% endif %}
+{% if 'endpoint' in peer %}
+Endpoint = {{ peer['endpoint'] }}
+{% endif %}
+AllowedIPs = {{ peer['allowed_ips'] }}
+{% if 'persistent_keepalive' in peer %}
+PersistentKeepalive = {{ peer['persistent_keepalive'] }}
+{% endif %}
+
+{% endfor %}

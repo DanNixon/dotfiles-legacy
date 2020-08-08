@@ -1,0 +1,22 @@
+---
+- name: Ensure dnscrypt-proxy is installed
+  become: yes
+  package:
+    name: dnscrypt-proxy
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure the dnscrypt-proxy service is enabled and running
+  become: yes
+  service:
+    name: dnscrypt-proxy
+    state: started
+    enabled: yes
+
+- name: Ensure system resolver is configured
+  become: yes
+  copy:
+    src: 'resolv.conf'
+    dest: '/etc/resolv.conf'
+    attributes: '+i'

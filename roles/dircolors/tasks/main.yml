@@ -1,0 +1,16 @@
+---
+- name: Generate ls_colors
+  delegate_to: localhost
+  changed_when: no
+  command: dircolors -b '{{ role_path }}/files/dircolors.conf'
+  register: ls_colors
+
+- name: Ensure target directory exists
+  file:
+    path: '{{ target_dir }}'
+    state: directory
+
+- name: Ensure ls_colors file is present
+  copy:
+    content: "{{ ls_colors['stdout'] }}"
+    dest: '{{ target_dir }}/ls_colors.sh'

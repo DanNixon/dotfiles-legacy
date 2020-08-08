@@ -1,0 +1,16 @@
+---
+- name: Ensure feh is installed
+  package:
+    name:
+      - feh
+      - xdg-utils
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure feh is the default viewer for appropriate formats
+  changed_when: no
+  command: xdg-mime default 'feh.desktop' '{{ item }}'
+  loop:
+    - 'image/jpeg'
+    - 'image/webp'

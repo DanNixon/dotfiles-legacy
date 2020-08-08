@@ -1,0 +1,13 @@
+---
+- name: Ensure QEMU guest agent is installed
+  become: yes
+  package:
+    name: qemu-guest-agent
+    state: present
+
+- name: Ensure QEMU guest agent service is running
+  become: yes
+  service:
+    name: qemu-guest-agent
+    state: started
+    enabled: yes
