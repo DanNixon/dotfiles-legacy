@@ -2,7 +2,7 @@
 
 set -xe
 
-url="${1:-$(xclip -o)}"
+url="${1:-$(wl-paste --no-newline)}"
 format="$(smenu-youtube-dl-select-format "$url")"
 
 mpv --ytdl-format="$format" "$url" &
