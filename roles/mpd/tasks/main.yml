@@ -1,5 +1,6 @@
 ---
 - name: Ensure MPD is installed
+  become: yes
   package:
     name: mpd
     state: present

@@ -4,7 +4,7 @@
   copy:
     src: 'todo.sh'
     dest: '/usr/local/bin/todo.sh'
-    mode: 'o+x'
+    mode: '+rx'
 
 - name: Ensure Todo.txt configuration directories exist
   file:
