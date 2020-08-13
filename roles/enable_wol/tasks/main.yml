@@ -1,0 +1,10 @@
+---
+- name: Ensure ethtool is installed
+  become: yes
+  package:
+    name: ethtool
+    state: present
+
+- name: Enable Wake on Lan
+  become: yes
+  command: 'ethtool -s {{ interface }} wol {{ mode }}'
