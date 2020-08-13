@@ -1,0 +1,56 @@
+---
+- name: Setup akane
+
+  hosts: localhost
+  connection: local
+
+  pre_tasks:
+    - name: Ensure packages are up to date
+      become: yes
+      pacman:
+        update_cache: yes
+        upgrade: yes
+
+  roles:
+    - dnscrypt-proxy
+    - networkmanager
+    - pulseaudio
+    - ufw
+
+    - essentials
+    - pass
+
+    - hsxkpasswdrc
+    - misc_scripts
+    - mpd_clients
+    - mpv
+    - newsboat
+    - syncthing
+    - tmux
+    - todotxt
+
+  tasks:
+    - name: Install other packages
+      become: yes
+      package:
+        name:
+          - base-devel
+          - borg
+          - blueman
+          - ffmpeg
+          - firefox
+          - go-pie
+          - gpxsee
+          - hugo
+          - ipcalc
+          - netdata
+          - net-tools
+          - pavucontrol
+          - qrencode
+          - sshfs
+          - sshuttle
+          - udevil
+          - unzip
+        state: present
+      tags:
+        - package_installation
