@@ -181,3 +181,16 @@ bindsym XF86AudioPause  exec --no-startup-id media-control pause
 bindsym XF86AudioPrev   exec --no-startup-id media-control prev
 bindsym XF86AudioNext   exec --no-startup-id media-control next
 bindsym XF86AudioStop   exec --no-startup-id media-control stop
+
+# Displays
+{% for d in sway_displays %}
+output {{ d['name'] }} {
+  {{ 'enable' if d['enabled'] else 'disable' }}
+{% if 'options' in d %}
+{% for k, v in d['options'].items() %}
+  {{ k }} {{ v }}
+{% endfor %}
+{% endif %}
+}
+
+{% endfor %}

@@ -14,8 +14,8 @@
     state: directory
 
 - name: Ensure Sway configuration is present
-  copy:
-    src: 'config'
+  template:
+    src: config.j2
     dest: '{{ config_dir }}/config'
 
 - name: Reload Sway
