@@ -21,4 +21,4 @@
 - name: Reload Sway
   changed_when: no
   command: swaymsg reload
-  when: reload|bool
+  when: sway_reload|bool

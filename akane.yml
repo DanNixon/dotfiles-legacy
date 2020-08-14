@@ -29,6 +29,10 @@
     - tmux
     - todotxt
 
+    - name: desktop_environment
+      tags:
+        - desktop_environment
+
   tasks:
     - name: Install other packages
       become: yes

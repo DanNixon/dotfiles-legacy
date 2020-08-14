@@ -13,5 +13,3 @@ dependencies:
   - role: wofi
   - role: zathura
   - role: sway
-    vars:
-      reload: '{{ reload_sway }}'

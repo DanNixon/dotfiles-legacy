@@ -9,7 +9,8 @@ notify-send \
   "Desktop environment is being reloaded with profile \"$profile\", please wait warmly..."
 
 cd "$(dirname "$0")" && ansible-playbook \
-  desktop.yml \
+  "$(hostname).yml" \
+  --tags desktop_environment \
   --skip-tags font_installation,package_installation \
-  -e reload_sway=yes \
-  -e target="$profile"
+  -e sway_reload=yes \
+  -e profile="$profile"

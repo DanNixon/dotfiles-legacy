@@ -1,5 +1,0 @@
-193a194,197
-> 
-> # Displays
-> set $wallpaper "~/docs/wallpapers/kirisame\ marisa\ and\ alice\ margatroid\ \(touhou\)\ drawn\ by\ turu\ -\ b1c5ab5a9230982ca1f5b5daafe1c7c0.png"
-> output eDP-1 bg $wallpaper fill scale 2 enable
