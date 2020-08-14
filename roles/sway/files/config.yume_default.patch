@@ -1,6 +1,0 @@
-190a191,195
-> 
-> # Displays
-> set $wallpaper "~/Downloads/img.png"
-> output eDP-1    bg $wallpaper stretch enable
-> output HDMI-A-1 bg $wallpaper stretch disable
