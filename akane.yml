@@ -4,7 +4,14 @@
   hosts: localhost
   connection: local
 
+  vars:
+    profile: default
+
   pre_tasks:
+    - include_vars: 'vars/{{ ansible_hostname }}/{{ profile }}.yml'
+      tags:
+        - always
+
     - name: Ensure packages are up to date
       become: yes
       pacman:

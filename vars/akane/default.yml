@@ -1,0 +1,6 @@
+---
+sway_displays:
+  - name: LVDS-1
+    enabled: yes
+    options:
+      bg: '~/docs/wallpapers/shameimaru\ aya\ \(touhou\)\ drawn\ by\ fjsmu\ -\ 68e92ca324796a9712eb35ca357eaf9e.png fill'
