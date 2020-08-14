@@ -14,9 +14,7 @@
     state: directory
 
 - name: Ensure Sway configuration is present
-  import_role:
-    name: copy_maybe_patched_file
-  vars:
+  copy:
     src: 'config'
     dest: '{{ config_dir }}/config'
 
