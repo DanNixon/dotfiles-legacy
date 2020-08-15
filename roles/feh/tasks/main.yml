@@ -13,4 +13,5 @@
   command: xdg-mime default 'feh.desktop' '{{ item }}'
   loop:
     - 'image/jpeg'
+    - 'image/png'
     - 'image/webp'
