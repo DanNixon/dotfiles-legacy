@@ -17,3 +17,4 @@
     name: 'syncthing@{{ ansible_user_id }}'
     state: started
     enabled: yes
+  when: service|bool
