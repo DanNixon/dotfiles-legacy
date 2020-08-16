@@ -20,3 +20,4 @@
   copy:
     src: 'actions/'
     dest: '{{ config_dir }}/actions/'
+    mode: '+x'
