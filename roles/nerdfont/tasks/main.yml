@@ -11,6 +11,5 @@
     remote_src: yes
 
 - name: Rebuild font cache
-  changed_when: no
   command: fc-cache --force --verbose
   when: rebuild_cache|bool

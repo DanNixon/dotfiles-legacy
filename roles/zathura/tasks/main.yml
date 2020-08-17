@@ -20,9 +20,7 @@
     dest: '{{ applications_dir }}/zathura.desktop'
 
 - name: Update applications database
-  changed_when: no
   command: update-desktop-database "{{ ansible_facts['env']['HOME'] }}/.local/share/applications"
 
 - name: Ensure Zathura is the default viewer for appropriate formats
-  changed_when: no
   command: xdg-mime default 'zathura.desktop' 'application/pdf'

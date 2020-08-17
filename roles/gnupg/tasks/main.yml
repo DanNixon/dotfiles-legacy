@@ -17,7 +17,6 @@
     dest: '{{ gpg_home }}'
 
 - name: Ensure my public key is present
-  changed_when: no
   shell:
     cmd: curl 'https://dan-nixon.com/pubkey.txt' | gpg --import -
     warn: no

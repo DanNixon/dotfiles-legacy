@@ -8,7 +8,8 @@
     profile: default
 
   pre_tasks:
-    - include_vars: 'vars/{{ ansible_hostname }}/{{ profile }}.yml'
+    - name: Include profile specific variables
+      include_vars: 'vars/{{ ansible_hostname }}/{{ profile }}.yml'
       tags:
         - always
 

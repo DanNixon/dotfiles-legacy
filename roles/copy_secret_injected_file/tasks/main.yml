@@ -3,6 +3,8 @@
   delegate_to: localhost
   changed_when: no
   shell: |
+    set -eo pipefail
+
     contents="$(cat {{ source_filename }})"
 
     # Find everything that matches "<< pass something >>" and replace it with the value of something from pass

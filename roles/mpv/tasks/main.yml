@@ -17,5 +17,4 @@
     dest: '{{ config_dir }}'
 
 - name: Ensure MPV is the default viewer for GIFs
-  changed_when: no
   command: xdg-mime default 'mpv.desktop' 'image/gif'

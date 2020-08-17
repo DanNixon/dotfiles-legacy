@@ -19,6 +19,5 @@
     dest: '{{ config_dir }}/config'
 
 - name: Reload Sway
-  changed_when: no
   command: swaymsg reload
   when: sway_reload|bool
