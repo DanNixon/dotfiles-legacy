@@ -13,8 +13,8 @@
 
 - name: Ensure Waybar configuration is present
   copy:
-    src: 'config.json'
-    dest: '{{ config_dir }}/config.json'
+    src: 'config'
+    dest: '{{ config_dir }}/config'
 
 - name: Ensure Waybar style is present
   copy:
