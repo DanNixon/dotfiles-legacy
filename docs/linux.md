@@ -37,6 +37,20 @@
 - Fonts
   - DejaVuSansMono [NerdFont](https://nerdfonts.com)
 
+## AUR packages
+
+- betaflight-configurator
+- blackbox-explorer
+- gtypist
+- opentx-companion
+- protonmail-bridge-nogui
+- qmk
+- smenu
+- tomb
+- (vesc_tool-git)
+- wdisplays
+- yay
+
 ## Themes
 
 [base16](http://chriskempson.com/projects/base16/) themes I have used for a reasonable amount of time (most recent first):
