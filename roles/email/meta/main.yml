@@ -8,4 +8,5 @@ dependencies:
   - role: neomutt
 
   - role: khal
+  - role: khard
   - role: vdirsyncer
