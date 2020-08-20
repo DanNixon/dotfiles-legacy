@@ -69,3 +69,13 @@
         state: present
       tags:
         - package_installation
+
+    - name: Install remote desktop client tools
+      become: yes
+      package:
+        name:
+          - remmina
+          - freerdp
+          - libvncserver
+      tags:
+        - package_installation
