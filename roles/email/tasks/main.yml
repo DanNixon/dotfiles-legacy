@@ -1,1 +1,11 @@
 ---
+- name: Ensure data mountpoints exist
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+      - "{{ ansible_facts['env']['HOME'] }}/.cache/vdirsyncer/secrets"
+      - "{{ ansible_facts['env']['HOME'] }}/.cache/vdirsyncer/status"
+      - "{{ ansible_facts['env']['HOME'] }}/.calendars"
+      - "{{ ansible_facts['env']['HOME'] }}/.contacts"
+      - "{{ ansible_facts['env']['HOME'] }}/.mail"

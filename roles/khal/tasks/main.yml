@@ -1,0 +1,20 @@
+---
+- name: Ensure khal is installed
+  become: yes
+  package:
+    name: khal
+    state: present
+  tags:
+    - package_installation
+
+- name: Ensure khal configuration directory exists
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Ensure khal configuration is present
+  import_role:
+    name: copy_secret_injected_file
+  vars:
+    src: 'config'
+    dest: '{{ config_dir }}/config'

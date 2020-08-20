@@ -1,0 +1,2 @@
+---
+config_dir: "{{ ansible_facts['env']['HOME'] }}/.config/khal/"

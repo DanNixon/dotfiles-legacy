@@ -6,3 +6,6 @@ dependencies:
   - role: mbsync
   - role: msmtp
   - role: neomutt
+
+  - role: khal
+  - role: vdirsyncer
