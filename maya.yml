@@ -28,7 +28,10 @@
     - essentials
     - pass
 
-    - email
+    - name: email
+      tags:
+        - email
+
     - gdb
     - hsxkpasswdrc
     - misc_scripts
