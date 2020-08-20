@@ -50,6 +50,7 @@
       package:
         name:
           - base-devel
+          - bolt
           - borg
           - blueman
           - ffmpeg
