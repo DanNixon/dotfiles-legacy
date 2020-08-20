@@ -5,7 +5,7 @@ sway_displays:
     options:
       pos: '1920 0'
       bg: '~/docs/wallpapers/kirisame\ marisa\ and\ alice\ margatroid\ \(touhou\)\ drawn\ by\ turu\ -\ b1c5ab5a9230982ca1f5b5daafe1c7c0.png fill'
-  - name: HDMI-A-1
+  - name: DP-1
     enabled: yes
     options:
       pos: '0 0'
