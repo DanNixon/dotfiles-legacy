@@ -1,4 +1,24 @@
 ---
+- name: Ensure Syncthing APT key is added
+  become: yes
+  apt_key:
+    url: https://syncthing.net/release-key.txt
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Ensure Syncthing APT repository is added
+  become: yes
+  apt_repository:
+    repo: deb https://apt.syncthing.net/ syncthing stable
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Update APT repos
+  become: yes
+  apt:
+    update_cache: yes
+  when: ansible_os_family == 'Debian'
+
 - name: Ensure Syncthing is installed
   become: yes
   package:
