@@ -1,5 +1,6 @@
 ---
 - name: Ensure Neovim is installed
+  become: yes
   package:
     name: neovim
     state: present

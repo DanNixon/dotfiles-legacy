@@ -1,5 +1,6 @@
 ---
 - name: Ensure GnuPG is installed
+  become: yes
   package:
     name: "{{ packages['common'] + packages[ansible_os_family] if ansible_os_family in packages else packages['common'] }}"
     state: present
