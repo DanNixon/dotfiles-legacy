@@ -84,3 +84,13 @@
           - libvncserver
       tags:
         - package_installation
+
+    - name: Install CD and DVD tools
+      become: yes
+      package:
+        name:
+          - cdparanoia
+          - dvdbackup
+          - libdvdcss
+      tags:
+        - package_installation
