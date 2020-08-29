@@ -1,6 +1,16 @@
 ---
-- name: Ensure Pulse Audio is installed
+- name: Ensure Pulseaudio and friends are installed
   become: yes
   package:
-    name: pulseaudio
-    state: present
+    name:
+      - pulseaudio
+      - pulseaudio-bluetooth
+      - pulseeffects
+
+- name: Ensure Pulseaudio configuration is suitable for Bluetooth devices
+  become: yes
+  blockinfile:
+    path: /etc/pulse/system.pa
+    block: |
+      load-module module-bluetooth-policy
+      load-module module-bluetooth-discover

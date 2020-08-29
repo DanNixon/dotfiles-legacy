@@ -1,0 +1,12 @@
+---
+- name: Ensure Bluez is installed
+  become: yes
+  package:
+    name: bluez
+
+- name: Ensure Bluetooth service is enabled and started
+  become: yes
+  service:
+    name: bluetooth
+    state: started
+    enabled: yes
