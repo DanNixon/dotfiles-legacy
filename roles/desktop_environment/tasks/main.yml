@@ -4,6 +4,7 @@
   package:
     name:
       - adobe-source-han-sans-otc-fonts
+      - blueman
       - grim
       - libnotify
       - light
