@@ -40,8 +40,8 @@
   "pulseaudio": {
     "scroll-step": 5,
     "format": "{volume}% {icon}  {format_source}",
-    "format-bluetooth": "{volume}% {icon}  {format_source}",
-    "format-bluetooth-muted": "mute {icon}  {format_source}",
+    "format-bluetooth": "{volume}% {icon}   {format_source}",
+    "format-bluetooth-muted": "mute {icon}   {format_source}",
     "format-muted": "mute {icon}  {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "mute ",
@@ -49,7 +49,6 @@
       "headphone": "",
       "default": ["奄", "奔", "墳"]
     },
-    "on-click": "pulseaudio-control m toggle",
-    "on-click-right": "pavucontrol"
+    "on-click": "pulseaudio-control m toggle"
   }
 }
