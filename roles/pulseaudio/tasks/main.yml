@@ -6,6 +6,7 @@
       - pulseaudio
       - pulseaudio-bluetooth
       - pulseeffects
+      - pulsemixer
 
 - name: Ensure Pulseaudio configuration is suitable for Bluetooth devices
   become: yes
