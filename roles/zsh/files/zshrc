@@ -124,6 +124,7 @@ alias netstat-list-listening-ports="netstat --tcp --udp --listening --numeric --
 alias nb="newsboat"
 alias pb="podboat"
 alias nm="neomutt"
+alias pm="pulsemixer"
 
 alias today="date '+%Y-%m-%d'"
 
