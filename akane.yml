@@ -58,7 +58,6 @@
           - ipcalc
           - netdata
           - net-tools
-          - pavucontrol
           - qrencode
           - sshfs
           - sshuttle
