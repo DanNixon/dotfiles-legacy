@@ -125,6 +125,7 @@ alias nb="newsboat"
 alias pb="podboat"
 alias nm="neomutt"
 alias pm="pulsemixer"
+alias bt="bluetoothctl"
 
 alias today="date '+%Y-%m-%d'"
 
