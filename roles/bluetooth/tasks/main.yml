@@ -2,7 +2,9 @@
 - name: Ensure Bluez is installed
   become: yes
   package:
-    name: bluez
+    name:
+      - bluez
+      - bluez-utils
 
 - name: Ensure Bluetooth service is enabled and started
   become: yes
