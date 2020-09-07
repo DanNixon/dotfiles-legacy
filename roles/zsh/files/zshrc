@@ -98,6 +98,9 @@ alias du="du -h"
 
 alias lb="lsblk"
 
+alias udm="udevil --mount"
+alias udum="udevil --unmount"
+
 alias q="exit"
 alias c="clear"
 
