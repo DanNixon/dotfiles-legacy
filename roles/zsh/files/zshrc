@@ -87,7 +87,9 @@ export TODO_DIR="$HOME/docs/markor"
 export NOTE_DIR="$HOME/docs/markor"
 export VOILE_BOOKMARK_FILE="$HOME/.voile/bookmarks.json"
 
-export PATH="$HOME/.local/bin/:$PATH"
+typeset -U PATH path
+path=("$HOME/.local/bin/" "$HOME/go/bin/" "$path[@]")
+export PATH
 
 # Aliases
 alias l="ls --color=auto -lFh"
