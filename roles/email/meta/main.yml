@@ -9,4 +9,3 @@ dependencies:
 
   - role: khal
   - role: khard
-  - role: vdirsyncer
