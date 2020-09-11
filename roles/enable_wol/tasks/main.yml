@@ -5,6 +5,22 @@
     name: ethtool
     state: present
 
+- name: Ensure systemd service is present
+  become: yes
+  register: systemd_service_install
+  copy:
+    src: 'wol@.service'
+    dest: '/usr/lib/systemd/system/wol@.service'
+
+- name: Reload systemd services
+  become: yes
+  systemd:
+    daemon_reload: yes
+  when: systemd_service_install.changed
+
 - name: Enable Wake on Lan
   become: yes
-  command: 'ethtool -s {{ interface }} wol {{ mode }}'
+  service:
+    name: 'wol@{{ interface }}'
+    state: started
+    enabled: yes
