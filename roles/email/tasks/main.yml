@@ -4,6 +4,4 @@
     path: "{{ item }}"
     state: directory
   with_items:
-      - "{{ ansible_facts['env']['HOME'] }}/.calendars"
-      - "{{ ansible_facts['env']['HOME'] }}/.contacts"
       - "{{ ansible_facts['env']['HOME'] }}/.mail"
