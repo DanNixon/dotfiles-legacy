@@ -3,6 +3,7 @@
   become: yes
   package:
     name:
+      - dmidecode
       - dnsmasq
       - ebtables
       - libvirt
