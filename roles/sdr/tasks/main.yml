@@ -1,0 +1,12 @@
+---
+- name: Ensure SDR tools are installed
+  become: yes
+  package:
+    name:
+      - gnuradio
+      - gnuradio-osmosdr
+      - qwt
+      - rtl-sdr
+    state: present
+  tags:
+    - package_installation

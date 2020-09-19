@@ -41,6 +41,7 @@
     - mpv
     - newsboat
     - qemu_host
+    - sdr
     - syncthing
     - tmux
     - todotxt
