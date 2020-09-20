@@ -9,6 +9,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
