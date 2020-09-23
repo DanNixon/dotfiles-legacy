@@ -154,6 +154,12 @@ command! CopyPlace :let @+ = expand("%") . ":" . line(".")
 " KEY MAPPINGS "
 """"""""""""""""
 
+" Easier moving around windows
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
 " Handy shortcut for replacing words
 map <Leader>r :%s/\<<C-r><C-w>\>/
 
