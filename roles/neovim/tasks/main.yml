@@ -14,7 +14,7 @@
 
 - name: Ensure Neovim configuration is present
   copy:
-    src: 'nvim'
+    src: 'nvim/'
     dest: '{{ config_dir }}'
 
 - name: Ensure NeoVim plugins are installed and up to date
