@@ -1,5 +1,6 @@
 ---
 - name: Ensure Zathura is installed
+  become: yes
   package:
     name:
       - xdg-utils
