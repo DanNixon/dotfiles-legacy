@@ -11,9 +11,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
-Plug 'kien/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/restore_view.vim'
 Plug 'scrooloose/syntastic'
@@ -166,9 +166,8 @@ map <Leader>s :Spell<CR>
 map <Leader>S :SpellOff<CR>
 
 " Find shortcuts
-map <Leader>f :FZF<CR>
-map <Leader>b :CtrlPBuffer<CR>
-map <Leader>l :CtrlPLine<CR>
+map <Leader>f :Files<CR>
+map <Leader>b :Buffers<CR>
 
 " easymotion word jumping
 map <Leader>j <Plug>(easymotion-bd-w)
