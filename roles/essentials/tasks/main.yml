@@ -5,6 +5,7 @@
     name:
       - htop
       - jq
+      - net-tools
       - nnn
       - progress
       - rsync
