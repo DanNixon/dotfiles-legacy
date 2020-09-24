@@ -41,6 +41,7 @@
 
 - betaflight-configurator
 - blackbox-explorer
+- gr-dab-git
 - gtypist
 - opentx-companion
 - protonmail-bridge-nogui

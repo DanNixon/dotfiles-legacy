@@ -4,6 +4,7 @@
   package:
     name:
       - gnuradio
+      - gnuradio-companion
       - gnuradio-osmosdr
       - qwt
       - rtl-sdr
