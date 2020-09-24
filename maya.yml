@@ -39,6 +39,7 @@
     - mpd
     - mpd_clients
     - mpv
+    - netdata
     - newsboat
     - qemu_host
     - sdr
@@ -65,7 +66,6 @@
           - gpxsee
           - hugo
           - ipcalc
-          - netdata
           - net-tools
           - qrencode
           - sshfs

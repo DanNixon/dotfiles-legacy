@@ -33,6 +33,7 @@
     - misc_scripts
     - mpd_clients
     - mpv
+    - netdata
     - newsboat
     - sdr
     - syncthing
@@ -57,7 +58,6 @@
           - gpxsee
           - hugo
           - ipcalc
-          - netdata
           - net-tools
           - qrencode
           - sshfs
