@@ -1,0 +1,8 @@
+---
+- name: Ensure manpage dependencies are installed
+  become: yes
+  package:
+    name:
+      - man-db
+      - man-pages
+      - texinfo

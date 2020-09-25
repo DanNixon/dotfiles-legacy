@@ -30,6 +30,7 @@
     - pass
 
     - hsxkpasswdrc
+    - manpages
     - misc_scripts
     - mpd_clients
     - mpv

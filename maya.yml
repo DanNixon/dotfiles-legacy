@@ -35,6 +35,7 @@
 
     - gdb
     - hsxkpasswdrc
+    - manpages
     - misc_scripts
     - mpd
     - mpd_clients
