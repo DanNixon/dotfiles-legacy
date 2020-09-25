@@ -4,8 +4,8 @@
   package:
     name:
       - htop
+      - iproute2
       - jq
-      - net-tools
       - nnn
       - progress
       - rsync
