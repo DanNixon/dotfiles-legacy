@@ -60,6 +60,7 @@
           - bolt
           - borg
           - blueman
+          - dnsutils
           - ffmpeg
           - firefox
           - go-pie
