@@ -1,0 +1,24 @@
+---
+- name: Ensure locale is generated
+  become: yes
+  community.general.locale_gen:
+    name: "{{ locale }}"
+
+- name: Ensure locale is selected
+  become: yes
+  copy:
+    dest: /etc/locale.conf
+    content: |
+      LANG={{ locale }}
+
+- name: Ensure keyboard layout is selected
+  become: yes
+  copy:
+    dest: /etc/vconsole.conf
+    content: |
+      KEYMAP={{ keymap }}
+
+- name: Ensure timezone is selected
+  become: yes
+  community.general.timezone:
+    name: "{{ timezone }}"

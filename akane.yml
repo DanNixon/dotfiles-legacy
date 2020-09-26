@@ -20,13 +20,15 @@
         upgrade: yes
 
   roles:
+    - system_essentials
+
     - bluetooth
     - dnscrypt-proxy
     - networkmanager
     - pulseaudio
     - ufw
 
-    - essentials
+    - user_essentials
     - pass
 
     - hsxkpasswdrc
