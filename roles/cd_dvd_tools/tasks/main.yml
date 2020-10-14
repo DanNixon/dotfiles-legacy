@@ -1,0 +1,11 @@
+---
+- name: Ensure CD and DVD tools are installed
+  become: yes
+  package:
+    name:
+      - cdparanoia
+      - dvdbackup
+      - libdvdcss
+      - vlc
+  tags:
+    - package_installation

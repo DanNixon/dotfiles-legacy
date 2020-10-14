@@ -1,0 +1,10 @@
+---
+- name: Ensure remote access client tools are installed
+  become: yes
+  package:
+    name:
+      - remmina
+      - freerdp
+      - libvncserver
+  tags:
+    - package_installation

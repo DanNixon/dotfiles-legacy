@@ -36,6 +36,7 @@
         - email
 
     - cad
+    - cd_dvd_tools
     - gdb
     - hsxkpasswdrc
     - manpages
@@ -46,6 +47,7 @@
     - netdata
     - newsboat
     - qemu_host
+    - remote_access_client
     - sdr
     - syncthing
     - tmux
@@ -77,25 +79,5 @@
           - udevil
           - unzip
         state: present
-      tags:
-        - package_installation
-
-    - name: Install remote desktop client tools
-      become: yes
-      package:
-        name:
-          - remmina
-          - freerdp
-          - libvncserver
-      tags:
-        - package_installation
-
-    - name: Install CD and DVD tools
-      become: yes
-      package:
-        name:
-          - cdparanoia
-          - dvdbackup
-          - libdvdcss
       tags:
         - package_installation
