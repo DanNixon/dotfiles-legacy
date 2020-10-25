@@ -11,3 +11,9 @@
   copy:
     src: 'zshrc'
     dest: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
+
+- name: Ensure Zsh is set at the user's logon shell
+  become: yes
+  user:
+    name: "{{ ansible_user }}"
+    shell: /usr/bin/zsh
