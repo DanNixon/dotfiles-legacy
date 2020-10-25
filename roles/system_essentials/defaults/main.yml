@@ -3,3 +3,4 @@ hostname: no
 locale: en_GB.UTF-8
 keymap: uk
 timezone: Europe/London
+sudoers: []

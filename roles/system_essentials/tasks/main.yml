@@ -29,3 +29,17 @@
   become: yes
   community.general.timezone:
     name: "{{ timezone }}"
+
+- name: Ensure sudo is installed
+  become: yes
+  package:
+    name: sudo
+    state: present
+
+- name: Ensure omnipowerful users/groups are configured
+  become: yes
+  copy:
+    dest: "/etc/sudoers.d/{{ item }}"
+    content: |
+      {{ item }} ALL=(ALL) ALL
+  loop: "{{ sudoers }}"
