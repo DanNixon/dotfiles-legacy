@@ -1,4 +1,11 @@
 ---
+- name: Ensure hostname is set
+  become: yes
+  copy:
+    dest: /etc/hostname
+    content: |
+      {{ hostname if hostname else inventory_hostname }}
+
 - name: Ensure locale is generated
   become: yes
   community.general.locale_gen:
