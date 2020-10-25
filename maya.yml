@@ -20,7 +20,9 @@
         upgrade: yes
 
   roles:
-    - system_essentials
+    - name: system_essentials
+      vars:
+        hostname: maya
 
     - bluetooth
     - dnscrypt-proxy
