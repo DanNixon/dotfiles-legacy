@@ -13,6 +13,6 @@
     state: directory
 
 - name: Ensure Alacritty configuration is present
-  copy:
-    src: 'alacritty.yml'
+  template:
+    src: alacritty.yml.j2
     dest: '{{ config_dir }}/alacritty.yml'
