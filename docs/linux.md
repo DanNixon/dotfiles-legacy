@@ -47,6 +47,7 @@
 - protonmail-bridge-nogui
 - qmk
 - smenu
+- tilp
 - tomb
 - (vesc_tool-git)
 - wdisplays
@@ -56,8 +57,8 @@
 
 [base16](http://chriskempson.com/projects/base16/) themes I have used for a reasonable amount of time (most recent first):
 
-- `base16-chalk`
-- `base16-material-darker`
+- `base16_chalk`
+- `base16_material-darker`
 
 ## Notes
 
