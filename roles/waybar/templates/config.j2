@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "top",
   "height": 30,
-  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-left": {{ waybar_modules_left }},
   "modules-center": ["sway/window"],
-  "modules-right": ["backlight", "pulseaudio", "battery", "clock"],
+  "modules-right": {{ waybar_modules_right }},
   "sway/workspaces": {
     "disable-scroll": false,
     "disable-scroll-wraparound": true,

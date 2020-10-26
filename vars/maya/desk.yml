@@ -1,5 +1,9 @@
 ---
 alacritty_font_size: 10
+
+waybar_modules_left: '["clock", "battery", "pulseaudio", "sway/workspaces", "sway/mode"]'
+waybar_modules_right: '[]'
+
 sway_displays:
   - name: eDP-1
     enabled: no

@@ -12,11 +12,11 @@
     state: directory
 
 - name: Ensure Waybar configuration is present
-  copy:
-    src: 'config'
+  template:
+    src: config.j2
     dest: '{{ config_dir }}/config'
 
 - name: Ensure Waybar style is present
   copy:
-    src: 'style.css'
+    src: style.css
     dest: '{{ config_dir }}/style.css'
