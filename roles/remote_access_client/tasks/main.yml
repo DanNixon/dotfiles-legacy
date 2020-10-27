@@ -6,5 +6,4 @@
       - remmina
       - freerdp
       - libvncserver
-  tags:
-    - package_installation
+    state: present

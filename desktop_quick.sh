@@ -10,7 +10,6 @@ notify-send \
 
 cd "$(dirname "$0")" && ansible-playbook \
   "$(hostname).yml" \
-  --tags desktop_environment \
-  --skip-tags font_installation,package_installation \
+  --tags desktop_environment_quick \
   -e sway_reload=yes \
   -e profile="$profile"

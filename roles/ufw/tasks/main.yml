@@ -4,8 +4,6 @@
   package:
     name: ufw
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure UFW firewall is enabled with default reject rule
   become: yes

@@ -4,8 +4,6 @@
   package:
     name: gdb
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure GDB configuration is present
   copy:

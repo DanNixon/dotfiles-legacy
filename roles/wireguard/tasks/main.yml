@@ -4,8 +4,6 @@
   package:
     name: wireguard-tools
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure WireGuard configuration is present and up to date
   become: yes

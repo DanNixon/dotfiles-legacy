@@ -5,8 +5,6 @@
       - sway
       - swaylock
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure Sway configuration directory exists
   file:
@@ -17,7 +15,11 @@
   template:
     src: config.j2
     dest: '{{ config_dir }}/config'
+  tags:
+    - desktop_environment_quick
 
 - name: Reload Sway
   command: swaymsg reload
   when: sway_reload|bool
+  tags:
+    - desktop_environment_quick

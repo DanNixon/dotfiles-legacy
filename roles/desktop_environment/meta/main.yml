@@ -2,13 +2,10 @@
 dependencies:
   - role: alacritty
   - role: feh
-  - role: feh
   - role: mako
   - role: nerdfont
     vars:
       font: DejaVuSansMono
-    tags:
-      - font_installation
   - role: waybar
   - role: wofi
   - role: zathura

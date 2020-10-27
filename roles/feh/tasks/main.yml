@@ -6,8 +6,6 @@
       - feh
       - xdg-utils
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure feh is the default viewer for appropriate formats
   command: xdg-mime default 'feh.desktop' '{{ item }}'

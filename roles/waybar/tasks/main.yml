@@ -3,8 +3,6 @@
   package:
     name: waybar
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure Waybar configuration directory exists
   file:
@@ -15,6 +13,8 @@
   template:
     src: config.j2
     dest: '{{ config_dir }}/config'
+  tags:
+    - desktop_environment_quick
 
 - name: Ensure Waybar style is present
   copy:

@@ -4,8 +4,6 @@
   package:
     name: khard
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure khard configuration directory exists
   file:

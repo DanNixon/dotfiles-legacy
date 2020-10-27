@@ -7,5 +7,3 @@
       - dvdbackup
       - libdvdcss
       - vlc
-  tags:
-    - package_installation

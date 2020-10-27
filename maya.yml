@@ -81,5 +81,3 @@
           - udevil
           - unzip
         state: present
-      tags:
-        - package_installation

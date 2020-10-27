@@ -11,8 +11,6 @@
       - wl-clipboard
       - xorg-server-xwayland
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure script directory exists
   file:

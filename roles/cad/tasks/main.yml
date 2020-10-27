@@ -9,8 +9,6 @@
       - openscad
       - prusa-slicer
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure DXFs open in LibreCAD
   command: xdg-mime default 'librecad.desktop' 'application/x-dxf'

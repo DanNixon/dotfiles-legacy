@@ -4,8 +4,6 @@
   package:
     name: isync
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure mbsync configuration is present
   import_role:

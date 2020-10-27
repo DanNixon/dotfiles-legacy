@@ -7,8 +7,6 @@
       - zathura
       - zathura-pdf-mupdf
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure applications configuration directory exists
   file:

@@ -4,8 +4,6 @@
   package:
     name: git
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure Git configuration is present
   copy:

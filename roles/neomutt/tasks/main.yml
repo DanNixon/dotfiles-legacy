@@ -4,8 +4,6 @@
   package:
     name: neomutt
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure Neomutt configuration directories exist
   file:

@@ -4,8 +4,6 @@
   package:
     name: wofi
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure Wofi configuration directory exists
   file:

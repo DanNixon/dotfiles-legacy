@@ -4,8 +4,6 @@
   package:
     name: dnscrypt-proxy
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure the dnscrypt-proxy service is enabled and running
   become: yes

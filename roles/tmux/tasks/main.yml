@@ -3,8 +3,6 @@
   package:
     name: tmux
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure Tmux configuration is present
   copy:

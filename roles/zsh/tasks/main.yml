@@ -4,8 +4,6 @@
   package:
     name: zsh
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure Zsh configuration is present
   copy:

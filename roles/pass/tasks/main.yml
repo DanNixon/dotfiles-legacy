@@ -4,8 +4,6 @@
   package:
     name: pass
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure script directory exists
   file:

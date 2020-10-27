@@ -4,8 +4,6 @@
   package:
     name: khal
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure khal configuration directory exists
   file:

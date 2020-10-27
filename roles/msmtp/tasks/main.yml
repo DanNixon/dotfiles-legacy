@@ -4,8 +4,6 @@
   package:
     name: msmtp
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure msmtp configuration directory exists
   file:

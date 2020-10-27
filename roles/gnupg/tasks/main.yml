@@ -4,8 +4,6 @@
   package:
     name: "{{ packages['common'] + packages[ansible_os_family] if ansible_os_family in packages else packages['common'] }}"
     state: present
-  tags:
-    - package_installation
 
 - name: Ensure GnuPG home directory exists
   file:
