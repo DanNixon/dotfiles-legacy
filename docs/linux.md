@@ -46,6 +46,7 @@
 - opentx-companion
 - protonmail-bridge-nogui
 - qmk
+- sdrangel-git
 - smenu
 - tilp
 - tomb
