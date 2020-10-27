@@ -1,9 +1,0 @@
-#!/bin/bash
-
-options=(
-  'sticky toggle'
-  'focus parent'
-  'focus child'
-)
-
-printf '%s\n' "${options[@]}" | wofi --dmenu --insensitive --prompt 'swaymsg' | xargs swaymsg

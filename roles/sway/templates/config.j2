@@ -91,6 +91,13 @@ bindsym $mod+Shift+space floating toggle
 # Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# Focus parent / child
+bindsym $mod+a        focus child
+bindsym $mod+Shift+a  focus parent
+
+# Toggle sticky window
+bindsym $mod+s sticky toggle
+
 # Switch to workspace
 bindsym $mod+comma  workspace prev
 bindsym $mod+period workspace next
@@ -143,9 +150,6 @@ bindsym $mod+r mode resize
 
 # Power menu shortcut
 bindsym $mod+Escape exec power-control-sway
-
-# Sway control shortcuts
-bindsym $mod+w exec swaymsg-shortcuts
 
 # Screenshot shortcut
 bindsym $mod+Shift+p exec grim
