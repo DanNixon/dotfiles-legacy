@@ -3,6 +3,7 @@
   package:
     name:
       - mpv
+      - socat
       - xdg-utils
     state: present
 
