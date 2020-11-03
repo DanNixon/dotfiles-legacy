@@ -76,6 +76,7 @@
           - hugo
           - ipcalc
           - qrencode
+          - rclone
           - sshfs
           - sshuttle
           - udevil
