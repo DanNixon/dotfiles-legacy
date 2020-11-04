@@ -3,7 +3,7 @@
   become: yes
   package:
     name:
-      - freecad
+      # - freecad
       - kicad
       - librecad
       - openscad
