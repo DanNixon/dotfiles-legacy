@@ -1,5 +1,6 @@
 ---
 dependencies:
+  - role: base16-shell
   - role: git
   - role: gnupg
   - role: neovim
