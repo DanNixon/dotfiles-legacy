@@ -6,6 +6,16 @@
     content: |
       {{ hostname if hostname else inventory_hostname }}
 
+- name: Ensure local host entries are present
+  become: yes
+  lineinfile:
+    path: /etc/hosts
+    line: "{{ item }}"
+  loop:
+    - '127.0.0.1 localhost'
+    - '::1 localhost'
+    - "127.0.1.1 {{ hostname if hostname else inventory_hostname }}"
+
 - name: Ensure locale is generated
   become: yes
   community.general.locale_gen:
