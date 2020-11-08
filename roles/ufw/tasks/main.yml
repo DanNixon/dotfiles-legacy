@@ -16,3 +16,10 @@
   ufw:
     rule: limit
     to_port: ssh
+
+- name: Ensure UFW firewall serivce is enabled and running
+  become: yes
+  service:
+    name: ufw
+    state: started
+    enabled: yes
