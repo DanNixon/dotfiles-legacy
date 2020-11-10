@@ -38,6 +38,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Konfekt/vim-sentencewrap'
 Plug 'tpope/vim-surround'
 Plug 'VundleVim/Vundle.vim'
+Plug 'chrisbra/unicode.vim'
 
 call plug#end()
 
