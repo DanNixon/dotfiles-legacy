@@ -49,7 +49,6 @@
     - mpv
     - netdata
     - newsboat
-    - qemu_host
     - remote_access_client
     - sdr
     - syncthing
