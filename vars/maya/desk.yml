@@ -1,5 +1,5 @@
 ---
-alacritty_font_size: 10
+alacritty_font_size: 12
 
 waybar_modules_left: '["clock", "battery", "pulseaudio", "sway/workspaces", "sway/mode"]'
 waybar_modules_right: '[]'
@@ -11,3 +11,4 @@ sway_displays:
     enabled: yes
     options:
       bg: '~/docs/wallpapers/kirisame\ marisa\ and\ alice\ margatroid\ \(touhou\)\ drawn\ by\ turu\ -\ b1c5ab5a9230982ca1f5b5daafe1c7c0.png fill'
+      scale: 1.5

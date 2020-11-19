@@ -1,4 +1,6 @@
 ---
+alacritty_font_size: 10
+
 sway_displays:
   - name: eDP-1
     enabled: yes

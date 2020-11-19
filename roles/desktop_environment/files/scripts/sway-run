@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export GDK_BACKEND=wayland
+export MOZ_ENABLE_WAYLAND=1
+
+sway
