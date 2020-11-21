@@ -19,6 +19,11 @@
 
 - name: Ensure scripts are present
   copy:
-    src: 'scripts/'
+    src: scripts/
     dest: '{{ script_dir }}'
     mode: '+x'
+
+- name: Ensure Chromium is configured to run under Wayland/Ozone
+  copy:
+    src: chromium-flags.conf
+    dest: "{{ ansible_facts['env']['HOME'] }}/.config/chromium-flags.conf"
