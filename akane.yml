@@ -36,6 +36,7 @@
     - base16-shell
     - cad
     - hsxkpasswdrc
+    - libreoffice
     - manpages
     - misc_scripts
     - mpd_clients

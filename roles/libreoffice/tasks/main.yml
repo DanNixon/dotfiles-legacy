@@ -1,0 +1,9 @@
+---
+- name: Ensure LibreOffice and dependencies are installed
+  become: yes
+  package:
+    name:
+      - libreoffice
+      - hunspell
+      - hunspell-en_GB
+    state: present
