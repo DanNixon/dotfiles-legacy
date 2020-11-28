@@ -4,7 +4,7 @@ pwname=$(pass-choose clipboard)
 result=$?
 
 if [ $result -eq 0 ]; then
-  pass "$pwname" -c
+  pass "$pwname" | wl-copy --paste-once
 else
   exit $result
 fi
