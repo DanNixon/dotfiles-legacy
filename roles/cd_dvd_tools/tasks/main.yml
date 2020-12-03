@@ -7,3 +7,4 @@
       - dvdbackup
       - libdvdcss
       - vlc
+    state: present
