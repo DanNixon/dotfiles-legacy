@@ -58,7 +58,6 @@
         name:
           - base-devel
           - borg
-          - blueman
           - dnsutils
           - ffmpeg
           - firefox
