@@ -81,4 +81,7 @@
           - sshuttle
           - udevil
           - unzip
+          - kubectl
+          - kubectx
+          - helm
         state: present
