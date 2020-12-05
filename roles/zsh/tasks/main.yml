@@ -14,4 +14,4 @@
   become: yes
   user:
     name: "{{ ansible_user }}"
-    shell: /usr/bin/zsh
+    shell: /bin/zsh

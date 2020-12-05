@@ -81,7 +81,9 @@ source "$HOME/.local/share/ls_colors.sh"
 export EDITOR='nvim'
 
 export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+if command -v gpgconf > /dev/null; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
 
 export TODO_DIR="$HOME/docs/markor"
 export NOTE_DIR="$HOME/docs/markor"
