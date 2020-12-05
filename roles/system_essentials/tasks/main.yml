@@ -20,6 +20,7 @@
   become: yes
   community.general.locale_gen:
     name: "{{ locale }}"
+  when: ansible_os_family != 'Alpine'
 
 - name: Ensure locale is selected
   become: yes
@@ -27,6 +28,7 @@
     dest: /etc/locale.conf
     content: |
       LANG={{ locale }}
+  when: ansible_os_family != 'Alpine'
 
 - name: Ensure keyboard layout is selected
   become: yes
@@ -39,6 +41,7 @@
   become: yes
   community.general.timezone:
     name: "{{ timezone }}"
+  when: ansible_os_family != 'Alpine'
 
 - name: Ensure sudo is installed
   become: yes
