@@ -41,6 +41,7 @@
 
 - betaflight-configurator
 - blackbox-explorer
+- gallery-dl
 - gr-dab-git
 - gtypist
 - opentx-companion
