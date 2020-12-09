@@ -164,9 +164,6 @@ def_key "left"
 def_key "right"
   dummy
 
-def_key "k"
-  scroll_up
-
 def_key "shift-up"
   dummy
 
@@ -174,11 +171,21 @@ def_key "shift-up"
 def_key "j"
   scroll_down
 
+def_key "k"
+  scroll_up
+
+def_key "h"
+  previous_column
+
+def_key "h"
+  master_screen
+
 def_key "l"
   next_column
 
 def_key "l"
   slave_screen
+
 
 def_key "="
   volume_up
@@ -186,11 +193,10 @@ def_key "="
 def_key "-"
   volume_down
 
-def_key "h"
-  previous_column
 
-def_key "h"
-  master_screen
+def_key "L"
+  show_lyrics
+
 
 #def_key "["
 #  scroll_up_album
