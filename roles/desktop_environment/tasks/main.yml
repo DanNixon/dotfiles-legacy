@@ -10,7 +10,7 @@
       - light
       - ttf-dejavu
       - wl-clipboard
-      - xorg-server-xwayland
+      - xorg-xwayland
     state: present
 
 - name: Ensure script directory exists
