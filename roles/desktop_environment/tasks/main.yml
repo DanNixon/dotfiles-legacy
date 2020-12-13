@@ -8,6 +8,7 @@
       - grim
       - libnotify
       - light
+      - ttf-dejavu
       - wl-clipboard
       - xorg-server-xwayland
     state: present
