@@ -1,0 +1,6 @@
+---
+- name: Ensure all (pacman) packages are up to date
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes

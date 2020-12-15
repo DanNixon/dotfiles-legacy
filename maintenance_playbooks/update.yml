@@ -2,20 +2,6 @@
 - name: Update packages and ensure essential configurations are sane
   hosts: all
 
-  pre_tasks:
-    - name: Ensure all (apt) packages are up to date
-      become: yes
-      apt:
-        update_cache: yes
-        upgrade: 'yes'
-      when: ansible_os_family == 'Debian'
-
-    - name: Ensure all (pacman) packages are up to date
-      become: yes
-      pacman:
-        update_cache: yes
-        upgrade: yes
-      when: ansible_os_family == 'Archlinux'
-
   roles:
+    - package_updates
     - system_essentials
