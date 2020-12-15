@@ -13,13 +13,8 @@
       tags:
         - always
 
-    - name: Ensure packages are up to date
-      become: yes
-      pacman:
-        update_cache: yes
-        upgrade: yes
-
   roles:
+    - package_updates
     - name: system_essentials
       vars:
         hostname: akane
