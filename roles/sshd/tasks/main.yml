@@ -1,0 +1,13 @@
+---
+- name: Ensure SSH key is present
+  ansible.posix.authorized_key:
+    user: "{{ ansible_user }}"
+    state: present
+    key: https://dan-nixon.com/ssh_pubkey.txt
+
+- name: Ensure SSH password authentication is disabled
+  become: yes
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    line: PasswordAuthentication no
+    state: present
