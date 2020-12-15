@@ -17,7 +17,6 @@ make life easier and work well for me.
   ([source](https://github.com/PrivacyApps/document-viewer))
   ([F-Droid](https://f-droid.org/packages/org.sufficientlysecure.viewer/))
 - Element
-- EteSync
 - F-Droid
 - [Gadgetbridge](https://gadgetbridge.org/)
   ([source](https://github.com/Freeyourgadget/Gadgetbridge))
