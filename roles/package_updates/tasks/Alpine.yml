@@ -1,0 +1,6 @@
+---
+- name: Ensure all (apk) packages are up to date
+  become: yes
+  apk:
+    update_cache: yes
+    upgrade: yes
