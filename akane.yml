@@ -39,8 +39,8 @@
     - newsboat
     - sdr
     - syncthing
+    - taskwarrior
     - tmux
-    - todotxt
 
     - name: desktop_environment
       tags:

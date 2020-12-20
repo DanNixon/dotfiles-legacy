@@ -85,7 +85,6 @@ if command -v gpgconf > /dev/null; then
   export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 
-export TODO_DIR="$HOME/docs/markor"
 export NOTE_DIR="$HOME/docs/markor"
 export VOILE_BOOKMARK_FILE="$HOME/.voile/bookmarks.json"
 
@@ -122,7 +121,7 @@ alias open="xdg-open"
 alias g="git"
 alias gs="git s"
 alias v="$EDITOR"
-alias t="todo.sh"
+alias t="task"
 alias m="ncmpcpp"
 alias stripexif="exiftool -all="
 alias tok="tomb open -k -"

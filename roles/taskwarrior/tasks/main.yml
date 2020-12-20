@@ -1,0 +1,11 @@
+---
+- name: Ensure Taskwarrior is installed
+  become: yes
+  package:
+    name: task
+    state: present
+
+- name: Ensure Taskwarrior configuration is present
+  copy:
+    src: taskrc
+    dest: "{{ ansible_facts['env']['HOME'] }}/.taskrc"

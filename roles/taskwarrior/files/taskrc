@@ -1,0 +1,5 @@
+data.location=~/docs/.task
+
+include /usr/share/doc/task/rc/solarized-dark-256.theme
+color.alternate=
+color.tagged=

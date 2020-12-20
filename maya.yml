@@ -48,8 +48,8 @@
     - remote_access_client
     - sdr
     - syncthing
+    - taskwarrior
     - tmux
-    - todotxt
 
     - name: desktop_environment
       tags:
