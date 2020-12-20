@@ -32,7 +32,7 @@
       tags:
         - email
 
-    - base16-shell
+    - base16_shell
     - cad
     - cd_dvd_tools
     - gdb
