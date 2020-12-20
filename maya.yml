@@ -45,37 +45,30 @@
     - mpv
     - netdata
     - newsboat
-    - remote_access_client
+    - remote_access_clients
     - sdr
     - syncthing
     - taskwarrior
     - tmux
+
+    - general_packages
 
     - name: desktop_environment
       tags:
         - desktop_environment
 
   tasks:
-    - name: Install other packages
+    - name: Install Bolt
       become: yes
       package:
         name:
-          - base-devel
           - bolt
-          - borg
-          - dnsutils
-          - ffmpeg
-          - firefox
-          - go-pie
-          - gpxsee
-          - hugo
-          - ipcalc
-          - qrencode
-          - rclone
-          - sshfs
-          - sshuttle
-          - udevil
-          - unzip
+        state: present
+
+    - name: Install Kubernetes tools
+      become: yes
+      package:
+        name:
           - kubectl
           - kubectx
           - helm

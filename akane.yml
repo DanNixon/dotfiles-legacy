@@ -42,27 +42,8 @@
     - taskwarrior
     - tmux
 
+    - general_packages
+
     - name: desktop_environment
       tags:
         - desktop_environment
-
-  tasks:
-    - name: Install other packages
-      become: yes
-      package:
-        name:
-          - base-devel
-          - borg
-          - dnsutils
-          - ffmpeg
-          - firefox
-          - go-pie
-          - gpxsee
-          - hugo
-          - ipcalc
-          - qrencode
-          - sshfs
-          - sshuttle
-          - udevil
-          - unzip
-        state: present

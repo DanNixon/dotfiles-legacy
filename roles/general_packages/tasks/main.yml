@@ -1,0 +1,23 @@
+---
+- name: Ensure other general packages are installed
+  become: yes
+  package:
+    name:
+      - base-devel
+      - borg
+      - dnsutils
+      - ffmpeg
+      - firefox
+      - glances
+      - go
+      - gpxsee
+      - hugo
+      - ipcalc
+      - qrencode
+      - rclone
+      - sshfs
+      - sshuttle
+      - termdown
+      - udevil
+      - unzip
+    state: present
