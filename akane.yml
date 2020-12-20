@@ -20,7 +20,7 @@
         hostname: akane
 
     - bluetooth
-    - dnscrypt-proxy
+    - dnscrypt_proxy
     - networkmanager
     - pulseaudio
     - ufw

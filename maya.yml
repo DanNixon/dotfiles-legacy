@@ -20,7 +20,7 @@
         hostname: maya
 
     - bluetooth
-    - dnscrypt-proxy
+    - dnscrypt_proxy
     - networkmanager
     - pulseaudio
     - ufw
