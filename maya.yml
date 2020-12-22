@@ -58,18 +58,25 @@
         - desktop_environment
 
   tasks:
-    - name: Install Bolt
+    - name: Ensure Bolt is installed
       become: yes
       package:
         name:
           - bolt
         state: present
 
-    - name: Install Kubernetes tools
+    - name: Ensure Kubernetes tools are installed
       become: yes
       package:
         name:
           - kubectl
           - kubectx
           - helm
+        state: present
+
+    - name: Ensure Terraform is installed
+      become: yes
+      package:
+        name:
+          - terraform
         state: present
