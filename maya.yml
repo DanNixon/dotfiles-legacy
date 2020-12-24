@@ -74,9 +74,10 @@
           - helm
         state: present
 
-    - name: Ensure Terraform is installed
+    - name: Ensure Terraform and Packer are installed
       become: yes
       package:
         name:
           - terraform
+          - packer
         state: present
