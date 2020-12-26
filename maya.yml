@@ -33,8 +33,8 @@
         - email
 
     - base16_shell
-    - cad
-    - cd_dvd_tools
+    - cad_tools
+    - cd_and_dvd_tools
     - gdb
     - hsxkpasswdrc
     - libreoffice
@@ -45,6 +45,7 @@
     - mpv
     - netdata
     - newsboat
+    - photo_and_image_tools
     - remote_access_clients
     - sdr
     - syncthing

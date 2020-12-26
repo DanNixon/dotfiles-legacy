@@ -1,0 +1,9 @@
+---
+- name: Ensure photo and image tools are installed
+  become: yes
+  package:
+    name:
+      - darktable
+      - gimp
+      - inkscape
+    state: present
