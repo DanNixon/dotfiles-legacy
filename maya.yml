@@ -5,6 +5,7 @@
   connection: local
 
   vars:
+    ansible_user: dan
     profile: default
 
   pre_tasks:
@@ -43,7 +44,6 @@
     - mpd
     - mpd_clients
     - mpv
-    - netdata
     - newsboat
     - photo_and_image_tools
     - remote_access_tools

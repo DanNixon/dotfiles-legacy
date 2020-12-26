@@ -5,6 +5,7 @@
   connection: local
 
   vars:
+    ansible_user: dan
     profile: default
 
   pre_tasks:
