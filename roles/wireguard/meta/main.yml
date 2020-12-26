@@ -1,6 +1,6 @@
 galaxy_info:
   author: Dan Nixon
-  description: Installs and configures Git
+  description: Installs WireGuard and configures a connection
   license: MIT
   min_ansible_version: 2.1
   platforms:

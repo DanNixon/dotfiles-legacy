@@ -37,7 +37,7 @@
     - mpd_clients
     - mpv
     - newsboat
-    - sdr
+    - sdr_tools
     - syncthing
     - taskwarrior
     - tmux

@@ -1,2 +1,10 @@
 ---
+galaxy_info:
+  author: Dan Nixon
+  description: Installs a NerdFont
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: ArchLinux
+
 dependencies: []

@@ -1,3 +1,11 @@
 ---
+galaxy_info:
+  author: Dan Nixon
+  description: Downloads requisite base16-shell files
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: ArchLinux
+
 dependencies:
   - role: git
