@@ -3,3 +3,6 @@ data.location=~/docs/.task
 include /usr/share/doc/task/rc/solarized-dark-256.theme
 color.alternate=
 color.tagged=
+
+urgency.annotations.coefficient=0.0
+urgency.project.coefficient=0.0
