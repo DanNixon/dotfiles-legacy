@@ -79,6 +79,7 @@ source "$HOME/.local/share/ls_colors.sh"
 
 # Environment
 export EDITOR='nvim'
+export NNN_OPTS="d"
 
 export GPG_TTY="$(tty)"
 if command -v gpgconf > /dev/null; then
