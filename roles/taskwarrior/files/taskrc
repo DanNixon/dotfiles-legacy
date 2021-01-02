@@ -1,8 +1,67 @@
 data.location=~/docs/.task
 
-include /usr/share/doc/task/rc/solarized-dark-256.theme
-color.alternate=
-color.tagged=
+default.command=ls
 
 urgency.annotations.coefficient=0.0
 urgency.project.coefficient=0.0
+
+weekstart=Monday
+
+# Colour scheme
+rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
+
+color.label=
+color.label.sort=
+color.alternate=
+color.header=blue
+color.footnote=cyan
+color.warning=black on yellow
+color.error=cyan
+color.debug=cyan
+
+color.completed=
+color.deleted=
+color.active=bold
+color.recurring=
+color.scheduled=
+color.until=
+color.blocked=
+color.blocking=
+
+color.project.none=
+
+color.uda.priority.H=red
+color.uda.priority.M=yellow
+color.uda.priority.L=green
+
+color.tagged=
+
+color.due=red
+color.due.today=red
+color.overdue=magenta
+
+color.burndown.done=black on cyan
+color.burndown.pending=black on red
+color.burndown.started=black on yellow
+
+color.history.add=black on red
+color.history.delete=black on yellow
+color.history.done=black on cyan
+
+color.summary.background=on black
+color.summary.bar=black on cyan
+
+color.calendar.due=black on red
+color.calendar.due.today=black on red
+color.calendar.holiday=black on yellow
+color.calendar.overdue=black on magenta
+color.calendar.today=black on blue
+color.calendar.weekend=yellow
+color.calendar.weeknumber=blue
+
+color.sync.added=cyan
+color.sync.changed=red
+color.sync.rejected=magenta
+
+color.undo.after=green
+color.undo.before=red
