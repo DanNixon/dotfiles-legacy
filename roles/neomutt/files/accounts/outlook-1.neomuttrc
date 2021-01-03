@@ -1,4 +1,4 @@
 # vim: filetype=neomuttrc
-set from = "<< pass Passwords/Internet/Microsoft_1/Email >>"
+set from = "<< pass Passwords/Personal/Microsoft_1/Email >>"
 set sendmail = "msmtp -a outlook-1"
 echo "Sending from $from"

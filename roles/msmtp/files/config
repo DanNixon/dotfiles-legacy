@@ -8,31 +8,31 @@ logfile   ~/.msmtp.log
 account       outlook-1
 host          smtp.office365.com
 port          587
-from          "<< pass Passwords/Internet/Microsoft_1/Email >>"
-user          "<< pass Passwords/Internet/Microsoft_1/Email >>"
-passwordeval  "pass Passwords/Internet/Microsoft_1/Password"
+from          "<< pass Passwords/Personal/Microsoft_1/Email >>"
+user          "<< pass Passwords/Personal/Microsoft_1/Email >>"
+passwordeval  "pass Passwords/Personal/Microsoft_1/Password"
 
 # Outlook 2
 account       outlook-2
 host          smtp.office365.com
 port          587
-from          "<< pass Passwords/Internet/Microsoft_2/Email >>"
-user          "<< pass Passwords/Internet/Microsoft_2/Email >>"
-passwordeval  "pass Passwords/Internet/Microsoft_2/Password"
+from          "<< pass Passwords/Personal/Microsoft_2/Email >>"
+user          "<< pass Passwords/Personal/Microsoft_2/Email >>"
+passwordeval  "pass Passwords/Personal/Microsoft_2/Password"
 
 # GMail
 account       gmail
 host          smtp.gmail.com
 port          587
-from          "<< pass Passwords/Internet/Google/Email >>"
-user          "<< pass Passwords/Internet/Google/Email >>"
-passwordeval  "pass Passwords/Internet/Google/EmailPassword"
+from          "<< pass Passwords/Personal/Google/Email >>"
+user          "<< pass Passwords/Personal/Google/Email >>"
+passwordeval  "pass Passwords/Personal/Google/EmailPassword"
 
 # ProtonMail
 account       protonmail
 host          127.0.0.1
 port          1025
 tls_certcheck off
-from          "<< pass Passwords/Internet/ProtonMail/Email2 >>"
-user          "<< pass Passwords/Internet/ProtonMail/Email2 >>"
+from          "<< pass Passwords/Personal/ProtonMail/Email2 >>"
+user          "<< pass Passwords/Personal/ProtonMail/Email2 >>"
 passwordeval  "pass ShellSecrets/ProtonmailBridgePassword"
