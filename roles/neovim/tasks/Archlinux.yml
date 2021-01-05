@@ -1,0 +1,7 @@
+---
+- name: Ensure Python interface package is installed
+  become: yes
+  package:
+    name:
+      - python-neovim
+    state: present
