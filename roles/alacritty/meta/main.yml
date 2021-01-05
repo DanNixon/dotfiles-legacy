@@ -7,4 +7,7 @@ galaxy_info:
   platforms:
     - name: ArchLinux
 
-dependencies: []
+dependencies:
+  - role: nerdfont
+    vars:
+      font: DejaVuSansMono

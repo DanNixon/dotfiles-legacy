@@ -11,9 +11,6 @@ dependencies:
   - role: alacritty
   - role: feh
   - role: mako
-  - role: nerdfont
-    vars:
-      font: DejaVuSansMono
   - role: waybar
   - role: wofi
   - role: zathura
