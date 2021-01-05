@@ -1,5 +1,6 @@
-# The following lines were added by compinstall
+# vi: ft=zsh
 
+# The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' completions 1
 zstyle ':completion:*' format '%d'
@@ -82,9 +83,11 @@ export EDITOR='nvim'
 export NNN_OPTS="d"
 
 export GPG_TTY="$(tty)"
+{<< if zsh_ssh_auth_sock >>}
 if command -v gpgconf > /dev/null; then
   export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
+{<< endif >>}
 
 export NOTE_DIR="$HOME/docs/markor"
 export VOILE_BOOKMARK_FILE="$HOME/.voile/bookmarks.json"

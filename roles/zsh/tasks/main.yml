@@ -6,9 +6,11 @@
     state: present
 
 - name: Ensure Zsh configuration is present
-  copy:
-    src: 'zshrc'
+  template:
+    src: zshrc.j2
     dest: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
+    block_start_string: "{<<"
+    block_end_string: ">>}"
 
 - name: Ensure Zsh is set at the user's logon shell
   become: yes
