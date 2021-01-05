@@ -1,11 +1,17 @@
 ---
 - name: Ensure target directory exists
   file:
-    path: '{{ target_dir }}'
+    path: "{{ target_dir }}"
     state: directory
 
 - name: Ensure base16-shell repo is available
   git:
-    repo: 'https://github.com/chriskempson/base16-shell.git'
-    version: 'master'
-    dest: '{{ target_dir }}/base16-shell'
+    repo: "https://github.com/chriskempson/base16-shell.git"
+    version: master
+    dest: "{{ target_dir }}/base16-shell"
+
+- name: Ensure selected theme is set
+  file:
+    src: "{{ target_dir }}/base16-shell/scripts/base16-{{ base16_theme }}.sh"
+    dest: "{{ ansible_facts['env']['HOME'] }}/.base16_theme"
+    state: link
