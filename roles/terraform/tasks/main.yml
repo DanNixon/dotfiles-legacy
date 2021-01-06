@@ -1,0 +1,17 @@
+---
+- name: Ensure Terraform is installed
+  become: yes
+  package:
+    name:
+      - terraform
+    state: present
+
+- name: Ensure Terraform configuration is present
+  copy:
+    src: terraformrc
+    dest: "{{ ansible_facts['env']['HOME'] }}/.terraformrc"
+
+- name: Ensure plugin cache directory exists
+  file:
+    path: "{{ ansible_facts['env']['HOME'] }}/.terraform.d/plugin-cache"
+    state: directory

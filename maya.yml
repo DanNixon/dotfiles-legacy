@@ -50,6 +50,7 @@
     - sdr_tools
     - syncthing
     - taskwarrior
+    - terraform
     - tmux
 
     - general_packages
@@ -75,10 +76,9 @@
           - helm
         state: present
 
-    - name: Ensure Terraform and Packer are installed
-      become: yes
-      package:
-        name:
-          - terraform
-          - packer
-        state: present
+    # - name: Ensure Packer is installed
+    #   become: yes
+    #   package:
+    #     name:
+    #       - packer
+    #     state: present
