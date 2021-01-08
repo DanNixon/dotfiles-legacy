@@ -16,10 +16,17 @@
     - '::1 localhost'
     - "127.0.1.1 {{ hostname if hostname else inventory_hostname }}"
 
+- name: Ensure locale is selected for generation
+  become: yes
+  copy:
+    content: |
+      {{ locale }} UTF-8
+    dest: /etc/locale.gen
+  when: ansible_os_family != 'Alpine'
+
 - name: Ensure locale is generated
   become: yes
-  community.general.locale_gen:
-    name: "{{ locale }}"
+  command: locale-gen
   when: ansible_os_family != 'Alpine'
 
 - name: Ensure locale is selected
