@@ -18,4 +18,5 @@
 - name: Ensure file exists
   copy:
     content: "{{ inject_secrets['stdout'] }}"
-    dest: '{{ dest }}'
+    dest: "{{ dest }}"
+    mode: "{{ mode }}"

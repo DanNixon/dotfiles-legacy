@@ -36,6 +36,7 @@
     - base16_shell
     - cad_tools
     - cd_and_dvd_tools
+    - dapnet_scripts
     - gdb
     - hsxkpasswdrc
     - libreoffice

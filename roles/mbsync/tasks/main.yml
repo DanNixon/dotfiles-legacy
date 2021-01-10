@@ -9,5 +9,6 @@
   import_role:
     name: copy_secret_injected_file
   vars:
-    src: 'mbsyncrc'
+    src: mbsyncrc
     dest: "{{ ansible_facts['env']['HOME'] }}/.mbsyncrc"
+    mode: "u=r,g=r,o="

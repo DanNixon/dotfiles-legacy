@@ -7,22 +7,23 @@
 
 - name: Ensure Neomutt configuration directories exist
   file:
-    path: '{{ config_dir }}/accounts/'
+    path: "{{ config_dir }}/accounts/"
     state: directory
 
 - name: Ensure Neomutt configuration is present
   copy:
-    src: 'neomuttrc'
-    dest: '{{ config_dir }}'
+    src: neomuttrc
+    dest: "{{ config_dir }}"
 
 - name: Ensure Neomutt account configurations are present
   include_role:
     name: copy_secret_injected_file
   vars:
-    src: 'accounts/{{ item }}.neomuttrc'
-    dest: '{{ config_dir }}/accounts/{{ item }}.neomuttrc'
+    src: "accounts/{{ item }}.neomuttrc"
+    dest: "{{ config_dir }}/accounts/{{ item }}.neomuttrc"
+    mode: "u=r,g=r,o="
   loop:
-    - 'gmail'
-    - 'outlook-1'
-    - 'outlook-2'
-    - 'protonmail'
+    - gmail
+    - outlook-1
+    - outlook-2
+    - protonmail

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -ex
+
+termdown "$1" && dapnet-page-me "$2"

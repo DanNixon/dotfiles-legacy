@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+text="${1:-"test $(date)"}"
+
+curl \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -u m0nxn:"<< pass Passwords/Personal/DAPNET/Password >>" \
+  -d "{ \"text\": \"M0NXN: $text\", \"callSignNames\": [\"m0nxn\"], \"transmitterGroupNames\": [\"uk-all\"], \"emergency\": false }" \
+  http://www.hampager.de:8080/calls

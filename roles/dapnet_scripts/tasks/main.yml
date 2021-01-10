@@ -1,0 +1,29 @@
+---
+- name: Ensure dependencies are met
+  become: yes
+  package:
+    name:
+      - curl
+      - termdown
+    state: present
+
+- name: Ensure target directory exists
+  file:
+    path: "{{ target_dir }}"
+    state: directory
+
+- name: Ensure send script is present
+  import_role:
+    name: copy_secret_injected_file
+  vars:
+    src: dapnet-page-me
+    dest: "{{ target_dir }}/dapnet-page-me"
+    mode: "u=rx,g=r,o="
+
+- name: Ensure scripts are present
+  copy:
+    src: "{{ item }}"
+    dest: "{{ target_dir }}"
+    mode: "u=rx,g=r,o="
+  loop:
+    - dapnet-page-me-timer

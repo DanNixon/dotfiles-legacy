@@ -3,5 +3,6 @@
   import_role:
     name: copy_secret_injected_file
   vars:
-    src: 'hsxkpasswdrc'
+    src: hsxkpasswdrc
     dest: "{{ ansible_facts['env']['HOME'] }}/.hsxkpasswdrc"
+    mode: "u=r,g=r,o="

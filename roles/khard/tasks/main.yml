@@ -7,12 +7,13 @@
 
 - name: Ensure khard configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ config_dir }}"
     state: directory
 
 - name: Ensure khard configuration is present
   import_role:
     name: copy_secret_injected_file
   vars:
-    src: 'khard.conf'
-    dest: '{{ config_dir }}/khard.conf'
+    src: khard.conf
+    dest: "{{ config_dir }}/khard.conf"
+    mode: "u=r,g=r,o="

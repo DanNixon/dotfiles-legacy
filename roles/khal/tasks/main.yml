@@ -7,12 +7,13 @@
 
 - name: Ensure khal configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ config_dir }}"
     state: directory
 
 - name: Ensure khal configuration is present
   import_role:
     name: copy_secret_injected_file
   vars:
-    src: 'config'
-    dest: '{{ config_dir }}/config'
+    src: config
+    dest: "{{ config_dir }}/config"
+    mode: "u=r,g=r,o="
