@@ -21,4 +21,5 @@
 - name: Perform platform specific tasks
   include_tasks: "{{ item }}"
   with_first_found:
-    - "{{ ansible_os_family }}.yml"
+    - files: "{{ ansible_os_family }}.yml"
+      skip: yes
