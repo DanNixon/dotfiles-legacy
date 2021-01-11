@@ -1,4 +1,12 @@
 ---
+- name: Ensure prerequisites are installed
+  become: yes
+  package:
+    name:
+      - fontconfig
+      - unzip
+    state: present
+
 - name: Ensure font directory exists
   file:
     path: '{{ font_dir }}'
