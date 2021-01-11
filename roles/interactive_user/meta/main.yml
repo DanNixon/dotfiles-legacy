@@ -1,0 +1,11 @@
+---
+galaxy_info:
+  author: Dan Nixon
+  description: Adds a user for a real person
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: ArchLinux
+    - name: Ubuntu
+
+dependencies: []

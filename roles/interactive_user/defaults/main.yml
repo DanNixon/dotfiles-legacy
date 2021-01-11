@@ -1,0 +1,4 @@
+---
+username: dan
+ssh_key: https://dan-nixon.com/ssh_pubkey.txt
+sudoer: yes

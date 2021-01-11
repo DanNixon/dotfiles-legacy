@@ -55,11 +55,3 @@
   package:
     name: sudo
     state: present
-
-- name: Ensure omnipowerful users/groups are configured
-  become: yes
-  copy:
-    dest: "/etc/sudoers.d/{{ item }}"
-    content: |
-      {{ item }} ALL=(ALL) ALL
-  loop: "{{ sudoers }}"

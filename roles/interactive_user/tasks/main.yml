@@ -1,0 +1,21 @@
+---
+- name: Ensure the user exists
+  become: yes
+  user:
+    name: "{{ username }}"
+    state: present
+
+- name: Ensure SSH public key is present
+  become: yes
+  ansible.posix.authorized_key:
+    user: "{{ username }}"
+    key: "{{ ssh_key }}"
+    state: present
+
+- name: Ensure user can sudo if allowed
+  become: yes
+  copy:
+    dest: "/etc/sudoers.d/{{ username }}"
+    content: |
+      {{ username }} ALL=(ALL) ALL
+  when: sudoer
