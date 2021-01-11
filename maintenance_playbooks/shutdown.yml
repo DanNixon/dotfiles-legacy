@@ -1,8 +1,0 @@
----
-- name: Shutdown host(s)
-  hosts: all
-
-  tasks:
-    - name: Shutdown
-      become: yes
-      community.general.shutdown:

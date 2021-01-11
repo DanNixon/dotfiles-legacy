@@ -1,7 +1,0 @@
----
-- name: Update packages and ensure essential configurations are sane
-  hosts: all
-
-  roles:
-    - package_updates
-    - system_essentials
