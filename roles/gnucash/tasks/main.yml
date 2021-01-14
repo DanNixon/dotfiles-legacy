@@ -1,0 +1,24 @@
+---
+- name: Ensure GNUCash is installed
+  become: yes
+  package:
+    name: gnucash
+    state: present
+
+- name: Ensure GNUCash configuration options are set
+  community.general.dconf:
+    key: "/org/gnucash/{{ item.key }}"
+    value: "{{ item.value }}"
+    state: present
+  loop: "{{ options | dict2items }}"
+  vars:
+    options:
+      dialogs/new-user/first-startup: "false"
+      dialogs/tip-of-the-day/show-at-startup: "false"
+      general/autosave-show-explanation: "false"
+      general/clock-24h: "true"
+      general/date-format: 3
+      general/file-compression: "false"
+      general/retain-type-days: "false"
+      general/retain-type-never: "true"
+      general/show-splash-screen: "false"
