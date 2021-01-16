@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+url="$1"
+target_dir="$HOME/Downloads/"
+
+format="$(smenu-youtube-dl-select-format "$url")"
+mkdir -p "$target_dir"
+
+session="ytdl-$RANDOM"
+tmux new-session -d -c "$target_dir" -s "$session"
+tmux send-keys -t "$session" "youtube-dl --format='$format' '$url' && exit" Enter

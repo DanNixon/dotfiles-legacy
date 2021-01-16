@@ -1,3 +1,2 @@
 #!/bin/sh
-url="$1"
-echo -e "${url}" >> ~/bookmarks.txt
+echo -e "$1" >> "$HOME/newsboat_bookmarks.txt"
