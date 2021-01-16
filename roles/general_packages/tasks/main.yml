@@ -15,6 +15,7 @@
       - ipcalc
       - qrencode
       - rclone
+      - shellcheck
       - sshfs
       - sshuttle
       - termdown
