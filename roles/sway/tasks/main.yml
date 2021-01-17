@@ -8,13 +8,15 @@
 
 - name: Ensure Sway configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ config_dir }}"
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure Sway configuration is present
   template:
     src: config.j2
-    dest: '{{ config_dir }}/config'
+    dest: "{{ config_dir }}/config"
+    mode: "u=r,g=,o="
   tags:
     - desktop_environment_quick
 

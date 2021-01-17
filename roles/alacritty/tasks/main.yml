@@ -7,12 +7,14 @@
 
 - name: Ensure Alacritty configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ config_dir }}"
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure Alacritty configuration is present
   template:
     src: alacritty.yml.j2
-    dest: '{{ config_dir }}/alacritty.yml'
+    dest: "{{ config_dir }}/alacritty.yml"
+    mode: "u=r,g=,o="
   tags:
     - desktop_environment_quick

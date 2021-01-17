@@ -7,10 +7,12 @@
 
 - name: Ensure Mako configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ config_dir }}"
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure Mako configuration is present
   copy:
-    src: 'config'
-    dest: '{{ config_dir }}/config'
+    src: config
+    dest: "{{ config_dir }}/config"
+    mode: "u=r,g=,o="

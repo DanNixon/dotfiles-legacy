@@ -7,10 +7,12 @@
 
 - name: Ensure Wofi configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ config_dir }}"
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure Wofi configuration is present
   copy:
-    src: 'style.css'
-    dest: '{{ config_dir }}/style.css'
+    src: style.css
+    dest: "{{ config_dir }}/style.css"
+    mode: "u=r,g=,o="

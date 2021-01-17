@@ -9,8 +9,10 @@
   file:
     path: '{{ target_dir }}'
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure ls_colors file is present
   copy:
     content: "{{ ls_colors['stdout'] }}"
     dest: '{{ target_dir }}/ls_colors.sh'
+    mode: "u=r,g=,o="

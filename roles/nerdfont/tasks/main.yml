@@ -9,13 +9,14 @@
 
 - name: Ensure font directory exists
   file:
-    path: '{{ font_dir }}'
+    path: "{{ font_dir }}"
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure font files are available
   unarchive:
-    src: '{{ archive_url }}'
-    dest: '{{ font_dir }}'
+    src: "{{ archive_url }}"
+    dest: "{{ font_dir }}"
     remote_src: yes
 
 - name: Rebuild font cache
