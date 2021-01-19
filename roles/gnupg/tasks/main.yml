@@ -7,13 +7,18 @@
 
 - name: Ensure GnuPG home directory exists
   file:
-    path: '{{ gpg_home }}'
+    path: "{{ gpg_home }}"
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure GnuPG configuration is present
   copy:
-    src: '.'
-    dest: '{{ gpg_home }}'
+    src: "{{ item }}"
+    dest: "{{ gpg_home }}"
+    mode: "u=r,g=,o="
+  loop:
+    - gpg.conf
+    - gpg-agent.conf
 
 - name: Ensure my public key is present
   shell:

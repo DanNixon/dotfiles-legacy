@@ -1,17 +1,20 @@
 ---
-- name: Ensure password store is installed
+- name: Ensure pass is installed
   become: yes
   package:
-    name: pass
+    name:
+      - pass
+      - pass-otp
     state: present
 
 - name: Ensure script directory exists
   file:
-    path: '{{ script_dir }}'
+    path: "{{ script_dir }}"
     state: directory
+    mode: "u=rwx,g=,o="
 
 - name: Ensure scripts are present
   copy:
-    src: 'scripts/'
-    dest: '{{ script_dir }}'
-    mode: '+x'
+    src: scripts/
+    dest: "{{ script_dir }}"
+    mode: "u=rx,g=,o="
