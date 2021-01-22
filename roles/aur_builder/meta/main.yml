@@ -7,4 +7,5 @@ galaxy_info:
   platforms:
     - name: ArchLinux
 
-dependencies: []
+dependencies:
+  - kewlfft.aur
