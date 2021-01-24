@@ -42,6 +42,7 @@
     - syncthing
     - taskwarrior
     - tmux
+    - yubikey_touch_detector
 
     - general_packages
 

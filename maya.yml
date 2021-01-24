@@ -54,6 +54,7 @@
     - taskwarrior
     - terraform
     - tmux
+    - yubikey_touch_detector
 
     - general_packages
 
