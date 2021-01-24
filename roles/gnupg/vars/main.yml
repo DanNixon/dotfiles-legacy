@@ -1,9 +1,2 @@
 ---
 gpg_home: "{{ ansible_facts['env']['HOME'] }}/.gnupg"
-
-packages:
-  common:
-    - gnupg
-  Archlinux:
-    - ccid
-    - pcsclite

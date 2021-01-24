@@ -2,7 +2,7 @@
 - name: Ensure GnuPG is installed
   become: yes
   package:
-    name: "{{ packages['common'] + packages[ansible_os_family] if ansible_os_family in packages else packages['common'] }}"
+    name: gnupg
     state: present
 
 - name: Ensure GnuPG home directory exists
@@ -24,3 +24,9 @@
   shell:
     cmd: curl 'https://dan-nixon.com/pubkey.txt' | gpg --import -
     warn: no
+
+- name: Perform platform specific tasks
+  include_tasks: "{{ item }}"
+  with_first_found:
+    - files: "{{ ansible_os_family }}.yml"
+      skip: yes

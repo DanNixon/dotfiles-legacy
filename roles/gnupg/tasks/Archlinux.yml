@@ -1,0 +1,10 @@
+---
+- name: Ensure smart card tools are installed
+  become: yes
+  package:
+    name:
+      - ccid
+      - pcsclite
+      - yubikey-manager
+      - yubikey-personalization
+    state: present
