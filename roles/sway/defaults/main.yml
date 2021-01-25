@@ -3,7 +3,5 @@ sway_displays: []
 
 sway_reload: no
 
-sway_window_opacity: 0.95
-sway_window_opactiy_ignore:
-  - mpv
-  - vlc
+sway_window_opactiy:
+  Alacritty: 0.92

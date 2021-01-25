@@ -196,9 +196,6 @@ output {{ d['name'] }} {
 {% endfor %}
 
 # Window specific config
-for_window [class=".*"] opacity {{ sway_window_opacity }}
-for_window [app_id=".*"] opacity {{ sway_window_opacity }}
-
-{% for aid in sway_window_opactiy_ignore %}
-for_window [app_id="{{ aid }}"] opacity 1
+{% for appid, opacity in sway_window_opactiy.items() %}
+for_window [app_id="{{ appid }}"] opacity {{ opacity }}
 {% endfor %}
