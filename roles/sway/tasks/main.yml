@@ -20,6 +20,12 @@
   tags:
     - desktop_environment_quick
 
+- name: Ensure systemd target is present
+  copy:
+    src: sway-session.target
+    dest: "{{ ansible_facts['env']['HOME'] }}/.config/systemd/user/sway-session.target"
+    mode: "u=r,g=,o="
+
 - name: Reload Sway
   command: swaymsg reload
   when: sway_reload|bool

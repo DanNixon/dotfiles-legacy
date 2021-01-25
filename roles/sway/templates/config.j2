@@ -194,3 +194,6 @@ output {{ d['name'] }} {
 }
 
 {% endfor %}
+
+# Systemd integration
+exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
