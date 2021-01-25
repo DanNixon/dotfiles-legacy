@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  author: Dan Nixon
+  description: Configures activity based transparency for Sway windows
+  license: ISC
+  min_ansible_version: 2.1
+  platforms:
+    - name: ArchLinux
+
+dependencies: []

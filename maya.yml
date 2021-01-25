@@ -61,6 +61,7 @@
     - name: desktop_environment
       tags:
         - desktop_environment
+    - sway_inactive_window_transparency
 
   tasks:
     - name: Ensure Bolt is installed

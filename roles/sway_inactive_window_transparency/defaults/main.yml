@@ -1,0 +1,5 @@
+---
+sway_inactive_window_opacity: 0.95
+
+sway_inactive_window_ignore:
+  - mpv
