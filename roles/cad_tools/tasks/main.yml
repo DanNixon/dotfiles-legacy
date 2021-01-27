@@ -8,6 +8,7 @@
       - librecad
       - openscad
       - prusa-slicer
+      - python-kikit
     state: present
 
 - name: Ensure DXFs open in LibreCAD
