@@ -6,4 +6,5 @@
       - darktable
       - gimp
       - inkscape
+      - xsane
     state: present
