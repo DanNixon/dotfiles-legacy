@@ -6,5 +6,6 @@
       - darktable
       - gimp
       - inkscape
+      - perl-image-exiftool
       - xsane
     state: present
