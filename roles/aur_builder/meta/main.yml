@@ -8,4 +8,4 @@ galaxy_info:
     - name: ArchLinux
 
 dependencies:
-  - kewlfft.aur
+  - role: kewlfft.aur
