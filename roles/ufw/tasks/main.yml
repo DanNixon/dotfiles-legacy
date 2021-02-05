@@ -17,7 +17,7 @@
     rule: limit
     to_port: ssh
 
-- name: Ensure UFW firewall serivce is enabled and running
+- name: Ensure UFW firewall service is enabled and running
   become: yes
   service:
     name: ufw
