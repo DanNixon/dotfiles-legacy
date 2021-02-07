@@ -5,9 +5,3 @@
     state: directory
   with_items:
     - "{{ ansible_facts['env']['HOME'] }}/.mail"
-
-- name: Ensure Radicale is installed
-  become: yes
-  package:
-    name: radicale
-    state: present

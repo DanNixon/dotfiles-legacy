@@ -1,0 +1,30 @@
+---
+- name: Ensure packages are installed
+  become: yes
+  package:
+    name:
+      - khal
+      - khard
+      - radicale
+    state: present
+
+- name: Ensure configuration directories exists
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "{{ config_dir }}/khal"
+    - "{{ config_dir }}/khard"
+
+- name: Ensure configurations are present
+  include_role:
+    name: copy_secret_injected_file
+  vars:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "u=r,g=r,o="
+  loop:
+    - src: khal_config
+      dest: "{{ config_dir }}/khal/config"
+    - src: khard.conf
+      dest: "{{ config_dir }}/khard/khard.conf"
