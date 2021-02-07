@@ -1,7 +1,5 @@
 ---
-- name: Ensure data mountpoints exist
+- name: Ensure data mountpoint exists
   file:
-    path: "{{ item }}"
+    path: "{{ ansible_facts['env']['HOME'] }}/.mail"
     state: directory
-  with_items:
-    - "{{ ansible_facts['env']['HOME'] }}/.mail"

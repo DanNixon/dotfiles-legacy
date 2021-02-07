@@ -8,6 +8,11 @@
       - radicale
     state: present
 
+- name: Ensure data mountpoint exists
+  file:
+    path: "{{ ansible_facts['env']['HOME'] }}/.calendar_contacts_data"
+    state: directory
+
 - name: Ensure configuration directories exists
   file:
     path: "{{ item }}"
