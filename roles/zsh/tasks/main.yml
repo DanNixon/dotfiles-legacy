@@ -16,5 +16,5 @@
 - name: Ensure Zsh is set at the user's logon shell
   become: yes
   user:
-    name: "{{ ansible_user }}"
+    name: "{{ ansible_user_id }}"
     shell: /bin/zsh
