@@ -9,34 +9,31 @@ weekstart=Monday
 rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
 
 color.label=
-color.label.sort=
+color.label.sort=bold
 color.alternate=
 color.header=blue
-color.footnote=cyan
+color.footnote=
 color.warning=black on yellow
-color.error=cyan
+color.error=magenta
 color.debug=cyan
 
 color.completed=
 color.deleted=
-color.active=bold
+color.active=
 color.recurring=
 color.scheduled=
 color.until=
 color.blocked=
 color.blocking=
-
-color.project.none=
+color.tagged=
 
 color.uda.priority.H=red
 color.uda.priority.M=yellow
 color.uda.priority.L=green
 
-color.tagged=
-
-color.due=red
-color.due.today=red
-color.overdue=magenta
+color.due=
+color.due.today=cyan
+color.overdue=cyan
 
 color.burndown.done=black on cyan
 color.burndown.pending=black on red
@@ -53,7 +50,7 @@ color.calendar.due=black on red
 color.calendar.due.today=black on red
 color.calendar.holiday=black on yellow
 color.calendar.overdue=black on magenta
-color.calendar.today=black on blue
+color.calendar.today=black on white
 color.calendar.weekend=yellow
 color.calendar.weeknumber=blue
 
