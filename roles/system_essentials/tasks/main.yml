@@ -50,8 +50,10 @@
     name: "{{ timezone }}"
   when: ansible_os_family != 'Alpine'
 
-- name: Ensure sudo is installed
+- name: Ensure common tools are installed
   become: yes
   package:
-    name: sudo
+    name:
+      - sudo
+      - iproute2
     state: present
