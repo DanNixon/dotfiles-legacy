@@ -32,7 +32,7 @@ color.uda.priority.M=yellow
 color.uda.priority.L=green
 
 color.due=
-color.due.today=cyan
+color.due.today=
 color.overdue=cyan
 
 color.burndown.done=black on cyan
