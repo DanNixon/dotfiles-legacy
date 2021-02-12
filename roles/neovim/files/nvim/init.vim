@@ -9,35 +9,66 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'chrisbra/csv.vim'
-Plug 'chriskempson/base16-vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'vim-scripts/restore_view.vim'
-Plug 'scrooloose/syntastic'
-Plug 'ervandew/supertab'
-Plug 'godlygeek/tabular'
-Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-abolish'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'Chiel92/vim-autoformat'
-Plug 'tpope/vim-commentary'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
-Plug 'airblade/vim-gitgutter'
-Plug 'reedes/vim-lexical'
-Plug 'kana/vim-operator-user'
-Plug 'sirtaj/vim-openscad'
-Plug 'sheerun/vim-polyglot'
-Plug 'Konfekt/vim-sentencewrap'
-Plug 'tpope/vim-surround'
-Plug 'VundleVim/Vundle.vim'
-Plug 'chrisbra/unicode.vim'
+" Used to format and make editing CSV files trivial
+Plug 'https://github.com/chrisbra/csv.vim'
+
+" Applies base16 colour themes to syntax highlighting
+Plug 'https://github.com/chriskempson/base16-vim'
+
+" Applies formatting rules based on editorconfig files
+Plug 'https://github.com/editorconfig/editorconfig-vim'
+
+Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/junegunn/fzf.vim'
+
+" Provides tree based file explorer
+Plug 'https://github.com/scrooloose/nerdtree'
+
+" Restores cursor position on opening previously opened files
+Plug 'https://github.com/vim-scripts/restore_view.vim'
+
+" Provides syntax checking
+Plug 'https://github.com/scrooloose/syntastic'
+
+" Tab completion
+Plug 'https://github.com/ervandew/supertab'
+
+" Provides ctags based navigation of current file
+Plug 'https://github.com/majutsushi/tagbar'
+
+" Provides powerline style status line
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
+
+" Invokes code formatting tools from Vim
+Plug 'https://github.com/Chiel92/vim-autoformat'
+
+" Provides easy line/block comment toggling
+Plug 'https://github.com/tpope/vim-commentary'
+
+" Fast jumping to markers in a file
+Plug 'https://github.com/easymotion/vim-easymotion'
+
+" File query/modification commands
+Plug 'https://github.com/tpope/vim-eunuch'
+
+" Git commands
+Plug 'https://github.com/tpope/vim-fugitive'
+
+" Enhanced spelling and grammar checking
+Plug 'https://github.com/reedes/vim-lexical'
+
+" Syntax highlighting for OpenSCAD
+Plug 'https://github.com/sirtaj/vim-openscad'
+
+" Syntax highlighting for nearly everything
+Plug 'https://github.com/sheerun/vim-polyglot'
+
+" Format text into one line per sentance
+Plug 'https://github.com/Konfekt/vim-sentencewrap'
+
+" Query and insert unicode characters
+Plug 'https://github.com/chrisbra/unicode.vim'
 
 call plug#end()
 
@@ -66,10 +97,6 @@ let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_cppcheckers = ['gcc', 'clang']
 let g:syntastic_python_checkers = ['flake8', 'pylint']
-
-" Clang Format config
-let g:clang_format#command = 'clang-format'
-let g:clang_format#detect_style_file = 1
 
 " Spelling config
 let g:lexical#spell_key = '<leader>ss'
@@ -103,9 +130,6 @@ set pumheight=15
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
 
-" Clang should not autocomplete
-let g:clang_complete_auto = 0
-
 " Set options to restore from last session
 set viewoptions=cursor,slash,unix
 
@@ -134,10 +158,6 @@ set relativenumber
 let g:NERDTreeChDirMode = 2 " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['.pyc']
-
-" Gitgutter
-let g:gitgutter_grep = ''
-let g:gitgutter_signs = 0
 
 """""""""""""""""""""""""""""""
 " MISC COMMANDS AND FUNCTIONS "
