@@ -1,0 +1,38 @@
+---
+- name: Ensure nftables userland tools are installed
+  become: yes
+  package:
+    name: nftables
+    state: present
+
+- name: Ensure configuration directory exists
+  become: yes
+  file:
+    path: /etc/nftables.conf.d
+    state: directory
+    mode: 'u=rwx,g=rx,o=rx'
+
+- name: Ensure configuration fragments exist
+  become: yes
+  copy:
+    src: nftables.conf.d/
+    dest: /etc/nftables.conf.d
+    mode: 'u=rw,g=r,o=r'
+  notify:
+    - Restart nftables
+
+- name: Ensure nftables configuration is present
+  become: yes
+  copy:
+    src: "{{ nftables_config_file }}"
+    dest: /etc/nftables.conf
+    mode: 'u=rw,g=r,o=r'
+  notify:
+    - Restart nftables
+
+- name: Ensure nftables service is enabled and running
+  become: yes
+  service:
+    name: nftables
+    enabled: yes
+    state: started

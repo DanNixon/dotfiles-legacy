@@ -1,0 +1,4 @@
+chain input-syncthing {
+  tcp dport 22000 accept
+  udp dport 21027 accept
+}

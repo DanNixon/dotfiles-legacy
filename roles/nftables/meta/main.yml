@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  author: Dan Nixon
+  description: Installs and configures nftables
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: ArchLinux
+
+dependencies: []

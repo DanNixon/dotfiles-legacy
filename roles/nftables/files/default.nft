@@ -1,0 +1,10 @@
+#!/usr/sbin/nft -f
+
+table inet filter {
+  include "/etc/nftables.conf.d/chain-input-default.nft"
+  include "/etc/nftables.conf.d/chain-forward-drop.nft"
+  include "/etc/nftables.conf.d/chain-output-accept.nft"
+
+  chain input-host {
+  }
+}

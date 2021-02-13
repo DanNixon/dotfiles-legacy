@@ -1,0 +1,18 @@
+chain input {
+  type filter hook input priority 0
+  policy drop
+
+  ct state { established, related } accept
+  ct state invalid drop
+
+  ip6 nexthdr icmpv6 icmpv6 type { nd-neighbor-solicit, echo-request, nd-router-advert, nd-neighbor-advert } accept
+
+  tcp dport ssh ct state new log prefix "New SSH connection: " accept
+  tcp dport ssh accept
+
+  iif lo accept
+
+  jump input-host
+
+  log level info prefix "Dropped incomming: " drop
+}
