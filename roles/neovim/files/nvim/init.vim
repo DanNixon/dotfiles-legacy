@@ -70,6 +70,9 @@ Plug 'https://github.com/Konfekt/vim-sentencewrap'
 " Query and insert unicode characters
 Plug 'https://github.com/chrisbra/unicode.vim'
 
+" Syntax highlighting for nftables
+Plug 'https://github.com/nfnty/vim-nftables'
+
 call plug#end()
 
 """"""""""""""""""
