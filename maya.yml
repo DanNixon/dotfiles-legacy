@@ -23,7 +23,9 @@
     - bluetooth
     - dnscrypt_proxy
     - networkmanager
-    - nftables
+    - name: nftables
+      tags:
+        - firewall
     - pulseaudio
 
     - user_essentials
