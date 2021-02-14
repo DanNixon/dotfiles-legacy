@@ -6,6 +6,7 @@
 
   vars:
     profile: default
+    nftables_config_file: akane.nft
 
   pre_tasks:
     - name: Include profile specific variables
@@ -22,8 +23,10 @@
     - bluetooth
     - dnscrypt_proxy
     - networkmanager
+    - name: nftables
+      tags:
+        - firewall
     - pulseaudio
-    - ufw
 
     - user_essentials
     - pass
