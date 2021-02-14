@@ -20,13 +20,3 @@
     name: 'wg-quick@{{ config }}'
     state: started
     enabled: yes
-
-- name: Ensure a UFW firewall rule exists that allows peers to connect
-  become: yes
-  when: "interface['listen_port'] is defined"
-  ufw:
-    rule: allow
-    direction: in
-    interface: '{{ external_interface }}'
-    proto: udp
-    to_port: "{{ interface['listen_port'] }}"

@@ -25,12 +25,6 @@
     name: syncthing
     state: present
 
-- name: Ensure a UFW firewall rule exists allowing Syncthing sync traffic
-  become: yes
-  ufw:
-    rule: allow
-    name: syncthing
-
 - name: Ensure the Syncthing service is enabled and running for the target user
   become: yes
   service:
