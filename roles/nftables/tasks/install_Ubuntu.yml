@@ -1,0 +1,14 @@
+---
+- name: Ensure iptables userland tools are not installed
+  become: yes
+  package:
+    name:
+      - iptables
+      - ufw
+    state: absent
+
+- name: Ensure nftables userland tools are installed
+  become: yes
+  package:
+    name: nftables
+    state: present
