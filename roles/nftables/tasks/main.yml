@@ -2,7 +2,9 @@
 - name: Ensure nftables userland tools are installed
   become: yes
   package:
-    name: nftables
+    name:
+      - nftables
+      - iptables-nft
     state: present
 
 - name: Ensure configuration directory exists
@@ -29,6 +31,16 @@
     mode: 'u=rw,g=r,o=r'
   notify:
     - Restart nftables
+
+- name: Ensure iptables services are disabled and stopped
+  become: yes
+  service:
+    name: "{{ item }}"
+    enabled: no
+    state: stopped
+  loop:
+    - iptables
+    - ip6tables
 
 - name: Ensure nftables service is enabled and running
   become: yes
