@@ -2,17 +2,17 @@ chain input {
   type filter hook input priority 0
   policy drop
 
+  iif lo counter accept
+
+  ct state invalid counter drop
   ct state { established, related } accept
-  ct state invalid drop
 
   ip6 nexthdr icmpv6 icmpv6 type { nd-neighbor-solicit, echo-request, nd-router-advert, nd-neighbor-advert } accept
 
-  tcp dport ssh ct state new log prefix "New SSH connection: " accept
-  tcp dport ssh accept
-
-  iif lo accept
-
+  jump input-ssh
   jump input-host
 
-  log level info prefix "Dropped incomming: " drop
+  log level info prefix "Dropped incomming: " counter drop
 }
+
+include "/etc/nftables.conf.d/chain-input-ssh.nft"
