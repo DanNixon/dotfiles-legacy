@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+
+import graphviz as gv
+import sys
+import yaml
+
+
+data = yaml.load(sys.stdin, Loader=yaml.FullLoader)
+
+
+def update_attrs_from_group(attrs, item):
+    for group_name in item.get("groups", []):
+        group = data["groups"].get(group_name)
+        if group is None:
+            continue
+        attrs.update(group.get("attrs", []))
+
+
+d = gv.Digraph(
+    name=data['diagram']['name'],
+    comment=data['diagram']['description'],
+    graph_attr=data['diagram'].get('graph_attrs'),
+    node_attr=data['diagram'].get('node_attrs'),
+    edge_attr=data['diagram'].get('edge_attrs'),
+)
+
+for node_name, node in data['nodes'].items():
+    label = f"{node.get('name', node_name)}\\n{node.get('type', '?')}\\n{node.get('model', '?')}"
+
+    node_attrs = {}
+    update_attrs_from_group(node_attrs, node)
+    node_attrs.update(node.get('attrs', {}))
+
+    d.node(node_name, label, **node_attrs)
+
+    for uplink in node.get("uplinks", []):
+        edge_attrs = {}
+        update_attrs_from_group(edge_attrs, uplink)
+        edge_attrs.update(uplink.get('attrs', {}))
+
+        d.edge(uplink["node"], node_name, **edge_attrs)
+
+print(d.source)
