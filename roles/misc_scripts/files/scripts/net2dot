@@ -8,36 +8,64 @@ import yaml
 data = yaml.load(sys.stdin, Loader=yaml.FullLoader)
 
 
-def update_attrs_from_group(attrs, item):
+def update_attrs_from_group(attrs, item, all_groups):
     for group_name in item.get("groups", []):
-        group = data["groups"].get(group_name)
+        group = all_groups.get(group_name)
         if group is None:
             continue
         attrs.update(group.get("attrs", []))
 
 
+def generate_label(key, item):
+    label = f"{item.get('name', key)}"
+    desc = item.get("desc")
+    if desc:
+        desc = desc.replace('\n', '\\n')
+        label += f"\\n{desc}"
+    return label
+
+
 d = gv.Digraph(
     name=data['diagram']['name'],
-    comment=data['diagram']['description'],
+    comment=data['diagram']['desc'],
     graph_attr=data['diagram'].get('graph_attrs'),
     node_attr=data['diagram'].get('node_attrs'),
     edge_attr=data['diagram'].get('edge_attrs'),
+    body=["rankdir = LR;"],
 )
 
 for node_name, node in data['nodes'].items():
-    label = f"{node.get('name', node_name)}\\n{node.get('type', '?')}\\n{node.get('model', '?')}"
-
     node_attrs = {}
-    update_attrs_from_group(node_attrs, node)
+    update_attrs_from_group(node_attrs, node, data["node_groups"])
     node_attrs.update(node.get('attrs', {}))
 
-    d.node(node_name, label, **node_attrs)
+    d.node(node_name, generate_label(node_name, node), **node_attrs)
 
     for uplink in node.get("uplinks", []):
         edge_attrs = {}
-        update_attrs_from_group(edge_attrs, uplink)
+        update_attrs_from_group(edge_attrs, uplink, data["link_groups"])
         edge_attrs.update(uplink.get('attrs', {}))
 
         d.edge(uplink["node"], node_name, **edge_attrs)
 
 print(d.source)
+
+
+
+def group_legend(cluster, title, members):
+    d = gv.Digraph(
+        name=title,
+        graph_attr=data['diagram'].get('graph_attrs'),
+        node_attr=data['diagram'].get('node_attrs'),
+        edge_attr=data['diagram'].get('edge_attrs'),
+    )
+
+    with d.subgraph(name=cluster, comment=title, body=[f"label = \"{title}\"", "rankdir = TB"]) as g:
+        for k, v in members.items():
+            g.node(f"legend_link_{k}", generate_label(k, v), **v["attrs"])
+
+    print(d.source)
+
+
+group_legend("cluster_0", "Link Legend", data["link_groups"])
+group_legend("cluster_1", "Node Legend", data["node_groups"])
