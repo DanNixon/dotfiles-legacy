@@ -18,16 +18,13 @@
 - betaflight-configurator
 - blackbox-explorer
 - gallery-dl
-- gr-dab-git
-- gtypist
 - opentx-companion
 - protonmail-bridge-nogui
 - qmk
-- sdrangel-git
 - smenu
 - tilp
 - tomb
-- (vesc_tool-git)
+- tomb-kdf
 - wdisplays
 - yay
 
