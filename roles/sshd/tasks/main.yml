@@ -5,3 +5,12 @@
     path: /etc/ssh/sshd_config
     line: PasswordAuthentication no
     state: present
+  notify:
+    - Restart sshd
+
+- name: Ensure sshd is enabled and running
+  become: yes
+  service:
+    name: sshd
+    state: started
+    enabled: yes

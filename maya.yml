@@ -27,6 +27,7 @@
       tags:
         - firewall
     - pulseaudio
+    - sshd
 
     - user_essentials
     - pass
