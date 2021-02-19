@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  author: Dan Nixon
+  description: Updates the pacman mirror list for Arch linux
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: ArchLinux
+
+dependencies: []

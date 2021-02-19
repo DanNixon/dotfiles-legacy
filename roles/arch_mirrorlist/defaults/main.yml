@@ -1,0 +1,11 @@
+---
+arch_mirror_countries:
+  - GB
+
+arch_mirror_protocols:
+  - https
+
+arch_mirror_ip_versions:
+  - 4
+
+arch_mirror_use_status: no
