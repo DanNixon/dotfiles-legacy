@@ -27,7 +27,7 @@
     - name: nftables
       tags:
         - firewall
-    - pipewire
+    - pulseaudio
     - sshd
 
     - user_essentials
