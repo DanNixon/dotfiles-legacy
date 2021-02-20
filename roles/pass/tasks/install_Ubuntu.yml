@@ -1,0 +1,6 @@
+---
+- name: Ensure pass is installed
+  become: yes
+  package:
+    name: pass
+    state: present

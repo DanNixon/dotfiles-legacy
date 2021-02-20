@@ -1,11 +1,8 @@
 ---
-- name: Ensure pass is installed
-  become: yes
-  package:
-    name:
-      - pass
-      - pass-otp
-    state: present
+- name: Install pass and extensions
+  include_tasks: "{{ item }}"
+  with_first_found:
+    - files: "install_{{ ansible_distribution }}.yml"
 
 - name: Ensure script directory exists
   file:
