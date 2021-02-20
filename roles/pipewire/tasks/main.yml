@@ -1,0 +1,20 @@
+---
+- name: Ensure PipeWire and friends are installed
+  become: yes
+  package:
+    name:
+      - gst-plugin-pipewire
+      - pipewire
+      - pipewire-pulse
+      - pulseeffects
+      - pulsemixer
+
+- name: Ensure services are enabled and running
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
+    scope: user
+  loop:
+    - pipewire
+    - pipewire-pulse
