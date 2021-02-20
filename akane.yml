@@ -19,6 +19,7 @@
     - name: system_essentials
       vars:
         hostname: akane
+    - interactive_user
 
     - bluetooth
     - dnscrypt_proxy
