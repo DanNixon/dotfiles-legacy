@@ -5,9 +5,9 @@ chain input {
   iif lo counter accept
 
   ct state invalid counter drop
-  ct state { established, related } accept
+  ct state { established, related } counter accept
 
-  ip6 nexthdr icmpv6 icmpv6 type { nd-neighbor-solicit, echo-request, nd-router-advert, nd-neighbor-advert } accept
+  ip6 nexthdr icmpv6 icmpv6 type { nd-neighbor-solicit, echo-request, nd-router-advert, nd-neighbor-advert } counter accept
 
   jump input-ssh
   jump input-host
