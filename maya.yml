@@ -24,9 +24,7 @@
     - bluetooth
     - dnscrypt_proxy
     - networkmanager
-    - name: nftables
-      tags:
-        - firewall
+    - nftables
     - pulseaudio
     - sshd
 
