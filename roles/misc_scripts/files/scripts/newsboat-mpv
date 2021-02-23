@@ -2,5 +2,5 @@
 
 url="$1"
 
-format="$(smenu-youtube-dl-select-format "$url")"
+format="$(youtube-dl-select-format "$url")"
 mpv --ytdl-format="$format" "$url"

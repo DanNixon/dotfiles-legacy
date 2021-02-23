@@ -5,9 +5,8 @@ set -o pipefail
 # A set of common formats
 preset_formats='bestvideo+bestaudio\nbestvideo[height<=1080]+bestaudio\nbestvideo[height<=720]+bestaudio'
 
-# Ask if a common format is good enough (best to ask this first as it covers
-# 90% of my use cases and requires no bandwidth)
-format=$(printf "$preset_formats\nquery...\n" | smenu -c -d -m 'Select format')
+# Ask if a common format is good enough
+format=$(printf "$preset_formats\nquery...\n" | fzf)
 status="$?"
 if [ "$status" -ne 0 ]; then
   exit "$status"
@@ -25,7 +24,7 @@ else
   if [ "$status" -eq 0 ]; then
     # Ask which format is desired, still present the common formats at the end of
     # the list if none of the queried formats are acceptable
-    printf "$formats\n$preset_formats\n" | smenu -W $':\t\n' -c -n 10 -d -m 'Select format' | awk '{print $1"+bestaudio"}'
+    printf "$formats\n$preset_formats\n" | fzf | awk '{print $1"+bestaudio"}'
   else
     exit "$status"
   fi

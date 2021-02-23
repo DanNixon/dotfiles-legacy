@@ -3,6 +3,7 @@
   become: yes
   package:
     name:
+      - fzf
       - htop
       - jq
       - nnn

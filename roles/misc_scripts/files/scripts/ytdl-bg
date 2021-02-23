@@ -5,7 +5,7 @@ set -e
 url="$1"
 target_dir="$HOME/Downloads/"
 
-format="$(smenu-youtube-dl-select-format "$url")"
+format="$(youtube-dl-select-format "$url")"
 mkdir -p "$target_dir"
 
 session="ytdl-$RANDOM"

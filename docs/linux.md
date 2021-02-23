@@ -21,7 +21,6 @@
 - opentx-companion
 - protonmail-bridge-nogui
 - qmk
-- smenu
 - tilp
 - tomb
 - tomb-kdf
