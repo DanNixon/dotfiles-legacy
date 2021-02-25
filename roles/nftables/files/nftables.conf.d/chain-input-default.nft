@@ -9,10 +9,7 @@ chain input {
 
   ip6 nexthdr icmpv6 icmpv6 type { nd-neighbor-solicit, echo-request, nd-router-advert, nd-neighbor-advert } counter accept
 
-  jump input-ssh
   jump input-host
 
   log level info prefix "Dropped incomming: " counter drop
 }
-
-include "/etc/nftables.conf.d/chain-input-ssh.nft"
