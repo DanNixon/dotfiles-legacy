@@ -1,5 +1,58 @@
 ---
-- name: Ensure data mountpoint exists
+- name: Ensure directories exist
   file:
-    path: "{{ ansible_facts['env']['HOME'] }}/.mail"
+    path: "{{ item }}"
     state: directory
+  loop:
+    - "{{ ansible_facts['env']['HOME'] }}/.mail"
+    - "{{ config_dir }}/msmtp/"
+    - "{{ config_dir }}/neomutt/"
+    - "{{ config_dir }}/neomutt/accounts/"
+
+- name: Ensure tools and dependencies are installed
+  become: yes
+  package:
+    name:
+      - isync
+      - mailcap
+      - msmtp
+      - neomutt
+      - w3m
+    state: present
+
+- name: Ensure configuration is present
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "u=r,g=r,o="
+  loop:
+    - src: neomuttrc
+      dest: "{{ config_dir }}/neomuttrc"
+    - src: mailcap
+      dest: "{{ ansible_facts['env']['HOME'] }}/.mailcap"
+
+- name: Ensure configuration is present
+  include_role:
+    name: copy_secret_injected_file
+  vars:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "u=r,g=r,o="
+  loop:
+    - src: mbsyncrc
+      dest: "{{ ansible_facts['env']['HOME'] }}/.mbsyncrc"
+    - src: msmtp.conf
+      dest: "{{ config_dir }}/msmtp/config"
+
+- name: Ensure Neomutt account configurations are present
+  include_role:
+    name: copy_secret_injected_file
+  vars:
+    src: "accounts/{{ item }}.neomuttrc"
+    dest: "{{ config_dir }}/neomutt/accounts/{{ item }}.neomuttrc"
+    mode: "u=r,g=r,o="
+  loop:
+    - gmail
+    - outlook-1
+    - outlook-2
+    - protonmail
