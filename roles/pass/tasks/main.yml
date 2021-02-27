@@ -10,8 +10,8 @@
     state: directory
     mode: "u=rwx,g=,o="
 
-- name: Ensure scripts are present
+- name: Ensure helper script is present
   copy:
-    src: scripts/
-    dest: "{{ script_dir }}"
+    src: passfzf
+    dest: "{{ script_dir }}/passfzf"
     mode: "u=rx,g=,o="

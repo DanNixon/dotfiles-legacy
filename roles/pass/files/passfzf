@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -eo pipefail
+
+pwname="$(find "$HOME/.password-store/" -name "*.gpg" -printf "%P\n" | sed -e "s/\.gpg//g" | fzf)"
+if [ ! $? -eq 0 ]; then
+  exit $?
+fi
+
+mode=$(cat <<EOF | fzf
+text type
+otp type
+otp
+text qr
+text
+EOF
+);
+
+case "$mode" in
+  'text')
+    pass "$pwname"
+    ;;
+  'text type')
+    pass "$pwname" | wtype -
+    ;;
+  'text qr')
+    pass "$pwname" | qrencode -t UTF8
+    ;;
+  'otp')
+    pass otp "$pwname"
+    ;;
+  'otp type')
+    pass otp "$pwname" | wtype -
+    ;;
+  *)
+    exit 1
+esac
