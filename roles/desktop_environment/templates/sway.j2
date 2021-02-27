@@ -157,9 +157,10 @@ bindsym $mod+Escape exec power-control-sway
 bindsym $mod+Shift+p exec grim
 
 # Application shortcuts
-bindsym $mod+Semicolon  exec wofi --show run
-bindsym $mod+Return     exec alacritty
-bindsym $mod+p          exec pass-clip
+bindsym $mod+Semicolon    exec wofi --show run
+bindsym $mod+Return       exec alacritty
+bindsym $mod+Shift+Return exec alacritty --class=FloatingAlacritty
+bindsym $mod+p            exec pass-clip
 
 # Audio controls (pulseaudio)
 bindsym $mod+equal              exec --no-startup-id pulseaudio-control v +5%
@@ -196,6 +197,6 @@ output {{ d['name'] }} {
 {% endfor %}
 
 # Window specific config
-{% for appid, opacity in sway_window_opactiy.items() %}
-for_window [app_id="{{ appid }}"] opacity {{ opacity }}
+{% for appid, config in sway_window_config.items() %}
+for_window [app_id="{{ appid }}"] {{ config }}
 {% endfor %}
