@@ -1,8 +1,11 @@
 ---
-- name: Ensure Neomutt is installed
+- name: Ensure Neomutt and dependencies are installed
   become: yes
   package:
-    name: neomutt
+    name:
+      - mailcap
+      - neomutt
+      - w3m
     state: present
 
 - name: Ensure Neomutt configuration directories exist
@@ -10,10 +13,15 @@
     path: "{{ config_dir }}/accounts/"
     state: directory
 
-- name: Ensure Neomutt configuration is present
+- name: Ensure configuration is present
   copy:
-    src: neomuttrc
-    dest: "{{ config_dir }}"
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - src: neomuttrc
+      dest: "{{ config_dir }}/neomuttrc"
+    - src: mailcap
+      dest: "{{ ansible_facts['env']['HOME'] }}/.mailcap"
 
 - name: Ensure Neomutt account configurations are present
   include_role:
