@@ -6,6 +6,7 @@
       - gnuradio
       - gnuradio-companion
       - gnuradio-osmosdr
+      - gqrx
       - qwt
       - rtl-sdr
     state: present
