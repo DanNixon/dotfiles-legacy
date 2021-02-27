@@ -18,6 +18,7 @@
 - betaflight-configurator
 - blackbox-explorer
 - gallery-dl
+- gr-soapy-git
 - opentx-companion
 - protonmail-bridge-nogui
 - qmk
