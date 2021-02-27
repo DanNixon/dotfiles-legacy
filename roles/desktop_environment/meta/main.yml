@@ -8,10 +8,6 @@ galaxy_info:
     - name: ArchLinux
 
 dependencies:
-  - role: alacritty
-  - role: feh
-  - role: mako
-  - role: waybar
-  - role: wofi
-  - role: zathura
-  - role: sway
+  - role: nerdfont
+    vars:
+      font: DejaVuSansMono

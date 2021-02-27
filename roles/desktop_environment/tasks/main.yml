@@ -1,23 +1,76 @@
 ---
-- name: Ensure general desktop environment pakages are installed
+- name: Ensure desktop environment pakages are installed
   become: yes
   package:
     name:
       - adobe-source-han-sans-otc-fonts
+      - alacritty
       - blueman
+      - feh
       - grim
       - libnotify
       - light
+      - mako
+      - sway
+      - swaylock
       - ttf-dejavu
+      - waybar
       - wl-clipboard
+      - wofi
+      - xdg-utils
       - xorg-xwayland
+      - zathura
+      - zathura-pdf-mupdf
     state: present
 
-- name: Ensure script directory exists
+- name: Ensure directories exist
   file:
-    path: "{{ script_dir }}"
+    path: "{{ item }}"
     state: directory
     mode: "u=rwx,g=,o="
+  loop:
+    - "{{ applications_dir }}"
+    - "{{ script_dir }}"
+    - "{{ config_dir }}/alacritty"
+    - "{{ config_dir }}/mako"
+    - "{{ config_dir }}/sway"
+    - "{{ config_dir }}/waybar"
+    - "{{ config_dir }}/wofi"
+
+- name: Ensure configuration is present
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "u=r,g=,o="
+  loop:
+    - src: chromium-flags.conf
+      dest: "{{ ansible_facts['env']['HOME'] }}/.config/chromium-flags.conf"
+    - src: mako.conf
+      dest: "{{ config_dir }}/mako/config"
+    - src: waybar.css
+      dest: "{{ config_dir }}/waybar/style.css"
+    - src: wofi.css
+      dest: "{{ config_dir }}/wofi/style.css"
+    - src: zathura.desktop
+      dest: "{{ applications_dir }}/zathura.desktop"
+
+- name: Ensure configuration is present
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "u=r,g=,o="
+  loop:
+    - src: alacritty.yml.j2
+      dest: "{{ config_dir }}/alacritty/alacritty.yml"
+    - src: sway.j2
+      dest: "{{ config_dir }}/sway/config"
+    - src: waybar.json.j2
+      dest: "{{ config_dir }}/waybar/config"
+  tags:
+    - desktop_environment_quick
+
+- name: Update applications database
+  command: update-desktop-database "{{ applications_dir }}"
 
 - name: Ensure scripts are present
   copy:
@@ -25,8 +78,20 @@
     dest: "{{ script_dir }}"
     mode: "u=rx,g=,o="
 
-- name: Ensure Chromium is configured to run under Wayland/Ozone
-  copy:
-    src: chromium-flags.conf
-    dest: "{{ ansible_facts['env']['HOME'] }}/.config/chromium-flags.conf"
-    mode: "u=r,g=,o="
+- name: Ensure default applications are set
+  command: xdg-mime default "{{ item.app }}" "{{ item.type }}"
+  loop:
+    - app: feh.desktop
+      type: image/jpeg
+    - app: feh.desktop
+      type: image/png
+    - app: feh.desktop
+      type: image/webp
+    - app: zathura.desktop
+      type: application/pdf
+
+- name: Reload Sway
+  command: swaymsg reload
+  when: sway_reload|bool
+  tags:
+    - desktop_environment_quick

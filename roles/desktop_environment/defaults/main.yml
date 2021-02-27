@@ -1,3 +1,10 @@
 ---
+alacritty_font_size: 8.5
+
+sway_displays: []
+sway_reload: no
+sway_window_opactiy:
+  Alacritty: 0.92
+
 waybar_modules_left: '["sway/workspaces", "sway/mode"]'
 waybar_modules_right: '["backlight", "pulseaudio", "battery", "clock"]'

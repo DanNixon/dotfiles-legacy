@@ -1,2 +1,0 @@
----
-applications_dir: "{{ ansible_facts['env']['HOME'] }}/.local/share/applications/"

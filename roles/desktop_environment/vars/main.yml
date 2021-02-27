@@ -1,2 +1,4 @@
 ---
+applications_dir: "{{ ansible_facts['env']['HOME'] }}/.local/share/applications/"
+config_dir: "{{ ansible_facts['env']['HOME'] }}/.config"
 script_dir: "{{ ansible_facts['env']['HOME'] }}/.local/bin/"
