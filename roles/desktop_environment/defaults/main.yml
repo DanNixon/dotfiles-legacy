@@ -5,7 +5,6 @@ sway_displays: []
 sway_reload: no
 sway_window_config:
   Alacritty: opacity 0.92
-  FloatingAlacritty: opacity 0.92
   FloatingAlacritty: floating enable
 
 waybar_modules_left: '["sway/workspaces", "sway/mode"]'
