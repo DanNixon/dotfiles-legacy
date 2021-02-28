@@ -1,4 +1,4 @@
 chain output {
-  type filter hook output priority 0
-  policy accept
+    type filter hook output priority 0
+    policy accept
 }
