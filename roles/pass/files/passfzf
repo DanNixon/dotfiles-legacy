@@ -21,7 +21,7 @@ case "$mode" in
     pass "$pwname"
     ;;
   'text type')
-    pass "$pwname" | wtype -
+    pass "$pwname" | tr -d '\n' | wtype -
     ;;
   'text qr')
     pass "$pwname" | qrencode -t UTF8
@@ -30,7 +30,7 @@ case "$mode" in
     pass otp "$pwname"
     ;;
   'otp type')
-    pass otp "$pwname" | wtype -
+    pass otp "$pwname" | tr -d '\n' | wtype -
     ;;
   *)
     exit 1
