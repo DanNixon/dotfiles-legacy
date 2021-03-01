@@ -1,0 +1,7 @@
+---
+- name: Ensure colour output is enabled in pacman
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/pacman.conf
+    insertafter: "^\\[options\\]"
+    line: Color

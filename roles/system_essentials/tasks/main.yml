@@ -57,3 +57,9 @@
       - sudo
       - iproute2
     state: present
+
+- name: Perform platform specific tasks
+  include_tasks: "{{ item }}"
+  with_first_found:
+    - files: "{{ ansible_os_family }}.yml"
+      skip: yes
