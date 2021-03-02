@@ -1,0 +1,13 @@
+---
+- name: Ensure iwd is installed
+  become: yes
+  package:
+    name: iwd
+    state: present
+
+- name: Ensure iwd service is enabled and running
+  become: yes
+  service:
+    name: iwd
+    state: started
+    enabled: yes

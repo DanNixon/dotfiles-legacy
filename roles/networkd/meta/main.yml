@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  author: Dan Nixon
+  description: Configures systemd-networkd
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: ArchLinux
+
+dependencies: []

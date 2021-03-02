@@ -1,0 +1,4 @@
+---
+- name: Reload systemd-networkd configuration
+  become: yes
+  command: networkctl reload

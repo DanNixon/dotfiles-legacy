@@ -1,0 +1,9 @@
+[Match]
+Name=en*
+Type=ether
+
+[Network]
+DHCP=ipv4
+
+[DHCP]
+RouteMetric=10

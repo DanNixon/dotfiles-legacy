@@ -7,6 +7,7 @@
   vars:
     profile: default
     nftables_config_file: akane.nft
+    networkd_config_dir: networkd_workstation
 
   pre_tasks:
     - name: Include profile specific variables
@@ -23,7 +24,8 @@
 
     - bluetooth
     - dnscrypt_proxy
-    - networkmanager
+    - networkd
+    - wlan
     - nftables
     - pulseaudio
     - sshd
