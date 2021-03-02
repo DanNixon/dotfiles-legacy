@@ -20,6 +20,7 @@
 - gallery-dl
 - gr-soapy-git
 - opentx-companion
+- paru
 - protonmail-bridge-nogui
 - qmk
 - tilp
@@ -27,6 +28,7 @@
 - tomb-kdf
 - wdisplays
 - yay
+- ytfzf-git
 
 ## Base16 themes
 
