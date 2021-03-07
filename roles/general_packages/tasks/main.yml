@@ -15,6 +15,7 @@
       - ipcalc
       - qrencode
       - rclone
+      - sipcalc
       - shellcheck
       - sshfs
       - sshuttle
