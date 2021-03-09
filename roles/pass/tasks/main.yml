@@ -12,6 +12,6 @@
 
 - name: Ensure helper script is present
   copy:
-    src: passfzf
-    dest: "{{ script_dir }}/passfzf"
+    src: fzf-pass
+    dest: "{{ script_dir }}/fzf-pass"
     mode: "u=rx,g=,o="
