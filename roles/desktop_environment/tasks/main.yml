@@ -16,7 +16,6 @@
       - ttf-dejavu
       - waybar
       - wl-clipboard
-      - wofi
       - xdg-utils
       - xorg-xwayland
       - zathura
@@ -35,7 +34,6 @@
     - "{{ config_dir }}/mako"
     - "{{ config_dir }}/sway"
     - "{{ config_dir }}/waybar"
-    - "{{ config_dir }}/wofi"
 
 - name: Ensure configuration is present
   copy:
@@ -49,8 +47,6 @@
       dest: "{{ config_dir }}/mako/config"
     - src: waybar.css
       dest: "{{ config_dir }}/waybar/style.css"
-    - src: wofi.css
-      dest: "{{ config_dir }}/wofi/style.css"
     - src: zathura.desktop
       dest: "{{ applications_dir }}/zathura.desktop"
 
