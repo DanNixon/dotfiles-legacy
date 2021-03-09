@@ -33,9 +33,16 @@ client.background       $base07
 
 ### Config
 
-# Keyboard layout
+# Default keyboard options
 input type:keyboard {
   xkb_layout gb
+  xkb_options altwin:swap_lalt_lwin,caps:none
+}
+
+# 60% QMK keyboard
+input "29746:1624:KB_Paradise_V60_Type_R" {
+  xkb_layout gb
+  xkb_options caps:none
 }
 
 # Waybar
