@@ -1,0 +1,48 @@
+#!/bin/bash
+
+set -o pipefail
+
+# Ensure the history file exists
+history_file="${XDG_CACHE_HOME:-$HOME/.cache}/${0##*/}-history.txt"
+touch "$history_file"
+
+# Get command to run
+# - Get commands from already sorted history file, remove invocation counters
+# - Get listing of all executables on PATH, sorted by name
+# Remove duplicates
+# Select via fzf
+command="$( (
+  awk '{print $2}' < "$history_file";
+  echo -n "$PATH" | xargs -d: -I{} -r find -L {} -maxdepth 1 -mindepth 1 -type f -executable -printf '%P\n' | sort;
+) \
+  | awk '!a[$0]++' \
+  | fzf --no-sort)"
+result=$?
+
+# Check if a command was selected
+if [ $result -eq 0 ];
+then
+  # Run the command
+  setsid --fork "$command"
+
+  # Find the entry in the history file for this command and extract the invocation count
+  count="$(grep -Pe "^[0-9]+ \Q$command\E$" < "$history_file" | awk '{ print $1 }')"
+  # If an entry for the command was found
+  if [ $? -eq 0 ];
+  then
+    # If an entry exists, remove it from the history file
+    sed -i "/^[0-9]* $command/d" "$history_file"
+  else
+    # Otherwise assume this command has never been invoked
+    count=0
+  fi
+
+  # Increment the invocation count
+  (( count++ ))
+  # Write it back to the history file
+  echo "$count $command" >> "$history_file"
+  # Ensure the history is sorted (by invocation count)
+  sort -nro "$history_file" "$history_file"
+else
+  exit $result
+fi
