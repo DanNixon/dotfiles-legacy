@@ -27,7 +27,7 @@
     - networkd
     - wlan
     - nftables
-    - pulseaudio
+    - pipewire
     - sshd
 
     - user_essentials
