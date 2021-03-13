@@ -1,0 +1,6 @@
+---
+- name: Restart dnscrypt-proxy
+  become: yes
+  service:
+    name: dnscrypt-proxy
+    state: restarted
