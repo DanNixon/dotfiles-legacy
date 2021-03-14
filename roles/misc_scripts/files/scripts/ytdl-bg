@@ -3,7 +3,7 @@
 set -e
 
 url="$1"
-target_dir="$HOME/Downloads/"
+target_dir="${2:-$HOME/Downloads/}"
 
 format="$(youtube-dl-select-format "$url")"
 mkdir -p "$target_dir"

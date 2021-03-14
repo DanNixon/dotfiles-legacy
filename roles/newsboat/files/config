@@ -17,7 +17,7 @@ browser "firefox --private-window %u"
 
 macro p set browser "newsboat-mpv %u"; open-in-browser ; set browser "firefox --private-window %u"
 macro c set browser "wl-copy %u"; open-in-browser ; set browser "firefox --private-window %u"
-macro d set browser "ytdl-bg %u"; open-in-browser ; set browser "firefox --private-window %u"
+macro d set browser "ytdl-bg %u ~/video_to_watch/"; open-in-browser ; set browser "firefox --private-window %u"
 
 bookmark-autopilot  yes
 bookmark-cmd        "newsboat-bookmark"
