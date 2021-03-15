@@ -3,5 +3,5 @@
   become: yes
   package:
     name:
-      - python-neovim
+      - python-pynvim
     state: present
