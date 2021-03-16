@@ -3,11 +3,17 @@
   become: yes
   package:
     name:
-      - gst-plugin-pipewire
+      - carla
+      - jackmeter
+      - jack_mixer
+      - njconnect
+      - patchmatrix
       - pipewire
+      - pipewire-jack
       - pipewire-pulse
       - pulseeffects
       - pulsemixer
+      - qjackctl
 
 - name: Ensure services are enabled and running
   ansible.builtin.systemd:
