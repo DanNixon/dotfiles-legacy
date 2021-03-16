@@ -15,7 +15,7 @@
     src: 'nvim/'
     dest: '{{ config_dir }}'
 
-- name: Ensure NeoVim plugins are installed and up to date
+- name: Ensure Neovim plugins are installed and up to date
   command: nvim +PlugUpdate +exit +exit
 
 - name: Perform platform specific tasks
