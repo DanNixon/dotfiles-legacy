@@ -10,8 +10,11 @@ fi
 mode=$(cat <<EOF | fzf
 text type
 otp type
+otp copy
 otp
 text qr
+text copy once
+text copy
 text
 EOF
 );
@@ -19,6 +22,12 @@ EOF
 case "$mode" in
   'text')
     pass "$pwname"
+    ;;
+  'text copy')
+    pass "$pwname" | wl-copy
+    ;;
+  'text copy once')
+    pass "$pwname" | wl-copy --paste-once
     ;;
   'text type')
     pass "$pwname" | tr -d '\n' | wtype -
@@ -28,6 +37,9 @@ case "$mode" in
     ;;
   'otp')
     pass otp "$pwname"
+    ;;
+  'otp copy')
+    pass otp "$pwname" | wl-copy
     ;;
   'otp type')
     pass otp "$pwname" | tr -d '\n' | wtype -
