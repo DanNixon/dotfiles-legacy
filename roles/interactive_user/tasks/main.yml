@@ -19,3 +19,11 @@
     content: |
       {{ username }} ALL=(ALL) ALL
   when: sudoer
+
+- name: Ensure the user's password is set
+  become: yes
+  user:
+    name: "{{ username }}"
+    password: "{{ password }}"
+    state: present
+  when: password | default(no)
