@@ -19,11 +19,23 @@ command="$( (
   | fzf --no-sort)"
 result=$?
 
+launch_method="${1:-setsid}"
+
 # Check if a command was selected
 if [ $result -eq 0 ];
 then
   # Run the command
-  setsid --fork "$command"
+  case "$launch_method" in
+    'setsid')
+      setsid --fork "$command"
+      ;;
+    'sway')
+      swaymsg -- exec "$command"
+      ;;
+    *)
+      exit 1
+      ;;
+  esac
 
   # Find the entry in the history file for this command and extract the invocation count
   count="$(grep -Pe "^[0-9]+ \Q$command\E$" < "$history_file" | awk '{ print $1 }')"
