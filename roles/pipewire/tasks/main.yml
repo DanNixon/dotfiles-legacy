@@ -24,3 +24,10 @@
   loop:
     - pipewire
     - pipewire-pulse
+
+- name: Ensure PipeWire is loaded as JACK library
+  become: yes
+  copy:
+    src: pipewire-jack.conf
+    dest: /etc/ld.so.conf.d/pipewire-jack.conf
+    mode: u=rw,g=r,o=r
