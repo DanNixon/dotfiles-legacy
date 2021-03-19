@@ -1,6 +1,8 @@
 ---
 - name: Install nftables
-  include_tasks: "{{ item }}"
+  include_tasks: "{{ task_file }}"
+  loop_control:
+    loop_var: task_file
   with_first_found:
     - files: "install_{{ ansible_distribution }}.yml"
 
