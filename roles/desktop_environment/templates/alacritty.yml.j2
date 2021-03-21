@@ -1,24 +1,15 @@
 # vim: filetype=yaml
 
-# Any items in the `env` entry below will be added as
-# environment variables. Some entries may override variables
-# set by alacritty it self.
 env:
-  TERM: screen-256color
+  TERM: alacritty
 
 window:
-  # Adds this many blank pixels of padding around the window
-  # Units are physical pixels; this is not DPI aware.
-  # (change requires restart)
   padding:
     x: 2
     y: 2
 
   decorations: full
   dynamic_title: true
-
-# When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: true
 
 # Font configuration (changes require restart)
 #
@@ -54,19 +45,6 @@ font:
 
   size: {{ alacritty_font_size }}
 
-  # Offset is the extra space around each character. offset.y can be thought of
-  # as modifying the linespacing, and offset.x as modifying the letter spacing.
-  offset:
-    x: 0
-    y: 0
-
-  # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increase the x offset to move the glyph to
-  # the right, increase the y offset to move the glyph upward.
-  glyph_offset:
-    x: 0
-    y: 0
-
 mouse:
   # Click settings
   #
@@ -92,10 +70,7 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 cursor:
-  # Style of the cursor (block, underline, beam)
-  style: Block
-
-  # Whether the cursor should be a hollow block on window focus loss
+  style: block
   unfocused_hollow: true
 
 live_config_reload: true
