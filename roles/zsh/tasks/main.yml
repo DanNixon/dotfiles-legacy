@@ -18,3 +18,16 @@
   user:
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
+
+- name: Ensure fzf completion tool is present
+  git:
+    repo: https://github.com/lincheney/fzf-tab-completion
+    dest: "{{ ansible_facts['env']['HOME'] }}/.local/share/fzf-tab-completion"
+  when: zsh_fzf_completion
+
+- name: Ensure fzf is installed
+  become: yes
+  package:
+    name: fzf
+    state: present
+  when: zsh_fzf_completion
