@@ -13,7 +13,7 @@
     block_start_string: "{<<"
     block_end_string: ">>}"
 
-- name: Ensure Zsh is set at the user's logon shell
+- name: Ensure Zsh is set as the user's logon shell
   become: yes
   user:
     name: "{{ ansible_user_id }}"
