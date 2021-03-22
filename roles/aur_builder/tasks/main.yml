@@ -18,3 +18,11 @@
     line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
     create: yes
     validate: 'visudo -cf %s'
+
+- name: Ensure paru is installed
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: paru
+    state: present
+  when: aur_builder_install_paru
