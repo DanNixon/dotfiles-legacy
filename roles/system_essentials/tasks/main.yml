@@ -16,18 +16,10 @@
     - '::1 localhost'
     - "127.0.1.1 {{ hostname if hostname else inventory_hostname }}"
 
-- name: Ensure locale is selected for generation
-  become: yes
-  copy:
-    content: |
-      {{ locale }} UTF-8
-    dest: /etc/locale.gen
-  when: ansible_os_family != 'Alpine'
-
 - name: Ensure locale is generated
   become: yes
-  command: locale-gen
-  when: ansible_os_family != 'Alpine'
+  community.general.locale_gen:
+    name: "{{ locale }}"
 
 - name: Ensure locale is selected
   become: yes
@@ -35,7 +27,6 @@
     dest: /etc/locale.conf
     content: |
       LANG={{ locale }}
-  when: ansible_os_family != 'Alpine'
 
 - name: Ensure keyboard layout is selected
   become: yes
@@ -48,7 +39,6 @@
   become: yes
   community.general.timezone:
     name: "{{ timezone }}"
-  when: ansible_os_family != 'Alpine'
 
 - name: Ensure common tools are installed
   become: yes
