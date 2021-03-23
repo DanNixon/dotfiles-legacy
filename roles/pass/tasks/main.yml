@@ -4,14 +4,9 @@
   with_first_found:
     - files: "install_{{ ansible_distribution }}.yml"
 
-- name: Ensure script directory exists
-  file:
-    path: "{{ script_dir }}"
-    state: directory
-    mode: "u=rwx,g=,o="
-
 - name: Ensure helper script is present
+  become: yes
   copy:
-    src: fzf-pass
-    dest: "{{ script_dir }}/fzf-pass"
-    mode: "u=rx,g=,o="
+    src: fzf.bash
+    dest: /usr/lib/password-store/extensions/fzf.bash
+    mode: "u=rx,g=rx,o=rx"
