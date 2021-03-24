@@ -15,8 +15,8 @@ Path          "~/.mail/outlook-1/"
 Inbox         "~/.mail/outlook-1/Inbox/"
 
 Channel   outlook-1
-Master    :outlook-1-remote:
-Slave     :outlook-1-local:
+Far       :outlook-1-remote:
+Near      :outlook-1-local:
 Patterns  *
 Create    Both
 SyncState *
@@ -39,8 +39,8 @@ Path          "~/.mail/outlook-2/"
 Inbox         "~/.mail/outlook-2/Inbox/"
 
 Channel   outlook-2
-Master    :outlook-2-remote:
-Slave     :outlook-2-local:
+Far       :outlook-2-remote:
+Near      :outlook-2-local:
 Patterns  *
 Create    Both
 SyncState *
@@ -63,8 +63,8 @@ Path          "~/.mail/gmail/"
 Inbox         "~/.mail/gmail/Inbox"
 
 Channel   gmail
-Master    :gmail-remote:
-Slave     :gmail-local:
+Far       :gmail-remote:
+Near      :gmail-local:
 Patterns  * !"[Google Mail]/All Mail"
 Create    Both
 SyncState *
@@ -89,8 +89,8 @@ Path          "~/.mail/protonmail/"
 Inbox         "~/.mail/protonmail/Inbox"
 
 Channel   protonmail
-Master    :protonmail-remote:
-Slave     :protonmail-local:
+Far       :protonmail-remote:
+Near      :protonmail-local:
 Patterns  * !"All Mail"
 Create    Both
 SyncState *
