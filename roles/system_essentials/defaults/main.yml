@@ -1,5 +1,0 @@
----
-system_essentials_hostname: "{{ inventory_hostname }}"
-system_essentials_locale: en_GB.UTF-8
-system_essentials_keymap: uk
-system_essentials_timezone: Europe/London

@@ -1,3 +1,0 @@
-chain input-packer {
-    tcp dport 8000-9000 log prefix "Packer HTTP connection: " counter accept
-}

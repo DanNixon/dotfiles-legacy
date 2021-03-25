@@ -1,2 +1,0 @@
----
-mirrorlist_url: "https://archlinux.org/mirrorlist/?{% for country in arch_mirror_countries %}&country={{ country }}{% endfor %}{% for proto in arch_mirror_protocols %}&protocol={{ proto }}{% endfor %}{% for ipver in arch_mirror_ip_versions %}&ip_version={{ ipver }}{% endfor %}{% if arch_mirror_use_status %}&use_mirror_status=on{% endif %}"

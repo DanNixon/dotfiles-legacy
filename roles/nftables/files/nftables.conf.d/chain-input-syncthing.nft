@@ -1,4 +1,0 @@
-chain input-syncthing {
-    tcp dport 22000 counter accept
-    udp dport 21027 counter accept
-}

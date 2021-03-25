@@ -1,6 +1,0 @@
-chain forward {
-    type filter hook forward priority 0
-    policy drop
-
-    log prefix "Dropped forwarded: " level info counter drop
-}

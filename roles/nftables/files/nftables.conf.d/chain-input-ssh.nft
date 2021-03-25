@@ -1,4 +1,0 @@
-chain input-ssh {
-    tcp dport ssh limit rate over 10/minute log prefix "Dropped SSH connection (rate limit): " counter drop
-    tcp dport ssh ct state new log prefix "New SSH connection: " counter accept
-}
