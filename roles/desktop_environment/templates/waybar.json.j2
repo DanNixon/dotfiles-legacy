@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "top",
   "height": 30,
-  "modules-left": {{ waybar_modules_left }},
+  "modules-left": {{ desktop_environment_bar_left | to_json }},
   "modules-center": ["sway/window"],
-  "modules-right": {{ waybar_modules_right }},
+  "modules-right": {{ desktop_environment_bar_right | to_json }},
   "sway/workspaces": {
     "disable-scroll": false,
     "disable-scroll-wraparound": true,

@@ -28,12 +28,12 @@
     state: directory
     mode: "u=rwx,g=,o="
   loop:
-    - "{{ applications_dir }}"
-    - "{{ script_dir }}"
-    - "{{ config_dir }}/alacritty"
-    - "{{ config_dir }}/mako"
-    - "{{ config_dir }}/sway"
-    - "{{ config_dir }}/waybar"
+    - "{{ desktop_environment_applications_dir }}"
+    - "{{ desktop_environment_script_dir }}"
+    - "{{ desktop_environment_config_dir }}/alacritty"
+    - "{{ desktop_environment_config_dir }}/mako"
+    - "{{ desktop_environment_config_dir }}/sway"
+    - "{{ desktop_environment_config_dir }}/waybar"
 
 - name: Ensure configuration is present
   copy:
@@ -42,13 +42,13 @@
     mode: "u=r,g=,o="
   loop:
     - src: chromium-flags.conf
-      dest: "{{ ansible_facts['env']['HOME'] }}/.config/chromium-flags.conf"
+      dest: "{{ ansible_user_dir }}/.config/chromium-flags.conf"
     - src: mako.conf
-      dest: "{{ config_dir }}/mako/config"
+      dest: "{{ desktop_environment_config_dir }}/mako/config"
     - src: waybar.css
-      dest: "{{ config_dir }}/waybar/style.css"
+      dest: "{{ desktop_environment_config_dir }}/waybar/style.css"
     - src: zathura.desktop
-      dest: "{{ applications_dir }}/zathura.desktop"
+      dest: "{{ desktop_environment_applications_dir }}/zathura.desktop"
 
 - name: Ensure configuration is present
   template:
@@ -57,21 +57,21 @@
     mode: "u=r,g=,o="
   loop:
     - src: alacritty.yml.j2
-      dest: "{{ config_dir }}/alacritty/alacritty.yml"
+      dest: "{{ desktop_environment_config_dir }}/alacritty/alacritty.yml"
     - src: sway.j2
-      dest: "{{ config_dir }}/sway/config"
+      dest: "{{ desktop_environment_config_dir }}/sway/config"
     - src: waybar.json.j2
-      dest: "{{ config_dir }}/waybar/config"
+      dest: "{{ desktop_environment_config_dir }}/waybar/config"
   tags:
     - desktop_environment_quick
 
 - name: Update applications database
-  command: update-desktop-database "{{ applications_dir }}"
+  command: update-desktop-database "{{ desktop_environment_applications_dir }}"
 
 - name: Ensure scripts are present
   copy:
     src: scripts/
-    dest: "{{ script_dir }}"
+    dest: "{{ desktop_environment_script_dir }}"
     mode: "u=rx,g=,o="
 
 - name: Ensure default applications are set
@@ -88,6 +88,6 @@
 
 - name: Reload Sway
   command: swaymsg reload
-  when: sway_reload|bool
   tags:
+    - never
     - desktop_environment_quick

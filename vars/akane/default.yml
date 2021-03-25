@@ -1,5 +1,5 @@
 ---
-sway_displays:
+desktop_environment_displays:
   - name: LVDS-1
     enabled: yes
     options:

@@ -1,11 +1,18 @@
 ---
-alacritty_font_size: 8.5
+desktop_environment_terminal_font_size: 8.5
 
-sway_displays: []
-sway_reload: no
-sway_window_config:
+desktop_environment_displays: []
+
+desktop_environment_window_config:
   Alacritty: opacity 0.92
   FloatingAlacritty: floating enable
 
-waybar_modules_left: '["sway/workspaces", "sway/mode"]'
-waybar_modules_right: '["backlight", "pulseaudio", "battery", "clock"]'
+desktop_environment_bar_left:
+  - sway/workspaces
+  - sway/mode
+
+desktop_environment_bar_right:
+  - backlight
+  - pulseaudio
+  - battery
+  - clock

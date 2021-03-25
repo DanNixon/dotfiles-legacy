@@ -1,10 +1,16 @@
 ---
-alacritty_font_size: 12
+desktop_environment_terminal_font_size: 12
 
-waybar_modules_left: '["clock", "battery", "pulseaudio", "sway/workspaces", "sway/mode"]'
-waybar_modules_right: '[]'
+desktop_environment_bar_left:
+  - clock
+  - battery
+  - pulseaudio
+  - sway/workspaces
+  - sway/mode
 
-sway_displays:
+desktop_environment_bar_right: []
+
+desktop_environment_displays:
   - name: eDP-1
     enabled: no
   - name: DP-1
