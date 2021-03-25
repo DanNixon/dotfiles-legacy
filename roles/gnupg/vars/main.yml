@@ -1,2 +1,2 @@
 ---
-gpg_home: "{{ ansible_facts['env']['HOME'] }}/.gnupg"
+gnupg_home: "{{ ansible_user_dir }}/.gnupg"

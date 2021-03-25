@@ -7,14 +7,14 @@
 
 - name: Ensure GnuPG home directory exists
   file:
-    path: "{{ gpg_home }}"
+    path: "{{ gnupg_home }}"
     state: directory
     mode: "u=rwx,g=,o="
 
 - name: Ensure GnuPG configuration is present
   copy:
     src: "{{ item }}"
-    dest: "{{ gpg_home }}"
+    dest: "{{ gnupg_home }}"
     mode: "u=r,g=,o="
   loop:
     - gpg.conf
