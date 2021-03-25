@@ -1,9 +1,8 @@
+# vim: ft=gitconfig
+
 [user]
   email = dan@dan-nixon.com
   name = Dan Nixon
-
-[core]
-  excludesFile = ~/.gitignore
 
 [init]
   defaultBranch = main

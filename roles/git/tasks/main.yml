@@ -5,10 +5,16 @@
     name: git
     state: present
 
+- name: Ensure config directory exists
+  file:
+    path: "{{ config_dir }}"
+    state: directory
+    mode: "u=rwx,g=,o="
+
 - name: Ensure Git configuration is present
   copy:
     src: "{{ item }}"
-    dest: "{{ ansible_facts['env']['HOME'] }}/.{{ item }}"
+    dest: "{{ config_dir }}/{{ item }}"
   loop:
-    - gitconfig
-    - gitignore
+    - config
+    - ignore
