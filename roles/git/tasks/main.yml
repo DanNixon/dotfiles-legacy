@@ -7,14 +7,15 @@
 
 - name: Ensure config directory exists
   file:
-    path: "{{ config_dir }}"
+    path: "{{ git_config_dir }}"
     state: directory
     mode: "u=rwx,g=,o="
 
 - name: Ensure Git configuration is present
   copy:
     src: "{{ item }}"
-    dest: "{{ config_dir }}/{{ item }}"
+    dest: "{{ git_config_dir }}/{{ item }}"
+    mode: "u=r,g=,o="
   loop:
     - attributes
     - config
