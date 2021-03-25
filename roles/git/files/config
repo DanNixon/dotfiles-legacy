@@ -33,6 +33,9 @@
 [diff "bin"]
   textconv = hexdump -v -C
 
+[diff "zip"]
+  textconv = unzip -c -a
+
 [difftool]
   prompt = false
 

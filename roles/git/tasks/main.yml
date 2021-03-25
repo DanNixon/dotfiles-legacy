@@ -16,5 +16,6 @@
     src: "{{ item }}"
     dest: "{{ config_dir }}/{{ item }}"
   loop:
+    - attributes
     - config
     - ignore
