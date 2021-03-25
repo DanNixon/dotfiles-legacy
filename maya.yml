@@ -6,6 +6,7 @@
 
   vars:
     profile: default
+    system_essentials_hostname: maya
     nftables_config_file: maya.nft
     networkd_config_dir: networkd_workstation
 
@@ -17,9 +18,7 @@
 
   roles:
     - package_updates
-    - name: system_essentials
-      vars:
-        hostname: maya
+    - system_essentials
     - interactive_user
 
     - bluetooth

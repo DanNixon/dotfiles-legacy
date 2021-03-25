@@ -4,7 +4,7 @@
   copy:
     dest: /etc/hostname
     content: |
-      {{ hostname if hostname else inventory_hostname }}
+      {{ system_essentials_hostname }}
 
 - name: Ensure local host entries are present
   become: yes
@@ -12,33 +12,33 @@
     path: /etc/hosts
     line: "{{ item }}"
   loop:
-    - '127.0.0.1 localhost'
-    - '::1 localhost'
-    - "127.0.1.1 {{ hostname if hostname else inventory_hostname }}"
+    - "127.0.0.1 localhost"
+    - "::1 localhost"
+    - "127.0.1.1 {{ system_essentials_hostname }}"
 
 - name: Ensure locale is generated
   become: yes
   community.general.locale_gen:
-    name: "{{ locale }}"
+    name: "{{ system_essentials_locale }}"
 
 - name: Ensure locale is selected
   become: yes
   copy:
     dest: /etc/locale.conf
     content: |
-      LANG={{ locale }}
+      LANG={{ system_essentials_locale }}
 
 - name: Ensure keyboard layout is selected
   become: yes
   copy:
     dest: /etc/vconsole.conf
     content: |
-      KEYMAP={{ keymap }}
+      KEYMAP={{ system_essentials_keymap }}
 
 - name: Ensure timezone is selected
   become: yes
   community.general.timezone:
-    name: "{{ timezone }}"
+    name: "{{ system_essentials_timezone }}"
 
 - name: Ensure common tools are installed
   become: yes
