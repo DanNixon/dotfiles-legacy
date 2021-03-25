@@ -1,2 +1,2 @@
 ---
-config_dir: "{{ ansible_facts['env']['HOME'] }}/.config/nvim"
+neovim_config_dir: "{{ ansible_user_dir }}/.config/nvim"

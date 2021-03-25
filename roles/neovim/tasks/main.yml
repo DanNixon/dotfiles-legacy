@@ -7,13 +7,13 @@
 
 - name: Ensure Neovim configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ neovim_config_dir }}"
     state: directory
 
 - name: Ensure Neovim configuration is present
   copy:
-    src: 'nvim/'
-    dest: '{{ config_dir }}'
+    src: nvim/
+    dest: "{{ neovim_config_dir }}"
 
 - name: Ensure Neovim plugins are installed and up to date
   command: nvim +PlugUpdate +exit +exit

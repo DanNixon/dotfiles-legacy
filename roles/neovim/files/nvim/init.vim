@@ -18,6 +18,7 @@ Plug 'https://github.com/chriskempson/base16-vim'
 " Applies formatting rules based on editorconfig files
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 
+" Fuzzy finding
 Plug 'https://github.com/junegunn/fzf.vim'
 
 " Provides tree based file explorer
@@ -57,20 +58,16 @@ Plug 'https://github.com/tpope/vim-fugitive'
 " Enhanced spelling and grammar checking
 Plug 'https://github.com/reedes/vim-lexical'
 
-" Syntax highlighting for OpenSCAD
-Plug 'https://github.com/sirtaj/vim-openscad'
-
-" Syntax highlighting for nearly everything
+" Syntax highlighting
 Plug 'https://github.com/sheerun/vim-polyglot'
+Plug 'https://github.com/sirtaj/vim-openscad'
+Plug 'https://github.com/nfnty/vim-nftables'
 
 " Format text into one line per sentance
 Plug 'https://github.com/Konfekt/vim-sentencewrap'
 
 " Query and insert unicode characters
 Plug 'https://github.com/chrisbra/unicode.vim'
-
-" Syntax highlighting for nftables
-Plug 'https://github.com/nfnty/vim-nftables'
 
 call plug#end()
 
