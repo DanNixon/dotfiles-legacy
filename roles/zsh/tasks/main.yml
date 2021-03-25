@@ -8,7 +8,7 @@
 - name: Ensure Zsh configuration is present
   template:
     src: zshrc.j2
-    dest: "{{ ansible_facts['env']['HOME'] }}/.zshrc"
+    dest: "{{ ansible_user_dir }}/.zshrc"
     mode: "u=rw,g=,o="
     block_start_string: "{<<"
     block_end_string: ">>}"
