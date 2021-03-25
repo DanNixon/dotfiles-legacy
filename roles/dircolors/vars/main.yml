@@ -1,2 +1,2 @@
 ---
-target_dir: "{{ ansible_facts['env']['HOME'] }}/.local/share/"
+dircolors_target_dir: "{{ ansible_user_dir }}/.local/share/"
