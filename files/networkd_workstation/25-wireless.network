@@ -1,9 +1,0 @@
-[Match]
-Name=wl*
-Type=wlan
-
-[Network]
-DHCP=ipv4
-
-[DHCP]
-RouteMetric=200
