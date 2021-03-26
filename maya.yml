@@ -27,6 +27,7 @@
     - dannixon.system.nftables
     - dannixon.system.dnscrypt_proxy
     - dannixon.system.sshd
+    - dannixon.system.inspection_tools
     - pipewire
 
     - user_essentials
