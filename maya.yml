@@ -18,6 +18,7 @@
         - always
 
   roles:
+    - dannixon.system.arch_mirrorlist
     - dannixon.system.package_updates
     - dannixon.system.system
     - dannixon.system.interactive_user
