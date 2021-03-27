@@ -16,6 +16,7 @@
       - ttf-dejavu
       - waybar
       - wl-clipboard
+      - wtype
       - xdg-utils
       - xorg-xwayland
       - zathura
