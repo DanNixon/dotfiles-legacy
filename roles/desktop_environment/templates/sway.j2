@@ -192,6 +192,11 @@ bindsym XF86AudioStop   exec --no-startup-id media-control stop
 
 xwayland force
 
+# Window specific config
+for_window [app_id="Alacritty"] opacity 0.92
+for_window [app_id="FloatingAlacritty"] floating enable
+for_window [instance="qjackctl" title="JACK Audio Connection Kit*"] floating enable
+
 # Displays
 {% for d in desktop_environment_displays %}
 output {{ d['name'] }} {
@@ -203,9 +208,4 @@ output {{ d['name'] }} {
 {% endif %}
 }
 
-{% endfor %}
-
-# Window specific config
-{% for appid, config in desktop_environment_window_config.items() %}
-for_window [app_id="{{ appid }}"] {{ config }}
 {% endfor %}

@@ -3,10 +3,6 @@ desktop_environment_terminal_font_size: 8.5
 
 desktop_environment_displays: []
 
-desktop_environment_window_config:
-  Alacritty: opacity 0.92
-  FloatingAlacritty: floating enable
-
 desktop_environment_bar_left:
   - sway/workspaces
   - sway/mode
