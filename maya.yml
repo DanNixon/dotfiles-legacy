@@ -29,6 +29,7 @@
     - dannixon.system.dnscrypt_proxy
     - dannixon.system.sshd
     - dannixon.system.inspection_tools
+    - dannixon.system.manpages
     - pipewire
 
     - user_essentials
@@ -46,7 +47,6 @@
     - gnucash
     - hsxkpasswdrc
     - libreoffice
-    - dannixon.system.manpages
     - misc_scripts
     - mpd
     - mpd_clients
