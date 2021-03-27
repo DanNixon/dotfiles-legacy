@@ -94,8 +94,15 @@ export NOTE_DIR="$HOME/docs/markor"
 export VOILE_BOOKMARK_FILE="$HOME/.voile/bookmarks.json"
 export FZF_DEFAULT_OPTS="--no-mouse --cycle --bind tab:up,btab:down"
 
-typeset -U PATH path
-path=("$HOME/.local/bin/" "$HOME/.cargo/bin/" "$HOME/go/bin/" "$path[@]")
+if [ -d "$HOME/go/bin/" ]; then
+  path+=("$HOME/go/bin/")
+fi
+if [ -d "$HOME/.cargo/bin/" ]; then
+  path+=("$HOME/.cargo/bin/")
+fi
+if [ -d "$HOME/.local/bin/" ]; then
+  path+=("$HOME/.local/bin/")
+fi
 export PATH
 
 # Aliases
