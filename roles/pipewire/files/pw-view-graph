@@ -1,0 +1,6 @@
+#!/bin/sh
+
+graph_filename="$(mktemp)"
+pw-dot -o "$graph_filename"
+dot -Tpng < "$graph_filename" | feh -
+rm "$graph_filename"

@@ -17,6 +17,7 @@
       - waybar
       - wl-clipboard
       - wtype
+      - xdg-desktop-portal-wlr
       - xdg-utils
       - xorg-xwayland
       - zathura
