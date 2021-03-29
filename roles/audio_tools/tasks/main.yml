@@ -1,0 +1,13 @@
+---
+- name: Ensure audio processing tools are installed
+  become: yes
+  package:
+    name:
+      - audacity
+      - carla
+      - jackmeter
+      - jack_mixer
+      - njconnect
+      - patchmatrix
+      - pulseeffects
+      - qjackctl
