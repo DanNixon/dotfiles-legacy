@@ -1,0 +1,20 @@
+---
+desktop_environment_terminal_font_size: 12
+
+desktop_environment_bar_left:
+  - clock
+  - battery
+  - pulseaudio
+  - sway/workspaces
+  - sway/mode
+
+desktop_environment_bar_right: []
+
+desktop_environment_displays:
+  - name: eDP-1
+    enabled: no
+  - name: DP-1
+    enabled: yes
+    options:
+      bg: '#000000 solid_color'
+      scale: 1.6
