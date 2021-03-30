@@ -32,16 +32,13 @@
     - user_essentials
     - pass
 
-    - name: email
-      tags:
-        - email
-
     - audio_tools
     - base16_shell
     - cad_tools
     - calendar_and_contacts
     - cd_and_dvd_tools
     - dapnet_scripts
+    - email
     - gnucash
     - hsxkpasswdrc
     - libreoffice
@@ -61,9 +58,7 @@
 
     - general_packages
 
-    - name: desktop_environment
-      tags:
-        - desktop_environment
+    - desktop_environment
 
   tasks:
     - name: Ensure Bolt is installed

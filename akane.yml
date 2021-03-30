@@ -50,6 +50,4 @@
 
     - general_packages
 
-    - name: desktop_environment
-      tags:
-        - desktop_environment
+    - desktop_environment
