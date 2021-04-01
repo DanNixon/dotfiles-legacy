@@ -26,8 +26,6 @@
 - tilp
 - tomb
 - tomb-kdf
-- wdisplays
-- yay
 - ytfzf-git
 
 ## Base16 themes
