@@ -28,6 +28,7 @@
     - dannixon.system.inspection_tools
     - dannixon.system.manpages
     - dannixon.system.pipewire
+    - dannixon.system.ddcutil
 
     - user_essentials
     - pass
