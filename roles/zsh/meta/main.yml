@@ -9,4 +9,4 @@ galaxy_info:
     - name: Ubuntu
 
 dependencies:
-  - role: dircolors
+  - role: dannixon.user.dircolors

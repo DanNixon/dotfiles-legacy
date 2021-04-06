@@ -77,7 +77,9 @@ BASE16_SHELL="$HOME/.local/share/base16-shell/"
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # File colors
-source "$HOME/.local/share/ls_colors.sh"
+if [ -f "$HOME/.dir_colors" ]; then
+  eval $(dircolors .dir_colors)
+fi
 
 # Environment
 export EDITOR='nvim'

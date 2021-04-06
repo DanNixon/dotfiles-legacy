@@ -8,6 +8,4 @@ galaxy_info:
     - name: ArchLinux
 
 dependencies:
-  - role: nerdfont
-    vars:
-      font: DejaVuSansMono
+  - role: dannixon.user.nerdfont

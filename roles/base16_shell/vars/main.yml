@@ -1,3 +1,0 @@
----
-base16_shell_target_dir: "{{ ansible_user_dir }}/.local/share"
-base16_shell_repo_dir: "{{ base16_shell_target_dir}}/base16-shell"

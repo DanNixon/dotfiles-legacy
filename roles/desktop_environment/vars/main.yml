@@ -1,4 +1,7 @@
 ---
+nerdfont_fonts:
+  - DejaVuSansMono
+
 desktop_environment_applications_dir: "{{ ansible_user_dir }}/.local/share/applications/"
 desktop_environment_config_dir: "{{ ansible_user_dir }}/.config"
 desktop_environment_script_dir: "{{ ansible_user_dir }}/.local/bin/"

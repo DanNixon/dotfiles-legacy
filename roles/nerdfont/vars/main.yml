@@ -1,3 +1,0 @@
----
-archive_url: 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/{{ font }}.zip'
-font_dir: "{{ ansible_facts['env']['HOME'] }}/.fonts/"
