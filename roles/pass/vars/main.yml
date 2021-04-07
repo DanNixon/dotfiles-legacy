@@ -1,2 +1,0 @@
----
-script_dir: "{{ ansible_facts['env']['HOME'] }}/.local/bin/"
