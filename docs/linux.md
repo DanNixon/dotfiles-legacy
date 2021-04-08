@@ -26,12 +26,10 @@
 - tilp
 - tomb
 - tomb-kdf
+- ttyper
+- uniflash
+- woeusb
 - ytfzf-git
-
-## Base16 themes
-
-- `base16_chalk`
-- `base16_material-darker`
 
 ## Notes
 
