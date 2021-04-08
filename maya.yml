@@ -37,6 +37,8 @@
     - user_essentials
     - pass
 
+    - dannixon.system.mpd
+
     - audio_tools
     - cad_tools
     - calendar_and_contacts
@@ -47,7 +49,6 @@
     - hsxkpasswdrc
     - libreoffice
     - misc_scripts
-    - mpd
     - mpd_clients
     - mpv
     - newsboat

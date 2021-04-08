@@ -1,6 +1,4 @@
 ---
-mpd_service_scope: user
-
 mpd_config:
   follow_outside_symlinks: false
   follow_inside_symlinks: false

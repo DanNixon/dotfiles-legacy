@@ -1,4 +1,0 @@
----
-mpd_config_dir:
-  user: "{{ ansible_user_dir }}/.config/mpd/"
-  system: "/etc/"
