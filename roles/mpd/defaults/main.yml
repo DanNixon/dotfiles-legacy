@@ -1,0 +1,29 @@
+---
+mpd_service_scope: user
+
+mpd_config:
+  follow_outside_symlinks: false
+  follow_inside_symlinks: false
+
+  music_directory: "~/music"
+
+  log_file: "syslog"
+  db_file: "~/.cache/mpd.db"
+  state_file: "~/.cache/mpd.state"
+
+  zeroconf_enabled: false
+
+mpd_audio_outputs:
+  - type: fifo
+    name: visualisation
+    path: /tmp/mpd.fifo
+    format: "44100:16:2"
+    visualizer_in_stereo: true
+
+  - type: fifo
+    name: snapcast
+    path: /tmp/snapfifo
+    format: "48000:16:2"
+
+  - type: pulse
+    name: local

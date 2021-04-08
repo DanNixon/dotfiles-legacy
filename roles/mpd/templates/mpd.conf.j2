@@ -1,0 +1,11 @@
+{% for k, v in mpd_config.items() %}
+{{ k }} "{{ v }}"
+{% endfor %}
+
+{% for o in mpd_audio_outputs %}
+audio_output {
+{% for k, v in o.items() %}
+  {{ k }} "{{ v }}"
+{% endfor %}
+}
+{% endfor %}

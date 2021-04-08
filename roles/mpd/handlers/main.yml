@@ -1,0 +1,6 @@
+---
+- name: Restart MPD
+  systemd:
+    name: mpd
+    scope: "{{ mpd_service_scope }}"
+    state: restarted
