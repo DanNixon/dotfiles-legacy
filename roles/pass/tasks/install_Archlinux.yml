@@ -1,8 +1,0 @@
----
-- name: Ensure pass and extensions are installed
-  become: yes
-  package:
-    name:
-      - pass
-      - pass-otp
-    state: present

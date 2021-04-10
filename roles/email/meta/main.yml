@@ -8,5 +8,5 @@ galaxy_info:
     - name: ArchLinux
 
 dependencies:
+  - role: dannixon.user.pass
   - role: gnupg
-  - role: pass

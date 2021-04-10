@@ -31,11 +31,11 @@
     - dannixon.system.ddcutil
 
     - dannixon.user.base16_shell
+    - dannixon.user.pass
     - dannixon.user.syncthing
     - dannixon.user.yubikey_touch_detector
 
     - user_essentials
-    - pass
 
     - dannixon.system.mpd
 

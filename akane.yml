@@ -30,11 +30,11 @@
     - dannixon.system.pipewire
 
     - dannixon.user.base16_shell
+    - dannixon.user.pass
     - dannixon.user.syncthing
     - dannixon.user.yubikey_touch_detector
 
     - user_essentials
-    - pass
 
     - audio_tools
     - cad_tools
