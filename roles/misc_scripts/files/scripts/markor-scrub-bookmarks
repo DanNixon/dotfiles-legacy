@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# Extracts just the URLs from URLs shared with Markor's quick note.
-# See https://github.com/gsantner/markor
-
-# Format those stored as "title - url", then those stored as Markdown links,
-# then remove empty lines
-sed -r 's/.+ \- (http.+)/\1/' | sed -r 's/\[.+\]\((http.+)\)/\1/' | sed -r '/^\s*$/d'

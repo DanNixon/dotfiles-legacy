@@ -1,3 +1,0 @@
-#!/bin/sh
-
-docker volume ls | grep -o -E "\w{64}" | xargs docker volume rm

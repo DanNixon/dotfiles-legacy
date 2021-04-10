@@ -12,7 +12,7 @@
     state: present
 
 - name: Ensure DXFs open in LibreCAD
-  command: xdg-mime default 'librecad.desktop' 'application/x-dxf'
+  command: xdg-mime default "librecad.desktop" "application/x-dxf"
 
 - name: Ensure the JLC KiCad SMT assembly exporter script is present
   become: yes
