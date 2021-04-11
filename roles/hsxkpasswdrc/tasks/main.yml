@@ -1,8 +1,7 @@
 ---
 - name: Ensure hsxkpasswdrc configuration is present
-  import_role:
-    name: copy_secret_injected_file
-  vars:
-    src: hsxkpasswdrc
-    dest: "{{ ansible_facts['env']['HOME'] }}/.hsxkpasswdrc"
+  copy:
+    content: |
+      {{ lookup('community.general.passwordstore', 'ShellSecrets/HSXKPASSWDRC returnall=true') }}
+    dest: "{{ ansible_user_dir }}/.hsxkpasswdrc"
     mode: "u=r,g=r,o="
