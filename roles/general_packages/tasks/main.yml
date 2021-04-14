@@ -5,6 +5,7 @@
     name:
       - base-devel
       - borg
+      - devtools
       - dnsutils
       - ffmpeg
       - firefox
