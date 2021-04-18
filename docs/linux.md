@@ -19,6 +19,7 @@
 - blackbox-explorer
 - gallery-dl
 - gr-soapy-git
+- hid_listen
 - opentx-companion
 - paru
 - protonmail-bridge-nogui
@@ -28,6 +29,7 @@
 - tomb-kdf
 - ttyper
 - uniflash
+- wev
 - woeusb
 - ytfzf-git
 
