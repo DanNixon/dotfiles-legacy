@@ -102,31 +102,25 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # Toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+d floating toggle
 
 # Change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# Focus parent / child
-bindsym $mod+a        focus child
-bindsym $mod+Shift+a  focus parent
+bindsym $mod+d focus mode_toggle
 
 # Toggle sticky window
 bindsym $mod+s sticky toggle
 
 # Switch to workspace
-bindsym $mod+comma  workspace prev
-bindsym $mod+period workspace next
-bindsym $mod+1      workspace 1
-bindsym $mod+2      workspace 2
-bindsym $mod+3      workspace 3
-bindsym $mod+4      workspace 4
-bindsym $mod+5      workspace 5
-bindsym $mod+6      workspace 6
-bindsym $mod+7      workspace 7
-bindsym $mod+8      workspace 8
-bindsym $mod+9      workspace 9
-bindsym $mod+0      workspace 10
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move workspace 1
@@ -171,11 +165,10 @@ bindsym $mod+Escape exec alacritty --class=FloatingAlacritty -e power-control
 bindsym $mod+Shift+p exec grim
 
 # Application shortcuts
-bindsym $mod+Semicolon    exec alacritty --class=FloatingAlacritty -e fzf-launch sway
-bindsym $mod+Return       exec alacritty
-bindsym $mod+Shift+Return exec alacritty --class=FloatingAlacritty
+bindsym $mod+Semicolon  exec alacritty --class=FloatingAlacritty -e fzf-launch sway
+bindsym $mod+Space      exec alacritty
 
-# Audio controls (pulseaudio)
+# Audio controls
 bindsym $mod+equal              exec --no-startup-id pulseaudio-control v +5%
 bindsym $mod+minus              exec --no-startup-id pulseaudio-control v -5%
 bindsym $mod+Shift+minus        exec --no-startup-id pulseaudio-control m toggle
