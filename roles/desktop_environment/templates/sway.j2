@@ -208,3 +208,5 @@ output {{ d['name'] }} {
 }
 
 {% endfor %}
+
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY
