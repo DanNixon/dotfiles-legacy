@@ -6,11 +6,28 @@
   vars:
     profile: default
     system_hostname: maya
-    nftables_config_file: maya.nft
+
+    nftables_tables:
+      - table: inet filter
+        includes:
+          - /etc/nftables.conf.d/chain-input-default.nft
+          - /etc/nftables.conf.d/chain-forward-drop.nft
+          - /etc/nftables.conf.d/chain-output-accept.nft
+          - /etc/nftables.conf.d/chain-input-ssh.nft
+          - /etc/nftables.conf.d/chain-input-syncthing.nft
+          - /etc/nftables.conf.d/chain-input-packer.nft
+          - /etc/nftables.conf.d/chain-input-jacktrip.nft
+        chains:
+          input-host:
+            - jump input-ssh
+            - jump input-syncthing
+            # - jump input-packer
+            # - jump input-jacktrip
+            # - tcp dport 5232 iifname kekkai log prefix "Radicale: " counter accept
 
   pre_tasks:
     - name: Include profile specific variables
-      include_vars: 'vars/{{ ansible_hostname }}/{{ profile }}.yml'
+      include_vars: "vars/{{ ansible_hostname }}/{{ profile }}.yml"
       tags:
         - always
 
