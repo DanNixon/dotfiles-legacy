@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+swaylock --color 002030 && \
+  echo "Welcome back!"

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+sync && \
+  swaylock --color 002030 --daemonize && \
+  systemctl suspend && \
+  echo "Welcome back!"
