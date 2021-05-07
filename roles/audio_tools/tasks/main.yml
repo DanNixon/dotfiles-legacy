@@ -3,7 +3,6 @@
   become: yes
   package:
     name:
-      - audacity
       - carla
       - jackmeter
       - jack_mixer
