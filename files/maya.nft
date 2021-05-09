@@ -15,6 +15,5 @@ table inet filter {
         jump input-syncthing
         # jump input-packer
         # jump input-jacktrip
-        # tcp dport 5232 iifname kekkai log prefix "Radicale: " counter accept
     }
 }
