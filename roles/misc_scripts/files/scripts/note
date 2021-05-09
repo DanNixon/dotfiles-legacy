@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [ -z ${NOTE_DIR+x} ]; then
-  exit 1
-fi
-
-cd "$NOTE_DIR" && timestamped-writing $@

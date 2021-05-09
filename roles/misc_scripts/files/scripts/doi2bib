@@ -1,8 +1,0 @@
-#!/bin/bash
-
-curl \
-  --location \
-  -H 'Accept: application/x-bibtex' \
-  "https://doi.org/$1"
-
-echo
