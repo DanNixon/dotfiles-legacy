@@ -16,5 +16,5 @@ desktop_environment_displays:
   - name: DP-1
     enabled: yes
     options:
-      bg: '#000000 solid_color'
+      bg: "#000000 solid_color"
       scale: 1.6

@@ -1,11 +1,9 @@
 ---
 - name: Setup akane
-
-  hosts: localhost
+  hosts: akane
 
   vars:
     profile: default
-    system_hostname: akane
     nftables_config_file: akane.nft
 
   pre_tasks:

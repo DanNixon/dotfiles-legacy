@@ -1,11 +1,9 @@
 ---
 - name: Setup maya
-
-  hosts: localhost
+  hosts: maya
 
   vars:
     profile: default
-    system_hostname: maya
     nftables_config_file: maya.nft
 
   pre_tasks:

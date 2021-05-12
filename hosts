@@ -1,0 +1,2 @@
+akane ansible_connection=local
+maya  ansible_connection=local
