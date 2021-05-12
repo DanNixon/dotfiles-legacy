@@ -4,7 +4,6 @@
 
   vars:
     profile: default
-    nftables_config_file: maya.nft
 
   pre_tasks:
     - name: Include profile specific variables
@@ -27,6 +26,7 @@
     - dannixon.system.manpages
     - dannixon.system.pipewire
     - dannixon.system.ddcutil
+    - dannixon.system.wireguard
 
     - dannixon.user.base16_shell
     - dannixon.user.pass
