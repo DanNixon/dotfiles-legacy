@@ -1,0 +1,2 @@
+---
+dnscrypt_proxy_forwarding_rules: "{{ secret_host_vars.dnscrypt_proxy_forwarding_rules }}"
