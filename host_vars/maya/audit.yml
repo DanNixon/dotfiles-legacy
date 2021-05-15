@@ -1,0 +1,24 @@
+---
+auditd_rules: |
+  -D
+  -b 8192
+  -f 1
+  --backlog_wait_time 60000
+  --loginuid-immutable
+  -c
+  -i
+
+  -a always,exit -F arch=b32 -S all -F key=32bit-abi
+
+  -a always,exit -F arch=b32 -S ptrace -F key=tracing
+  -a always,exit -F arch=b64 -S ptrace -F key=tracing
+
+  -a always,exit -F arch=b32 -S init_module,finit_module -F key=module-load
+  -a always,exit -F arch=b64 -S init_module,finit_module -F key=module-load
+  -a always,exit -F arch=b32 -S delete_module -F key=module-unload
+  -a always,exit -F arch=b64 -S delete_module -F key=module-unload
+
+  -a always,exit -F arch=b32 -S execve -F exe=/usr/bin/gpg -F key=gnupg
+  -a always,exit -F arch=b64 -S execve -F exe=/usr/bin/gpg -F key=gnupg
+  -a always,exit -F arch=b32 -S execve -F exe=/usr/bin/gpg2 -F key=gnupg
+  -a always,exit -F arch=b64 -S execve -F exe=/usr/bin/gpg2 -F key=gnupg
