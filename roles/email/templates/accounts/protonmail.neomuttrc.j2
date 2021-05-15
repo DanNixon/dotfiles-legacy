@@ -1,0 +1,4 @@
+# vim: filetype=neomuttrc
+set from = "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
+set sendmail = "msmtp -a protonmail"
+echo "Sending from $from"

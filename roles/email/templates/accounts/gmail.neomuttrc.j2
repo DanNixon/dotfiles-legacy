@@ -1,0 +1,4 @@
+# vim: filetype=neomuttrc
+set from = "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Google/Email') }}"
+set sendmail = "msmtp -a gmail"
+echo "Sending from $from"

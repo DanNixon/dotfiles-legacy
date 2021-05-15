@@ -3,7 +3,7 @@
 IMAPAccount outlook-1
 Host        "outlook.office365.com"
 SSLType     IMAPS
-User        "<< pass Passwords/Personal/Microsoft_1/Email >>"
+User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_1/Email') }}"
 PassCmd     "pass Passwords/Personal/Microsoft_1/Password"
 
 IMAPStore outlook-1-remote
@@ -27,7 +27,7 @@ SyncState *
 IMAPAccount outlook-2
 Host        "outlook.office365.com"
 SSLType     IMAPS
-User        "<< pass Passwords/Personal/Microsoft_2/Email >>"
+User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_2/Email') }}"
 PassCmd     "pass Passwords/Personal/Microsoft_2/Password"
 
 IMAPStore outlook-2-remote
@@ -51,7 +51,7 @@ SyncState *
 IMAPAccount gmail
 Host        "imap.gmail.com"
 SSLType     IMAPS
-User        "<< pass Passwords/Personal/Google/Email >>"
+User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Google/Email') }}"
 PassCmd     "pass Passwords/Personal/Google/EmailPassword"
 
 IMAPStore gmail-remote
@@ -77,7 +77,7 @@ Host            "127.0.0.1"
 Port            1143
 SSLType         STARTTLS
 CertificateFile "~/.protonmail-bridge.pem"
-User            "<< pass Passwords/Personal/ProtonMail/Email2 >>"
+User            "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
 PassCmd         "pass ShellSecrets/ProtonmailBridgePassword"
 
 IMAPStore protonmail-remote

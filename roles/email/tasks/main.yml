@@ -32,10 +32,8 @@
       dest: "{{ ansible_facts['env']['HOME'] }}/.mailcap"
 
 - name: Ensure configuration is present
-  include_role:
-    name: copy_secret_injected_file
-  vars:
-    src: "{{ item.src }}"
+  template:
+    src: "{{ item.src }}.j2"
     dest: "{{ item.dest }}"
     mode: "u=r,g=r,o="
   loop:
@@ -45,10 +43,8 @@
       dest: "{{ config_dir }}/msmtp/config"
 
 - name: Ensure Neomutt account configurations are present
-  include_role:
-    name: copy_secret_injected_file
-  vars:
-    src: "accounts/{{ item }}.neomuttrc"
+  template:
+    src: "accounts/{{ item }}.neomuttrc.j2"
     dest: "{{ config_dir }}/neomutt/accounts/{{ item }}.neomuttrc"
     mode: "u=r,g=r,o="
   loop:

@@ -1,0 +1,38 @@
+# Global defaults
+defaults
+auth      on
+tls       on
+logfile   ~/.msmtp.log
+
+# Outlook 1
+account       outlook-1
+host          smtp.office365.com
+port          587
+from          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_1/Email') }}"
+user          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_1/Email') }}"
+passwordeval  "pass Passwords/Personal/Microsoft_1/Password"
+
+# Outlook 2
+account       outlook-2
+host          smtp.office365.com
+port          587
+from          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_2/Email') }}"
+user          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_2/Email') }}"
+passwordeval  "pass Passwords/Personal/Microsoft_2/Password"
+
+# GMail
+account       gmail
+host          smtp.gmail.com
+port          587
+from          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Google/Email') }}"
+user          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Google/Email') }}"
+passwordeval  "pass Passwords/Personal/Google/EmailPassword"
+
+# ProtonMail
+account       protonmail
+host          127.0.0.1
+port          1025
+tls_certcheck off
+from          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
+user          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
+passwordeval  "pass ShellSecrets/ProtonmailBridgePassword"
