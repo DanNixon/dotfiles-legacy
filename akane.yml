@@ -4,7 +4,6 @@
 
   vars:
     profile: default
-    nftables_config_file: akane.nft
 
   pre_tasks:
     - name: Include profile specific variables
@@ -17,6 +16,7 @@
     - dannixon.system.package_updates
     - dannixon.system.system
     - dannixon.system.interactive_user
+    - dannixon.system.auditd
 
     - dannixon.system.bluetooth
     - dannixon.system.networkmanager
