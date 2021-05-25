@@ -81,21 +81,18 @@ syntax on
 " Use Space as Leader
 let mapleader = " "
 
-set wildignore+=*~,*.pyc,*.so,*.o
-
 " Tagbar config
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 
 " Syntastic config
-let g:syntastic_mode_map = { 'mode': 'passive',
-                          \ 'active_filetypes': [],
-                          \ 'passive_filetypes': [] }
+let g:syntastic_mode_map = {
+      \ 'mode': 'passive',
+      \ 'active_filetypes': [],
+      \ 'passive_filetypes': []
+\ }
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_aggregate_errors = 1
-
-let g:syntastic_cppcheckers = ['gcc', 'clang']
-let g:syntastic_python_checkers = ['flake8', 'pylint']
 
 " Spelling config
 let g:lexical#spell_key = '<leader>ss'
@@ -156,7 +153,6 @@ set relativenumber
 " NERDTree config
 let g:NERDTreeChDirMode = 2 " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = ['.pyc']
 
 """""""""""""""""""""""""""""""
 " MISC COMMANDS AND FUNCTIONS "
