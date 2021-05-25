@@ -63,14 +63,11 @@ Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/sirtaj/vim-openscad'
 Plug 'https://github.com/nfnty/vim-nftables'
 
-" Format text into one line per sentence
+" Format text into one line per sentance
 Plug 'https://github.com/Konfekt/vim-sentencewrap'
 
 " Query and insert unicode characters
 Plug 'https://github.com/chrisbra/unicode.vim'
-
-" Used for range based syntax highlighting
-Plug 'https://github.com/inkarkat/vim-SyntaxRange'
 
 call plug#end()
 
@@ -160,16 +157,6 @@ set relativenumber
 let g:NERDTreeChDirMode = 2 " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['.pyc']
-
-" Use Jinja2 sytax for parts of files that match Jinja2 syntax.
-" Assumes that the files modeline is used to set the 'actual' file type.
-function! EnableSyntaxRangeIfEditingJinja2Template()
-      if @% =~ ".*\.j2"
-            :call SyntaxRange#Include('{{', '}}', 'jinja2')
-            :call SyntaxRange#Include('{%', '%}', 'jinja2')
-      endif
-endfunction
-au Syntax * :call EnableSyntaxRangeIfEditingJinja2Template()
 
 """""""""""""""""""""""""""""""
 " MISC COMMANDS AND FUNCTIONS "
