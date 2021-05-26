@@ -21,18 +21,20 @@
     - dannixon.system.bluetooth
     - dannixon.system.networkmanager
     - dannixon.system.nftables
-    - dannixon.system.dnscrypt_proxy
-    - dannixon.system.sshd
     - dannixon.system.inspection_tools
     - dannixon.system.manpages
     - dannixon.system.pipewire
 
+    - dannixon.services.dnscrypt_proxy
+    - dannixon.services.sshd
+
     - dannixon.user.base16_shell
     - dannixon.user.pass
-    - dannixon.user.syncthing
     - dannixon.user.yubikey_touch_detector
 
     - user_essentials
+
+    - dannixon.services.syncthing
 
     - audio_tools
     - cad_tools

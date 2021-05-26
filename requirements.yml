@@ -1,4 +1,5 @@
 ---
 collections:
+  - git+https://github.com/DanNixon/ansible-services.git
   - git+https://github.com/DanNixon/ansible-system.git
   - git+https://github.com/DanNixon/ansible-user.git
