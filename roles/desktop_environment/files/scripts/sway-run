@@ -5,4 +5,4 @@ export XDG_CURRENT_DESKTOP=sway
 export GDK_BACKEND=wayland
 export MOZ_ENABLE_WAYLAND=1
 
-dbus-launch --sh-syntax --exit-with-session sway
+sway
