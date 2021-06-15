@@ -1,5 +1,0 @@
----
-wireguard_config: kekkai
-wireguard_service: no
-wireguard_interface: "{{ secret_host_vars.wireguard_interface }}"
-wireguard_peers: "{{ secret_host_vars.wireguard_peers }}"

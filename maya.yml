@@ -19,7 +19,8 @@
     - dannixon.system.auditd
 
     - dannixon.system.bluetooth
-    - dannixon.system.networkmanager
+    - dannixon.system.networkd
+    - dannixon.system.iwd
     - dannixon.system.nftables
     - dannixon.system.inspection_tools
     - dannixon.system.manpages
