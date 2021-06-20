@@ -26,7 +26,6 @@
     - dannixon.system.manpages
     - dannixon.system.pipewire
     - dannixon.system.ddcutil
-    - dannixon.system.wireguard
 
     - dannixon.services.dnscrypt_proxy
     - dannixon.services.sshd
