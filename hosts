@@ -1,2 +1,3 @@
-akane ansible_connection=local
-maya  ansible_connection=local
+akane     ansible_connection=local
+maya      ansible_connection=local
+kawashiro ansible_host=kawashiro.lan

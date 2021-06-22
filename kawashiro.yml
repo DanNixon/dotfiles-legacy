@@ -1,0 +1,51 @@
+---
+- name: Setup kawashiro
+  hosts: kawashiro
+
+  vars:
+    profile: default
+
+  pre_tasks:
+    - name: Include profile specific variables
+      include_vars: 'vars/{{ ansible_hostname }}/{{ profile }}.yml'
+      tags:
+        - always
+
+  roles:
+    - dannixon.system.arch_mirrorlist
+    - dannixon.system.package_updates
+    - dannixon.system.system
+    - dannixon.system.interactive_user
+    - dannixon.system.auditd
+
+    - dannixon.system.bluetooth
+    - dannixon.system.networkd
+    - dannixon.system.iwd
+    - dannixon.system.nftables
+    - dannixon.system.inspection_tools
+    - dannixon.system.manpages
+    - dannixon.system.pipewire
+
+    - dannixon.services.dnscrypt_proxy
+    - dannixon.services.sshd
+
+    - dannixon.user.base16_shell
+    - dannixon.user.pass
+    - dannixon.user.yubikey_touch_detector
+
+    - user_essentials
+
+    - dannixon.services.syncthing
+
+    - audio_tools
+    - cad_tools
+    - hsxkpasswdrc
+    - libreoffice
+    - misc_scripts
+    - mpv
+    - sdr_tools
+    - tmux
+
+    - general_packages
+
+    - desktop_environment

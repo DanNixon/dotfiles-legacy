@@ -17,28 +17,3 @@ networkd_config:
         DHCP: "yes"
       DHCP:
         RouteMetric: 20
-
-  20-kekkai:
-    netdev:
-      NetDev:
-        Name: kekkai
-        Kind: wireguard
-      WireGuard:
-        PrivateKey: "{{ secret_host_vars.kekkai.private_key }}"
-      WireGuardPeer:
-        Endpoint: "{{ secret_host_vars.kekkai.endpoint }}"
-        PublicKey: "{{ secret_host_vars.kekkai.public_key }}"
-        PresharedKey: "{{ secret_host_vars.kekkai.preshared_key }}"
-        AllowedIPs: "{{ secret_host_vars.kekkai.cidr }}"
-        PersistentKeepalive: 15
-    network:
-      Match:
-        Name: kekkai
-      Link:
-        ActivationPolicy: manual
-        RequiredForOnline: "no"
-      Network:
-        Address: "{{ secret_host_vars.kekkai.ip4 }}/32"
-      Route:
-        Gateway: "{{ secret_host_vars.kekkai.ip4 }}"
-        Destination: "{{ secret_host_vars.kekkai.cidr }}"
