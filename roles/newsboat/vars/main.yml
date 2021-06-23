@@ -1,2 +1,2 @@
 ---
-config_dir: "{{ ansible_facts['env']['HOME'] }}/.newsboat/"
+config_dir: "{{ ansible_user_dir }}/.newsboat/"

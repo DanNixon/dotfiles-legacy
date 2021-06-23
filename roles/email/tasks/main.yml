@@ -4,7 +4,7 @@
     path: "{{ item }}"
     state: directory
   loop:
-    - "{{ ansible_facts['env']['HOME'] }}/.mail"
+    - "{{ ansible_user_dir }}/.mail"
     - "{{ config_dir }}/msmtp/"
     - "{{ config_dir }}/neomutt/"
     - "{{ config_dir }}/neomutt/accounts/"
@@ -29,7 +29,7 @@
     - src: neomuttrc
       dest: "{{ config_dir }}/neomuttrc"
     - src: mailcap
-      dest: "{{ ansible_facts['env']['HOME'] }}/.mailcap"
+      dest: "{{ ansible_user_dir }}/.mailcap"
 
 - name: Ensure configuration is present
   template:
@@ -38,7 +38,7 @@
     mode: "u=r,g=r,o="
   loop:
     - src: mbsyncrc
-      dest: "{{ ansible_facts['env']['HOME'] }}/.mbsyncrc"
+      dest: "{{ ansible_user_dir }}/.mbsyncrc"
     - src: msmtp.conf
       dest: "{{ config_dir }}/msmtp/config"
 

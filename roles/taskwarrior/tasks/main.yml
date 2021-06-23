@@ -8,4 +8,4 @@
 - name: Ensure Taskwarrior configuration is present
   copy:
     src: taskrc
-    dest: "{{ ansible_facts['env']['HOME'] }}/.taskrc"
+    dest: "{{ ansible_user_dir }}/.taskrc"

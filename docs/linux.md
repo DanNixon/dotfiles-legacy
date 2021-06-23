@@ -20,6 +20,7 @@
 - gallery-dl
 - gr-soapy-git
 - hid_listen
+- hsxkpasswd
 - opentx-companion
 - paru
 - protonmail-bridge-nogui

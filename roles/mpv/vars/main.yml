@@ -1,2 +1,2 @@
 ---
-config_dir: "{{ ansible_facts['env']['HOME'] }}/.config/mpv/"
+config_dir: "{{ ansible_user_dir }}/.config/mpv/"
