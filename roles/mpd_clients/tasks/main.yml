@@ -1,5 +1,6 @@
 ---
 - name: Ensure clients are installed
+  become: true
   package:
     name:
       - mpc

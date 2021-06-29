@@ -1,5 +1,6 @@
 ---
 - name: Ensure Newsboat is installed
+  become: true
   package:
     name: newsboat
     state: present
