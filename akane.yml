@@ -2,15 +2,6 @@
 - name: Setup akane
   hosts: akane
 
-  vars:
-    profile: default
-
-  pre_tasks:
-    - name: Include profile specific variables
-      include_vars: 'vars/{{ ansible_hostname }}/{{ profile }}.yml'
-      tags:
-        - always
-
   roles:
     - dannixon.system.arch_mirrorlist
     - dannixon.system.package_updates

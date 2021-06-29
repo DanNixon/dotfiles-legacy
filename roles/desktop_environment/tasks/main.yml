@@ -1,4 +1,12 @@
 ---
+- name: Include profile specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files: "desktop_profiles/{{ ansible_hostname }}/{{ desktop_environment_profile }}.yml"
+      skip: true
+  tags:
+    - desktop_environment_quick
+
 - name: Ensure desktop environment pakages are installed
   become: yes
   package:

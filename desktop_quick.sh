@@ -11,4 +11,4 @@ notify-send \
 cd "$(dirname "$0")" && ansible-playbook \
   "$(hostname).yml" \
   --tags desktop_environment_quick \
-  -e profile="$profile"
+  -e desktop_environment_profile="$profile"
