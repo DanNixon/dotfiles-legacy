@@ -35,4 +35,4 @@ port          1025
 tls_certcheck off
 from          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
 user          "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
-passwordeval  "pass ShellSecrets/ProtonmailBridgePassword"
+passwordeval  "pass ansible_secrets/protonmail_bridge_password"

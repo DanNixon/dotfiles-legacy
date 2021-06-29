@@ -2,6 +2,6 @@
 - name: Ensure hsxkpasswdrc configuration is present
   copy:
     content: |
-      {{ lookup('community.general.passwordstore', 'ShellSecrets/HSXKPASSWDRC returnall=true') }}
+      {{ lookup('community.general.passwordstore', 'ansible_secrets/hsxkpasswdrc returnall=true') }}
     dest: "{{ ansible_user_dir }}/.hsxkpasswdrc"
     mode: "u=r,g=r,o="

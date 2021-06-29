@@ -78,7 +78,7 @@ Port            1143
 SSLType         STARTTLS
 CertificateFile "~/.protonmail-bridge.pem"
 User            "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
-PassCmd         "pass ShellSecrets/ProtonmailBridgePassword"
+PassCmd         "pass shell_secrets/protonmail_bridge_password"
 
 IMAPStore protonmail-remote
 Account   protonmail
