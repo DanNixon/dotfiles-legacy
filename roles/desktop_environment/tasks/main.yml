@@ -34,6 +34,14 @@
       - zathura-pdf-mupdf
     state: present
 
+- name: Ensure user is in video group (required for rootless light)
+  become: yes
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    append: true
+    groups:
+      - video
+
 - name: Ensure directories exist
   file:
     path: "{{ item }}"
