@@ -4,10 +4,10 @@
   package:
     name:
       - carla
+      - easyeffects
       - jackmeter
       - jack_mixer
       - jacktrip
       - njconnect
       - patchmatrix
-      - pulseeffects
       - qjackctl
