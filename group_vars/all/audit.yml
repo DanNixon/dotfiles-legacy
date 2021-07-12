@@ -8,8 +8,6 @@ auditd_rules: |
   -c
   -i
 
-  -a always,exit -F arch=b32 -S all -F key=32bit-abi
-
   -a always,exit -F arch=b32 -S ptrace -F key=tracing
   -a always,exit -F arch=b64 -S ptrace -F key=tracing
 
