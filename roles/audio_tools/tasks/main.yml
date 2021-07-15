@@ -3,6 +3,7 @@
   become: yes
   package:
     name:
+      - ardour
       - carla
       - easyeffects
       - jackmeter
