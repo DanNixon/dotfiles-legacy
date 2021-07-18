@@ -35,7 +35,6 @@ networkd_config:
       Match:
         Name: kekkai
       Link:
-        ActivationPolicy: manual
         RequiredForOnline: "no"
       Network:
         Address: "{{ secret_host_vars.kekkai.ip4 }}/32"
