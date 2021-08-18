@@ -1,0 +1,69 @@
+---
+networkd_config:
+  20-wired:
+    network:
+      Match:
+        Type: ether
+      Network:
+        DHCP: "yes"
+      DHCP:
+        RouteMetric: 10
+
+  20-wireless:
+    network:
+      Match:
+        Type: wlan
+      Network:
+        DHCP: "yes"
+      DHCP:
+        RouteMetric: 20
+
+  20-trusted-internal:
+    netdev:
+      NetDev:
+        Name: trusted-int
+        Kind: wireguard
+      WireGuard:
+        PrivateKey: "{{ wireguard_secrets.trusted.akane.private_key }}"
+      WireGuardPeer:
+        Endpoint: "{{ wireguard_secrets.trusted.router.endpoint }}"
+        PublicKey: "{{ wireguard_secrets.trusted.router.public_key }}"
+        PresharedKey: "{{ wireguard_secrets.trusted.akane.preshared_key }}"
+        AllowedIPs: "{{ wireguard_secrets.trusted.subnet }}"
+        PersistentKeepalive: 15
+    network:
+      Match:
+        Name: trusted-int
+      Link:
+        RequiredForOnline: "no"
+        ActivationPolicy: manual
+      Network:
+        Address: "{{ wireguard_secrets.trusted.akane.ip4 }}/32"
+      Route:
+        - Gateway: "{{ wireguard_secrets.trusted.akane.ip4 }}"
+          Destination: "{{ wireguard_secrets.trusted.subnet }}"
+
+  20-trusted-external:
+    netdev:
+      NetDev:
+        Name: trusted-ext
+        Kind: wireguard
+      WireGuard:
+        PrivateKey: "{{ wireguard_secrets.trusted.akane.private_key }}"
+      WireGuardPeer:
+        Endpoint: "{{ wireguard_secrets.trusted.cloud.endpoint }}"
+        PublicKey: "{{ wireguard_secrets.trusted.cloud.public_key }}"
+        PresharedKey: "{{ wireguard_secrets.trusted.akane.preshared_key }}"
+        AllowedIPs: "{{ wireguard_secrets.trusted.subnet }}"
+        PersistentKeepalive: 15
+    network:
+      Match:
+        Name: trusted-ext
+      Link:
+        RequiredForOnline: "no"
+        ActivationPolicy: manual
+      Network:
+        Address: "{{ wireguard_secrets.trusted.akane.ip4 }}/32"
+      Route:
+        Gateway: "{{ wireguard_secrets.trusted.akane.ip4 }}"
+        Destination: "{{ wireguard_secrets.trusted.subnet }}"
