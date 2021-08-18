@@ -2,6 +2,13 @@
 - name: Setup kawashiro
   hosts: kawashiro
 
+  pre_tasks:
+    - name: Set secrets
+      ansible.builtin.set_fact:
+        host_secrets: "{{ lookup('community.general.passwordstore', 'ansible_secrets/%s returnall=true' % ansible_hostname) | from_yaml }}"
+        wireguard_secrets:
+          trusted: "{{ lookup('community.general.passwordstore', 'ansible_secrets/wireguard/trusted returnall=true') | from_yaml }}"
+
   roles:
     - dannixon.system.arch_mirrorlist
     - dannixon.system.package_updates
