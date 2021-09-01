@@ -86,11 +86,11 @@ export EDITOR='nvim'
 export NNN_OPTS="d"
 
 export GPG_TTY="$(tty)"
-{<< if zsh_ssh_auth_sock >>}
+{! if zsh_ssh_auth_sock !}
 if command -v gpgconf > /dev/null; then
   export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
-{<< endif >>}
+{! endif !}
 
 export VOILE_BOOKMARK_FILE="$HOME/.voile/bookmarks.json"
 export FZF_DEFAULT_OPTS="--no-mouse --cycle --bind tab:up,btab:down"
@@ -153,7 +153,12 @@ alias today="date '+%Y-%m-%d'"
 alias -g fwd-gpg='-R /run/user/1000/gnupg/S.gpg-agent:$(gpgconf --list-dirs agent-extra-socket)'
 alias -g fwd-st='-L localhost:8385:localhost:8384'
 
-# Fzf
+# direnv
+if command -v direnv > /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
+# fzf
 if [ -d "/usr/share/fzf/" ]; then
   source "/usr/share/fzf/key-bindings.zsh"
   source "/usr/share/fzf/completion.zsh"

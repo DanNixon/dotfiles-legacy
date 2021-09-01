@@ -17,6 +17,7 @@
 
 - betaflight-configurator
 - blackbox-explorer
+- direnv
 - gallery-dl
 - gr-soapy-git
 - hid_listen

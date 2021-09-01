@@ -10,8 +10,8 @@
     src: zshrc.j2
     dest: "{{ ansible_user_dir }}/.zshrc"
     mode: "u=rw,g=,o="
-    block_start_string: "{<<"
-    block_end_string: ">>}"
+    block_start_string: "{!"
+    block_end_string: "!}"
 
 - name: Ensure Zsh is set as the user's logon shell
   become: yes
