@@ -31,7 +31,6 @@
 - tomb-kdf
 - ttyper
 - uniflash
-- wdisplays
 - wev
 - woeusb
 - ytfzf-git
