@@ -17,4 +17,4 @@ desktop_environment_displays:
     enabled: yes
     options:
       bg: "#000000 solid_color"
-      scale: 1.6
+      scale: 1.5
