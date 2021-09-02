@@ -2,7 +2,10 @@
 
 export XDG_CURRENT_DESKTOP=sway
 
-export GDK_BACKEND=wayland
+# See https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland
 export MOZ_ENABLE_WAYLAND=1
+export SDL_VIDEODRIVER=wayland
+export QT_WAYLAND_FORCE_DPI=physical
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 sway
