@@ -92,7 +92,6 @@ if command -v gpgconf > /dev/null; then
 fi
 {! endif !}
 
-export VOILE_BOOKMARK_FILE="$HOME/.voile/bookmarks.json"
 export FZF_DEFAULT_OPTS="--no-mouse --cycle --bind tab:up,btab:down"
 
 if [ -d "$HOME/go/bin/" ]; then
@@ -107,6 +106,8 @@ fi
 export PATH
 
 # Aliases
+alias ..="cd .."
+
 alias l="ls --color=auto -lFh"
 alias ll="ls --color=auto -lFa"
 alias lt="tree"
@@ -123,11 +124,6 @@ alias udum="udevil --unmount"
 alias q="exit"
 alias c="clear"
 
-alias ..="cd .."
-
-alias bm="voile"
-alias bmadd="voile add -cae"
-
 alias zfs-ls="zfs list -o name,referenced,used,available,encryption,keystatus,mounted,mountpoint"
 
 alias g="git"
@@ -138,7 +134,6 @@ alias m="ncmpcpp"
 alias stripexif="exiftool -all="
 alias tok="tomb open -k -"
 alias f="nnn"
-alias fif="grep -rnw . -e"
 alias nb="newsboat"
 alias nb-update="newsboat -x print-unread -x reload -x print-unread"
 alias pb="podboat"
