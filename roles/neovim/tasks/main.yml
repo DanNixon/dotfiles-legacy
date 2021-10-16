@@ -5,17 +5,17 @@
     name: neovim
     state: present
 
-- name: Ensure Neovim configuration directory exists
+- name: Ensure configuration directory exists
   file:
     path: "{{ neovim_config_dir }}"
     state: directory
 
-- name: Ensure Neovim configuration is present
+- name: Ensure configuration is present
   copy:
     src: nvim/
     dest: "{{ neovim_config_dir }}"
 
-- name: Ensure Neovim plugins are installed and up to date
+- name: Ensure plugins are installed and up to date
   command: nvim +PlugUpdate +exit +exit
 
 - name: Perform platform specific tasks

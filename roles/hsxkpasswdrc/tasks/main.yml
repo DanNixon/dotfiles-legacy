@@ -1,5 +1,5 @@
 ---
-- name: Ensure hsxkpasswdrc configuration is present
+- name: Ensure configuration is present
   copy:
     content: |
       {{ lookup('community.general.passwordstore', 'ansible_secrets/hsxkpasswdrc returnall=true') }}

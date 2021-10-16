@@ -5,7 +5,7 @@
     name: zsh
     state: present
 
-- name: Ensure Zsh configuration is present
+- name: Ensure configuration is present
   template:
     src: zshrc.j2
     dest: "{{ ansible_user_dir }}/.zshrc"

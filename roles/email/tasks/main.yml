@@ -9,7 +9,7 @@
     - "{{ config_dir }}/neomutt/"
     - "{{ config_dir }}/neomutt/accounts/"
 
-- name: Ensure tools and dependencies are installed
+- name: Ensure packages are installed
   become: yes
   package:
     name:

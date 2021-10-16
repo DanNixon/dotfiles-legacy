@@ -11,7 +11,7 @@
     state: directory
     mode: "u=rwx,g=,o="
 
-- name: Ensure Git configuration is present
+- name: Ensure configuration is present
   copy:
     src: "{{ item }}"
     dest: "{{ git_config_dir }}/{{ item }}"

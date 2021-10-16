@@ -5,12 +5,12 @@
     name: newsboat
     state: present
 
-- name: Ensure Newsboat configuration directory exists
+- name: Ensure configuration directory exists
   file:
     path: '{{ config_dir }}'
     state: directory
 
-- name: Ensure Newsboat configuration is present
+- name: Ensure configuration is present
   copy:
     src: 'config'
     dest: '{{ config_dir }}/config'

@@ -7,7 +7,7 @@
   tags:
     - desktop_environment_quick
 
-- name: Ensure desktop environment pakages are installed
+- name: Ensure packages are installed
   become: yes
   package:
     name:

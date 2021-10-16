@@ -5,7 +5,7 @@
     name: gnucash
     state: present
 
-- name: Ensure GNUCash configuration options are set
+- name: Ensure configuration options are set
   community.general.dconf:
     key: "/org/gnucash/{{ item.key }}"
     value: "{{ item.value }}"

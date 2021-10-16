@@ -1,5 +1,5 @@
 ---
-- name: Ensure CD and DVD tools are installed
+- name: Ensure packages are installed
   become: yes
   package:
     name:

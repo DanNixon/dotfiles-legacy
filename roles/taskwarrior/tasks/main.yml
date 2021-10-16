@@ -5,7 +5,7 @@
     name: task
     state: present
 
-- name: Ensure Taskwarrior configuration is present
+- name: Ensure configuration is present
   copy:
     src: taskrc
     dest: "{{ ansible_user_dir }}/.taskrc"

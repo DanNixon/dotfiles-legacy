@@ -2,11 +2,10 @@
 - name: Ensure Terraform is installed
   become: yes
   package:
-    name:
-      - terraform
+    name: terraform
     state: present
 
-- name: Ensure Terraform configuration is present
+- name: Ensure configuration is present
   copy:
     src: terraformrc
     dest: "{{ ansible_user_dir }}/.terraformrc"

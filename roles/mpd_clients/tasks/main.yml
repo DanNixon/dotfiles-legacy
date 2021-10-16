@@ -1,5 +1,5 @@
 ---
-- name: Ensure clients are installed
+- name: Ensure packages are installed
   become: true
   package:
     name:
@@ -7,12 +7,12 @@
       - ncmpcpp
     state: present
 
-- name: Ensure Ncmpcpp configuration directory exists
+- name: Ensure configuration directory exists
   file:
-    path: '{{ config_dir }}'
+    path: "{{ config_dir }}"
     state: directory
 
-- name: Ensure Ncmpcpp configuration is present
+- name: Ensure configuration is present
   copy:
-    src: 'ncmpcpp/'
-    dest: '{{ config_dir }}'
+    src: ncmpcpp/
+    dest: "{{ config_dir }}"

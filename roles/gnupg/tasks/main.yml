@@ -5,13 +5,13 @@
     name: gnupg
     state: present
 
-- name: Ensure GnuPG home directory exists
+- name: Ensure home directory exists
   file:
     path: "{{ gnupg_home }}"
     state: directory
     mode: "u=rwx,g=,o="
 
-- name: Ensure GnuPG configuration is present
+- name: Ensure configuration is present
   copy:
     src: "{{ item }}"
     dest: "{{ gnupg_home }}"

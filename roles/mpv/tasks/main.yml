@@ -8,12 +8,12 @@
       - xdg-utils
     state: present
 
-- name: Ensure MPV configuration directory exists
+- name: Ensure configuration directory exists
   file:
     path: '{{ config_dir }}'
     state: directory
 
-- name: Ensure MPV configuration is present
+- name: Ensure configuration is present
   copy:
     src: '.'
     dest: '{{ config_dir }}'
