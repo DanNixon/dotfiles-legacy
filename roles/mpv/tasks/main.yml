@@ -1,5 +1,5 @@
 ---
-- name: Ensure MPV is installed
+- name: Ensure MPV and dependencies are installed
   become: yes
   package:
     name:
@@ -8,15 +8,14 @@
       - xdg-utils
     state: present
 
-- name: Ensure configuration directory exists
-  file:
-    path: '{{ config_dir }}'
-    state: directory
-
 - name: Ensure configuration is present
   copy:
-    src: '.'
-    dest: '{{ config_dir }}'
+    src: "{{ item }}"
+    dest: "{{ ansible_user_dir }}/.config/mpv/"
+    mode: "u=r,g=r,o="
+  loop:
+    - config
+    - input.conf
 
 - name: Ensure MPV is the default viewer for GIFs
   command: xdg-mime default 'mpv.desktop' 'image/gif'
