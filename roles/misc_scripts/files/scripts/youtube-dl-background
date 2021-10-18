@@ -2,12 +2,14 @@
 
 set -e
 
+youtubedl='yt-dlp'
+
 url="$1"
 target_dir="${2:-$HOME/Downloads/}"
 
 format="$(youtube-dl-select-format "$url")"
 mkdir -p "$target_dir"
 
-session="ytdl-$RANDOM"
+session="youtube-dl-$RANDOM"
 tmux new-session -d -c "$target_dir" -s "$session"
-tmux send-keys -t "$session" "youtube-dl --format='$format' '$url' && exit" Enter
+tmux send-keys -t "$session" "$youtubedl --format='$format' '$url' && exit" Enter

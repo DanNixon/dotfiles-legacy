@@ -2,6 +2,8 @@
 
 set -o pipefail
 
+youtubedl='yt-dlp'
+
 # A set of common formats
 preset_formats='bestvideo+bestaudio\nbestvideo[height<=1080]+bestaudio\nbestvideo[height<=720]+bestaudio'
 
@@ -18,7 +20,7 @@ if [ "$format" != 'query...' ]; then
   exit
 else
   # If query was selected then see what formats the remote resource has
-  formats=$(youtube-dl -F "$1" | sed -n '6,50p')
+  formats=$($youtubedl -F "$1" | sed -n '6,50p')
   status="$?"
 
   if [ "$status" -eq 0 ]; then

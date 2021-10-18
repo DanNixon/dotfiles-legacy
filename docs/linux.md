@@ -33,7 +33,7 @@
 - uniflash
 - wev
 - woeusb
-- ytfzf-git
+- yt-dlp
 
 ## Notes
 

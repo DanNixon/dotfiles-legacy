@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -xe
-
-url="${1:-$(wl-paste --no-newline)}"
-format="$(youtube-dl-select-format "$url")"
-
-mpv --ytdl-format="$format" "$url" &
-disown
