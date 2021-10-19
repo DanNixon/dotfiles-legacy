@@ -43,7 +43,6 @@
     - mpd_clients
     - mpv
     - newsboat
-    - sdr_tools
     - taskwarrior
     - tmux
 
