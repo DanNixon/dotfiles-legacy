@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: Dan Nixon
+  author: dannixon
   description: Installs and configures Zsh
   license: MIT
   min_ansible_version: 2.1
@@ -8,5 +8,4 @@ galaxy_info:
     - name: ArchLinux
     - name: Ubuntu
 
-dependencies:
-  - role: dannixon.user.dircolors
+dependencies: []

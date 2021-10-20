@@ -1,5 +1,5 @@
 galaxy_info:
-  author: Dan Nixon
+  author: dannixon
   description: Installs general packages used on all interactive systems
   license: MIT
   min_ansible_version: 2.1

@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: Dan Nixon
+  author: dannixon
   description: Installs and configures NeoVim
   license: MIT
   min_ansible_version: 2.1
