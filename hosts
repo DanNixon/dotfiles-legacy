@@ -1,3 +1,4 @@
 akane     ansible_connection=local
 maya      ansible_connection=local
 kawashiro ansible_connection=local
+sakuya    ansible_connection=local

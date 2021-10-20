@@ -1,0 +1,29 @@
+---
+- name: Setup sakuya
+  hosts: sakuya
+
+  roles:
+    - dannixon.system.arch_mirrorlist
+    - dannixon.system.package_updates
+    - dannixon.system.system
+    - dannixon.system.interactive_user
+
+    - dannixon.system.networkd
+    - dannixon.system.nftables
+    - dannixon.system.inspection_tools
+    - dannixon.system.manpages
+    - dannixon.system.pipewire
+
+    - dannixon.services.sshd
+
+    - dannixon.user.base16_shell
+
+    - user_essentials
+
+    - misc_scripts
+    - mpv
+    - tmux
+
+    - general_packages
+
+    - desktop_environment

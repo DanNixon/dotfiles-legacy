@@ -1,0 +1,8 @@
+---
+desktop_environment_bar_right:
+  - pulseaudio
+  - clock
+
+desktop_environment_displays:
+  - name: LVDS-1
+    enabled: yes
