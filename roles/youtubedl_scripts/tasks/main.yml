@@ -1,0 +1,20 @@
+---
+- name: Ensure dependencies are installed
+  become: true
+  package:
+    name:
+      - bash
+      - fzf
+      - sed
+      - tmux
+    state: present
+
+- name: Ensure scripts are present
+  become: true
+  copy:
+    src: "{{ item }}"
+    dest: /usr/bin
+    mode: "u=rx,g=rx,o=rx"
+  loop:
+    - youtube-dl-background
+    - youtube-dl-select-format

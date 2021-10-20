@@ -39,13 +39,13 @@
     - gnupg
     - hsxkpasswdrc
     - libreoffice
-    - misc_scripts
     - mpd_clients
     - mpv
     - neovim
     - newsboat
     - taskwarrior
     - tmux
+    - youtubedl_scripts
     - zsh
 
     - general_packages

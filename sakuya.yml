@@ -20,7 +20,6 @@
 
     - git
     - gnupg
-    - misc_scripts
     - mpv
     - neovim
     - tmux

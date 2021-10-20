@@ -1,6 +1,0 @@
-#!/bin/sh
-
-IP="$1"
-FIELDS='status,message,query,country,regionName,city,zip,lat,lon,timezone,isp,org,mobile,proxy'
-
-curl --silent "http://ip-api.com/json/${IP}?fields=${FIELDS}" | jq

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-curl --silent --location 'http://edns.ip-api.com/json' | jq
