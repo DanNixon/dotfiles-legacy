@@ -15,6 +15,7 @@
       - alacritty
       - blueman
       - feh
+      - firefox
       - grim
       - jq
       - libnotify

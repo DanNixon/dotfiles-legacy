@@ -31,20 +31,22 @@
     - dannixon.user.pass
     - dannixon.user.yubikey_touch_detector
 
-    - user_essentials
-
     - dannixon.services.syncthing
 
     - audio_tools
     - cad_tools
+    - git
+    - gnupg
     - hsxkpasswdrc
     - libreoffice
     - misc_scripts
     - mpd_clients
     - mpv
+    - neovim
     - newsboat
     - taskwarrior
     - tmux
+    - zsh
 
     - general_packages
 

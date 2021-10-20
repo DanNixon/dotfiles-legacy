@@ -4,23 +4,31 @@
   package:
     name:
       - base-devel
-      - borg
       - devtools
       - dnsutils
-      - ffmpeg
-      - firefox
-      - glances
-      - go
-      - gpxsee
-      - hugo
+      - fzf
+      - htop
       - ipcalc
+      - jq
+      - nnn
+      - progress
       - qrencode
       - rclone
+      - rsync
       - sipcalc
       - shellcheck
       - sshfs
       - sshuttle
       - termdown
+      - tree
       - udevil
       - unzip
+
+      - borg
+      - ffmpeg
+      - go
+      - hugo
+
+      - gpxsee
+
     state: present
