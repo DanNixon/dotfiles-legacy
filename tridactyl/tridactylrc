@@ -1,0 +1,9 @@
+set newtab about:blank
+
+colourscheme base16-monokai
+
+set smoothscroll true
+
+bind / fillcmdline find
+bind n findnext 1
+bind N findnext -1
