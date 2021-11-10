@@ -18,13 +18,12 @@
 
     - dannixon.user.base16_shell
 
+    - general_packages
     - git
     - gnupg
     - mpv
     - neovim
     - tmux
     - zsh
-
-    - general_packages
 
     - desktop_environment

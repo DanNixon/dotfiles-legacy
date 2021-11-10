@@ -7,6 +7,7 @@
       - fzf
       - sed
       - tmux
+      - yt-dlp
     state: present
 
 - name: Ensure scripts are present
@@ -16,5 +17,5 @@
     dest: /usr/bin
     mode: "u=rx,g=rx,o=rx"
   loop:
-    - youtube-dl-background
-    - youtube-dl-select-format
+    - yt-dlp-background
+    - yt-dlp-select-format

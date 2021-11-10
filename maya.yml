@@ -40,6 +40,7 @@
     - cad_tools
     - cd_and_dvd_tools
     - email
+    - general_packages
     - git
     - gnucash
     - gnupg
@@ -54,10 +55,8 @@
     - taskwarrior
     - terraform
     - tmux
-    - youtubedl_scripts
+    - yt_dlp
     - zsh
-
-    - general_packages
 
     - desktop_environment
 

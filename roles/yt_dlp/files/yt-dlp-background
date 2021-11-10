@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+url="$1"
+target_dir="${2:-$HOME/Downloads/}"
+
+format="$(yt-dlp-select-format "$url")"
+mkdir -p "$target_dir"
+
+session="yt-dlp-$RANDOM"
+tmux new-session -d -c "$target_dir" -s "$session"
+tmux send-keys -t "$session" "yt-dlp --format='$format' '$url' && exit" Enter
