@@ -29,6 +29,4 @@
       - go
       - hugo
 
-      - gpxsee
-
     state: present

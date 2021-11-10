@@ -62,25 +62,18 @@
     - desktop_environment
 
   tasks:
-    - name: Ensure Bolt is installed
+    - name: Ensure extra packages are installed
       become: yes
       package:
         name:
           - bolt
-        state: present
 
-    - name: Ensure Kubernetes tools are installed
-      become: yes
-      package:
-        name:
+          - gpxsee
+
           - kubectl
           - kubectx
           - helm
-        state: present
 
-    # - name: Ensure Packer is installed
-    #   become: yes
-    #   package:
-    #     name:
-    #       - packer
-    #     state: present
+          # - packer
+
+        state: present
