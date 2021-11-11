@@ -27,7 +27,7 @@
     mode: "u=r,g=r,o="
   loop:
     - src: neomuttrc
-      dest: "{{ config_dir }}/neomuttrc"
+      dest: "{{ config_dir }}/neomutt/neomuttrc"
     - src: mailcap
       dest: "{{ ansible_user_dir }}/.mailcap"
 
