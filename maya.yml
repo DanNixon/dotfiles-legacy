@@ -7,7 +7,6 @@
       ansible.builtin.set_fact:
         host_secrets: "{{ lookup('community.general.passwordstore', 'ansible_secrets/%s returnall=true' % ansible_hostname) | from_yaml }}"
         wireguard_secrets:
-          kekkai: "{{ lookup('community.general.passwordstore', 'ansible_secrets/wireguard/kekkai returnall=true') | from_yaml }}"
           trusted: "{{ lookup('community.general.passwordstore', 'ansible_secrets/wireguard/trusted returnall=true') | from_yaml }}"
 
   roles:

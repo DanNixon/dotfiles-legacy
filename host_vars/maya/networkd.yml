@@ -18,30 +18,6 @@ networkd_config:
       DHCP:
         RouteMetric: 20
 
-  20-kekkai:
-    netdev:
-      NetDev:
-        Name: kekkai
-        Kind: wireguard
-      WireGuard:
-        PrivateKey: "{{ wireguard_secrets.kekkai.maya.private_key }}"
-      WireGuardPeer:
-        Endpoint: "{{ wireguard_secrets.kekkai.cloud.endpoint }}"
-        PublicKey: "{{ wireguard_secrets.kekkai.cloud.public_key }}"
-        PresharedKey: "{{ wireguard_secrets.kekkai.maya.preshared_key }}"
-        AllowedIPs: "{{ wireguard_secrets.kekkai.subnet }}"
-        PersistentKeepalive: 15
-    network:
-      Match:
-        Name: kekkai
-      Link:
-        RequiredForOnline: "no"
-      Network:
-        Address: "{{ wireguard_secrets.kekkai.maya.ip4 }}/32"
-      Route:
-        Gateway: "{{ wireguard_secrets.kekkai.maya.ip4 }}"
-        Destination: "{{ wireguard_secrets.kekkai.subnet }}"
-
   20-trusted-internal:
     netdev:
       NetDev:
