@@ -1,8 +1,10 @@
 ---
-- name: Ensure Taskwarrior is installed
+- name: Ensure packages are installed
   become: yes
   package:
-    name: task
+    name:
+      - task
+      - taskwarrior-tui
     state: present
 
 - name: Ensure configuration is present
