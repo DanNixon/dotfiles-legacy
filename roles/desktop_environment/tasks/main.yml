@@ -63,13 +63,17 @@
     mode: "u=r,g=,o="
   loop:
     - src: chromium-flags.conf
-      dest: "{{ ansible_user_dir }}/.config/chromium-flags.conf"
+      dest: "{{ ansible_user_dir }}/.config/"
+    - src: chromium-flags.conf
+      dest: "{{ ansible_user_dir }}/.var/app/org.chromium.Chromium/config/"
+    - src: chromium-flags.conf
+      dest: "{{ ansible_user_dir }}/.var/app/com.github.Eloston.UngoogledChromium/config/"
     - src: mako.conf
       dest: "{{ desktop_environment_config_dir }}/mako/config"
     - src: waybar.css
       dest: "{{ desktop_environment_config_dir }}/waybar/style.css"
     - src: zathura.desktop
-      dest: "{{ desktop_environment_applications_dir }}/zathura.desktop"
+      dest: "{{ desktop_environment_applications_dir }}/"
 
 - name: Ensure configuration is present
   template:

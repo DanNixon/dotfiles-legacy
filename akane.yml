@@ -50,3 +50,12 @@
     - zsh
 
     - desktop_environment
+
+  tasks:
+    - name: Ensure extra flatpaks are installed
+      become: yes
+      flatpak:
+        name:
+          - com.github.Eloston.UngoogledChromium
+          - com.vesc_project.VescTool
+        state: present

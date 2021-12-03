@@ -3,12 +3,17 @@
   become: yes
   package:
     name:
-      - freecad
       - kicad
       - librecad
       - openscad
       - prusa-slicer
       - python-kikit
+    state: present
+
+- name: Ensure flatpaks are installed
+  become: yes
+  flatpak:
+    name: org.freecadweb.FreeCAD
     state: present
 
 - name: Ensure DXFs open in LibreCAD
