@@ -39,6 +39,7 @@
     - git
     - gnupg
     - hsxkpasswdrc
+    - k8s_tools
     - libreoffice
     - mpd_clients
     - mpv

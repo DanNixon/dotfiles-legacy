@@ -46,6 +46,7 @@
     - gnucash
     - gnupg
     - hsxkpasswdrc
+    - k8s_tools
     - libreoffice
     - mpd_clients
     - mpv
@@ -76,13 +77,6 @@
       package:
         name:
           - bolt
-
           - gpxsee
-
-          - kubectl
-          - kubectx
-          - helm
-
           # - packer
-
         state: present
