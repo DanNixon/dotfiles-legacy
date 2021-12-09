@@ -1,0 +1,26 @@
+---
+borg_borgmatic_config:
+  location:
+    source_directories:
+      - /home/dan/.ssh
+      - /home/dan/.newsboat
+      - /home/dan/.password-store
+      - /home/dan/docs
+      - /home/dan/phone_camera
+      - /home/dan/phone_docs
+      - /home/dan/tombs
+    exclude_if_present:
+      - .do_not_backup
+    repositories:
+      - "{{ lookup('community.general.passwordstore', 'borg/maya/borgbase/repo') }}"
+
+  storage:
+    encryption_passcommand: pass borg/maya/passphrase
+    compression: none
+    checkpoint_interval: 300
+    extra_borg_options:
+      prune: "--list -s"
+      create: "--progress --list --filter=AME --stats"
+
+  retention:
+    keep_within: 6m

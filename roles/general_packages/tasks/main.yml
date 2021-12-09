@@ -24,7 +24,6 @@
       - udevil
       - unzip
 
-      - borg
       - ffmpeg
       - go
       - hugo
