@@ -1,4 +1,4 @@
-data.location=~/docs/.task
+data.location=~/.task
 
 urgency.annotations.coefficient=0.0
 urgency.project.coefficient=0.0
