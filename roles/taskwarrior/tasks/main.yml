@@ -1,6 +1,6 @@
 ---
 - name: Ensure packages are installed
-  become: yes
+  become: true
   package:
     name:
       - task
@@ -11,3 +11,4 @@
   copy:
     src: taskrc
     dest: "{{ ansible_user_dir }}/.taskrc"
+    mode: "u=rw,g=r,o="

@@ -12,9 +12,9 @@ desktop_environment_bar_right: []
 
 desktop_environment_displays:
   - name: eDP-1
-    enabled: no
+    enabled: false
   - name: DP-1
-    enabled: yes
+    enabled: true
     options:
       bg: "#000000 solid_color"
       scale: 1.5

@@ -1,6 +1,6 @@
 ---
 - name: Ensure packages are installed
-  become: yes
+  become: true
   package:
     name:
       - gnuradio

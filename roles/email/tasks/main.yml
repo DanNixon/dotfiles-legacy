@@ -3,14 +3,13 @@
   file:
     path: "{{ item }}"
     state: directory
+    mode: "u=rwx,g=rx,o="
   loop:
     - "{{ ansible_user_dir }}/.mail"
-    - "{{ config_dir }}/msmtp/"
-    - "{{ config_dir }}/neomutt/"
-    - "{{ config_dir }}/neomutt/accounts/"
+    - "{{ config_dir }}/msmtp"
 
 - name: Ensure packages are installed
-  become: yes
+  become: true
   package:
     name:
       - isync
@@ -27,13 +26,13 @@
     mode: "u=r,g=r,o="
   loop:
     - src: neomuttrc
-      dest: "{{ config_dir }}/neomutt/neomuttrc"
+      dest: "{{ config_dir }}/neomutt/"
     - src: mailcap
       dest: "{{ ansible_user_dir }}/.mailcap"
 
 - name: Ensure configuration is present
   template:
-    src: "{{ item.src }}.j2"
+    src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     mode: "u=r,g=r,o="
   loop:
@@ -44,8 +43,8 @@
 
 - name: Ensure Neomutt account configurations are present
   template:
-    src: "accounts/{{ item }}.neomuttrc.j2"
-    dest: "{{ config_dir }}/neomutt/accounts/{{ item }}.neomuttrc"
+    src: "accounts/{{ item }}.neomuttrc"
+    dest: "{{ config_dir }}/neomutt/accounts/"
     mode: "u=r,g=r,o="
   loop:
     - gmail

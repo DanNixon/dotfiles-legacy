@@ -65,7 +65,7 @@
 
   tasks:
     - name: Ensure extra flatpaks are installed
-      become: yes
+      become: true
       flatpak:
         name:
           - com.github.Eloston.UngoogledChromium
@@ -74,7 +74,7 @@
         state: present
 
     - name: Ensure extra packages are installed
-      become: yes
+      become: true
       package:
         name:
           - bolt

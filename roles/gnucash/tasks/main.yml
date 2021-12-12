@@ -1,6 +1,6 @@
 ---
 - name: Ensure GNUCash is installed
-  become: yes
+  become: true
   package:
     name: gnucash
     state: present

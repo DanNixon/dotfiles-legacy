@@ -3,7 +3,7 @@ desktop_environment_terminal_font_size: 10
 
 desktop_environment_displays:
   - name: eDP-1
-    enabled: yes
+    enabled: true
     options:
       bg: '~/docs/wallpapers/izayoi\ sakuya\ and\ hong\ meiling\ \(touhou\)\ drawn\ by\ mikado_\(winters\)\ -\ 1600381848a6c45f0aa43eb12d226540.png fill'
       scale: 2.5

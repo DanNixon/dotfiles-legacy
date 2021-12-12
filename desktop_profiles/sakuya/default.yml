@@ -5,4 +5,4 @@ desktop_environment_bar_right:
 
 desktop_environment_displays:
   - name: LVDS-1
-    enabled: yes
+    enabled: true

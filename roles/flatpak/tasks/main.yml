@@ -1,6 +1,6 @@
 ---
 - name: Ensure Flatpak is installed
-  become: yes
+  become: true
   package:
     name: flatpak
     state: present

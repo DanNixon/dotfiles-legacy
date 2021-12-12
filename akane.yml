@@ -54,7 +54,7 @@
 
   tasks:
     - name: Ensure extra flatpaks are installed
-      become: yes
+      become: true
       flatpak:
         name:
           - com.github.Eloston.UngoogledChromium

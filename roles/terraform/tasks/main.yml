@@ -9,8 +9,10 @@
   copy:
     src: terraformrc
     dest: "{{ ansible_user_dir }}/.terraformrc"
+    mode: "u=rw,g=r,o="
 
 - name: Ensure plugin cache directory exists
   file:
     path: "{{ ansible_user_dir }}/.terraform.d/plugin-cache"
     state: directory
+    mode: "u=rwx,g=rx,o="

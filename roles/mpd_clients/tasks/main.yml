@@ -13,5 +13,5 @@
     dest: "{{ ansible_user_dir }}/.config/ncmpcpp/"
     mode: "u=rw,g=r,o="
   loop:
-    - "ncmpcpp/bindings"
-    - "ncmpcpp/config"
+    - ncmpcpp/bindings
+    - ncmpcpp/config

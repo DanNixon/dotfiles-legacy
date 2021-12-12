@@ -1,2 +1,2 @@
 ---
-zsh_ssh_auth_sock: yes
+zsh_ssh_auth_sock: true

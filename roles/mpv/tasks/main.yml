@@ -1,6 +1,6 @@
 ---
 - name: Ensure MPV and dependencies are installed
-  become: yes
+  become: true
   package:
     name:
       - mpv

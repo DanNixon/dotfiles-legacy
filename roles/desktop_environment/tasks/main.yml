@@ -8,7 +8,7 @@
     - desktop_environment_quick
 
 - name: Ensure packages are installed
-  become: yes
+  become: true
   package:
     name:
       - adobe-source-han-sans-otc-fonts
@@ -36,7 +36,7 @@
     state: present
 
 - name: Ensure user is in video group (required for rootless light)
-  become: yes
+  become: true
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     append: true

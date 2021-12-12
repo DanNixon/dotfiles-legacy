@@ -1,6 +1,6 @@
 ---
 - name: Ensure Zsh is installed
-  become: yes
+  become: true
   package:
     name: zsh
     state: present
@@ -14,7 +14,7 @@
     block_end_string: "!}"
 
 - name: Ensure Zsh is set as the user's logon shell
-  become: yes
+  become: true
   user:
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh

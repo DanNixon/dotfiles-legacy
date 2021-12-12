@@ -1,6 +1,6 @@
 ---
 desktop_environment_displays:
   - name: LVDS-1
-    enabled: yes
+    enabled: true
     options:
       bg: '~/docs/wallpapers/shameimaru\ aya\ \(touhou\)\ drawn\ by\ fjsmu\ -\ 68e92ca324796a9712eb35ca357eaf9e.png fill'

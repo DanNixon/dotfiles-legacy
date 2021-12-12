@@ -1,6 +1,6 @@
 ---
 desktop_environment_displays:
   - name: eDP-1
-    enabled: yes
+    enabled: true
     options:
       scale: 1.5
