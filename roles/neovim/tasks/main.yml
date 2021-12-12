@@ -1,19 +1,21 @@
 ---
 - name: Ensure Neovim is installed
-  become: yes
+  become: true
   package:
     name: neovim
     state: present
 
-- name: Ensure configuration directory exists
-  file:
-    path: "{{ neovim_config_dir }}"
-    state: directory
-
 - name: Ensure configuration is present
   copy:
-    src: nvim/
-    dest: "{{ neovim_config_dir }}"
+    src: init.vim
+    dest: "{{ ansible_user_dir }}/.config/nvim/"
+    mode: "u=rw,g=r,o="
+
+- name: Ensure vim-plug is present
+  copy:
+    src: plug.vim
+    dest: "{{ ansible_user_dir }}/.config/nvim/autoload/"
+    mode: "u=rw,g=r,o="
 
 - name: Ensure plugins are installed and up to date
   command: nvim +PlugUpdate +exit +exit
@@ -22,4 +24,4 @@
   include_tasks: "{{ item }}"
   with_first_found:
     - files: "{{ ansible_os_family }}.yml"
-      skip: yes
+      skip: true

@@ -1,2 +1,0 @@
----
-config_dir: "{{ ansible_user_dir }}/.config/ncmpcpp/"

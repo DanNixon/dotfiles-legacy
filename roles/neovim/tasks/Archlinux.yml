@@ -1,7 +1,6 @@
 ---
 - name: Ensure Python interface package is installed
-  become: yes
+  become: true
   package:
-    name:
-      - python-pynvim
+    name: python-pynvim
     state: present

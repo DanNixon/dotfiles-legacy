@@ -5,16 +5,10 @@
     name: git
     state: present
 
-- name: Ensure config directory exists
-  file:
-    path: "{{ git_config_dir }}"
-    state: directory
-    mode: "u=rwx,g=,o="
-
 - name: Ensure configuration is present
   copy:
     src: "{{ item }}"
-    dest: "{{ git_config_dir }}/{{ item }}"
+    dest: "{{ ansible_user_dir }}/.config/git/"
     mode: "u=r,g=,o="
   loop:
     - attributes

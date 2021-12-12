@@ -7,12 +7,11 @@
       - ncmpcpp
     state: present
 
-- name: Ensure configuration directory exists
-  file:
-    path: "{{ config_dir }}"
-    state: directory
-
 - name: Ensure configuration is present
   copy:
-    src: ncmpcpp/
-    dest: "{{ config_dir }}"
+    src: "{{ item }}"
+    dest: "{{ ansible_user_dir }}/.config/ncmpcpp/"
+    mode: "u=rw,g=r,o="
+  loop:
+    - "ncmpcpp/bindings"
+    - "ncmpcpp/config"

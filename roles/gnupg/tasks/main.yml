@@ -1,20 +1,14 @@
 ---
 - name: Ensure GnuPG is installed
-  become: yes
+  become: true
   package:
     name: gnupg
     state: present
 
-- name: Ensure home directory exists
-  file:
-    path: "{{ gnupg_home }}"
-    state: directory
-    mode: "u=rwx,g=,o="
-
 - name: Ensure configuration is present
   copy:
     src: "{{ item }}"
-    dest: "{{ gnupg_home }}"
+    dest: "{{ ansible_user_dir }}/.gnupg/"
     mode: "u=r,g=,o="
   loop:
     - gpg.conf
@@ -23,10 +17,10 @@
 - name: Ensure my public key is present
   shell:
     cmd: curl 'https://dan-nixon.com/pubkey.txt' | gpg --import -
-    warn: no
+    warn: false
 
 - name: Perform platform specific tasks
   include_tasks: "{{ item }}"
   with_first_found:
     - files: "{{ ansible_os_family }}.yml"
-      skip: yes
+      skip: true

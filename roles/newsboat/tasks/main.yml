@@ -5,12 +5,8 @@
     name: newsboat
     state: present
 
-- name: Ensure configuration directory exists
-  file:
-    path: '{{ config_dir }}'
-    state: directory
-
 - name: Ensure configuration is present
   copy:
-    src: 'config'
-    dest: '{{ config_dir }}/config'
+    src: config
+    dest: "{{ ansible_user_dir }}/.newsboat/"
+    mode: "u=r,g=r,o="
