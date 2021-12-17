@@ -1,15 +1,6 @@
 ---
 desktop_environment_terminal_font_size: 12
 
-desktop_environment_bar_left:
-  - clock
-  - battery
-  - pulseaudio
-  - sway/workspaces
-  - sway/mode
-
-desktop_environment_bar_right: []
-
 desktop_environment_displays:
   - name: eDP-1
     enabled: false
@@ -18,3 +9,16 @@ desktop_environment_displays:
     options:
       bg: "#000000 solid_color"
       scale: 1.5
+
+i3status_rust_blocks:
+  - block: sound
+    device_kind: sink
+
+  - block: sound
+    device_kind: source
+
+  - block: battery
+
+  - block: time
+    interval: 1
+    format: "%Y-%m-%d %H:%M:%S"

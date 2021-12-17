@@ -1,0 +1,18 @@
+{{ ansible_managed | comment }}
+
+[theme]
+{% for k, v in i3status_rust_theme.items() %}
+{{ k }} = {{ v | to_json }}
+{% endfor %}
+
+[icons]
+{% for k, v in i3status_rust_icons.items() %}
+{{ k }} = {{ v | to_json }}
+{% endfor %}
+
+{% for block in i3status_rust_blocks %}
+[[block]]
+{% for k, v in block.items() %}
+{{ k }} = {{ v | to_json }}
+{% endfor %}
+{% endfor %}

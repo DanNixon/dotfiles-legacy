@@ -1,9 +1,7 @@
 # vim: filetype=conf
 
-### Theme
 ### Base16 Atelier Savanna
 # Author: Bram de Haan (http://atelierbramdehaan.nl)
-
 set $base00 #171c19
 set $base01 #232a25
 set $base02 #526057
@@ -30,9 +28,6 @@ client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
-
-### Config
-
 # Default keyboard options
 input type:keyboard {
   xkb_layout gb
@@ -51,9 +46,22 @@ input "48879:3:DanNixon_Aya" {
   xkb_options none
 }
 
-# Waybar
+set $bar_bg "$base01"88
 bar {
-  swaybar_command waybar
+  font pango:DejaVuSansMono Nerd Font 14
+  position top
+  gaps 10
+  colors {
+    separator  $base07
+    background $bar_bg
+    statusline $base07
+    #                  Border  BG      Text
+    focused_workspace  $base07 $bar_bg $base07
+    active_workspace   $base07 $bar_bg $base07
+    inactive_workspace $bar_bg $bar_bg $base06
+    urgent_workspace   $base08 $bar_bg $base08
+  }
+  status_command i3status-rs
 }
 
 # Mod1 = Alt
@@ -111,28 +119,28 @@ bindsym $mod+d focus mode_toggle
 bindsym $mod+s sticky toggle
 
 # Switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move workspace 1
-bindsym $mod+Shift+2 move workspace 2
-bindsym $mod+Shift+3 move workspace 3
-bindsym $mod+Shift+4 move workspace 4
-bindsym $mod+Shift+5 move workspace 5
-bindsym $mod+Shift+6 move workspace 6
-bindsym $mod+Shift+7 move workspace 7
-bindsym $mod+Shift+8 move workspace 8
-bindsym $mod+Shift+9 move workspace 9
-bindsym $mod+Shift+0 move workspace 10
+bindsym $mod+Shift+1 move workspace number 1
+bindsym $mod+Shift+2 move workspace number 2
+bindsym $mod+Shift+3 move workspace number 3
+bindsym $mod+Shift+4 move workspace number 4
+bindsym $mod+Shift+5 move workspace number 5
+bindsym $mod+Shift+6 move workspace number 6
+bindsym $mod+Shift+7 move workspace number 7
+bindsym $mod+Shift+8 move workspace number 8
+bindsym $mod+Shift+9 move workspace number 9
+bindsym $mod+Shift+0 move workspace number 10
 
 # Exit Sway
 bindsym $mod+Shift+E exit

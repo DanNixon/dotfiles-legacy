@@ -1,7 +1,9 @@
 ---
-desktop_environment_displays:
-  - name: LVDS-1
-    enabled: true
+i3status_rust_theme:
+  name: native
+
+i3status_rust_icons:
+  name: awesome
 
 i3status_rust_blocks:
   - block: sound
@@ -9,6 +11,10 @@ i3status_rust_blocks:
 
   - block: sound
     device_kind: source
+
+  - block: backlight
+
+  - block: battery
 
   - block: time
     interval: 1

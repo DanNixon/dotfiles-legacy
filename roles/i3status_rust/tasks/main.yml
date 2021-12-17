@@ -1,0 +1,13 @@
+---
+- name: Ensure package is installed
+  become: true
+  package:
+    name: i3status-rust
+    state: present
+
+- name: Ensure configuration is present
+  template:
+    src: config.toml
+    dest: "{{ ansible_user_dir }}/.config/i3status-rust/"
+    mode: "u=rw,g=r,o="
+  tags: desktop_environment_quick

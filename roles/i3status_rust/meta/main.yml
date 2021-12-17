@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: dannixon
-  description: Installs and configures desktop environment
+  description: Installs and configures i3status-rust
   license: MIT
   min_ansible_version: 2.1
   platforms:

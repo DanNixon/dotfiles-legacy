@@ -1,15 +1,6 @@
 ---
 desktop_environment_terminal_font_size: 12
 
-desktop_environment_bar_left:
-  - clock
-  - battery
-  - pulseaudio
-  - sway/workspaces
-  - sway/mode
-
-desktop_environment_bar_right: []
-
 desktop_environment_displays:
   - name: DP-1
     enabled: true
@@ -21,3 +12,16 @@ desktop_environment_displays:
     options:
       bg: '~/docs/wallpapers/izayoi\ sakuya\ and\ hong\ meiling\ \(touhou\)\ drawn\ by\ mikado_\(winters\)\ -\ 1600381848a6c45f0aa43eb12d226540.png fill'
       scale: 2.5
+
+i3status_rust_blocks:
+  - block: sound
+    device_kind: sink
+
+  - block: sound
+    device_kind: source
+
+  - block: battery
+
+  - block: time
+    interval: 1
+    format: "%Y-%m-%d %H:%M:%S"

@@ -4,8 +4,15 @@
   with_first_found:
     - files: "desktop_profiles/{{ ansible_hostname }}/{{ desktop_environment_profile }}.yml"
       skip: true
-  tags:
-    - desktop_environment_quick
+  tags: desktop_environment_quick
+
+- name: Configure components
+  include_role:
+    role: "{{ item }}"
+  tags: always
+  loop:
+    - dannixon.user.nerdfont
+    - i3status_rust
 
 - name: Ensure packages are installed
   become: true
@@ -25,7 +32,6 @@
       - sway
       - swaylock
       - ttf-dejavu
-      - waybar
       - wl-clipboard
       - wtype
       - xdg-desktop-portal-wlr
@@ -54,7 +60,6 @@
     - "{{ desktop_environment_config_dir }}/alacritty"
     - "{{ desktop_environment_config_dir }}/mako"
     - "{{ desktop_environment_config_dir }}/sway"
-    - "{{ desktop_environment_config_dir }}/waybar"
 
 - name: Ensure configuration is present
   copy:
@@ -70,8 +75,6 @@
       dest: "{{ ansible_user_dir }}/.var/app/com.github.Eloston.UngoogledChromium/config/"
     - src: mako.conf
       dest: "{{ desktop_environment_config_dir }}/mako/config"
-    - src: waybar.css
-      dest: "{{ desktop_environment_config_dir }}/waybar/style.css"
     - src: zathura.desktop
       dest: "{{ desktop_environment_applications_dir }}/"
 
@@ -79,16 +82,13 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-    mode: "u=r,g=,o="
+    mode: "u=rw,g=,o="
   loop:
     - src: alacritty.yml.j2
       dest: "{{ desktop_environment_config_dir }}/alacritty/alacritty.yml"
     - src: sway.j2
       dest: "{{ desktop_environment_config_dir }}/sway/config"
-    - src: waybar.json.j2
-      dest: "{{ desktop_environment_config_dir }}/waybar/config"
-  tags:
-    - desktop_environment_quick
+  tags: desktop_environment_quick
 
 - name: Update applications database
   command: update-desktop-database "{{ desktop_environment_applications_dir }}"
