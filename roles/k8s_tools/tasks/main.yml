@@ -6,4 +6,5 @@
       - kubectl
       - kubectx
       - helm
+      - python-kubernetes
     state: present
