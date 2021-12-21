@@ -56,7 +56,6 @@
     mode: "u=rwx,g=,o="
   loop:
     - "{{ desktop_environment_applications_dir }}"
-    - "{{ desktop_environment_script_dir }}"
     - "{{ desktop_environment_config_dir }}/alacritty"
     - "{{ desktop_environment_config_dir }}/mako"
     - "{{ desktop_environment_config_dir }}/sway"
@@ -95,9 +94,20 @@
 
 - name: Ensure scripts are present
   copy:
-    src: scripts/
-    dest: "{{ desktop_environment_script_dir }}"
+    src: "scripts/{{ item }}"
+    dest: "{{ ansible_user_dir }}/.local/bin/"
     mode: "u=rx,g=,o="
+  loop:
+    - ddcutil-modify-vcp
+    - de-lock
+    - de-screenshot
+    - de-sleep
+    - firefox-private
+    - fzf-launch
+    - media-control
+    - pulseaudio-control
+    - st-web
+    - sway-run
 
 - name: Ensure default applications are set
   command: xdg-mime default "{{ item.app }}" "{{ item.type }}"

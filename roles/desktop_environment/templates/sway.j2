@@ -55,11 +55,11 @@ bar {
     separator  $base07
     background $bar_bg
     statusline $base07
-    #                  Border  BG      Text
-    focused_workspace  $base07 $bar_bg $base07
-    active_workspace   $base07 $bar_bg $base07
-    inactive_workspace $bar_bg $bar_bg $base06
-    urgent_workspace   $base08 $bar_bg $base08
+    #                  Border  Background  Text
+    focused_workspace  $base07 "$base03"88 $base07
+    active_workspace   $base07 $bar_bg     $base07
+    inactive_workspace $bar_bg $bar_bg     $base06
+    urgent_workspace   $base08 "$base08"88 $base07
   }
   status_command i3status-rs
 }
@@ -148,7 +148,7 @@ bindsym $mod+Shift+E exit
 # Reset desktop environment config
 bindsym $mod+Shift+R exec "$HOME/dotfiles/desktop_quick.sh"
 
-# Resize window
+bindsym $mod+r mode resize
 mode resize {
   bindsym h           resize shrink left  $d_px px or $d_ppt ppt
   bindsym Shift+H     resize grow   left  $d_px px or $d_ppt ppt
@@ -164,7 +164,40 @@ mode resize {
 
   bindsym Escape      mode default
 }
-bindsym $mod+r mode resize
+
+bindsym $mod+c mode sink_volume
+mode sink_volume {
+  bindsym k exec --no-startup-id pulseaudio-control sink volume +5%
+  bindsym j exec --no-startup-id pulseaudio-control sink volume -5%
+  bindsym h exec --no-startup-id pulseaudio-control sink mute toggle
+
+  bindsym Escape mode default
+  bindsym $mod+c mode source_volume
+}
+mode source_volume {
+  bindsym k exec --no-startup-id pulseaudio-control source volume +5%
+  bindsym j exec --no-startup-id pulseaudio-control source volume -5%
+  bindsym h exec --no-startup-id pulseaudio-control source mute toggle
+
+  bindsym Escape mode default
+  bindsym $mod+c mode monitor_brightness
+}
+mode monitor_brightness {
+  bindsym k exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
+  bindsym j exec --no-startup-id ddcutil-modify-vcp 10 adjust -10
+  bindsym h exec --no-startup-id ddcutil-modify-vcp 10 set 10
+  bindsym l exec --no-startup-id ddcutil-modify-vcp 10 set 80
+
+  bindsym Escape mode default
+  bindsym $mod+c mode monitor_contrast
+}
+mode monitor_contrast {
+  bindsym k exec --no-startup-id ddcutil-modify-vcp 12 adjust +10
+  bindsym j exec --no-startup-id ddcutil-modify-vcp 12 adjust -10
+
+  bindsym Escape mode default
+  bindsym $mod+c mode default
+}
 
 # Screenshot shortcut
 bindsym $mod+Shift+p exec de-screenshot
