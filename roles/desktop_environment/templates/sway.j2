@@ -148,6 +148,7 @@ bindsym $mod+Shift+E exit
 # Reset desktop environment config
 bindsym $mod+Shift+R exec "$HOME/dotfiles/desktop_quick.sh"
 
+# Window resize
 bindsym $mod+r mode resize
 mode resize {
   bindsym h           resize shrink left  $d_px px or $d_ppt ppt
@@ -165,6 +166,7 @@ mode resize {
   bindsym Escape      mode default
 }
 
+# Quick system settings
 bindsym $mod+c mode sink_volume
 mode sink_volume {
   bindsym k exec --no-startup-id pulseaudio-control sink volume +5%
@@ -216,9 +218,6 @@ bindsym $mod+Semicolon  exec alacritty --class=FloatingAlacritty -e fzf-launch s
 bindsym $mod+Space      exec alacritty
 
 # Audio controls
-bindsym $mod+equal            exec --no-startup-id pulseaudio-control sink volume +5%
-bindsym $mod+minus            exec --no-startup-id pulseaudio-control sink volume -5%
-bindsym $mod+Shift+minus      exec --no-startup-id pulseaudio-control sink mute toggle
 bindsym XF86AudioRaiseVolume  exec --no-startup-id pulseaudio-control sink volume +5%
 bindsym XF86AudioLowerVolume  exec --no-startup-id pulseaudio-control sink volume -5%
 bindsym XF86AudioMute         exec --no-startup-id pulseaudio-control sink mute toggle
