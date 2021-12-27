@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set +ex
+set -ex
 
 profile="${1:-default}"
 
@@ -9,7 +9,7 @@ notify-send \
   "Desktop environment is being reloaded with profile \"$profile\", please wait warmly..."
 
 cd "$(dirname "$0")" && ansible-playbook \
-  "$(hostname).yml" \
+  "$(uname -n).yml" \
   --diff \
   --tags desktop_environment_quick \
   -e desktop_environment_profile="$profile"
