@@ -1,6 +1,6 @@
 ---
 desktop_environment_profile: default
 
-desktop_environment_terminal_font_size: 8.5
-
+desktop_environment_bar_position: bottom
 desktop_environment_displays: []
+desktop_environment_terminal_font_size: 8.5
