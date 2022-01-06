@@ -33,6 +33,8 @@
 
     - dannixon.services.syncthing
 
+    - flatpak
+
     - audio_tools
     - cad_tools
     - general_packages
