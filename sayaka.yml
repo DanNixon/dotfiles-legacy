@@ -1,0 +1,30 @@
+---
+- name: Setup sayaka
+  hosts: sayaka
+
+  roles:
+    - dannixon.system.arch_mirrorlist
+    - dannixon.system.package_updates
+    - dannixon.system.system
+    - dannixon.system.interactive_user
+
+    - dannixon.system.networkd
+    - dannixon.system.iwd
+    - dannixon.system.nftables
+    - dannixon.system.inspection_tools
+    - dannixon.system.manpages
+    - dannixon.system.pipewire
+
+    - dannixon.services.sshd
+
+    - dannixon.user.base16_shell
+
+    - general_packages
+    - git
+    - gnupg
+    - mpv
+    - neovim
+    - tmux
+    - zsh
+
+    - desktop_environment

@@ -1,0 +1,20 @@
+---
+desktop_environment_displays:
+  - name: DSI-1
+    enabled: true
+    options:
+      transform: 90
+
+i3status_rust_blocks:
+  - block: sound
+    device_kind: sink
+
+  - block: sound
+    device_kind: source
+
+  - block: battery
+    device: /sys/class/power_supply/axp288_fuel_gauge
+
+  - block: time
+    interval: 1
+    format: "%Y-%m-%d %H:%M:%S"
