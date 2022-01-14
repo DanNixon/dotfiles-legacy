@@ -9,6 +9,7 @@
     - dannixon.system.interactive_user
 
     - dannixon.system.networkd
+    - dannixon.system.iwd
     - dannixon.system.nftables
     - dannixon.system.inspection_tools
     - dannixon.system.manpages
