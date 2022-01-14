@@ -5,6 +5,7 @@
     name:
       - base-devel
       - devtools
+      - direnv
       - dnsutils
       - fzf
       - htop
