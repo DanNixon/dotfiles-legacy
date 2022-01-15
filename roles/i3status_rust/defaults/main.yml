@@ -12,8 +12,6 @@ i3status_rust_blocks:
   - block: sound
     device_kind: source
 
-  - block: backlight
-
   - block: battery
 
   - block: time
