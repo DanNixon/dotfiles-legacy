@@ -168,42 +168,56 @@ mode resize {
 # Quick system settings
 bindsym $mod+c mode sink_volume
 mode sink_volume {
-  bindsym k exec --no-startup-id pulseaudio-control sink volume +5%
-  bindsym j exec --no-startup-id pulseaudio-control sink volume -5%
-  bindsym h exec --no-startup-id pulseaudio-control sink mute toggle
+  bindsym k            exec --no-startup-id pulseaudio-control sink volume +5%
+  bindsym j            exec --no-startup-id pulseaudio-control sink volume -5%
+  bindsym h            exec --no-startup-id pulseaudio-control sink mute toggle
+{% for i in range(1, 11) %}
+  bindsym {{ i % 10 }} exec --no-startup-id pulseaudio-control sink volume {{ i * 10 }}%
+{% endfor %}
 
   bindsym Escape mode default
   bindsym $mod+c mode source_volume
 }
 mode source_volume {
-  bindsym k exec --no-startup-id pulseaudio-control source volume +5%
-  bindsym j exec --no-startup-id pulseaudio-control source volume -5%
-  bindsym h exec --no-startup-id pulseaudio-control source mute toggle
+  bindsym k            exec --no-startup-id pulseaudio-control source volume +5%
+  bindsym j            exec --no-startup-id pulseaudio-control source volume -5%
+  bindsym h            exec --no-startup-id pulseaudio-control source mute toggle
+{% for i in range(1, 11) %}
+  bindsym {{ i % 10 }} exec --no-startup-id pulseaudio-control source volume {{ i * 10 }}%
+{% endfor %}
 
   bindsym Escape mode default
   bindsym $mod+c mode laptop_brightness
 }
 mode laptop_brightness {
-  bindsym k exec --no-startup-id light -A 5
-  bindsym j exec --no-startup-id light -U 5
-  bindsym h exec --no-startup-id light -S 5
-  bindsym l exec --no-startup-id light -S 80
+  bindsym k            exec --no-startup-id light -A 5
+  bindsym j            exec --no-startup-id light -U 5
+  bindsym grave        exec --no-startup-id light -S 0
+{% for i in range(1, 11) %}
+  bindsym {{ i % 10 }} exec --no-startup-id light -S {{ i * 10 }}
+{% endfor %}
 
   bindsym Escape mode default
   bindsym $mod+c mode monitor_brightness
 }
 mode monitor_brightness {
-  bindsym k exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
-  bindsym j exec --no-startup-id ddcutil-modify-vcp 10 adjust -10
-  bindsym h exec --no-startup-id ddcutil-modify-vcp 10 set 10
-  bindsym l exec --no-startup-id ddcutil-modify-vcp 10 set 80
+  bindsym k            exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
+  bindsym j            exec --no-startup-id ddcutil-modify-vcp 10 adjust -10
+  bindsym grave        exec --no-startup-id ddcutil-modify-vcp 10 set 0
+{% for i in range(1, 11) %}
+  bindsym {{ i % 10 }} exec --no-startup-id ddcutil-modify-vcp 10 set {{ i * 10 }}
+{% endfor %}
 
   bindsym Escape mode default
   bindsym $mod+c mode monitor_contrast
 }
 mode monitor_contrast {
-  bindsym k exec --no-startup-id ddcutil-modify-vcp 12 adjust +10
-  bindsym j exec --no-startup-id ddcutil-modify-vcp 12 adjust -10
+  bindsym k            exec --no-startup-id ddcutil-modify-vcp 12 adjust +10
+  bindsym j            exec --no-startup-id ddcutil-modify-vcp 12 adjust -10
+  bindsym grave        exec --no-startup-id ddcutil-modify-vcp 12 set 0
+{% for i in range(1, 11) %}
+  bindsym {{ i % 10 }} exec --no-startup-id ddcutil-modify-vcp 12 set {{ i * 10 }}
+{% endfor %}
 
   bindsym Escape mode default
   bindsym $mod+c mode default
