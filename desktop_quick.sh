@@ -10,6 +10,5 @@ notify-send \
 
 cd "$(dirname "$0")" && ansible-playbook \
   "$(uname -n).yml" \
-  --diff \
   --tags desktop_environment_quick \
   -e desktop_environment_profile="$profile"
