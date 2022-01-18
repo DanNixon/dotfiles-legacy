@@ -23,4 +23,4 @@ borg_borgmatic_config:
       create: "--progress --list --filter=AME --stats"
 
   retention:
-    keep_within: 6m
+    keep_within: 3m
