@@ -3,6 +3,7 @@
   become: true
   package:
     name:
+      - k9s
       - kubectl
       - kubectx
       - helm
