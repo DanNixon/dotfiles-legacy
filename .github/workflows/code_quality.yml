@@ -1,0 +1,20 @@
+---
+name: Code Quality
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ansible-lint:
+    name: Ansible Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: pip install ansible ansible-lint yamllint
+
+      - name: Ansible Lint
+        run: ansible-lint

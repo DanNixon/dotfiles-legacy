@@ -18,4 +18,4 @@
     - input.conf
 
 - name: Ensure MPV is the default viewer for GIFs
-  command: xdg-mime default 'mpv.desktop' 'image/gif'
+  command: xdg-mime default 'mpv.desktop' 'image/gif'  # noqa no-changed-when

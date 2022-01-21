@@ -15,7 +15,7 @@
     - gpg-agent.conf
 
 - name: Ensure my public key is present
-  shell:
+  shell:  # noqa no-changed-when
     cmd: curl 'https://dan-nixon.com/pubkey.txt' | gpg --import -
     warn: false
 

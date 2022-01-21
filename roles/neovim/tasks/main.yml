@@ -18,7 +18,7 @@
     mode: "u=rw,g=r,o="
 
 - name: Ensure plugins are installed and up to date
-  command: nvim +PlugUpdate +exit +exit
+  command: nvim +PlugUpdate +exit +exit  # noqa no-changed-when
 
 - name: Perform platform specific tasks
   include_tasks: "{{ item }}"

@@ -90,7 +90,7 @@
   tags: desktop_environment_quick
 
 - name: Update applications database
-  command: update-desktop-database "{{ desktop_environment_applications_dir }}"
+  command: update-desktop-database "{{ desktop_environment_applications_dir }}"  # noqa no-changed-when
 
 - name: Ensure scripts are present
   copy:
@@ -110,7 +110,7 @@
     - sway-run
 
 - name: Ensure default applications are set
-  command: xdg-mime default "{{ item.app }}" "{{ item.type }}"
+  command: xdg-mime default "{{ item.app }}" "{{ item.type }}"  # noqa no-changed-when
   loop:
     - app: feh.desktop
       type: image/jpeg
@@ -123,6 +123,7 @@
 
 - name: Reload Sway
   command: swaymsg reload
+  changed_when: true
   tags:
     - never
     - desktop_environment_quick
