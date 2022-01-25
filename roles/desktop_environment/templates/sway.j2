@@ -166,8 +166,8 @@ mode resize {
 }
 
 # Quick system settings
-bindsym $mod+c mode sink_volume
-mode sink_volume {
+bindsym $mod+c mode "sink volume"
+mode "sink volume" {
   bindsym k            exec --no-startup-id pulseaudio-control sink volume +5%
   bindsym j            exec --no-startup-id pulseaudio-control sink volume -5%
   bindsym h            exec --no-startup-id pulseaudio-control sink mute toggle
@@ -176,9 +176,9 @@ mode sink_volume {
 {% endfor %}
 
   bindsym Escape mode default
-  bindsym $mod+c mode source_volume
+  bindsym $mod+c mode "source volume"
 }
-mode source_volume {
+mode "source volume" {
   bindsym k            exec --no-startup-id pulseaudio-control source volume +5%
   bindsym j            exec --no-startup-id pulseaudio-control source volume -5%
   bindsym h            exec --no-startup-id pulseaudio-control source mute toggle
@@ -187,9 +187,9 @@ mode source_volume {
 {% endfor %}
 
   bindsym Escape mode default
-  bindsym $mod+c mode laptop_brightness
+  bindsym $mod+c mode "laptop brightness"
 }
-mode laptop_brightness {
+mode "laptop brightness" {
   bindsym k            exec --no-startup-id light -A 5
   bindsym j            exec --no-startup-id light -U 5
   bindsym grave        exec --no-startup-id light -S 0
@@ -198,9 +198,9 @@ mode laptop_brightness {
 {% endfor %}
 
   bindsym Escape mode default
-  bindsym $mod+c mode monitor_brightness
+  bindsym $mod+c mode "monitor brightness"
 }
-mode monitor_brightness {
+mode "monitor brightness" {
   bindsym k            exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
   bindsym j            exec --no-startup-id ddcutil-modify-vcp 10 adjust -10
   bindsym grave        exec --no-startup-id ddcutil-modify-vcp 10 set 0
@@ -209,9 +209,9 @@ mode monitor_brightness {
 {% endfor %}
 
   bindsym Escape mode default
-  bindsym $mod+c mode monitor_contrast
+  bindsym $mod+c mode "monitor contrast"
 }
-mode monitor_contrast {
+mode "monitor contrast" {
   bindsym k            exec --no-startup-id ddcutil-modify-vcp 12 adjust +10
   bindsym j            exec --no-startup-id ddcutil-modify-vcp 12 adjust -10
   bindsym grave        exec --no-startup-id ddcutil-modify-vcp 12 set 0
