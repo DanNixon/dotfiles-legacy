@@ -107,6 +107,7 @@
     - media-control
     - pulseaudio-control
     - st-web
+    - sway-mouse
     - sway-run
 
 - name: Ensure default applications are set
