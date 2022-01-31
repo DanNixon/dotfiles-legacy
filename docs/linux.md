@@ -10,17 +10,17 @@
 - [Privacy Badger](https://github.com/EFForg/privacybadger) ([install](https://privacybadger.org/))
 - [Refined GitHub](https://github.com/sindresorhus/refined-github) ([install](https://addons.mozilla.org/en-US/firefox/addon/refined-github-/))
 - [uBlock](https://github.com/gorhill/uBlock) ([install](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/))
-- [Vim Vixen](https://github.com/ueokande/vim-vixen) ([install](https://addons.mozilla.org/en-US/firefox/addon/vim-vixen/))
 - [Wallabagger](https://github.com/wallabag/wallabagger) ([install](https://addons.mozilla.org/en-US/firefox/addon/wallabagger/))
 
 ## AUR packages
 
 - betaflight-configurator
 - blackbox-explorer
+- cilium-cli-bin
 - gallery-dl
-- gr-soapy-git
 - hid_listen
 - hsxkpasswd
+- hubble-bin
 - opentx-companion
 - paru
 - protonmail-bridge-nogui
