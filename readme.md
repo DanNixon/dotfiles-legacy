@@ -1,4 +1,4 @@
-# Linux
+# dotfiles [![Code Quality](https://github.com/DanNixon/dotfiles/actions/workflows/code_quality.yml/badge.svg)](https://github.com/DanNixon/dotfiles/actions/workflows/code_quality.yml)
 
 ## Firefox Addons
 
@@ -8,7 +8,7 @@
 - [HTTPS Everywhere](https://github.com/EFForg/https-everywhere) ([install](https://www.eff.org/https-everywhere))
 - [Multi-Account Containers](https://github.com/mozilla/multi-account-containers) ([install](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/))
 - [Privacy Badger](https://github.com/EFForg/privacybadger) ([install](https://privacybadger.org/))
-- [Refined GitHub](https://github.com/sindresorhus/refined-github) ([install](https://addons.mozilla.org/en-US/firefox/addon/refined-github-/))
+- [Tridactyl](https://github.com/tridactyl/tridactyl) ([install](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)) ([config](./tridactyl))
 - [uBlock](https://github.com/gorhill/uBlock) ([install](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/))
 - [Wallabagger](https://github.com/wallabag/wallabagger) ([install](https://addons.mozilla.org/en-US/firefox/addon/wallabagger/))
 
@@ -32,9 +32,3 @@
 - uniflash
 - wev
 - woeusb
-
-## Notes
-
-- If needed, smart card reader can be manually selected in `.gnupg/scdaemon.conf` using `reader-port`.
-- https://wiki.gnupg.org/AgentForwarding
-- https://bugzilla.mindrot.org/show_bug.cgi?id=2824#c9
