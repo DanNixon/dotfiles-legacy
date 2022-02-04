@@ -150,6 +150,9 @@ set hlsearch
 set number
 set relativenumber
 
+" Highlight current line
+set cursorline
+
 " NERDTree config
 let g:NERDTreeChDirMode = 2 " Change working dir to NERDTree dir
 let g:NERDTreeMinimalUI = 1
