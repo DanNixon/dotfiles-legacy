@@ -79,5 +79,6 @@
         name:
           - bolt
           - gpxsee
+          - influx-cli
           # - packer
         state: present
