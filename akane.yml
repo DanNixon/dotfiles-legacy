@@ -18,6 +18,7 @@
     - dannixon.system.networkd
     - dannixon.system.iwd
     - dannixon.system.nftables
+    - dannixon.system.tailscale
     - dannixon.system.inspection_tools
     - dannixon.system.manpages
     - dannixon.system.pipewire
