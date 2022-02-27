@@ -6,7 +6,6 @@ nftables_tables:
     chains:
       - "{{ nftables_application_chains.ssh }}"
       - "{{ nftables_application_chains.syncthing }}"
-      - "{{ nftables_application_chains.jacktrip }}"
 
       - name: input
         config:
@@ -16,12 +15,15 @@ nftables_tables:
           policy: drop
         rules:
           - iif lo counter accept
+
           - ct state invalid counter drop
           - 'ct state { established, related } counter accept'
+
           - 'ip6 nexthdr icmpv6 icmpv6 type { nd-neighbor-solicit, echo-request, nd-router-advert, nd-neighbor-advert } counter accept'
+
           - jump input_ssh
           - jump input_syncthing
-          # - jump input_jacktrip
+
           - 'log prefix "firewall: dropped " counter drop'
 
       - name: forward
