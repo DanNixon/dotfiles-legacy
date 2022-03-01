@@ -1,6 +1,14 @@
 external_editor = nvim
 
+connected_message_on_startup = no
+
+display_bitrate = yes
+display_remaining_time = yes
+
 playlist_disable_highlight_delay = 0
 
+song_list_format = "%a - %t (%f)"
+
+follow_now_playing_lyrics = yes
 lyrics_directory = "~/music/lyrics"
 lyrics_fetchers = azlyrics
