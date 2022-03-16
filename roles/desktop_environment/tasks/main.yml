@@ -1,13 +1,13 @@
 ---
 - name: Include profile specific variables
-  include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - files: "desktop_profiles/{{ ansible_hostname }}/{{ desktop_environment_profile }}.yml"
       skip: true
   tags: desktop_environment_quick
 
 - name: Configure components
-  include_role:
+  ansible.builtin.include_role:
     role: "{{ item }}"
   tags: always
   loop:
@@ -16,7 +16,7 @@
 
 - name: Ensure packages are installed
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - adobe-source-han-sans-otc-fonts
       - alacritty
@@ -50,7 +50,7 @@
       - video
 
 - name: Ensure directories exist
-  file:
+  ansible.builtin.file:
     path: "{{ item }}"
     state: directory
     mode: "u=rwx,g=,o="
@@ -61,7 +61,7 @@
     - "{{ desktop_environment_config_dir }}/sway"
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     mode: "u=r,g=,o="
@@ -78,7 +78,7 @@
       dest: "{{ desktop_environment_applications_dir }}/"
 
 - name: Ensure configuration is present
-  template:
+  ansible.builtin.template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     mode: "u=rw,g=,o="
@@ -90,10 +90,10 @@
   tags: desktop_environment_quick
 
 - name: Update applications database
-  command: update-desktop-database "{{ desktop_environment_applications_dir }}"  # noqa no-changed-when
+  ansible.builtin.command: update-desktop-database "{{ desktop_environment_applications_dir }}"  # noqa no-changed-when
 
 - name: Ensure scripts are present
-  copy:
+  ansible.builtin.copy:
     src: "scripts/{{ item }}"
     dest: "{{ ansible_user_dir }}/.local/bin/"
     mode: "u=rx,g=,o="
@@ -111,7 +111,7 @@
     - sway-run
 
 - name: Ensure default applications are set
-  command: xdg-mime default "{{ item.app }}" "{{ item.type }}"  # noqa no-changed-when
+  ansible.builtin.command: xdg-mime default "{{ item.app }}" "{{ item.type }}"  # noqa no-changed-when
   loop:
     - app: feh.desktop
       type: image/jpeg
@@ -123,7 +123,7 @@
       type: application/pdf
 
 - name: Reload Sway
-  command: swaymsg reload
+  ansible.builtin.command: swaymsg reload
   changed_when: true
   tags:
     - never

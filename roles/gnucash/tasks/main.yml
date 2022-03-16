@@ -1,7 +1,7 @@
 ---
 - name: Ensure GNUCash is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: gnucash
     state: present
 

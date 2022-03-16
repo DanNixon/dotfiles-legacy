@@ -1,7 +1,7 @@
 ---
 - name: Ensure smart card tools are installed
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - ccid
       - pcsclite

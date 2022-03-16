@@ -56,7 +56,7 @@
   tasks:
     - name: Ensure extra flatpaks are installed
       become: true
-      flatpak:
+      community.general.flatpak:
         name:
           - com.github.Eloston.UngoogledChromium
           - com.vesc_project.VescTool

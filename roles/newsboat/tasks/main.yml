@@ -1,12 +1,12 @@
 ---
 - name: Ensure Newsboat is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: newsboat
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: config
     dest: "{{ ansible_user_dir }}/.newsboat/"
     mode: "u=r,g=r,o="

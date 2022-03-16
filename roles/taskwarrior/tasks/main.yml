@@ -1,14 +1,14 @@
 ---
 - name: Ensure packages are installed
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - task
       - taskwarrior-tui
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: taskrc
     dest: "{{ ansible_user_dir }}/.taskrc"
     mode: "u=rw,g=r,o="

@@ -1,6 +1,6 @@
 ---
 - name: Ensure Python interface package is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: python-pynvim
     state: present

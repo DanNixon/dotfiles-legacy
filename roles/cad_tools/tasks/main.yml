@@ -1,7 +1,7 @@
 ---
 - name: Ensure packages are installed
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - kicad
       - librecad
@@ -12,16 +12,17 @@
 
 - name: Ensure flatpaks are installed
   become: true
-  flatpak:
+  community.general.flatpak:
     name: org.freecadweb.FreeCAD
     state: present
 
 - name: Ensure DXFs open in LibreCAD
-  command: xdg-mime default "librecad.desktop" "application/x-dxf"  # noqa no-changed-when
+  ansible.builtin.command: xdg-mime default "librecad.desktop" "application/x-dxf"  # noqa no-changed-when
 
 - name: Ensure the JLC KiCad SMT assembly exporter script is present
   become: true
-  get_url:
+  ansible.builtin.get_url:
     url: https://gist.githubusercontent.com/arturo182/a8c4a4b96907cfccf616a1edb59d0389/raw/2c9191c0f1fe5471db3362ccf29f71d3235af4d4/bom2grouped_csv_jlcpcb.xsl
     checksum: sha256:548e86a8f5947fa29355f0666db83804eea760dd7d7ef99fd5d830737339b157
     dest: /usr/share/kicad/plugins/bom2grouped_csv_jlcpcb.xsl
+    mode: "u=r,g=r,o=r"

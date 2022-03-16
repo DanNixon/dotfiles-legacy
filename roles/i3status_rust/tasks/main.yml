@@ -1,12 +1,12 @@
 ---
 - name: Ensure package is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: i3status-rust
     state: present
 
 - name: Ensure configuration is present
-  template:
+  ansible.builtin.template:
     src: config.toml
     dest: "{{ ansible_user_dir }}/.config/i3status-rust/"
     mode: "u=rw,g=r,o="

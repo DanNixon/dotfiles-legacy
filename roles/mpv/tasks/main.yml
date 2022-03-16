@@ -1,7 +1,7 @@
 ---
 - name: Ensure MPV and dependencies are installed
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - mpv
       - socat
@@ -9,7 +9,7 @@
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: "{{ item }}"
     dest: "{{ ansible_user_dir }}/.config/mpv/"
     mode: "u=r,g=r,o="
@@ -18,4 +18,4 @@
     - input.conf
 
 - name: Ensure MPV is the default viewer for GIFs
-  command: xdg-mime default 'mpv.desktop' 'image/gif'  # noqa no-changed-when
+  ansible.builtin.command: xdg-mime default 'mpv.desktop' 'image/gif'  # noqa no-changed-when

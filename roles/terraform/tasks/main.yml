@@ -1,18 +1,18 @@
 ---
 - name: Ensure Terraform is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: terraform
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: terraformrc
     dest: "{{ ansible_user_dir }}/.terraformrc"
     mode: "u=rw,g=r,o="
 
 - name: Ensure plugin cache directory exists
-  file:
+  ansible.builtin.file:
     path: "{{ ansible_user_dir }}/.terraform.d/plugin-cache"
     state: directory
     mode: "u=rwx,g=rx,o="

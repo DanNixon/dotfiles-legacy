@@ -1,12 +1,12 @@
 ---
 - name: Ensure package is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: tmux
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: tmux.conf
     dest: "{{ ansible_facts['env']['HOME'] }}/.tmux.conf"
     mode: "u=rw,g=,o="

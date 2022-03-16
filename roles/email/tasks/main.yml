@@ -1,6 +1,6 @@
 ---
 - name: Ensure directories exist
-  file:
+  ansible.builtin.file:
     path: "{{ item }}"
     state: directory
     mode: "u=rwx,g=rx,o="
@@ -10,7 +10,7 @@
 
 - name: Ensure packages are installed
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - isync
       - mailcap
@@ -20,7 +20,7 @@
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     mode: "u=r,g=r,o="
@@ -31,7 +31,7 @@
       dest: "{{ ansible_user_dir }}/.mailcap"
 
 - name: Ensure configuration is present
-  template:
+  ansible.builtin.template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     mode: "u=r,g=r,o="
@@ -42,7 +42,7 @@
       dest: "{{ config_dir }}/msmtp/config"
 
 - name: Ensure Neomutt account configurations are present
-  template:
+  ansible.builtin.template:
     src: "accounts/{{ item }}.neomuttrc"
     dest: "{{ config_dir }}/neomutt/accounts/"
     mode: "u=r,g=r,o="

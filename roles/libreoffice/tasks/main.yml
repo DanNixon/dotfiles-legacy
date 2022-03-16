@@ -1,7 +1,7 @@
 ---
 - name: Ensure packages are installed
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - libreoffice
       - hunspell

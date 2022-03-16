@@ -1,12 +1,12 @@
 ---
 - name: Ensure GnuPG is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: gnupg
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: "{{ item }}"
     dest: "{{ ansible_user_dir }}/.gnupg/"
     mode: "u=r,g=,o="
@@ -15,12 +15,12 @@
     - gpg-agent.conf
 
 - name: Ensure my public key is present
-  shell:  # noqa no-changed-when
+  ansible.builtin.shell:  # noqa no-changed-when
     cmd: curl 'https://dan-nixon.com/pubkey.txt' | gpg --import -
     warn: false
 
 - name: Perform platform specific tasks
-  include_tasks: "{{ item }}"
+  ansible.builtin.include_tasks: "{{ item }}"
   with_first_found:
     - files: "{{ ansible_os_family }}.yml"
       skip: true

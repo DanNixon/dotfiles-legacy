@@ -1,6 +1,6 @@
 ---
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     content: |
       {{ lookup('community.general.passwordstore', 'ansible_secrets/hsxkpasswdrc returnall=true') }}
     dest: "{{ ansible_user_dir }}/.hsxkpasswdrc"

@@ -1,6 +1,6 @@
 ---
 - name: Ensure Flatpak is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: flatpak
     state: present

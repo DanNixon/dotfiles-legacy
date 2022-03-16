@@ -1,27 +1,27 @@
 ---
 - name: Ensure Neovim is installed
   become: true
-  package:
+  ansible.builtin.package:
     name: neovim
     state: present
 
 - name: Ensure configuration is present
-  copy:
+  ansible.builtin.copy:
     src: init.vim
     dest: "{{ ansible_user_dir }}/.config/nvim/"
     mode: "u=rw,g=r,o="
 
 - name: Ensure vim-plug is present
-  copy:
+  ansible.builtin.copy:
     src: plug.vim
     dest: "{{ ansible_user_dir }}/.config/nvim/autoload/"
     mode: "u=rw,g=r,o="
 
 - name: Ensure plugins are installed and up to date
-  command: nvim +PlugUpdate +exit +exit  # noqa no-changed-when
+  ansible.builtin.command: nvim +PlugUpdate +exit +exit  # noqa no-changed-when
 
 - name: Perform platform specific tasks
-  include_tasks: "{{ item }}"
+  ansible.builtin.include_tasks: "{{ item }}"
   with_first_found:
     - files: "{{ ansible_os_family }}.yml"
       skip: true
