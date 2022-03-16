@@ -11,10 +11,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: pip install ansible ansible-lint yamllint
-
-      - name: Ansible Lint
-        run: ansible-lint
+      - uses: dannixon/ansible-testing/actions/lint@main
