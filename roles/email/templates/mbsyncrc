@@ -51,8 +51,8 @@ SyncState *
 IMAPAccount gmail
 Host        "imap.gmail.com"
 SSLType     IMAPS
-User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Google/Email') }}"
-PassCmd     "pass Passwords/Personal/Google/EmailPassword"
+User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/google/email') }}"
+PassCmd     "pass Passwords/Personal/google/email_password"
 
 IMAPStore gmail-remote
 Account   gmail
@@ -76,7 +76,7 @@ IMAPAccount     protonmail
 Host            "127.0.0.1"
 Port            1143
 SSLType         STARTTLS
-CertificateFile "~/.protonmail-bridge.pem"
+CertificateFile "~/.config/protonmail/bridge/cert.pem"
 User            "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
 PassCmd         "pass ansible_secrets/protonmail_bridge_password"
 
