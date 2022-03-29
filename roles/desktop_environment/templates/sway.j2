@@ -164,27 +164,6 @@ mode resize {
   bindsym Escape      mode default
 }
 
-# Mouse mode
-bindsym $mod+Return mode mouse
-mode mouse {
-  bindsym r exec --no-startup-id sway-mouse start
-
-  bindsym h exec --no-startup-id sway-mouse left
-  bindsym j exec --no-startup-id sway-mouse down
-  bindsym k exec --no-startup-id sway-mouse up
-  bindsym l exec --no-startup-id sway-mouse right
-
-  bindsym Shift+h seat - cursor move -50   0
-  bindsym Shift+j seat - cursor move   0  50
-  bindsym Shift+k seat - cursor move   0 -50
-  bindsym Shift+l seat - cursor move  50   0
-
-  bindsym Space  exec --no-startup-id sway-mouse left_click; mode default
-  bindsym Return exec --no-startup-id sway-mouse right_click; mode default
-
-  bindsym Escape exec --no-startup-id sway-mouse finish; mode default
-}
-
 # Quick system settings
 bindsym $mod+c mode "sink volume"
 mode "sink volume" {
