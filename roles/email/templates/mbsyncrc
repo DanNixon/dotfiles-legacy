@@ -3,8 +3,8 @@
 IMAPAccount outlook-1
 Host        "outlook.office365.com"
 SSLType     IMAPS
-User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_1/Email') }}"
-PassCmd     "pass Passwords/Personal/Microsoft_1/Password"
+User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/microsoft_1/Email') }}"
+PassCmd     "pass Passwords/Personal/microsoft_1/Password"
 
 IMAPStore outlook-1-remote
 Account   outlook-1
@@ -27,8 +27,8 @@ SyncState *
 IMAPAccount outlook-2
 Host        "outlook.office365.com"
 SSLType     IMAPS
-User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/Microsoft_2/Email') }}"
-PassCmd     "pass Passwords/Personal/Microsoft_2/Password"
+User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/microsoft_2/Email') }}"
+PassCmd     "pass Passwords/Personal/microsoft_2/Password"
 
 IMAPStore outlook-2-remote
 Account   outlook-2
