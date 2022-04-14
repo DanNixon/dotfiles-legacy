@@ -6,7 +6,7 @@
     - dannixon.system.arch_mirrorlist
     - dannixon.system.package_updates
     - dannixon.system.system
-    - dannixon.system.interactive_user
+    - dannixon.system.interactive_users
 
     - dannixon.system.networkd
     - dannixon.system.iwd
