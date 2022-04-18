@@ -9,6 +9,8 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'https://github.com/autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+
 " Used to format and make editing CSV files trivial
 Plug 'https://github.com/chrisbra/csv.vim'
 
@@ -94,6 +96,11 @@ let g:syntastic_mode_map = {
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_aggregate_errors = 1
 
+" Language server config
+let g:LanguageClient_serverCommands = {
+      \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+\ }
+
 " Spelling config
 let g:lexical#spell_key = '<leader>ss'
 let g:lexical#thesaurus_key = '<leader>st'
@@ -168,6 +175,9 @@ command! TextWrap :set formatoptions+=t
 """"""""""""""""
 " KEY MAPPINGS "
 """"""""""""""""
+
+" Language server menu
+nmap <Leader>l <Plug>(lcn-menu)
 
 " Handy shortcut for replacing words
 map <Leader>r :%s/\<<C-r><C-w>\>/
