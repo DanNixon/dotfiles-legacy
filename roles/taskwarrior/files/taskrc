@@ -1,7 +1,10 @@
 data.location=~/.task
 
+urgency.active.coefficient=0.0
+urgency.age.coefficient=0.0
 urgency.annotations.coefficient=0.0
 urgency.project.coefficient=0.0
+urgency.tags.coefficient=0.0
 
 weekstart=Monday
 
@@ -60,3 +63,8 @@ color.sync.rejected=magenta
 
 color.undo.after=green
 color.undo.before=red
+
+news.version=2.6.0
+
+context.work.read=+work
+context.work.write=+work
