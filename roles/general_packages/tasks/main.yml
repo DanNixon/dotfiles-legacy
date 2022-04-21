@@ -25,8 +25,4 @@
       - udisks2
       - unzip
 
-      - ffmpeg
-      - go
-      - hugo
-
     state: present
