@@ -22,7 +22,7 @@
       - sshuttle
       - termdown
       - tree
-      - udevil
+      - udisks2
       - unzip
 
       - ffmpeg
