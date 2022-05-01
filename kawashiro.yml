@@ -32,19 +32,19 @@
 
     - dannixon.services.syncthing
 
-    - flatpak
+    - dannixon.dotfiles.flatpak
 
-    - audio_tools
-    - cad_tools
-    - git
-    - gnupg
-    - hsxkpasswdrc
-    - libreoffice
-    - mpv
-    - neovim
-    - tmux
-    - zsh
+    - dannixon.dotfiles.audio_tools
+    - dannixon.dotfiles.cad_tools
+    - dannixon.dotfiles.git
+    - dannixon.dotfiles.gnupg
+    - dannixon.dotfiles.hsxkpasswdrc
+    - dannixon.dotfiles.libreoffice
+    - dannixon.dotfiles.mpv
+    - dannixon.dotfiles.neovim
+    - dannixon.dotfiles.tmux
+    - dannixon.dotfiles.zsh
 
-    - general_packages
+    - dannixon.dotfiles.general_packages
 
-    - desktop_environment
+    - dannixon.dotfiles.desktop_environment

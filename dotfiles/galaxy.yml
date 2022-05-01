@@ -1,0 +1,15 @@
+---
+namespace: dannixon
+name: dotfiles
+
+version: 0.0.1
+
+authors:
+  - Dan Nixon <dan@dan-nixon.com>
+
+description: Personal configurations
+readme: README.md
+
+license: MIT
+
+repository: https://github.com/DanNixon/dotfiles

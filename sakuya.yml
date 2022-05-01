@@ -20,12 +20,12 @@
 
     - dannixon.user.base16_shell
 
-    - general_packages
-    - git
-    - gnupg
-    - mpv
-    - neovim
-    - tmux
-    - zsh
+    - dannixon.dotfiles.general_packages
+    - dannixon.dotfiles.git
+    - dannixon.dotfiles.gnupg
+    - dannixon.dotfiles.mpv
+    - dannixon.dotfiles.neovim
+    - dannixon.dotfiles.tmux
+    - dannixon.dotfiles.zsh
 
-    - desktop_environment
+    - dannixon.dotfiles.desktop_environment

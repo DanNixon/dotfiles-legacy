@@ -35,32 +35,32 @@
     - dannixon.services.mpd
     - dannixon.services.syncthing
 
-    - flatpak
+    - dannixon.dotfiles.flatpak
 
-    - audio_tools
-    - cad_tools
-    - cd_and_dvd_tools
-    - email
-    - general_packages
-    - git
-    - gnucash
-    - gnupg
-    - hsxkpasswdrc
-    - k8s_tools
-    - libreoffice
-    - mpd_clients
-    - mpv
-    - neovim
-    - newsboat
-    - photo_and_image_tools
-    - remote_access_tools
-    - taskwarrior
-    - terraform
-    - tmux
-    - yt_dlp
-    - zsh
+    - dannixon.dotfiles.audio_tools
+    - dannixon.dotfiles.cad_tools
+    - dannixon.dotfiles.cd_and_dvd_tools
+    - dannixon.dotfiles.email
+    - dannixon.dotfiles.general_packages
+    - dannixon.dotfiles.git
+    - dannixon.dotfiles.gnucash
+    - dannixon.dotfiles.gnupg
+    - dannixon.dotfiles.hsxkpasswdrc
+    - dannixon.dotfiles.k8s_tools
+    - dannixon.dotfiles.libreoffice
+    - dannixon.dotfiles.mpd_clients
+    - dannixon.dotfiles.mpv
+    - dannixon.dotfiles.neovim
+    - dannixon.dotfiles.newsboat
+    - dannixon.dotfiles.photo_and_image_tools
+    - dannixon.dotfiles.remote_access_tools
+    - dannixon.dotfiles.taskwarrior
+    - dannixon.dotfiles.terraform
+    - dannixon.dotfiles.tmux
+    - dannixon.dotfiles.yt_dlp
+    - dannixon.dotfiles.zsh
 
-    - desktop_environment
+    - dannixon.dotfiles.desktop_environment
 
   tasks:
     - name: Ensure extra flatpaks are installed
@@ -79,5 +79,4 @@
           - bolt
           - gpxsee
           - influx-cli
-          # - packer
         state: present
