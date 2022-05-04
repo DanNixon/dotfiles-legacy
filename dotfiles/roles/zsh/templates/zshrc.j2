@@ -130,29 +130,16 @@ alias p="pass fzf"
 alias tm="tmux"
 alias tok="tomb open -k -"
 alias v="$EDITOR"
-
+alias m="ncmpcpp"
+alias kc="kubectl"
 alias t="task"
-alias task-sync="git -C ~/.task pull && git -C ~/.task push"
 alias tt="taskwarrior-tui"
 
-alias m="ncmpcpp"
-alias pm="pulsemixer"
-alias bt="bluetoothctl"
-
-alias nb="newsboat"
-alias nb-update="newsboat -x print-unread -x reload -x print-unread"
-alias pb="podboat"
-
-alias kc="kubectl"
-alias nm="neomutt"
+alias task-sync="git -C ~/.task pull && git -C ~/.task push"
+alias newsboat-update="newsboat -x print-unread -x reload -x print-unread"
 alias stripexif="exiftool -all="
 alias today="date '+%Y-%m-%d'"
 alias zfs-ls="zfs list -o name,referenced,used,available,encryption,keystatus,mounted,mountpoint"
-
-
-# Global aliases
-alias -g fwd-gpg='-R /run/user/1000/gnupg/S.gpg-agent:$(gpgconf --list-dirs agent-extra-socket)'
-alias -g fwd-st='-L localhost:8385:localhost:8384'
 
 # direnv
 if command -v direnv > /dev/null; then
