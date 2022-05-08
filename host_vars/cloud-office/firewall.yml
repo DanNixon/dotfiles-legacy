@@ -1,0 +1,40 @@
+---
+nftables_tables:
+  - name: filter
+    family: inet
+
+    chains:
+      - "{{ nftables_application_chains.ssh }}"
+      - "{{ nftables_application_chains.syncthing }}"
+
+      - name: input-from-tailscale
+        rules:
+          - 'jump input_ssh'
+          - 'jump input_syncthing'
+
+      - name: input
+        config:
+          type: filter
+          hook: input
+          priority: filter
+          policy: drop
+        rules:
+          - 'iif lo counter accept'
+          - 'ct state invalid counter drop'
+          - 'ct state { established, related } counter accept'
+          - 'iifname "tailscale0" counter jump input-from-tailscale'
+          - 'log prefix "firewall: dropped " counter drop'
+
+      - name: forward
+        config:
+          type: filter
+          hook: forward
+          priority: filter
+          policy: drop
+
+      - name: output
+        config:
+          type: filter
+          hook: output
+          priority: filter
+          policy: accept

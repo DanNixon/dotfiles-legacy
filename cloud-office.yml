@@ -1,0 +1,50 @@
+---
+- name: Setup cloud-office
+  hosts: cloud-office
+
+  roles:
+    - dannixon.system.arch_mirrorlist
+    - dannixon.system.package_updates
+    - dannixon.system.system
+
+    - dannixon.system.networkd
+    - dannixon.system.resolved
+    - dannixon.system.nftables
+    - dannixon.system.tailscale
+
+    - dannixon.system.manpages
+    - dannixon.services.sshd
+    - dannixon.system.interactive_users
+
+    - dannixon.services.borg
+    - dannixon.services.syncthing
+
+    - dannixon.user.base16_shell
+    - dannixon.user.pass
+
+    - dannixon.dotfiles.email
+    - dannixon.dotfiles.general_packages
+    - dannixon.dotfiles.git
+    - dannixon.dotfiles.gnupg
+    - dannixon.dotfiles.neovim
+    - dannixon.dotfiles.newsboat
+    - dannixon.dotfiles.taskwarrior
+    - dannixon.dotfiles.tmux
+    - dannixon.dotfiles.zsh
+
+  tasks:
+    - name: Ensure SSH forwarded socket unbind is enabled (needed for GPG agent forwarding)
+      become: true
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        line: StreamLocalBindUnlink yes
+        state: present
+
+    - name: Ensure workflow scripts are available
+      become: true
+      copy:
+        src: "cloud-office/{{ item }}"
+        dest: /usr/local/bin
+        mode: "u=rwx,g=rx,o=rx"
+      loop:
+        - update-storage1

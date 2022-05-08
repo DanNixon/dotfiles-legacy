@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -ex
+
+git -C "$HOME/git/mpv_watch_later.git/" push storage1 master
+git -C "$HOME/git/password-store.git" push storage1 master
+git -C "$HOME/.newsboat/.git" push origin
+
+rsync \
+  --archive \
+  --inplace \
+  --verbose \
+  ~/tombs/ \
+  'storage1.data.castle.dan-nixon.com:/data/dan/tombs'

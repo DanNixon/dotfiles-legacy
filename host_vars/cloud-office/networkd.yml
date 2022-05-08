@@ -1,0 +1,8 @@
+---
+networkd_config:
+  20-wired:
+    network:
+      Match:
+        Type: ether
+      Network:
+        DHCP: "yes"
