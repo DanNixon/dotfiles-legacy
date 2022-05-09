@@ -33,7 +33,6 @@
 - hubble-bin
 - opentx-companion
 - paru
-- protonmail-bridge-nogui
 - qmk
 - tilp
 - tomb

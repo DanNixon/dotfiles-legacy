@@ -1,10 +1,58 @@
+# Fastmail
+
+IMAPAccount fastmail
+Host        "imap.fastmail.com"
+SSLType     IMAPS
+User        "{{ email_account_secrets.fastmail.address }}"
+PassCmd     "pass {{ email_account_secrets.fastmail.password_name }}"
+
+IMAPStore fastmail-remote
+Account   fastmail
+
+MaildirStore  fastmail-local
+Subfolders    Verbatim
+Path          "~/.mail/fastmail/"
+Inbox         "~/.mail/fastmail/Inbox"
+
+Channel   fastmail
+Far       :fastmail-remote:
+Near      :fastmail-local:
+Patterns  *
+Create    Both
+SyncState *
+
+
+# GMail
+
+IMAPAccount gmail
+Host        "imap.gmail.com"
+SSLType     IMAPS
+User        "{{ email_account_secrets.gmail.address }}"
+PassCmd     "pass {{ email_account_secrets.gmail.password_name }}"
+
+IMAPStore gmail-remote
+Account   gmail
+
+MaildirStore  gmail-local
+Subfolders    Verbatim
+Path          "~/.mail/gmail/"
+Inbox         "~/.mail/gmail/Inbox"
+
+Channel   gmail
+Far       :gmail-remote:
+Near      :gmail-local:
+Patterns  * !"[Google Mail]/All Mail" !"[Google Mail]/All mail"
+Create    Both
+SyncState *
+
+
 # Outlook 1
 
 IMAPAccount outlook-1
 Host        "outlook.office365.com"
 SSLType     IMAPS
-User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/microsoft_1/Email') }}"
-PassCmd     "pass Passwords/Personal/microsoft_1/Password"
+User        "{{ email_account_secrets.outlook_1.address }}"
+PassCmd     "pass {{ email_account_secrets.outlook_1.password_name }}"
 
 IMAPStore outlook-1-remote
 Account   outlook-1
@@ -27,8 +75,8 @@ SyncState *
 IMAPAccount outlook-2
 Host        "outlook.office365.com"
 SSLType     IMAPS
-User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/microsoft_2/Email') }}"
-PassCmd     "pass Passwords/Personal/microsoft_2/Password"
+User        "{{ email_account_secrets.outlook_2.address }}"
+PassCmd     "pass {{ email_account_secrets.outlook_2.password_name }}"
 
 IMAPStore outlook-2-remote
 Account   outlook-2
@@ -42,55 +90,5 @@ Channel   outlook-2
 Far       :outlook-2-remote:
 Near      :outlook-2-local:
 Patterns  *
-Create    Both
-SyncState *
-
-
-# GMail
-
-IMAPAccount gmail
-Host        "imap.gmail.com"
-SSLType     IMAPS
-User        "{{ lookup('community.general.passwordstore', 'Passwords/Personal/google/email') }}"
-PassCmd     "pass Passwords/Personal/google/email_password"
-
-IMAPStore gmail-remote
-Account   gmail
-
-MaildirStore  gmail-local
-Subfolders    Verbatim
-Path          "~/.mail/gmail/"
-Inbox         "~/.mail/gmail/Inbox"
-
-Channel   gmail
-Far       :gmail-remote:
-Near      :gmail-local:
-Patterns  * !"[Google Mail]/All Mail" !"[Google Mail]/All mail"
-Create    Both
-SyncState *
-
-
-# ProtonMail
-
-IMAPAccount     protonmail
-Host            "127.0.0.1"
-Port            1143
-SSLType         STARTTLS
-CertificateFile "~/.config/protonmail/bridge/cert.pem"
-User            "{{ lookup('community.general.passwordstore', 'Passwords/Personal/ProtonMail/Email2') }}"
-PassCmd         "pass ansible_secrets/protonmail_bridge_password"
-
-IMAPStore protonmail-remote
-Account   protonmail
-
-MaildirStore  protonmail-local
-Subfolders    Verbatim
-Path          "~/.mail/protonmail/"
-Inbox         "~/.mail/protonmail/Inbox"
-
-Channel   protonmail
-Far       :protonmail-remote:
-Near      :protonmail-local:
-Patterns  * !"All Mail"
 Create    Both
 SyncState *

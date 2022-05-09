@@ -1,4 +1,4 @@
 # vim: filetype=neomuttrc
-set from = "{{ lookup('community.general.passwordstore', 'Passwords/Personal/microsoft_2/Email') }}"
+set from = "{{ email_account_secrets.outlook_2.address }}"
 set sendmail = "msmtp -a outlook-2"
 echo "Sending from $from"

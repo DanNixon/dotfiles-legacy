@@ -1,4 +1,20 @@
 ---
+- name: Set facts
+  ansible.builtin.set_fact:
+    email_account_secrets:
+      fastmail:
+        address: "{{ lookup('community.general.passwordstore', 'Passwords/Personal/fastmail/email') }}"
+        password_name: Passwords/Personal/fastmail/api_password
+      gmail:
+        address: "{{ lookup('community.general.passwordstore', 'Passwords/Personal/google/email') }}"
+        password_name: Passwords/Personal/google/email_password
+      outlook_1:
+        address: "{{ lookup('community.general.passwordstore', 'Passwords/Personal/microsoft_1/Email') }}"
+        password_name: Passwords/Personal/microsoft_1/Password
+      outlook_2:
+        address: "{{ lookup('community.general.passwordstore', 'Passwords/Personal/microsoft_2/Email') }}"
+        password_name: Passwords/Personal/microsoft_2/Password
+
 - name: Ensure directories exist
   ansible.builtin.file:
     path: "{{ item }}"
@@ -47,7 +63,7 @@
     dest: "{{ config_dir }}/neomutt/accounts/"
     mode: "u=r,g=r,o="
   loop:
+    - fastmail
     - gmail
     - outlook-1
     - outlook-2
-    - protonmail

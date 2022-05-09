@@ -1,0 +1,4 @@
+# vim: filetype=neomuttrc
+set from = "{{ email_account_secrets.fastmail.address }}"
+set sendmail = "msmtp -a fastmail"
+echo "Sending from $from"
