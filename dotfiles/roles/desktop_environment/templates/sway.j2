@@ -84,7 +84,7 @@ gaps inner 10
 floating_modifier $mod normal
 
 # Kill focused window
-bindsym $mod+Shift+Q kill
+bindsym $mod+Shift+z kill
 
 # Change focus
 focus_wrapping no
@@ -101,53 +101,42 @@ bindsym $mod+Shift+k move up    $d_px
 bindsym $mod+Shift+l move right $d_px
 
 # Set split orientation
-bindsym $mod+b split h
-bindsym $mod+v split v
+bindsym $mod+u split vertical
+bindsym $mod+i split horizontal
+bindsym $mod+o layout toggle splitv splith stacking tabbed
 
 # Toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen
-
-# Toggle tiling / floating
-bindsym $mod+Shift+d floating toggle
-
-# Change focus between tiling / floating windows
-bindsym $mod+d focus mode_toggle
-
-# Toggle sticky window
-bindsym $mod+s sticky toggle
+bindsym $mod+comma fullscreen
 
 # Switch to workspace
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
+bindsym $mod+a workspace number 1
+bindsym $mod+s workspace number 2
+bindsym $mod+d workspace number 3
+bindsym $mod+f workspace number 4
+bindsym $mod+g workspace number 5
+bindsym $mod+q workspace number 6
+bindsym $mod+w workspace number 7
+bindsym $mod+e workspace number 8
+bindsym $mod+r workspace number 9
+bindsym $mod+t workspace number 10
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move workspace number 1
-bindsym $mod+Shift+2 move workspace number 2
-bindsym $mod+Shift+3 move workspace number 3
-bindsym $mod+Shift+4 move workspace number 4
-bindsym $mod+Shift+5 move workspace number 5
-bindsym $mod+Shift+6 move workspace number 6
-bindsym $mod+Shift+7 move workspace number 7
-bindsym $mod+Shift+8 move workspace number 8
-bindsym $mod+Shift+9 move workspace number 9
-bindsym $mod+Shift+0 move workspace number 10
+bindsym $mod+Shift+a move workspace number 1
+bindsym $mod+Shift+s move workspace number 2
+bindsym $mod+Shift+d move workspace number 3
+bindsym $mod+Shift+f move workspace number 4
+bindsym $mod+Shift+g move workspace number 5
+bindsym $mod+Shift+q move workspace number 6
+bindsym $mod+Shift+w move workspace number 7
+bindsym $mod+Shift+e move workspace number 8
+bindsym $mod+Shift+r move workspace number 9
+bindsym $mod+Shift+t move workspace number 10
 
 # Exit Sway
-bindsym $mod+Shift+E exit
-
-# Reset desktop environment config
-bindsym $mod+Shift+R exec "$HOME/dotfiles/desktop_quick.sh"
+bindsym $mod+Shift+n exit
 
 # Window resize
-bindsym $mod+r mode resize
+bindsym $mod+v mode resize
 mode resize {
   bindsym h           resize shrink left  $d_px px or $d_ppt ppt
   bindsym Shift+H     resize grow   left  $d_px px or $d_ppt ppt
@@ -167,63 +156,51 @@ mode resize {
 # Quick system settings
 bindsym $mod+c mode "sink volume"
 mode "sink volume" {
-  bindsym k            exec --no-startup-id pulseaudio-control sink volume +5%
-  bindsym j            exec --no-startup-id pulseaudio-control sink volume -5%
-  bindsym h            exec --no-startup-id pulseaudio-control sink mute toggle
-{% for i in range(1, 11) %}
-  bindsym {{ i % 10 }} exec --no-startup-id pulseaudio-control sink volume {{ i * 10 }}%
-{% endfor %}
+  bindsym k exec --no-startup-id pulseaudio-control sink volume +5%
+  bindsym j exec --no-startup-id pulseaudio-control sink volume -5%
+  bindsym h exec --no-startup-id pulseaudio-control sink mute toggle
 
   bindsym Escape mode default
   bindsym $mod+c mode "source volume"
 }
 mode "source volume" {
-  bindsym k            exec --no-startup-id pulseaudio-control source volume +5%
-  bindsym j            exec --no-startup-id pulseaudio-control source volume -5%
-  bindsym h            exec --no-startup-id pulseaudio-control source mute toggle
-{% for i in range(1, 11) %}
-  bindsym {{ i % 10 }} exec --no-startup-id pulseaudio-control source volume {{ i * 10 }}%
-{% endfor %}
+  bindsym k exec --no-startup-id pulseaudio-control source volume +5%
+  bindsym j exec --no-startup-id pulseaudio-control source volume -5%
+  bindsym h exec --no-startup-id pulseaudio-control source mute toggle
 
   bindsym Escape mode default
   bindsym $mod+c mode "laptop brightness"
 }
 mode "laptop brightness" {
-  bindsym k            exec --no-startup-id light -A 5
-  bindsym j            exec --no-startup-id light -U 5
-  bindsym grave        exec --no-startup-id light -S 0
-{% for i in range(1, 11) %}
-  bindsym {{ i % 10 }} exec --no-startup-id light -S {{ i * 10 }}
-{% endfor %}
+  bindsym k exec --no-startup-id light -A 5
+  bindsym j exec --no-startup-id light -U 5
 
   bindsym Escape mode default
   bindsym $mod+c mode "monitor brightness"
 }
 mode "monitor brightness" {
-  bindsym k            exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
-  bindsym j            exec --no-startup-id ddcutil-modify-vcp 10 adjust -10
-  bindsym grave        exec --no-startup-id ddcutil-modify-vcp 10 set 0
-{% for i in range(1, 11) %}
-  bindsym {{ i % 10 }} exec --no-startup-id ddcutil-modify-vcp 10 set {{ i * 10 }}
-{% endfor %}
+  bindsym k exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
+  bindsym j exec --no-startup-id ddcutil-modify-vcp 10 adjust -10
+
+  bindsym a exec --no-startup-id ddcutil-modify-vcp 12 set 20
+  bindsym s exec --no-startup-id ddcutil-modify-vcp 12 set 40
+  bindsym d exec --no-startup-id ddcutil-modify-vcp 12 set 60
+  bindsym f exec --no-startup-id ddcutil-modify-vcp 12 set 80
+  bindsym g exec --no-startup-id ddcutil-modify-vcp 12 set 100
 
   bindsym Escape mode default
   bindsym $mod+c mode "monitor contrast"
 }
 mode "monitor contrast" {
-  bindsym k            exec --no-startup-id ddcutil-modify-vcp 12 adjust +10
-  bindsym j            exec --no-startup-id ddcutil-modify-vcp 12 adjust -10
-  bindsym grave        exec --no-startup-id ddcutil-modify-vcp 12 set 0
-{% for i in range(1, 11) %}
-  bindsym {{ i % 10 }} exec --no-startup-id ddcutil-modify-vcp 12 set {{ i * 10 }}
-{% endfor %}
+  bindsym k exec --no-startup-id ddcutil-modify-vcp 12 adjust +10
+  bindsym j exec --no-startup-id ddcutil-modify-vcp 12 adjust -10
 
   bindsym Escape mode default
   bindsym $mod+c mode default
 }
 
 # Screenshot shortcut
-bindsym $mod+Shift+p exec de-screenshot
+bindsym $mod+p exec de-screenshot
 
 # Application shortcuts
 bindsym $mod+Semicolon  exec alacritty --class=FloatingAlacritty -e fzf-launch sway
@@ -239,7 +216,6 @@ bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # Media controls
-bindsym $mod+m          exec --no-startup-id media-control pause
 bindsym XF86AudioPause  exec --no-startup-id media-control pause
 bindsym XF86AudioPrev   exec --no-startup-id media-control prev
 bindsym XF86AudioNext   exec --no-startup-id media-control next
