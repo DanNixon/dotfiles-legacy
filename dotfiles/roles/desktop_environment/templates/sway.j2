@@ -84,7 +84,7 @@ gaps inner 10
 floating_modifier $mod normal
 
 # Kill focused window
-bindsym $mod+Shift+z kill
+bindsym $mod+shift+q kill
 
 # Change focus
 focus_wrapping no
@@ -95,10 +95,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # Move focused window
-bindsym $mod+Shift+h move left  $d_px
-bindsym $mod+Shift+j move down  $d_px
-bindsym $mod+Shift+k move up    $d_px
-bindsym $mod+Shift+l move right $d_px
+bindsym $mod+shift+h move left  $d_px
+bindsym $mod+shift+j move down  $d_px
+bindsym $mod+shift+k move up    $d_px
+bindsym $mod+shift+l move right $d_px
 
 # Set split orientation
 bindsym $mod+u split vertical
@@ -114,69 +114,69 @@ bindsym $mod+s workspace number 2
 bindsym $mod+d workspace number 3
 bindsym $mod+f workspace number 4
 bindsym $mod+g workspace number 5
-bindsym $mod+q workspace number 6
-bindsym $mod+w workspace number 7
-bindsym $mod+e workspace number 8
-bindsym $mod+r workspace number 9
-bindsym $mod+t workspace number 10
+bindsym $mod+z workspace number 6
+bindsym $mod+x workspace number 7
+bindsym $mod+c workspace number 8
+bindsym $mod+v workspace number 9
+bindsym $mod+b workspace number 10
 
 # Move focused container to workspace
-bindsym $mod+Shift+a move workspace number 1
-bindsym $mod+Shift+s move workspace number 2
-bindsym $mod+Shift+d move workspace number 3
-bindsym $mod+Shift+f move workspace number 4
-bindsym $mod+Shift+g move workspace number 5
-bindsym $mod+Shift+q move workspace number 6
-bindsym $mod+Shift+w move workspace number 7
-bindsym $mod+Shift+e move workspace number 8
-bindsym $mod+Shift+r move workspace number 9
-bindsym $mod+Shift+t move workspace number 10
+bindsym $mod+shift+a move workspace number 1
+bindsym $mod+shift+s move workspace number 2
+bindsym $mod+shift+d move workspace number 3
+bindsym $mod+shift+f move workspace number 4
+bindsym $mod+shift+g move workspace number 5
+bindsym $mod+shift+z move workspace number 6
+bindsym $mod+shift+x move workspace number 7
+bindsym $mod+shift+c move workspace number 8
+bindsym $mod+shift+v move workspace number 9
+bindsym $mod+shift+b move workspace number 10
 
 # Exit Sway
-bindsym $mod+Shift+n exit
+bindsym $mod+shift+n exit
 
 # Window resize
-bindsym $mod+v mode resize
+bindsym $mod+r mode resize
 mode resize {
   bindsym h           resize shrink left  $d_px px or $d_ppt ppt
-  bindsym Shift+H     resize grow   left  $d_px px or $d_ppt ppt
+  bindsym shift+h     resize grow   left  $d_px px or $d_ppt ppt
 
   bindsym j           resize shrink down  $d_px px or $d_ppt ppt
-  bindsym Shift+J     resize grow   down  $d_px px or $d_ppt ppt
+  bindsym shift+j     resize grow   down  $d_px px or $d_ppt ppt
 
   bindsym k           resize shrink up    $d_px px or $d_ppt ppt
-  bindsym Shift+K     resize grow   up    $d_px px or $d_ppt ppt
+  bindsym shift+k     resize grow   up    $d_px px or $d_ppt ppt
 
   bindsym l           resize shrink right $d_px px or $d_ppt ppt
-  bindsym Shift+L     resize grow   right $d_px px or $d_ppt ppt
+  bindsym shift+l     resize grow   right $d_px px or $d_ppt ppt
 
-  bindsym Escape      mode default
+  bindsym escape      mode default
 }
 
 # Quick system settings
-bindsym $mod+c mode "sink volume"
+bindsym $mod+e mode "sink volume"
 mode "sink volume" {
   bindsym k exec --no-startup-id pulseaudio-control sink volume +5%
   bindsym j exec --no-startup-id pulseaudio-control sink volume -5%
   bindsym h exec --no-startup-id pulseaudio-control sink mute toggle
 
-  bindsym Escape mode default
-  bindsym $mod+c mode "source volume"
+  bindsym escape mode default
+  bindsym $mod+e mode "source volume"
 }
 mode "source volume" {
   bindsym k exec --no-startup-id pulseaudio-control source volume +5%
   bindsym j exec --no-startup-id pulseaudio-control source volume -5%
   bindsym h exec --no-startup-id pulseaudio-control source mute toggle
 
-  bindsym Escape mode default
-  bindsym $mod+c mode "laptop brightness"
+  bindsym escape mode default
+  bindsym $mod+e mode "laptop brightness"
 }
 mode "laptop brightness" {
   bindsym k exec --no-startup-id light -A 5
   bindsym j exec --no-startup-id light -U 5
 
-  bindsym Escape mode default
-  bindsym $mod+c mode "monitor brightness"
+  bindsym escape mode default
+  bindsym $mod+e mode "monitor brightness"
 }
 mode "monitor brightness" {
   bindsym k exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
@@ -188,15 +188,15 @@ mode "monitor brightness" {
   bindsym f exec --no-startup-id ddcutil-modify-vcp 12 set 80
   bindsym g exec --no-startup-id ddcutil-modify-vcp 12 set 100
 
-  bindsym Escape mode default
-  bindsym $mod+c mode "monitor contrast"
+  bindsym escape mode default
+  bindsym $mod+e mode "monitor contrast"
 }
 mode "monitor contrast" {
   bindsym k exec --no-startup-id ddcutil-modify-vcp 12 adjust +10
   bindsym j exec --no-startup-id ddcutil-modify-vcp 12 adjust -10
 
-  bindsym Escape mode default
-  bindsym $mod+c mode default
+  bindsym escape mode default
+  bindsym $mod+e mode default
 }
 
 # Screenshot shortcut
