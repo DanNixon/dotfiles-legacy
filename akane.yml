@@ -30,6 +30,7 @@
     - dannixon.user.pass
     - dannixon.user.yubikey_touch_detector
 
+    - dannixon.services.mpd
     - dannixon.services.syncthing
 
     - dannixon.dotfiles.flatpak
