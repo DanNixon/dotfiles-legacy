@@ -182,11 +182,11 @@ mode "monitor brightness" {
   bindsym k exec --no-startup-id ddcutil-modify-vcp 10 adjust +10
   bindsym j exec --no-startup-id ddcutil-modify-vcp 10 adjust -10
 
-  bindsym a exec --no-startup-id ddcutil-modify-vcp 12 set 20
-  bindsym s exec --no-startup-id ddcutil-modify-vcp 12 set 40
-  bindsym d exec --no-startup-id ddcutil-modify-vcp 12 set 60
-  bindsym f exec --no-startup-id ddcutil-modify-vcp 12 set 80
-  bindsym g exec --no-startup-id ddcutil-modify-vcp 12 set 100
+  bindsym a exec --no-startup-id ddcutil-modify-vcp 10 set 20
+  bindsym s exec --no-startup-id ddcutil-modify-vcp 10 set 40
+  bindsym d exec --no-startup-id ddcutil-modify-vcp 10 set 60
+  bindsym f exec --no-startup-id ddcutil-modify-vcp 10 set 80
+  bindsym g exec --no-startup-id ddcutil-modify-vcp 10 set 100
 
   bindsym escape mode default
   bindsym $mod+e mode "monitor contrast"
