@@ -156,17 +156,17 @@ mode resize {
 # Quick system settings
 bindsym $mod+e mode "sink volume"
 mode "sink volume" {
-  bindsym k exec --no-startup-id pulseaudio-control sink volume +5%
-  bindsym j exec --no-startup-id pulseaudio-control sink volume -5%
-  bindsym h exec --no-startup-id pulseaudio-control sink mute toggle
+  bindsym k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+  bindsym j exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+  bindsym h exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
   bindsym escape mode default
   bindsym $mod+e mode "source volume"
 }
 mode "source volume" {
-  bindsym k exec --no-startup-id pulseaudio-control source volume +5%
-  bindsym j exec --no-startup-id pulseaudio-control source volume -5%
-  bindsym h exec --no-startup-id pulseaudio-control source mute toggle
+  bindsym k exec --no-startup-id pactl set-source-volume @DEFAULT_SOURCE@ +5%
+  bindsym j exec --no-startup-id pactl set-source-volume @DEFAULT_SOURCE@ -5%
+  bindsym h exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
   bindsym escape mode default
   bindsym $mod+e mode "laptop brightness"
@@ -207,9 +207,9 @@ bindsym $mod+Semicolon  exec alacritty --class=FloatingAlacritty -e fzf-launch s
 bindsym $mod+Space      exec alacritty
 
 # Audio controls
-bindsym XF86AudioRaiseVolume  exec --no-startup-id pulseaudio-control sink volume +5%
-bindsym XF86AudioLowerVolume  exec --no-startup-id pulseaudio-control sink volume -5%
-bindsym XF86AudioMute         exec --no-startup-id pulseaudio-control sink mute toggle
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Backlight brighness controls
 bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5

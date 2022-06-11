@@ -7,9 +7,11 @@ i3status_rust_icons:
 
 i3status_rust_blocks:
   - block: sound
+    driver: pulseaudio
     device_kind: sink
 
   - block: sound
+    driver: pulseaudio
     device_kind: source
 
   - block: battery
