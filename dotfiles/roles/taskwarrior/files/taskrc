@@ -3,6 +3,7 @@ data.location=~/.task
 urgency.active.coefficient=0.0
 urgency.age.coefficient=0.0
 urgency.annotations.coefficient=0.0
+urgency.blocking.coefficient=1.0
 urgency.project.coefficient=0.0
 urgency.tags.coefficient=0.0
 
