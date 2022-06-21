@@ -3,7 +3,7 @@ galaxy_info:
   author: dannixon
   description: Installs and configures Taskwarrior
   license: MIT
-  min_ansible_version: 2.1
+  min_ansible_version: "2.1"
   platforms:
     - name: ArchLinux
 

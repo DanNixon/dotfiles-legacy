@@ -3,7 +3,7 @@ galaxy_info:
   author: dannixon
   description: Installs general packages used on all interactive systems
   license: MIT
-  min_ansible_version: 2.1
+  min_ansible_version: "2.1"
   platforms:
     - name: ArchLinux
 

@@ -3,7 +3,7 @@ galaxy_info:
   author: dannixon
   description: Installs and configures Music Player Daemon clients
   license: MIT
-  min_ansible_version: 2.1
+  min_ansible_version: "2.1"
   platforms:
     - name: ArchLinux
 
