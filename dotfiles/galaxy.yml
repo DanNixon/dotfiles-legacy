@@ -10,6 +10,7 @@ authors:
 description: Personal configurations
 readme: README.md
 
-license: MIT
+license:
+  - MIT
 
 repository: https://github.com/DanNixon/dotfiles
