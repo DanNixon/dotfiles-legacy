@@ -39,5 +39,6 @@
 - tomb-kdf
 - ttyper
 - uniflash
+- warpd-wayland-git
 - wev
 - woeusb

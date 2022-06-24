@@ -59,6 +59,7 @@
     - "{{ desktop_environment_config_dir }}/alacritty"
     - "{{ desktop_environment_config_dir }}/mako"
     - "{{ desktop_environment_config_dir }}/sway"
+    - "{{ desktop_environment_config_dir }}/warpd"
 
 - name: Ensure configuration is present
   ansible.builtin.copy:
@@ -74,6 +75,8 @@
       dest: "{{ ansible_user_dir }}/.var/app/com.github.Eloston.UngoogledChromium/config/"
     - src: mako.conf
       dest: "{{ desktop_environment_config_dir }}/mako/config"
+    - src: warpd.conf
+      dest: "{{ desktop_environment_config_dir }}/warpd/config"
     - src: zathura.desktop
       dest: "{{ desktop_environment_applications_dir }}/"
 
