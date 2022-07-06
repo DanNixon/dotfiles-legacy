@@ -64,6 +64,7 @@ Plug 'https://github.com/reedes/vim-lexical'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/sirtaj/vim-openscad'
 Plug 'https://github.com/nfnty/vim-nftables'
+Plug 'https://github.com/ron-rs/ron.vim'
 
 " Format text into one line per sentance
 Plug 'https://github.com/Konfekt/vim-sentencewrap'
