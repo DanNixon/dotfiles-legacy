@@ -61,15 +61,6 @@ case "$TERM" in
     ;;
 esac
 
-# Expand aliases
-# See https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/globalias/globalias.plugin.zsh
-globalias() {
-  zle _expand_alias
-  zle expand-word
-}
-zle -N globalias
-bindkey '^E' globalias
-
 # Base16 shell
 BASE16_SHELL="$HOME/.local/share/base16-shell/"
 [ -n "$PS1" ] && \
