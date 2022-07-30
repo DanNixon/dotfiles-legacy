@@ -67,8 +67,6 @@
       become: true
       community.general.flatpak:
         name:
-          - com.github.Eloston.UngoogledChromium
-          - com.vesc_project.VescTool
           - us.zoom.Zoom
         state: present
 
