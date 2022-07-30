@@ -80,3 +80,19 @@
           - gpxsee
           - influx-cli
         state: present
+
+    - name: Ensure eduroam certificate is present
+      become: true
+      ansible.builtin.copy:
+        content: |
+          {{ lookup('community.general.passwordstore', 'ansible_secrets/stfc_eduroam/cert returnall=true') }}
+        dest: /etc/ssl/certs/eduroam-linux-STFC.crt
+        mode: "u=r,g=r,o=r"
+
+    - name: Ensure eduroam configuration is present
+      become: true
+      ansible.builtin.copy:
+        content: |
+          {{ lookup('community.general.passwordstore', 'ansible_secrets/stfc_eduroam/iwd_config returnall=true') }}
+        dest: /var/lib/iwd/eduroam.8021x
+        mode: "u=r,g=r,o="
