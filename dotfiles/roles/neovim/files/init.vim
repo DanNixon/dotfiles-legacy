@@ -99,7 +99,7 @@ let g:syntastic_aggregate_errors = 1
 
 " Language server config
 let g:LanguageClient_serverCommands = {
-      \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+      \ 'rust': ['rust-analyzer'],
 \ }
 
 " Spelling config
