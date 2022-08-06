@@ -14,3 +14,10 @@
     - attributes
     - config
     - ignore
+
+- name: Ensure gfold is installed
+  become: true
+  ansible.builtin.package:
+    name: gfold
+    state: present
+  when: ansible_os_family == "Archlinux"
