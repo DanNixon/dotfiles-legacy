@@ -26,6 +26,8 @@
     - dannixon.services.dnscrypt_proxy
     - dannixon.services.sshd
 
+    - dannixon.services.grafana_agent
+
     - dannixon.user.base16_shell
     - dannixon.user.pass
     - dannixon.user.yubikey_touch_detector
