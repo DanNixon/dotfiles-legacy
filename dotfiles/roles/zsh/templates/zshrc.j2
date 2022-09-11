@@ -50,9 +50,8 @@ else
 fi
 
 setopt PROMPT_SUBST
-PROMPT_GREY='248'
-PROMPT='%B%F{cyan}%n%f%b %F{$PROMPT_GREY}at%f %B%F{$PROMPT_HOSTNAME_COLOR}%m%f%b %F{$PROMPT_GREY}in%f %B%F{blue}%~%f%b %F{$PROMPT_GREY}[%B%F{$PROMPT_VI_COLOR}$PROMPT_VI_MODE%F{$PROMPT_GREY}%b]%B>%f%b '
-RPROMPT='%(?..%F{red}%?  )%F{240}%D{%Y-%m-%d %H:%M:%S}%f'
+PROMPT='%B%F{cyan}%n%f%b at %B%F{$PROMPT_HOSTNAME_COLOR}%m%f%b in %B%F{blue}%~%f%b [%B%F{$PROMPT_VI_COLOR}$PROMPT_VI_MODE%f%b]%B>%b '
+RPROMPT='%(?..%F{red}%?%f  )%F{green}%D{%H:%M:%S}%f'
 
 # Terminal title
 case "$TERM" in
