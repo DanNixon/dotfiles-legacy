@@ -2,6 +2,7 @@
 
 set -ex
 
+git -C "$HOME/git/notebook.git" push storage1
 git -C "$HOME/git/password-store.git" push storage1 master
 git -C "$HOME/.newsboat/.git" push origin
 
