@@ -13,7 +13,8 @@ desktop_environment_displays:
     enabled: true
     options:
       bg: '~/docs/wallpapers/izayoi\ sakuya\ and\ hong\ meiling\ \(touhou\)\ drawn\ by\ mikado_\(winters\)\ -\ 1600381848a6c45f0aa43eb12d226540.png fill'
-      scale: 2.5
+      mode: 3840x2160
+      scale: 1.5
 
 i3status_rust_blocks:
   - block: sound
