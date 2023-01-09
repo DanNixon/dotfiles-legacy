@@ -98,8 +98,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_aggregate_errors = 1
 
 " Language server config
+highlight LanguageClientError   ctermbg=None
+highlight LanguageClientWarning ctermbg=None
+highlight LanguageClientInfo    ctermbg=None
 let g:LanguageClient_serverCommands = {
-      \ 'rust': ['rust-analyzer'],
+      \ 'rust': ['rustup', 'run', 'beta', 'rust-analyzer'],
 \ }
 
 " Spelling config
