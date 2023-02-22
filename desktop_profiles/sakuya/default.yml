@@ -12,4 +12,4 @@ i3status_rust_blocks:
 
   - block: time
     interval: 1
-    format: "%Y-%m-%d %H:%M:%S"
+    format: " $timestamp.datetime(f:'%Y-%m-%d %H:%M:%S')"
