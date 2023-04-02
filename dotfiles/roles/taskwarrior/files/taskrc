@@ -1,4 +1,4 @@
-data.location=~/.task
+data.location=~/notebook/taskwarrior
 
 urgency.active.coefficient=0.0
 urgency.age.coefficient=0.0
