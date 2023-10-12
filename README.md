@@ -1,4 +1,4 @@
-# dotfiles [![Code Quality](https://github.com/DanNixon/dotfiles/actions/workflows/code_quality.yml/badge.svg)](https://github.com/DanNixon/dotfiles/actions/workflows/code_quality.yml)
+# dotfiles
 
 ## Firefox Addons
 
